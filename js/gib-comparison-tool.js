@@ -418,7 +418,7 @@ var GIBComparisonTool = (function () {
    */
 
   var getMonthlyRate = function ( ) {
-	  if (formdata.gi_bill_chap == 30 && formdata.enlistment_service = = 3 ) {
+	  if (formdata.gi_bill_chap == 30 && formdata.enlistment_service == 3 ) {
 		  calculated.monthlyrate = MGIB3YRRATE;
 	  } else if (formdata.gi_bill_chap == 30 && formdata.enlistment_service = = 2 ) {
 		  calculated.monthlyrate = MGIB2YRRATE;
