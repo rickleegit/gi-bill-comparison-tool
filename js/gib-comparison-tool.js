@@ -396,8 +396,12 @@ var GIBComparisonTool = (function () {
    * Calculates the estimated tuition and fees
    */
   var getTuitionFees = function () {
-    if (calculated.institution_type == 'ojt') {
+    if (formdata.gi_bill_chap != 33 && formdata.gi_bill_chap != 31) {
       calculated.est_tuition_fees = '';
+    } else if (calculated.institution_type == 'ojt') {
+      calculated.est_tuition_fees = '';
+    if (formdata.gi_bill_chap == 31) {
+      calculated.est_tuition_fees = 'Full Cost of Attendance';
     } else if (calculated.institution_type == 'flight') {
       calculated.est_tuition_fees = formatCurrency(FLTTFCAP * calculated.tier) + ' / year (up to)';
     } else if (calculated.institution_type == 'correspond') {
@@ -409,6 +413,33 @@ var GIBComparisonTool = (function () {
     }
   };
   
+  /*
+   * Calculate the monthly benefit rate for non-chapter 33 benefits
+   */
+
+  var getMonthlyRate = function ( ) {
+	  if (formdata.gi_bill_chap == 30 && formdata.enlistment_service = = 3 ) {
+		  calculated.monthlyrate = MGIB3YRRATE;
+	  } else if (formdata.gi_bill_chap == 30 && formdata.enlistment_service = = 2 ) {
+		  calculated.monthlyrate = MGIB2YRRATE;
+	  } else if (formdata.gi_bill_chap == 1607 ) {
+		  calculated.monthlyrate = MGIB3YRRATE* formdata.consecutive_service;
+	  } else if (formdata.gi_bill_chap == 1606 ) {
+		  calculated.monthlyrate = SRRATE;
+	  } else if (formdata.gi_bill_chap == 31) {
+		  calculated.monthlyrate = DEARATE;
+	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 0) {
+		  calculated.monthlyrate = VRE0DEPRATE;
+	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 1) {
+		  calculated.monthlyrate = VRE1DEPRATE;
+	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 2) {
+		  calculated.monthlyrate = VRE2DEP RATE;
+	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend > 2) {
+		  calculated.monthlyrate = VRE2DEPRATE + VREINCRATE * (formdata.number_of_depend – 2);
+    }
+  };
+
+
   
   /*
    * Calculate the estimated housing allowance
@@ -418,6 +449,8 @@ var GIBComparisonTool = (function () {
       calculated.est_housing_allowance = '$0 / month';
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
       calculated.est_housing_allowance = '$0 / month';
+    } else if (formdata.gi_bill_chap != 33 || (formdata.gi_bill_chap == 31 && !calculated.post_911_elig)) {
+      calculated.est_housing_allowance = calculated.monthlyrate + ' / month (full time)';
     } else if (calculated.institution_type == 'flight') {
       calculated.est_housing_allowance = '$0 / month';
     } else if (calculated.institution_type == 'correspond') {
@@ -438,10 +471,14 @@ var GIBComparisonTool = (function () {
    * Calculate the estimated book stipend
    */
   var getBookStipend = function () {
-    if (calculated.institution_type == 'flight') {
+    if (formdata.gi_bill_chap != 33 && formdata.gi_bill_chap != 31) {
+      calculated. est_book_stipend = '$0 / year';
+    } else if (calculated.institution_type == 'flight') {
       calculated.est_book_stipend = '$0 / year';
     } else if (calculated.institution_type == 'correspond') {
       calculated.est_book_stipend = '$0 / year';
+    } else if (formdata.gi_bill_chap == 31) {
+      calculated.est_book_stipend = 'TEST';
     } else {
       calculated.est_book_stipend = formatCurrency(calculated.tier * BSCAP) + ' / year';
     }
@@ -1567,6 +1604,7 @@ var GIBComparisonTool = (function () {
     getInstitutionTypeForDisplay();
     getTier();
     getTuitionFees();
+    getMonthlyRate();
     getHousingAllowance();
     getBookStipend();
     getTuitionOutOfState();
