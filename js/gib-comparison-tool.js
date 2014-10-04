@@ -19,9 +19,14 @@ var GIBComparisonTool = (function () {
   
   // User form data
   var formData = {
-    cumulative_service:    '',
     military_status:       '',
     spouse_active_duty:    false,
+    gi_bill_chap:          '',
+    number_of_depend:      '',  
+    post_911_elig:         '',
+    cumulative_service:    '',
+    enlistment_service:    '',
+    consecutive_service:   '',
     facility_code:         '',
     online:                false,
     in_state:              true,
@@ -186,10 +191,15 @@ var GIBComparisonTool = (function () {
    * Get user data from the form
    */
   var getFormData = function () {
-    formData.cumulative_service = $('#cumulative-service').val();
-    formData.military_status    = $('#military-status').val();
-    formData.spouse_active_duty = $('#spouse-active-duty-yes').prop('checked');
-    formData.online             = $('#online-classes-yes').prop('checked');
+    formData.military_status      = $('#military-status').val();
+    formData.spouse_active_duty   = $('#spouse-active-duty-yes').prop('checked');
+    formData.gi_bill_chap         = $('#gi-bill-chapter').val();
+    formData.number_of_depend     = $('#number-of-dependents').val();
+    formData.post_911_elig        = $('#elig-for-post-911-gi-bill-yes').prop('checked');
+    formData.cumulative_service   = $('#cumulative-service').val();
+    formData.enlistment_service   = $('#enlistment-service').val();
+    formData.consecutive_service  = $('#consecutive-service').val();
+    formData.online               = $('#online-classes-yes').prop('checked');
     
     if (formData.military_status == 'spouse') {
       $('#spouse-active-duty-form').show();
