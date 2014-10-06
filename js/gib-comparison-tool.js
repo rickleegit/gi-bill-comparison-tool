@@ -196,7 +196,7 @@ var GIBComparisonTool = (function () {
     formData.spouse_active_duty   = $('#spouse-active-duty-yes').prop('checked');
     formData.gi_bill_chap         = $('#gi-bill-chapter').val();
     formData.number_of_depend     = $('#number-of-dependents').val();
-    formData.post_911_elig        = $('#elig-for-post-911-gi-bill-yes').prop('checked');
+    formData.post_911_elig        = $('#elig-for-post-gi-bill-yes').prop('checked');
     formData.cumulative_service   = $('#cumulative-service').val();
     formData.enlistment_service   = $('#enlistment-service').val();
     formData.consecutive_service  = $('#consecutive-service').val();
@@ -2017,7 +2017,7 @@ var GIBComparisonTool = (function () {
     $('#cumulative-service, #military-status, ' +
       '#spouse-active-duty-yes, #spouse-active-duty-no, ' +
       '#gi-bill-chapter, #number-of-dependents, ' +
-      '#elig-for-post-911-gi-bill-yes. #elig-for-post-911-gi-bill-no, ' +
+      '#elig-for-post-gi-bill-yes. #elig-for-post-gi-bill-no, ' +
       '#enlistment-service, #consecutive-service, ' +
       '#online-classes-yes, #online-classes-no, ' +
       '#in-state-yes, #in-state-no, ' +
