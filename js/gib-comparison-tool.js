@@ -194,12 +194,12 @@ var GIBComparisonTool = (function () {
   var getFormData = function () {
     formData.military_status      = $('#military-status').val();
     formData.spouse_active_duty   = $('#spouse-active-duty-yes').prop('checked');
-    formData.gi_bill_chap         = $('#gi-bill-chapter').val();
-    formData.number_of_depend     = $('#number-of-dependents').val();
+    formData.gi_bill_chap         = Number($('#gi-bill-chapter').val());
+    formData.number_of_depend     = Number($('#number-of-dependents').val());
     formData.post_911_elig        = $('#elig-for-post-gi-bill-yes').prop('checked');
     formData.cumulative_service   = $('#cumulative-service').val();
-    formData.enlistment_service   = $('#enlistment-service').val();
-    formData.consecutive_service  = $('#consecutive-service').val();
+    formData.enlistment_service   = Number($('#enlistment-service').val());
+    formData.consecutive_service  = Number($('#consecutive-service').val());
     formData.online               = $('#online-classes-yes').prop('checked');
     
     if (formData.military_status == 'spouse') {
