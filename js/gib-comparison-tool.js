@@ -2126,7 +2126,7 @@ var GIBComparisonTool = (function () {
     update: update,
     trackOpenCalculator: trackOpenCalculator
   };
-}
+})();
 
 /*
  * Toggle filter results
