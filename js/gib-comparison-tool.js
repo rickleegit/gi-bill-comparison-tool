@@ -2015,8 +2015,10 @@ var GIBComparisonTool = (function () {
     
     // Bind event handlers to form elements
     $('#military-status, ' +
-      '#gi-bill-chapter, ' +
       '#spouse-active-duty-yes, #spouse-active-duty-no, ' +
+      '#cumulative-service,' + 
+      '#enlistment-service, ' +
+      '#consecutive-service, ' +
       '#online-classes-yes, #online-classes-no, ' +
       '#in-state-yes, #in-state-no, ' +
       '#tuition-fees-input, ' +
