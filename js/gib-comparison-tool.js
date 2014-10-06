@@ -450,7 +450,7 @@ var GIBComparisonTool = (function () {
       calculated.est_housing_allowance = '$0 / month';
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
       calculated.est_housing_allowance = '$0 / month';
-    } else if (formData.gi_bill_chap !== 33 || (formData.gi_bill_chap == 31 && !calculated.post_911_elig)) {
+    } else if (formData.gi_bill_chap != 33 || (formData.gi_bill_chap = 31 && !calculated.post_911_elig)) {
       calculated.est_housing_allowance = calculated.monthlyrate + ' / month (full time)';
     } else if (calculated.institution_type == 'flight') {
       calculated.est_housing_allowance = '$0 / month';
