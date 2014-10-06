@@ -435,7 +435,8 @@ var GIBComparisonTool = (function () {
 	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 2) {
 		  calculated.monthlyrate = VRE2DEPRATE;
 	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend > 2) {
-		  calculated.monthlyrate = VRE2DEPRATE + (formdata.number_of_depend – 2) * VREINCRATE;
+		  calculated.monthlyrate = VRE2DEPRATE;
+							//(formdata.number_of_depend – 2) * VREINCRATE
     }
   };
 
