@@ -2016,6 +2016,9 @@ var GIBComparisonTool = (function () {
     // Bind event handlers to form elements
     $('#cumulative-service, #military-status, ' +
       '#spouse-active-duty-yes, #spouse-active-duty-no, ' +
+      '#gi-bill-chapter, #number-of-dependents, ' +
+      '#elig-for-post-911-gi-bill-yes. #elig-for-post-911-gi-bill-no, ' +
+      '#enlistment-service, #consecutive-service, ' +
       '#online-classes-yes, #online-classes-no, ' +
       '#in-state-yes, #in-state-no, ' +
       '#tuition-fees-input, ' +
