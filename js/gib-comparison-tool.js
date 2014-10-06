@@ -400,7 +400,7 @@ var GIBComparisonTool = (function () {
       calculated.est_tuition_fees = '';
     } else if (calculated.institution_type == 'ojt') {
       calculated.est_tuition_fees = '';
-    if (formdata.gi_bill_chap == 31) {
+    } else if (formdata.gi_bill_chap == 31) {
       calculated.est_tuition_fees = 'Full Cost of Attendance';
     } else if (calculated.institution_type == 'flight') {
       calculated.est_tuition_fees = formatCurrency(FLTTFCAP * calculated.tier) + ' / year (up to)';
