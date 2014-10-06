@@ -418,28 +418,28 @@ var GIBComparisonTool = (function () {
    */
 
   var getMonthlyRate = function ( ) {
-	  if (formdata.gi_bill_chap == 30 && formdata.enlistment_service == 3 ) {
-		  calculated.monthlyrate = MGIB3YRRATE;
-	  } else if (formdata.gi_bill_chap == 30 && formdata.enlistment_service == 2 ) {
-		  calculated.monthlyrate = MGIB2YRRATE;
-	  } else if (formdata.gi_bill_chap == 1607 ) {
-		  calculated.monthlyrate = MGIB3YRRATE* formdata.consecutive_service;
-	  } else if (formdata.gi_bill_chap == 1606 ) {
-		  calculated.monthlyrate = SRRATE;
-	  } else if (formdata.gi_bill_chap == 31) {
-		  calculated.monthlyrate = DEARATE;
-	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 0) {
-		  calculated.monthlyrate = VRE0DEPRATE;
-	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 1) {
-		  calculated.monthlyrate = VRE1DEPRATE;
-	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 2) {
-		  calculated.monthlyrate = VRE2DEPRATE;
-	  } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend > 2) {
-		  calculated.monthlyrate = VRE2DEPRATE;
-//(formdata.number_of_depend – 2) * VREINCRATE
+    if (formdata.gi_bill_chap == 30 && formdata.enlistment_service == 3 ) {
+        calculated.monthlyrate = MGIB3YRRATE;
+    } else if (formdata.gi_bill_chap == 30 && formdata.enlistment_service == 2 ) {
+        calculated.monthlyrate = MGIB2YRRATE;
+    } else if (formdata.gi_bill_chap == 1607 ) {
+        calculated.monthlyrate = MGIB3YRRATE* formdata.consecutive_service;
+    } else if (formdata.gi_bill_chap == 1606 ) {
+        calculated.monthlyrate = SRRATE;
+    } else if (formdata.gi_bill_chap == 31) {
+        calculated.monthlyrate = DEARATE;
+    } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 0) {
+        calculated.monthlyrate = VRE0DEPRATE;
+    } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 1) {
+        calculated.monthlyrate = VRE1DEPRATE;
+    } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend == 2) {
+        calculated.monthlyrate = VRE2DEPRATE;
+    } else if (formdata.gi_bill_chap == 35 && formdata.number_of_depend > 2) {
+        calculated.monthlyrate = VRE2DEPRATE;
     }
   };
-
+  	
+//(formdata.number_of_depend – 2) * VREINCRATE
 
   
   /*
