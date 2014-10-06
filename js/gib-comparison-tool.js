@@ -396,7 +396,7 @@ var GIBComparisonTool = (function () {
    * Calculates the estimated tuition and fees
    */
   var getTuitionFees = function () {
-    if (formData.gi_bill_chap !== 33 && formData.gi_bill_chap !== 31) {
+    if (formData.gi_bill_chap != 33 && formData.gi_bill_chap != 31) {
       calculated.est_tuition_fees = '';
     } else if (calculated.institution_type == 'ojt') {
       calculated.est_tuition_fees = '';
@@ -472,7 +472,7 @@ var GIBComparisonTool = (function () {
    * Calculate the estimated book stipend
    */
   var getBookStipend = function () {
-    if (formData.gi_bill_chap !== 33 && formData.gi_bill_chap !== 31) {
+    if (formData.gi_bill_chap != 33 && formData.gi_bill_chap != 31) {
       calculated. est_book_stipend = '$0 / year';
     } else if (calculated.institution_type == 'flight') {
       calculated.est_book_stipend = '$0 / year';
