@@ -2017,7 +2017,6 @@ var GIBComparisonTool = (function () {
     $('#cumulative-service,' + 
       '#military-status, ' +
       '#spouse-active-duty-yes, #spouse-active-duty-no, ' +
-      '#gi-bill-chapter, ' + 
       '#number-of-dependents, ' +
       '#elig-for-post-gi-bill-yes. #elig-for-post-gi-bill-no, ' +
       '#enlistment-service, ' +
