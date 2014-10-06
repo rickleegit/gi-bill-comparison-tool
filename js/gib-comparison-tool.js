@@ -2014,8 +2014,13 @@ var GIBComparisonTool = (function () {
   $(document).ready(function () {
     
     // Bind event handlers to form elements
-    $('#cumulative-service,' + 
-      '#military-status, ' +
+    $('#military-status, ' +
+      '#gi-bill-chapter, ' +
+      '#number-of-dependents, ' +
+      '#elig-for-post-gi-bill-yes. #elig-for-post-gi-bill-no, ' +
+      '#cumulative-service,' + 
+      '#enlistment-service, ' +
+      '#consecutive-service, ' +
       '#spouse-active-duty-yes, #spouse-active-duty-no, ' +
       '#online-classes-yes, #online-classes-no, ' +
       '#in-state-yes, #in-state-no, ' +
