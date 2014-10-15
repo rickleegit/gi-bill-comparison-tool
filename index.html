@@ -204,6 +204,9 @@ layout: va
     <div class="ui-widget">
       <label class="institution-search-label" for="institution-search">Enter a school or employer name to search:</label>
       <input id="institution-search" placeholder="Search by School or Employer Name" title="Enter school/employer name"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#schoolname" onclick="track('Tool Tips', 'Institution Search');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about selecting a school/employer." title="Click here for more information about selecting a school/employer"></a>
+      <div>
+        <a href="#advancedsearch">Advanced search</a>
+      </div>
     </div>
   </div>
   
@@ -820,5 +823,71 @@ layout: va
     <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#feedback" onclick="track('Tool Tips', 'Feedback');" target="_blank">Feedback</a>
     <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#accessibility" onclick="track('Tool Tips', 'Accessibility');" target="_blank">Accessibility</a>
   </div>
+
+<style>
+#mask {
+  position:absolute;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+  left: 0px;
+  top: 0px;
+}
+
+#searchmodal .modal {
+  position:fixed;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+#searchmodal #advancedsearch {
+  width:375px;
+  height:203px;
+  background-color: white;
+}
+</style>
+
+<script>
+$().ready(function() {
+  $("a[href=#advancedsearch]").click(function(e) {
+    e.preventDefault();
+
+    var wh = $(window).height(),
+        dh = $(document).height(),
+        ww = $(window).width(),
+        modal = $($(this).attr("href"));
+
+    /* set mask on and show it */
+    $('#mask').css({'width': ww, 'height': dh});
+    $('#mask').show();
+
+    /* center and show modal */
+    modal.css('top', wh/2-modal.height()/2);
+    modal.css('left', ww/2-modal.width()/2);
+    modal.show();
+  });
+
+  $(".modal .close").click(function(e) {
+    e.preventDefault();
+    $('#mask, .modal').hide();
+  });
+
+  $('#mask').click(function () {
+    $('#mask, .modal').hide();
+  });
+});
+</script>
+
+<div id="searchmodal">
+  <div id="advancedsearch" class="modal">
+    Stuff goes here
+    <a href="#" class="close">Close it</a>
+  </div>
+
+  <div id="mask"></div>
+</div>
   
 <!-- </div> -->
