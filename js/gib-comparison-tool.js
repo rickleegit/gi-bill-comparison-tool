@@ -208,10 +208,7 @@ var GIBComparisonTool = (function () {
       $('#spouse-active-duty-form').hide();
     }
     
-    $('#enlistment-service-form').hide();
-    $('#consecutive-service-form').hide();
-    $('#number-of-dependents-form').hide();
-    $('#elig-for-post-gi-bill-form').hide();
+
 
     if (formData.gi_bill_chap == 33 ) {
       $('#cumulative-service-form').show();
@@ -2084,6 +2081,10 @@ var GIBComparisonTool = (function () {
     }, 1000);
     
     // Hide elements on load
+    $('#enlistment-service-form').hide();
+    $('#consecutive-service-form').hide();
+    $('#number-of-dependents-form').hide();
+    $('#elig-for-post-gi-bill-form').hide();
     $('#calculate-benefits-btn').hide();
     $('#spouse-active-duty-form').hide();
     $('#institution-select').hide();
