@@ -236,7 +236,7 @@ var GIBComparisonTool = (function () {
       $('#number-of-dependents-form').hide();
     }
 
-    if (formData.gi_bill_chap == 31 && formData.post_911_elig == true) {
+    if (formData.gi_bill_chap == 31 && formData.post_911_elig !== false) {
       $('#cumulative-service-form').show();
     } else {
       $('#cumulative-service-form').hide();
