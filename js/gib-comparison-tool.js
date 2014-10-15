@@ -208,6 +208,32 @@ var GIBComparisonTool = (function () {
       $('#spouse-active-duty-form').hide();
     }
     
+    if (formData.gi_bill_chap == 33 ) {
+      $('#cumulative-service-form').show();
+    } else {
+      $('#cumulative-service-form').hide();
+    }
+
+    if (formData.gi_bill_chap == 30 ) {
+      $('#enlistment-service-form').show();
+    } else {
+      $('#enlistment-service-form').hide();
+    }
+
+    if (formData.gi_bill_chap == 1607 ) {
+      $('#consecutive-service-form').show();
+    } else {
+      $('#consecutive-service-form').hide();
+    }
+
+    if (formData.gi_bill_chap == 31 ) {
+      $('#number-of-dependents-form').show();
+      $('#elig-for-post-gi-bill-form').show();
+    } else {
+      $('#number-of-dependents-form').hide();
+      $('#elig-for-post-gi-bill-form').hide();
+    }
+
     formData.in_state              = $('#in-state-yes').prop('checked');
     formData.tuition_fees          = getCurrency('#tuition-fees-input');
     formData.in_state_tuition_fees = getCurrency('#in-state-tuition-fees');
@@ -1763,12 +1789,6 @@ var GIBComparisonTool = (function () {
     $('#vet-success').html('Yes &nbsp; <a href="mailto:'+ institution.vetsuccess_email +'" onclick="track(\'Vet Success\', \'Email\');">Email '+ institution.vetsuccess_name +' &raquo;</a>');
     
     // Show/hide elements (defaults) ///////////////////////////////////////////
-    
-    $('#number-of-dependents-form').hide();
-    $('#elig-for-post-gi-bill-form').hide();
-    $('#cumulative-service-form').show();
-    $('#enlistment-service-form').hide();
-    $('#consecutive-service-form').hide();
     
     $('#online-classes').show();
     $('#voc-rehab').hide();
