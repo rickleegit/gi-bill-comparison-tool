@@ -1764,6 +1764,12 @@ var GIBComparisonTool = (function () {
     
     // Show/hide elements (defaults) ///////////////////////////////////////////
     
+    $('#number-of-dependents').hide();
+    $('#elig-for-post-gi-bill-form').hide();
+    $('#cumulative-service').show();
+    $('#enlistment-service').hide();
+    $('#consecutive-service').hide();
+    
     $('#online-classes').show();
     $('#voc-rehab').hide();
     $('#veteran-indicators').show();
