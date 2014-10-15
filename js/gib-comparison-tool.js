@@ -228,13 +228,22 @@ var GIBComparisonTool = (function () {
       $('#consecutive-service-form').hide();
     }
 
-    if (formData.gi_bill_chap == 31 ) {
-      $('#number-of-dependents-form').show();
+    if (formData.gi_bill_chap == 31 && formData.post_911_elig == false) {
       $('#elig-for-post-gi-bill-form').show();
+      $('#number-of-dependents-form').show();
     } else {
-      $('#number-of-dependents-form').hide();
       $('#elig-for-post-gi-bill-form').hide();
+      $('#number-of-dependents-form').hide();
     }
+
+    if (formData.gi_bill_chap == 31 && formData.post_911_elig == true) {
+      $('#elig-for-post-gi-bill-form').show();
+      $('#cumulative-service-form').show();
+    } else {
+      $('#elig-for-post-gi-bill-form').hide();
+      $('#cumulative-service-form').hide();
+    }
+
 
     formData.in_state              = $('#in-state-yes').prop('checked');
     formData.tuition_fees          = getCurrency('#tuition-fees-input');
