@@ -518,7 +518,7 @@ var GIBComparisonTool = (function () {
     } else if (calculated.institution_type == 'correspond') {
       calculated.est_book_stipend = '$0 / year';
     } else if (formData.gi_bill_chap == 31) {
-      calculated.est_book_stipend = 'TEST';
+      calculated.est_book_stipend = 'Full Cost of Books/Supplies';
     } else {
       calculated.est_book_stipend = formatCurrency(calculated.tier * BSCAP) + ' / year';
     }
