@@ -426,15 +426,15 @@ var GIBComparisonTool = (function () {
         calculated.monthlyrate = MGIB3YRRATE* formData.consecutive_service;
     } else if (formData.gi_bill_chap == 1606 ) {
         calculated.monthlyrate = SRRATE;
-    } else if (formData.gi_bill_chap == 31) {
+    } else if (formData.gi_bill_chap == 35) {
         calculated.monthlyrate = DEARATE;
-    } else if (formData.gi_bill_chap == 35 && formData.number_of_depend == 0) {
+    } else if (formData.gi_bill_chap == 31 && formData.number_of_depend == 0) {
         calculated.monthlyrate = VRE0DEPRATE;
-    } else if (formData.gi_bill_chap == 35 && formData.number_of_depend == 1) {
+    } else if (formData.gi_bill_chap == 31 && formData.number_of_depend == 1) {
         calculated.monthlyrate = VRE1DEPRATE;
-    } else if (formData.gi_bill_chap == 35 && formData.number_of_depend == 2) {
+    } else if (formData.gi_bill_chap == 31 && formData.number_of_depend == 2) {
         calculated.monthlyrate = VRE2DEPRATE;
-    } else if (formData.gi_bill_chap == 35 && formData.number_of_depend > 2) {
+    } else if (formData.gi_bill_chap == 31 && formData.number_of_depend > 2) {
         calculated.monthlyrate = VRE2DEPRATE + (formData.number_of_depend * VREINCRATE) ;
     }
   };
