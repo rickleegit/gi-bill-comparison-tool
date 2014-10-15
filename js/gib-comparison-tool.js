@@ -396,7 +396,7 @@ var GIBComparisonTool = (function () {
    * Calculates the estimated tuition and fees
    */
   var getTuitionFees = function () {
-    if (formData.gi_bill_chap !== 1 && formData.gi_bill_chap !== 31) {
+    if (formData.gi_bill_chap !== 33 && formData.gi_bill_chap !== 31) {
       calculated.est_tuition_fees = '$0';
     } else if (calculated.institution_type == 'ojt') {
       calculated.est_tuition_fees = '';
@@ -450,7 +450,7 @@ var GIBComparisonTool = (function () {
       calculated.est_housing_allowance = '$0 / month';
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
       calculated.est_housing_allowance = '$0 / month';
-    } else if (formData.gi_bill_chap !== 1 || (formData.gi_bill_chap == 31 && formData.post_911_elig == false)) {
+    } else if (formData.gi_bill_chap !== 33 || (formData.gi_bill_chap == 31 && formData.post_911_elig == false)) {
       calculated.est_housing_allowance = formatCurrency(calculated.monthlyrate) + ' / month (full time)';
     } else if (calculated.institution_type == 'flight') {
       calculated.est_housing_allowance = '$0 / month';
@@ -472,7 +472,7 @@ var GIBComparisonTool = (function () {
    * Calculate the estimated book stipend
    */
   var getBookStipend = function () {
-    if (formData.gi_bill_chap !== 1 && formData.gi_bill_chap !== 31) {
+    if (formData.gi_bill_chap !== 33 && formData.gi_bill_chap !== 31) {
       calculated. est_book_stipend = '$0 / year';
     } else if (calculated.institution_type == 'flight') {
       calculated.est_book_stipend = '$0 / year';
