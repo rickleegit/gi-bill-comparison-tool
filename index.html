@@ -116,7 +116,7 @@ layout: va
   </div>
 
   <!-- GI Bill Chapter Being Used -->
-  <div class="form-group top-aligned">
+  <div id="gi-bill-chapter-form" class="form-group top-aligned">
     <label for="gi-bill-chapter">Which GI Bill benefit are you thinking of using? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / GI Bill Chapter');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about types of GI Bill benefits." title="Click here for more information about types of GI Bill benefits."></a></label>
     <select id="gi-bill-chapter" name="Type of GI Bill Benefits" alt="Select which GI Bill benefit you are thinking of using">
       <option value="33" selected>Post-9/11 GI Bill (Ch 33)</option>
@@ -130,7 +130,7 @@ layout: va
   
 
   <!-- Number of Dependents -->
-  <div class="form-group top-aligned">
+  <div id="number-of-dependents-form" class="form-group top-aligned">
     <label for="number-of-dependents">Number of Dependents <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / 1607 Consecutive Service');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about consecutive service." title="Click here for more information about consecutive service."></a></label>
     <select id="number-of-dependents" name="Number of Dependents" alt="Select the number of dependents you have">
       <option value="0">0</option>
@@ -157,7 +157,7 @@ layout: va
   
   
   <!-- Cumulative Post 9-11 Active Duty Service -->
-  <div class="form-group top-aligned">
+  <div id="cumulative-service-form" class="form-group top-aligned">
     <label for="cumulative-service">Cumulative Post 9-11 Active Duty Service: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / Cumulative Service');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about cumulative service." title="Click here for more information about cumulative service."></a></label>
     <select id="cumulative-service" name="Cumulative Post 9-11 Active Duty Service" alt="Select amount of cumulative Post 9-11 Active Duty Service">
       <option value="1.0">36+ months: 100% (includes BASIC)</option>
@@ -174,7 +174,7 @@ layout: va
   </div>
 
   <!-- Enlistment Length -->
-  <div class="form-group top-aligned">
+  <div id"enlistment-service-form" class="form-group top-aligned">
     <label for="enlistment-service">Completed an enlistment of: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / 1607 Consecutive Service');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about consecutive service." title="Click here for more information about consecutive service."></a></label>
     <select id="enlistment-service" name="Enlistment" alt="Select length of your enlistment">
       <option value="3">3 or more years</option>
@@ -183,7 +183,7 @@ layout: va
   </div>
   
   <!-- Consecutive Active Duty Service -->
-  <div class="form-group top-aligned">
+  <div id="consecutive-service-form" class="form-group top-aligned">
     <label for="consecutive-service">Length of Longest Active Duty Tour: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / 1607 Consecutive Service');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about consecutive service." title="Click here for more information about consecutive service."></a></label>
     <select id="consecutive-service" name="Longest Consecutive Active Duty Tour" alt="Select the length of your longest actice duty tour">
       <option value="0.8">2+ years of consecutive service: 80%</option>
@@ -192,10 +192,6 @@ layout: va
     </select>
   </div>
 
-
-
-
-  
   <div class="clear"></div>
   
   <!-- ================================================== -->
