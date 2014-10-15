@@ -396,7 +396,7 @@ var GIBComparisonTool = (function () {
    * Calculates the estimated tuition and fees
    */
   var getTuitionFees = function () {
-    if (formData.gi_bill_chap !== 33 || formData.gi_bill_chap !== 31) {
+    if (formData.gi_bill_chap != 33 || formData.gi_bill_chap != 31) {
       calculated.est_tuition_fees = '$0';
     } else if (calculated.institution_type == 'ojt') {
       calculated.est_tuition_fees = '';
