@@ -208,6 +208,11 @@ var GIBComparisonTool = (function () {
       $('#spouse-active-duty-form').hide();
     }
     
+    $('#enlistment-service-form').hide();
+    $('#consecutive-service-form').hide();
+    $('#number-of-dependents-form').hide();
+    $('#elig-for-post-gi-bill-form').hide();
+
     if (formData.gi_bill_chap == 33 ) {
       $('#cumulative-service-form').show();
     } else {
