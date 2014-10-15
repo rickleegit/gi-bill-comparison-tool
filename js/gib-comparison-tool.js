@@ -236,17 +236,12 @@ var GIBComparisonTool = (function () {
       $('#number-of-dependents-form').hide();
     }
 
-    if (formData.gi_bill_chap == 31 && formData.post_911_elig !== false) {
+    if (formData.gi_bill_chap == 33 || (formData.gi_bill_chap == 31 && formData.post_911_elig == true)) {
       $('#cumulative-service-form').show();
     } else {
       $('#cumulative-service-form').hide();
     }
 
-    if (formData.gi_bill_chap == 33 ) {
-      $('#cumulative-service-form').show();
-    } else {
-      $('#cumulative-service-form').hide();
-    }
 
 
 
