@@ -487,7 +487,7 @@ var GIBComparisonTool = (function () {
    * Calculates the estimated tuition and fees
    */
   var getTuitionFees = function () {
-    if (calculated.old_gi_bill = true) {
+    if (calculated.old_gi_bill == true) {
       calculated.est_tuition_fees = '$0 / year ';
     } else if (calculated.institution_type == 'ojt') {
       calculated.est_tuition_fees = '';
@@ -509,7 +509,7 @@ var GIBComparisonTool = (function () {
    * Calculate the estimated housing allowance
    */
   var getHousingAllowance = function () {
-    if (calculated.old_gi_bill = true || calculated.vre_only = true) {
+    if (calculated.old_gi_bill == true || calculated.vre_only == true) {
       calculated.est_housing_allowance = formatCurrency(calculated.monthlyrate) + ' / month (full time)';
     } else if (formData.military_status == 'active duty') {
       calculated.est_housing_allowance = '$0 / month';
@@ -1669,8 +1669,8 @@ var GIBComparisonTool = (function () {
     getTier();
     getOldGIBill();
     getVREOnly();
-    getTuitionFees();
     getMonthlyRate();
+    getTuitionFees();
     getHousingAllowance();
     getBookStipend();
     getTuitionOutOfState();
