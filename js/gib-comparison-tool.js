@@ -472,25 +472,23 @@ var GIBComparisonTool = (function () {
     } else if (formData.gi_bill_chap == 31 && formData.number_of_depend == 2) {
         calculated.monthlyrate = VRE2DEPRATE;
     } else if (formData.gi_bill_chap == 31 && formData.number_of_depend > 2) {
-        calculated.monthlyrate = VRE2DEPRATE + (formData.number_of_depend * VREINCRATE) ;
+        calculated.monthlyrate = VRE2DEPRATE + ((formData.number_of_depend-2) * VREINCRATE) ;
     }
   };
   	
-//(formdata.number_of_depend – 2) * VREINCRATE
 
-  
   /*
    * Calculate the estimated housing allowance
    */
   var getHousingAllowance = function () {
-    if (formData.military_status == 'active duty') {
-      calculated.est_housing_allowance = '$0 / month';
-    } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
-      calculated.est_housing_allowance = '$0 / month';
-    } else if (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607 || formData.gi_bill_chap == 1606 || formData.gi_bill_chap == 35) {
+    if (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607 || formData.gi_bill_chap == 1606 || formData.gi_bill_chap == 35) {
       calculated.est_housing_allowance = formatCurrency(calculated.monthlyrate) + ' / month (full time)';
     } else if (formData.gi_bill_chap == 31 && formData.post_911_elig == false) {
       calculated.est_housing_allowance = formatCurrency(calculated.monthlyrate) + ' / month (full time)';
+    } else if (formData.military_status == 'active duty') {
+      calculated.est_housing_allowance = '$0 / month';
+    } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
+      calculated.est_housing_allowance = '$0 / month';
     } else if (calculated.institution_type == 'flight') {
       calculated.est_housing_allowance = '$0 / month';
     } else if (calculated.institution_type == 'correspond') {
