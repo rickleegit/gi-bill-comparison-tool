@@ -528,7 +528,7 @@ var GIBComparisonTool = (function () {
    * Calculate the estimated housing allowance
    */
   var getHousingAllowance = function () {
-    if (calculated.old_gi_bill == true && calculated.only_tuition_fees = true) {
+    if (calculated.old_gi_bill == true && calculated.only_tuition_fees == true) {
       calculated.est_housing_allowance = formatCurrency(calculated.monthlyrate) + ' / month (full time)*';
     } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
       calculated.est_housing_allowance = formatCurrency(calculated.monthlyrate) + ' / month (full time)';
