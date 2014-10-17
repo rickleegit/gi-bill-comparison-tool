@@ -35,6 +35,7 @@ var GIBComparisonTool = (function () {
     yellow_ribbon:         false,
     yellow_ben:            '',
     rop:                   '',
+    rop_old:               '',
     ojt_working:           '',
     calendar:              '',
     number_nontrad_terms:  '',
@@ -57,6 +58,7 @@ var GIBComparisonTool = (function () {
     location:                 '',
     old_gi_bill:              false,
     vre_only:                 false,
+    only_tuition_fees:        false,
     est_tuition_fees:         0,
     monthlyrate:              0,
     est_housing_allowance:    0,
@@ -456,6 +458,23 @@ var GIBComparisonTool = (function () {
     }
   };  
   
+  /*
+   * Calculate if monthly benefit can only be spent on tuition/fees
+   */
+
+  var getOnlyTuitionFees = function ( ) {
+    if (formData.military_status == 'active duty' && (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607) {
+        calculated.only_tuition_fees = true;
+    } else if ((calculated.institution_type == 'correspond'|| calculated.institution_type == 'flight') && calculated.old_gi_bill = true) {
+        calculated.only_tuition_fees = true;    
+    } else if (formData.rop_old > .5 && (calculated.old_gi_bill = true || calculated.vre_only = true)) {
+        calculated.only_tuition_fees = true;
+    } else {
+        calculated.only_tuition_fees = false;
+    }
+  };
+
+
   /*
    * Calculate the monthly benefit rate for non-chapter 33 benefits
    */
@@ -1669,6 +1688,7 @@ var GIBComparisonTool = (function () {
     getTier();
     getOldGIBill();
     getVREOnly();
+    getOnlyTuitionFees();
     getMonthlyRate();
     getTuitionFees();
     getHousingAllowance();
