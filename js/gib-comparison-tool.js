@@ -434,7 +434,7 @@ var GIBComparisonTool = (function () {
    */
   var getTuitionFees = function () {
     if (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607 || formData.gi_bill_chap == 1606 || formData.gi_bill_chap == 35) {
-      calculated.est_tuition_fees = '$0';
+      calculated.est_tuition_fees = '$0 / year ';
     } else if (calculated.institution_type == 'ojt') {
       calculated.est_tuition_fees = '';
     } else if (formData.gi_bill_chap == 31) {
