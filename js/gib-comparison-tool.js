@@ -463,7 +463,7 @@ var GIBComparisonTool = (function () {
    */
 
   var getOnlyTuitionFees = function ( ) {
-    if (formData.military_status == 'active duty' && (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607) {
+    if (formData.military_status == 'active duty' && (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607)) {
         calculated.only_tuition_fees = true;
     } else if ((calculated.institution_type == 'correspond' || calculated.institution_type == 'flight') && calculated.old_gi_bill = true) {
         calculated.only_tuition_fees = true;    
