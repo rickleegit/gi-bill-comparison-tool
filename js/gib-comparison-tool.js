@@ -1851,6 +1851,7 @@ var GIBComparisonTool = (function () {
     
     $('#online-classes').show();
     $('#voc-rehab').hide();
+    $('#only-tuition-fees').hide();
     $('#veteran-indicators').show();
     $('#vet-success-row').hide();
     $('#eight-keys-row').hide();
@@ -1909,6 +1910,10 @@ var GIBComparisonTool = (function () {
     
     if (formData.cumulative_service == 'service discharge') {
       $('#voc-rehab').show();
+    }
+    
+    if (calculated.only_tuition_fees == true) {
+      $('#only-tuition-fees').show();
     }
     
     if (calculated.institution_type == 'ojt') {
@@ -2146,6 +2151,7 @@ var GIBComparisonTool = (function () {
     $('#spouse-active-duty-form').hide();
     $('#institution-select').hide();
     $('#veteran-indicators').hide();
+    $('#only-tuition-fees').hide();
     $('#voc-rehab').hide();
     $('#school-indicators').hide();
     
