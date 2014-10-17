@@ -852,6 +852,52 @@ layout: va
 
 <script>
 $().ready(function() {
+  function handle_json(url, callback) {
+    // TODO: handle errors?
+    $.getJSON(url, function(data) { callback(null, data); });
+  }
+
+  function advanced_search() {
+    var type = $("#adv_type").val(),
+        state = $("#adv_state").val(),
+        results = [],
+        q = queue();
+
+    /* TODO: normalize type and state. lowercase, [a-zA-Z] */
+    /* TODO: can these be gzipped? */
+    if (type != "") {
+      var url = 'api/filters/type/' + type + '.json';
+      q.defer(handle_json, url);
+    }
+    if (state != "") {
+      var url = 'api/filters/state/' + state + '.json';
+      q.defer(handle_json, url);
+    }
+
+    q.awaitAll(function(err, type, state) { intersect(type, state); })
+  }
+
+  /* Return the intersection of all its arguments */
+  function intersect(arrays) {
+    if (arrays.length == 0) { return; }
+
+    /* TODO replace arrays with dictionaries. This is mega n**2 */
+    results = arrays[0];
+    for (var i=1; i<arrays.length; i++) {
+      temp_results = [];
+      for (var j=0; j<results.length; j++) {
+        if (arrays[i].indexOf(results[j]) >= 0) {
+          temp_results.push(results[j]);
+        }
+      }
+
+      results = temp_results;
+    }
+
+    console.log("results: ", results);
+    return results;
+  }
+
   $("a[href=#advancedsearch]").click(function(e) {
     e.preventDefault();
 
@@ -878,13 +924,88 @@ $().ready(function() {
   $('#mask').click(function () {
     $('#mask, .modal').hide();
   });
+
+  $('#advsearch').click(advanced_search);
 });
 </script>
 
 <div id="searchmodal">
   <div id="advancedsearch" class="modal">
-    Stuff goes here
-    <a href="#" class="close">Close it</a>
+    <div><h1>Advanced Search</h1></div>
+    <div>
+      School Type: <select id="adv_type">
+        <option value="">Institution Type</option>
+        <option value="Correspondence">Correspondence</option>
+        <option value="Private">Private</option>
+        <option value="Public">Public</option>
+      </select>
+    </div>
+
+    <div>
+      State: <select id="adv_state">
+<option value="">State</option>
+<option value="AL">AL</option>
+<option value="AK">AK</option>
+<option value="AZ">AZ</option>
+<option value="AR">AR</option>
+<option value="CA">CA</option>
+<option value="CO">CO</option>
+<option value="CT">CT</option>
+<option value="DC">DC</option>
+<option value="DE">DE</option>
+<option value="FL">FL</option>
+<option value="GA">GA</option>
+<option value="HI">HI</option>
+<option value="ID">ID</option>
+<option value="IL">IL</option>
+<option value="IN">IN</option>
+<option value="IA">IA</option>
+<option value="KS">KS</option>
+<option value="KY">KY</option>
+<option value="LA">LA</option>
+<option value="ME">ME</option>
+<option value="MD">MD</option>
+<option value="MA">MA</option>
+<option value="MI">MI</option>
+<option value="MN">MN</option>
+<option value="MS">MS</option>
+<option value="MO">MO</option>
+<option value="MT">MT</option>
+<option value="NE">NE</option>
+<option value="NV">NV</option>
+<option value="NH">NH</option>
+<option value="NJ">NJ</option>
+<option value="NM">NM</option>
+<option value="NY">NY</option>
+<option value="NC">NC</option>
+<option value="ND">ND</option>
+<option value="OH">OH</option>
+<option value="OK">OK</option>
+<option value="OR">OR</option>
+<option value="PA">PA</option>
+<option value="RI">RI</option>
+<option value="SC">SC</option>
+<option value="SD">SD</option>
+<option value="TN">TN</option>
+<option value="TX">TX</option>
+<option value="UT">UT</option>
+<option value="VT">VT</option>
+<option value="VA">VA</option>
+<option value="WA">WA</option>
+<option value="WV">WV</option>
+<option value="WI">WI</option>
+<option value="WY">WY</option>
+      </select>
+    </div>
+
+    <a href="#" id="advsearch">Search</a>
+
+    <div id="advresults">
+    </div>
+
+    <div>
+      <a href="#" class="close">Close it</a>
+    </div>
   </div>
 
   <div id="mask"></div>
