@@ -55,7 +55,10 @@ var GIBComparisonTool = (function () {
     institution_type:         '',
     institution_type_display: '',
     location:                 '',
+    old_gi_bill:              false,
+    vre_only:                 false,
     est_tuition_fees:         0,
+    monthlyrate:              0,
     est_housing_allowance:    0,
     est_book_stipend:         0,
     tuition_out_of_state:     0,
@@ -427,28 +430,31 @@ var GIBComparisonTool = (function () {
       calculated.tier = parseFloat(formData.cumulative_service);
     }
   };
+
+  /*
+   * Calculate if using new or old GI Bill benefits
+   */
+
+  var getOldGIBill = function ( ) {
+    if (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607 || formData.gi_bill_chap == 1606 || formData.gi_bill_chap == 35) {
+        calculated.old_gi_bill = true;
+    } else {
+        calculated.old_gi_bill = false;
+    }
+  };  
   
   
   /*
-   * Calculates the estimated tuition and fees
+   * Calculate if eligible for VR&E and Post-9/11 Benefits
    */
-  var getTuitionFees = function () {
-    if (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607 || formData.gi_bill_chap == 1606 || formData.gi_bill_chap == 35) {
-      calculated.est_tuition_fees = '$0 / year ';
-    } else if (calculated.institution_type == 'ojt') {
-      calculated.est_tuition_fees = '';
-    } else if (formData.gi_bill_chap == 31) {
-      calculated.est_tuition_fees = 'Full Cost of Attendance';
-    } else if (calculated.institution_type == 'flight') {
-      calculated.est_tuition_fees = formatCurrency(FLTTFCAP * calculated.tier) + ' / year (up to)';
-    } else if (calculated.institution_type == 'correspond') {
-      calculated.est_tuition_fees = formatCurrency(CORRESPONDTFCAP * calculated.tier) + ' / year (up to)';
-    } else if (calculated.institution_type == 'public' && institution.country == 'USA') {
-      calculated.est_tuition_fees = Math.round(calculated.tier * 100) + '% of instate tuition';
+
+  var getVREOnly = function ( ) {
+    if (formData.gi_bill_chap == 31 && formData.post_911_elig == false) {
+        calculated.vre_only = true;
     } else {
-      calculated.est_tuition_fees = formatCurrency(TFCAP * calculated.tier) + ' / year (up to)';
+        calculated.vre_only = false;
     }
-  };
+  };  
   
   /*
    * Calculate the monthly benefit rate for non-chapter 33 benefits
@@ -476,14 +482,34 @@ var GIBComparisonTool = (function () {
     }
   };
   	
+  
+  /*
+   * Calculates the estimated tuition and fees
+   */
+  var getTuitionFees = function () {
+    if (calculated.old_gi_bill = true) {
+      calculated.est_tuition_fees = '$0 / year ';
+    } else if (calculated.institution_type == 'ojt') {
+      calculated.est_tuition_fees = '';
+    } else if (formData.gi_bill_chap == 31) {
+      calculated.est_tuition_fees = 'Full Cost of Attendance';
+    } else if (calculated.institution_type == 'flight') {
+      calculated.est_tuition_fees = formatCurrency(FLTTFCAP * calculated.tier) + ' / year (up to)';
+    } else if (calculated.institution_type == 'correspond') {
+      calculated.est_tuition_fees = formatCurrency(CORRESPONDTFCAP * calculated.tier) + ' / year (up to)';
+    } else if (calculated.institution_type == 'public' && institution.country == 'USA') {
+      calculated.est_tuition_fees = Math.round(calculated.tier * 100) + '% of instate tuition';
+    } else {
+      calculated.est_tuition_fees = formatCurrency(TFCAP * calculated.tier) + ' / year (up to)';
+    }
+  };
+  
 
   /*
    * Calculate the estimated housing allowance
    */
   var getHousingAllowance = function () {
-    if (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607 || formData.gi_bill_chap == 1606 || formData.gi_bill_chap == 35) {
-      calculated.est_housing_allowance = formatCurrency(calculated.monthlyrate) + ' / month (full time)';
-    } else if (formData.gi_bill_chap == 31 && formData.post_911_elig == false) {
+    if (calculated.old_gi_bill = true || calculated.vre_only = true) {
       calculated.est_housing_allowance = formatCurrency(calculated.monthlyrate) + ' / month (full time)';
     } else if (formData.military_status == 'active duty') {
       calculated.est_housing_allowance = '$0 / month';
@@ -1641,6 +1667,8 @@ var GIBComparisonTool = (function () {
     getInstitutionType();
     getInstitutionTypeForDisplay();
     getTier();
+    getOldGIBill();
+    getVREOnly();
     getTuitionFees();
     getMonthlyRate();
     getHousingAllowance();
