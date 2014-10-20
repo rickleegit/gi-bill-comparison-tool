@@ -1720,52 +1720,6 @@ var GIBComparisonTool = (function () {
     return (pt - el.min) * ((ui.max - ui.min) / (el.max - el.min)) + ui.min;
   };
 
-  var handle_json = function(url, callback) {
-    // TODO: handle errors?
-    $.getJSON(url, function(data) { callback(null, data); });
-  }
-
-  var advanced_search = function() {
-    var type = $("#adv_type").val(),
-        state = $("#adv_state").val(),
-        results = [],
-        q = queue();
-
-    /* TODO: normalize type and state. lowercase, [a-zA-Z] */
-    /* TODO: can these be gzipped? */
-    if (type != "") {
-      var url = 'api/filters/type/' + type + '.json';
-      q.defer(handle_json, url);
-    }
-    if (state != "") {
-      var url = 'api/filters/state/' + state + '.json';
-      q.defer(handle_json, url);
-    }
-
-    q.awaitAll(function(err, type, state) { intersect(type, state); })
-  }
-
-  /* Return the intersection of all its arguments */
-  var intersect = function(arrays) {
-    if (arrays.length == 0) { return; }
-
-    /* TODO replace arrays with dictionaries. This is mega n**2 */
-    results = arrays[0];
-    for (var i=1; i<arrays.length; i++) {
-      temp_results = [];
-      for (var j=0; j<results.length; j++) {
-        if (arrays[i].indexOf(results[j]) >= 0) {
-          temp_results.push(results[j]);
-        }
-      }
-
-      results = temp_results;
-    }
-
-    console.log("results: ", results);
-    return results;
-  }
-
   /*
    * Update benefit information
    */
@@ -2303,7 +2257,6 @@ var GIBComparisonTool = (function () {
     }
   };
 
-
   // Initialize page
 
   $(document).ready(function () {
@@ -2364,36 +2317,6 @@ var GIBComparisonTool = (function () {
     $('#tuition-fees-section').hide();
     $('#enrollment-section').hide();
     $('#calculator').hide();
-
-
-    $("a[href=#advancedsearch]").click(function(e) {
-      e.preventDefault();
-
-      var wh = $(window).height(),
-          dh = $(document).height(),
-          ww = $(window).width(),
-          modal = $($(this).attr("href"));
-
-      /* set mask on and show it */
-      $('#mask').css({'width': ww, 'height': dh});
-      $('#mask').show();
-
-      /* center and show modal */
-      modal.css('top', wh/2-modal.height()/2);
-      modal.css('left', ww/2-modal.width()/2);
-      modal.show();
-    });
-
-    $(".modal .close").click(function(e) {
-      e.preventDefault();
-      $('#mask, .modal').hide();
-    });
-
-    $('#mask').click(function () {
-      $('#mask, .modal').hide();
-    });
-
-    $('#advsearch').click(advanced_search);
 
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
