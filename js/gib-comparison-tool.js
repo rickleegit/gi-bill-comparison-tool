@@ -1008,7 +1008,10 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #1
    */
   var getHousingAllowTerm1 = function () {
-    if (formData.military_status == 'active duty') {
+    if (calculated.old_gi_bill == true || calculated.vre_only == true) {
+      calculated.housing_allow_term_1 = calculated.rop_old* ((calculated.monthlyrate + calculated.buy_up_rate)  + calculated.kicker_benefit);
+
+    } else if (formData.military_status == 'active duty') {
       calculated.housing_allow_term_1 = (0 + calculated.kicker_benefit);
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
       calculated.housing_allow_term_1 = (0 + calculated.kicker_benefit);
@@ -1030,7 +1033,11 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #2
    */
   var getHousingAllowTerm2 = function () {
-    if (formData.military_status == 'active duty') {
+    if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
+      calculated.housing_allow_term_2 = 0;
+    } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
+      calculated.housing_allow_term_2 = calculated.rop_old* ((calculated.monthlyrate + calculated.buy_up_rate)  + calculated.kicker_benefit);
+    } else if (formData.military_status == 'active duty') {
       calculated.housing_allow_term_2 = (0 + calculated.kicker_benefit);
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
       calculated.housing_allow_term_2 = (0 + calculated.kicker_benefit);
@@ -1054,7 +1061,13 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #3
    */
   var getHousingAllowTerm3 = function () {
-    if (formData.military_status == 'active duty') {
+    if (formData.calendar == 'semesters') {
+      calculated.housing_allow_term_3 = 0;
+    } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
+      calculated.housing_allow_term_3 = 0;
+    } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
+      calculated.housing_allow_term_2 = calculated.rop_old* ((calculated.monthlyrate + calculated.buy_up_rate)  + calculated.kicker_benefit);
+    } else if (formData.military_status == 'active duty') {
       calculated.housing_allow_term_3 = (0 + calculated.kicker_benefit);
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
       calculated.housing_allow_term_3 = (0 + calculated.kicker_benefit);
