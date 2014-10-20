@@ -113,6 +113,7 @@ var GIBComparisonTool = (function () {
     total_to_you:             0,
     total_left_to_pay:        0,
     total_year:               0,
+    gi_bill_total_text:       '',
     yellow_ribbon_elig:       false
   };
   
@@ -1217,7 +1218,27 @@ var GIBComparisonTool = (function () {
                                 calculated.book_stipend_term_3;
     }
   };
-  
+
+  /*
+   * Calculate Text for Total Benefits Row
+   */
+  var getTotalText = function () { 
+    if (formData.gi_bill_chap == 33) {
+      calculated.gi_bill_total_text = 'Total Post-9/11 GI Bill Benefits';
+    } else if (formData.gi_bill_chap == 30) {
+      calculated.gi_bill_total_text = 'Total Montgomery GI Bill Benefits';
+    } else if (formData.gi_bill_chap == 1606) {
+      calculated.gi_bill_total_text = 'Total Select Reserve GI Bill Benefits';
+    } else if (formData.gi_bill_chap == 1607) {
+      calculated.gi_bill_total_text = 'Total REAP GI Bill Benefits';
+    } else if (formData.gi_bill_chap == 35) {
+      calculated.gi_bill_total_text = 'Total DEA GI Bill Benefits';
+    } else if (formData.gi_bill_chap == 31) {
+      calculated.gi_bill_total_text = 'Total Voc Rehab Benefits';
+    }
+};
+
+
   
   /*
    * Calculate Total Benefits for Year
@@ -1809,6 +1830,7 @@ var GIBComparisonTool = (function () {
     getTotalScholarships();
     getTotalPaidToYou();
     getTotalYear();
+    getTotalText();
 
     
     // Log values for testing
@@ -1908,6 +1930,7 @@ var GIBComparisonTool = (function () {
     $('#total-term-3').html(formatCurrency(calculated.total_term_3));
     
     $('#total-paid-to-you').html(formatCurrency(calculated.total_to_you));
+    $('#total-year-td').html(calculated.gi_bill_total_text);
     $('#total-year').html(formatCurrency(calculated.total_year));
     
     if (institution.student_veteran) {
