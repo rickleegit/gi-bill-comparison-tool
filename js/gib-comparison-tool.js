@@ -2183,7 +2183,7 @@ var GIBComparisonTool = (function () {
       '#yellow-ribbon-recipient-yes, #yellow-ribbon-recipient-no,  ' +
       '#yellow-ribbon-amount, ' +
       '#enrolled, ' +
-      '#enrolled-old-gi-bill, ' +
+      '#enrolled-old, ' +
       '#working, ' +
       '#calendar, ' +
       '#number-non-traditional-terms, ' +
