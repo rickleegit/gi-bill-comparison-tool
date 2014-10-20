@@ -1117,7 +1117,7 @@ var GIBComparisonTool = (function () {
       calculated.book_stipend_term_2 = 0;
     } else if (formData.gi_bill_chap == 31) {
       calculated.book_stipend_term_2 = BSCAP;
-    } elseif (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
+    } else if (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
       calculated.book_stipend_term_2 = BSOJTMONTH;
     } else {
       calculated.book_stipend_term_2 = calculated.rop_book * BSCAP / calculated.number_of_terms * calculated.tier;
