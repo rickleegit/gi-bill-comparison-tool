@@ -2026,14 +2026,17 @@ var GIBComparisonTool = (function () {
       $('#kicker-form').show();
     }
 
-    if (formData.gi_bill_chap == 30) {
-      $('#buy-up-form').show();
-    }
 
     if (formData.buy_up_elig) {
       $('#buy-up-rate-form').show();
     }
 
+    if (formData.gi_bill_chap == 30) {
+      $('#buy-up-form').show();
+    } else {
+      $('#buy-up-form').hide();
+      $('#buy-up-rate-form').hide();      
+    }
     
     if (formData.military_status == 'active duty' ||
         formData.military_status == 'national guard / reserves') {
