@@ -19,31 +19,33 @@ var GIBComparisonTool = (function () {
   
   // User form data
   var formData = {
-    military_status:       '',
-    spouse_active_duty:    false,
-    gi_bill_chap:          '',
-    number_of_depend:      '',  
-    post_911_elig:         '',
-    cumulative_service:    '',
-    enlistment_service:    '',
-    consecutive_service:   '',
-    facility_code:         '',
-    online:                false,
-    in_state:              true,
-    tuition_fees:          '',
-    in_state_tuition_fees: '',
-    yellow_ribbon:         false,
-    yellow_ben:            '',
-    rop:                   '',
-    rop_old:               '',
-    ojt_working:           '',
-    calendar:              '',
-    number_nontrad_terms:  '',
-    length_nontrad_terms:  '',
-    kicker_elig:           false,
-    kicker:                0,
-    scholar:               '',
-    tuition_assist:        ''
+    military_status:        '',
+    spouse_active_duty:     false,
+    gi_bill_chap:           '',
+    number_of_depend:       '',  
+    post_911_elig:          '',
+    cumulative_service:     '',
+    enlistment_service:     '',
+    consecutive_service:    '',
+    facility_code:          '',
+    online:                 false,
+    in_state:               true,
+    tuition_fees:           '',
+    in_state_tuition_fees:  '',
+    yellow_ribbon:          false,
+    yellow_ben:             '',
+    rop:                    '',
+    rop_old:                '',
+    ojt_working:            '',
+    calendar:               '',
+    number_nontrad_terms:   '',
+    length_nontrad_terms:   '',
+    kicker_elig:            false,
+    kicker:                 0,
+    buy_up_elig:            false,
+    buy_up:                 0,
+    scholar:                '',
+    tuition_assist:         ''
   };
   
   // The current institution
@@ -70,9 +72,11 @@ var GIBComparisonTool = (function () {
     tuition_net_price:        0,
     tuition_fees_cap:         0,
     tuition_fees_per_term:    0,
+    rop_old:                  0,
     rop_book:                 0,
     rop_ojt:                  0,
-    kicker_benefit:            0,
+    kicker_benefit:           0,
+    buy_up_rate:              0, 
     term1:                    '',
     term2:                    '',
     term3:                    '',
@@ -256,12 +260,15 @@ var GIBComparisonTool = (function () {
     formData.yellow_ribbon         = $('#yellow-ribbon-recipient-yes').prop('checked');
     formData.yellow_ben            = getCurrency('#yellow-ribbon-amount');
     formData.rop                   = $('#enrolled').val();
+    formData.rop_old               = $('#enrolled-old').val();
     formData.ojt_working           = $('#working').val();
     formData.calendar              = $('#calendar').val();
     formData.number_nontrad_terms  = Number($('#number-non-traditional-terms').val());
     formData.length_nontrad_terms  = $('#length-non-traditional-terms').val();
     formData.kicker_elig           = $('#kicker-elig-yes').prop('checked');
     formData.kicker                = getCurrency('#kicker');
+    formDate.buy_up_elig           = $('#buy-up-yes').prop('checked');
+    formData.buy_up                = getCurrency('buy-up-rate');
     formData.scholar               = getCurrency('#scholar');
     formData.tuition_assist        = getCurrency('#tuition-assist');
   };
@@ -659,6 +666,24 @@ var GIBComparisonTool = (function () {
 
   
  /*
+   * Calculate the rate of pursuit for Old GI Bill
+   */
+  var getRopOld = function () {
+    if (formData.rop_old == "full") {
+      calculated.rop_old = 1;
+    } else if (formData.rop_old == "three quarter") {
+      calculated.rop_old = 0.75;
+    } else if (formData.rop_old == "half") {
+      calculated.rop_rop_old = 0.50;
+    } else if (formData.rop_old == "less than half") {
+      calculated.rop_rop_old = 0.50;
+    } else if (formData.rop_old == "quarter") {
+      calculated.rop_old = 0.25;
+    }
+  };
+
+
+ /*
    * Calculate the rate of pursuit for Book Stipend
    */
   var getRopBook = function () {
@@ -707,6 +732,22 @@ var GIBComparisonTool = (function () {
     }
   };
   
+
+  /*
+   * Determine kicker benefit level
+   */
+  var getBuyUpRate = function () {
+    if (!formData.buy_up_elig) {
+      calculated.buy_up_rate = 0;
+    } else if (formData.gi_bill_chap !== 30) {
+      calculated.buy_up_rate = 0;
+    } else {
+      calculated.buy_up_rate = (formData.buy_up/4);
+    }
+  };
+
+
+
   
   /*
    * Calculate the name of Term #1
@@ -1647,6 +1688,8 @@ var GIBComparisonTool = (function () {
         $('#tuition-assist').val('$0');
         $('#kicker-elig-no').prop('checked', true);
         $('#kicker').val('$200');
+        $('#buy-up-no').prop('checked', true);
+
         getFormData();
         
         // Reset element visibility
@@ -1702,9 +1745,11 @@ var GIBComparisonTool = (function () {
     getTuitionFeesPerTerm();
     getTermLength();
     getAcadYearLength();
+    getRopOld();
     getRopBook();
     getRopOjt();
     getKickerBenefit();
+    getBuyUpRate();
     getYellowRibbonEligibility();
     getTerm1();
     getTerm2();
@@ -1870,12 +1915,16 @@ var GIBComparisonTool = (function () {
     // Enrollment Inputs
     $('#enrollment-section').show();
     $('#enrolled-form').show();
+    $('#enrolled-form-old-gi-bill').hide();
     $('#working-form').hide();
     $('#calendar-form').show();
     $('#number-non-traditional-terms-form').hide();
     $('#length-non-traditional-terms-form').hide();
     $('#kicker-elig-form').show();
     $('#kicker-form').hide();
+    $('#buy-up-form').show();
+    $('#buy-up-rate-form').hide();
+    
     
     // Calculator Results
     $('#paid-school-calculator').show();
@@ -1922,6 +1971,7 @@ var GIBComparisonTool = (function () {
       $('#school-indicators').hide();
       $('#tuition-fees-section').hide();
       $('#enrolled-form').hide();
+      $('#enrolled-form-old-gi-bill').hide();
       $('#working-form').show();
       $('#calendar-form').hide();
       $('#scholar-form').hide();
@@ -1942,7 +1992,9 @@ var GIBComparisonTool = (function () {
         calculated.institution_type == 'correspond') {
       $('#online-classes').hide();
       $('#enrolled-form').hide();
+      $('#enrolled-form-old-gi-bill').hide();
       $('#kicker-elig-form').hide();
+      $('#buy-up-form').hide();
     }
     
     if (calculated.institution_type == 'public') {
@@ -1965,9 +2017,20 @@ var GIBComparisonTool = (function () {
       $('#length-non-traditional-terms-form').show();
     }
     
+    if (calculated.old_gi_bill == true) {
+      $('#enrolled-form').hide();
+      $('#enrolled-form-old-gi-bill').show();
+    }
+    
+    
     if (formData.kicker_elig) {
       $('#kicker-form').show();
     }
+
+    if (formData.buy_up_elig) {
+      $('#buy-up-rate-form').show();
+    }
+
     
     if (formData.military_status == 'active duty' ||
         formData.military_status == 'national guard / reserves') {
@@ -2121,12 +2184,15 @@ var GIBComparisonTool = (function () {
       '#yellow-ribbon-recipient-yes, #yellow-ribbon-recipient-no,  ' +
       '#yellow-ribbon-amount, ' +
       '#enrolled, ' +
+      '#enrolled-old-gi-bill, ' +
       '#working, ' +
       '#calendar, ' +
       '#number-non-traditional-terms, ' +
       '#length-non-traditional-terms, ' +
       '#kicker-elig-yes, #kicker-elig-no, ' +
       '#kicker, ' +
+      '#buy-up-yes, #buy-up-no,  ' +
+      '#buy-up-rate, ' +
       '#scholar, ' +
       '#tuition-assist').on('change', function () {
       GIBComparisonTool.update();
