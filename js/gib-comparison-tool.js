@@ -1921,7 +1921,7 @@ var GIBComparisonTool = (function () {
     $('#length-non-traditional-terms-form').hide();
     $('#kicker-elig-form').show();
     $('#kicker-form').hide();
-    $('#buy-up-form').show();
+    $('#buy-up-form').hide();
     $('#buy-up-rate-form').hide();
     
     
@@ -2024,6 +2024,10 @@ var GIBComparisonTool = (function () {
     
     if (formData.kicker_elig) {
       $('#kicker-form').show();
+    }
+
+    if (formData.gi_bill_chap == 30) {
+      $('#buy-up-form').show();
     }
 
     if (formData.buy_up_elig) {
