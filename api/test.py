@@ -18,6 +18,9 @@ def index(args, dirname, fnames):
             except:
                 print f
 
+def norm(string):
+    return re.sub("\W", "", string).lower()
+
 attrindexes = {}
 os.path.walk('.', index, (attrindexes, ("type", "state", "country")))
 
@@ -26,4 +29,6 @@ for attr in attrindexes:
     if not os.path.isdir(dirname):
         os.mkdir(dirname)
     for typ, codes in attrindexes[attr].iteritems():
-        json.dump(codes, file("filters/{}/{}.json".format(attr, typ), 'w'))
+        if typ is None:
+            typ = "null"
+        json.dump(codes, file("filters/{}/{}.json".format(attr, norm(typ)), 'w'))
