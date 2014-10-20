@@ -218,13 +218,12 @@ var GIBComparisonTool = (function () {
     }
     
 
-
-
     if (formData.gi_bill_chap == 30 ) {
       $('#enlistment-service-form').show();
     } else {
       $('#enlistment-service-form').hide();
     }
+
 
     if (formData.gi_bill_chap == 1607 ) {
       $('#consecutive-service-form').show();
@@ -268,7 +267,7 @@ var GIBComparisonTool = (function () {
     formData.kicker_elig           = $('#kicker-elig-yes').prop('checked');
     formData.kicker                = getCurrency('#kicker');
     formData.buy_up_elig           = $('#buy-up-yes').prop('checked');
-    formData.buy_up                = $('buy-up-rate');
+    formData.buy_up                = Number($('buy-up-rate').val());
     formData.scholar               = getCurrency('#scholar');
     formData.tuition_assist        = getCurrency('#tuition-assist');
   };
