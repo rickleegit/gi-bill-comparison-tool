@@ -674,9 +674,9 @@ var GIBComparisonTool = (function () {
     } else if (formData.rop_old == "three quarter") {
       calculated.rop_old = 0.75;
     } else if (formData.rop_old == "half") {
-      calculated.rop_rop_old = 0.50;
+      calculated.rop_old = 0.50;
     } else if (formData.rop_old == "less than half") {
-      calculated.rop_rop_old = 0.50;
+      calculated.rop_old = 0.50;
     } else if (formData.rop_old == "quarter") {
       calculated.rop_old = 0.25;
     }
