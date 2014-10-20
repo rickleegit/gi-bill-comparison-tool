@@ -814,6 +814,10 @@ var GIBComparisonTool = (function () {
   var getTuitionFeesTerm1 = function () {
     if (calculated.institution_type == 'ojt') {
       calculated.tuition_fees_term_1 = 0;
+    } else if (calculated.old_gi_bill == true) {
+      calculated.tuition_fees_term_1 = 0;
+    } else if (formData.gi_bill_chap == 31) {
+      calculated.tuition_fees_term_1 = calculated.tuition_fees_per_term;
     } else {
       calculated.tuition_fees_term_1 = 
       Math.max(0, Math.min(
@@ -834,6 +838,10 @@ var GIBComparisonTool = (function () {
       calculated.tuition_fees_term_2 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
       calculated.tuition_fees_term_2 = 0;
+    } else if (calculated.old_gi_bill == true) {
+      calculated.tuition_fees_term_2 = 0;
+    } else if (formData.gi_bill_chap == 31) {
+      calculated.tuition_fees_term_2 = calculated.tuition_fees_per_term;
     } else {
       calculated.tuition_fees_term_2 = 
       Math.max(0, Math.min(
@@ -853,6 +861,10 @@ var GIBComparisonTool = (function () {
       calculated.tuition_fees_term_3 = 0;
     } else if (formData.calendar == 'semesters' || (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3)) {
       calculated.tuition_fees_term_3 = 0;
+    } else if (calculated.old_gi_bill == true) {
+      calculated.tuition_fees_term_3 = 0;
+    } else if (formData.gi_bill_chap == 31) {
+      calculated.tuition_fees_term_3 = calculated.tuition_fees_per_term;
     } else {
       calculated.tuition_fees_term_3 = 
       Math.max(0, Math.min(
@@ -880,6 +892,8 @@ var GIBComparisonTool = (function () {
   var getYrBenTerm1 = function () {
     if (!calculated.yellow_ribbon_elig || formData.yellow_ben == 0) {
       calculated.yr_ben_term_1 = 0;
+    } else if (calculated.old_gi_bill == true || formData.gi_bill_chap == 31) {
+      calculated.yr_ben_term_1 = 0;
     } else if (calculated.tuition_fees_per_term == calculated.tuition_fees_term_1) {
       calculated.yr_ben_term_1 = 0;
     } else {
@@ -900,6 +914,8 @@ var GIBComparisonTool = (function () {
       calculated.yr_ben_term_2 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
       calculated.yr_ben_term_2 = 0;
+    } else if (calculated.old_gi_bill == true || formData.gi_bill_chap == 31) {
+      calculated.yr_ben_term_2 = 0;
     } else if (calculated.tuition_fees_per_term == calculated.tuition_fees_term_2) {
       calculated.yr_ben_term_2 = 0;
     } else {
@@ -919,6 +935,8 @@ var GIBComparisonTool = (function () {
     if (!calculated.yellow_ribbon_elig || formData.yellow_ben == 0) {
       calculated.yr_ben_term_3 = 0;
     } else if (formData.calendar == 'semesters' || (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3)) {
+      calculated.yr_ben_term_3 = 0;
+    } else if (calculated.old_gi_bill == true || formData.gi_bill_chap == 31) {
       calculated.yr_ben_term_3 = 0;
     } else if (calculated.tuition_fees_per_term == calculated.tuition_fees_term_3) {
       calculated.yr_ben_term_3 = 0;
@@ -1075,7 +1093,11 @@ var GIBComparisonTool = (function () {
   var getBookStipendTerm1 = function () {
     if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
       calculated.book_stipend_term_1 = 0;
-    } else if (calculated.institution_type == 'ojt') {
+    } else if (calculated.old_gi_bill == true) {
+      calculated.book_stipend_term_1 = 0;
+    } else if (formData.gi_bill_chap == 31) {
+      calculated.book_stipend_term_1 = BSCAP;
+    } else if (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
       calculated.book_stipend_term_1 = BSOJTMONTH;
     } else {
       calculated.book_stipend_term_1 = calculated.rop_book * BSCAP / calculated.number_of_terms * calculated.tier;
@@ -1087,12 +1109,16 @@ var GIBComparisonTool = (function () {
    * Calculate Book Stipend for Term #2
    */
   var getBookStipendTerm2 = function () {
-    if (calculated.institution_type == 'ojt') {
-      calculated.book_stipend_term_2 = BSOJTMONTH;
-    } else if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
+    if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
       calculated.book_stipend_term_2 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
       calculated.book_stipend_term_2 = 0;
+    } else if (calculated.old_gi_bill == true) {
+      calculated.book_stipend_term_2 = 0;
+    } else if (formData.gi_bill_chap == 31) {
+      calculated.book_stipend_term_2 = BSCAP;
+    } elseif (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
+      calculated.book_stipend_term_2 = BSOJTMONTH;
     } else {
       calculated.book_stipend_term_2 = calculated.rop_book * BSCAP / calculated.number_of_terms * calculated.tier;
     }
@@ -1103,14 +1129,18 @@ var GIBComparisonTool = (function () {
    * Calculate Book Stipend for Term #3
    */
   var getBookStipendTerm3 = function () {
-    if  (calculated.institution_type == 'ojt') {
-      calculated.book_stipend_term_3 = BSOJTMONTH;
+    if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
+      calculated.book_stipend_term_2 = 0;
     } else if (formData.calendar == 'semesters') {
       calculated.book_stipend_term_3 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
       calculated.book_stipend_term_3 = 0;
-    } else if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
-      calculated.book_stipend_term_3 = 0;
+    } else if (calculated.old_gi_bill == true) {
+      calculated.book_stipend_term_2 = 0;
+    } else if (formData.gi_bill_chap == 31) {
+      calculated.book_stipend_term_2 = BSCAP;
+    } else if  (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
+      calculated.book_stipend_term_3 = BSOJTMONTH;
     } else {
       calculated.book_stipend_term_3 = calculated.rop_book * BSCAP / calculated.number_of_terms * calculated.tier;
     }
@@ -1121,7 +1151,7 @@ var GIBComparisonTool = (function () {
    * Calculate Book Stipend for Year
    */
   var getBookStipendYear = function () {
-    if (calculated.institution_type == 'ojt') {
+    if (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
       calculated.book_stipend_total = BSOJTMONTH;
     } else {
       calculated.book_stipend_total = calculated.book_stipend_term_1 + 
