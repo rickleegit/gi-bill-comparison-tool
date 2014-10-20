@@ -42,9 +42,10 @@ function intersect(institutions, dicts) {
     results = temp_results;
   }
 
-  /* TODO: move this out of the intersection func */
+  /* TODO: move this out of the intersection func (?) */
+  /* TODO: where to display these? */
   for (key in results) {
-    console.log(institutions[key].label);
+    console.log(key, institutions[key].label);
   }
 
   return results;
