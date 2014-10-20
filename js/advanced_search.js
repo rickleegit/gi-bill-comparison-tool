@@ -3,20 +3,23 @@ function handle_json(url, callback) {
   $.getJSON(url, function(data) { callback(null, data); });
 }
 
+function normalize(str) {
+  return str.replace(/\W/g, "").toLowerCase();
+}
+
 function advanced_search(institutions) {
   var type = $("#adv_type").val(),
       state = $("#adv_state").val(),
       results = [],
       q = queue();
 
-  /* TODO: normalize type and state. lowercase, [a-zA-Z] */
   /* TODO: can these be gzipped? */
   if (type != "") {
-    var url = 'api/filters/type/' + type + '.json';
+    var url = 'api/filters/type/' + normalize(type) + '.json';
     q.defer(handle_json, url);
   }
   if (state != "") {
-    var url = 'api/filters/state/' + state + '.json';
+    var url = 'api/filters/state/' + normalize(state) + '.json';
     q.defer(handle_json, url);
   }
 
