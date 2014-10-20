@@ -268,7 +268,7 @@ var GIBComparisonTool = (function () {
     formData.kicker_elig           = $('#kicker-elig-yes').prop('checked');
     formData.kicker                = getCurrency('#kicker');
     formData.buy_up_elig           = $('#buy-up-yes').prop('checked');
-    formData.buy_up                = getCurrency('buy-up-rate');
+    formData.buy_up                = $('buy-up-rate');
     formData.scholar               = getCurrency('#scholar');
     formData.tuition_assist        = getCurrency('#tuition-assist');
   };
