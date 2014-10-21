@@ -3,6 +3,18 @@ function handle_json(url, callback) {
   $.getJSON(url, function(data) { callback(null, data); });
 }
 
+function search_name(needle, institutions, callback) {
+  var results = {};
+  needle = needle.toUpperCase();
+  for (key in institutions) {
+    if (institutions[key]["label"].indexOf(needle) > -1) {
+      results[key] = null;
+    }
+  }
+
+  callback(null, results);
+}
+
 function normalize(str) {
   return str.replace(/\W/g, "").toLowerCase();
 }
@@ -10,6 +22,8 @@ function normalize(str) {
 function advanced_search(institutions) {
   var type = $("#adv_type").val(),
       state = $("#adv_state").val(),
+      country = $("#adv_country").val(),
+      name = $("#adv_name").val(),
       results = [],
       q = queue();
 
@@ -21,6 +35,13 @@ function advanced_search(institutions) {
   if (state != "") {
     var url = 'api/filters/state/' + normalize(state) + '.json';
     q.defer(handle_json, url);
+  }
+  if (country != "") {
+    var url = 'api/filters/country/' + normalize(country) + '.json';
+    q.defer(handle_json, url);
+  }
+  if (name != "") {
+    q.defer(search_name, name, institutions);
   }
 
   q.awaitAll(function(err, results) { intersect(institutions, results); })
