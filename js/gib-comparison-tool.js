@@ -2082,11 +2082,23 @@ var GIBComparisonTool = (function () {
       $('#length-non-traditional-terms-form').show();
     }
     
-    if (calculated.old_gi_bill == true) {
+    if (calculated.old_gi_bill == true || calculated.vre_only == true) {
       $('#enrolled-form').hide();
       $('#enrolled-form-old-gi-bill').show();
+      $('#scholar-form').hide();
+      $('#yellow-ribbon-amount-form').hide();
+      $('#yellow-ribbon-rates-link').hide();
+      $('#calc-yellow-ribbon-row').hide();
     }
     
+      if (formData.gi_bill_chap == 31 && calculated.vre_only == false) {
+      $('#enrolled-form').show();
+      $('#enrolled-form-old-gi-bill').hide();
+      $('#scholar-form').hide();
+      $('#yellow-ribbon-amount-form').hide();
+      $('#yellow-ribbon-rates-link').hide();
+      $('#calc-yellow-ribbon-row').hide();
+    }
     
     if (formData.kicker_elig) {
       $('#kicker-form').show();
