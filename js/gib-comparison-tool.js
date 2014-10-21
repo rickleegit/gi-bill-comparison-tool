@@ -2085,18 +2085,20 @@ var GIBComparisonTool = (function () {
     if (calculated.old_gi_bill == true || calculated.vre_only == true) {
       $('#enrolled-form').hide();
       $('#enrolled-form-old-gi-bill').show();
-      $('#scholar-form').hide();
+      $('#yellow-ribbon-recipient-form').hide();
       $('#yellow-ribbon-amount-form').hide();
       $('#yellow-ribbon-rates-link').hide();
+      $('#scholar-form').hide();
       $('#calc-yellow-ribbon-row').hide();
     }
     
       if (formData.gi_bill_chap == 31 && calculated.vre_only == false) {
       $('#enrolled-form').show();
       $('#enrolled-form-old-gi-bill').hide();
-      $('#scholar-form').hide();
+      $('#yellow-ribbon-recipient-form').hide();
       $('#yellow-ribbon-amount-form').hide();
       $('#yellow-ribbon-rates-link').hide();
+      $('#scholar-form').hide();
       $('#calc-yellow-ribbon-row').hide();
     }
     
