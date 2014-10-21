@@ -3,6 +3,12 @@ import os
 import os.path
 import re
 
+
+#def walk(fn):
+#    for dir in (d for d in os.listdir('.') if len(d) == 3):
+#        for f in (f for f in os.listdir("./{}".format(dir)) if f.endswith("json")):
+#            fn(json.load(file("./{}/{}".format(dir, f))))
+
 def index(args, dirname, fnames):
     index, attrs = args
     for f in fnames:
