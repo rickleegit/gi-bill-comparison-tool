@@ -1182,14 +1182,14 @@ var GIBComparisonTool = (function () {
   var getBookStipendTerm2 = function () {
     if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
       calculated.book_stipend_term_2 = 0;
+    } else if (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
+      calculated.book_stipend_term_2 = BSOJTMONTH;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
       calculated.book_stipend_term_2 = 0;
     } else if (calculated.old_gi_bill == true) {
       calculated.book_stipend_term_2 = 0;
     } else if (formData.gi_bill_chap == 31) {
       calculated.book_stipend_term_2 = BSCAP;
-    } else if (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
-      calculated.book_stipend_term_2 = BSOJTMONTH;
     } else {
       calculated.book_stipend_term_2 = calculated.rop_book * BSCAP / calculated.number_of_terms * calculated.tier;
     }
@@ -1202,6 +1202,8 @@ var GIBComparisonTool = (function () {
   var getBookStipendTerm3 = function () {
     if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
       calculated.book_stipend_term_2 = 0;
+    } else if  (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
+      calculated.book_stipend_term_3 = BSOJTMONTH;
     } else if (formData.calendar == 'semesters') {
       calculated.book_stipend_term_3 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
@@ -1210,8 +1212,6 @@ var GIBComparisonTool = (function () {
       calculated.book_stipend_term_2 = 0;
     } else if (formData.gi_bill_chap == 31) {
       calculated.book_stipend_term_2 = BSCAP;
-    } else if  (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
-      calculated.book_stipend_term_3 = BSOJTMONTH;
     } else {
       calculated.book_stipend_term_3 = calculated.rop_book * BSCAP / calculated.number_of_terms * calculated.tier;
     }
