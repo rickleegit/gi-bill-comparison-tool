@@ -1148,12 +1148,12 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance Total for year
    */
   var getHousingAllowTotal = function () {
-    if (calculated.institution_type == 'ojt') {
-      calculated.housing_allow_total = 0.4 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
-    } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+    if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_total =  (7/15) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
       calculated.housing_allow_total = (7/15) * calculated.monthly_rate_final;
+    } else if (calculated.institution_type == 'ojt') {
+      calculated.housing_allow_total = 0.4 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
     } else if (calculated.only_tuition_fees) {
       calculated.housing_allow__total = Math.max(0, Math.min(calculated.monthly_rate_final * calculated.acad_year_length, formData.tuition_fees));
     } else {
