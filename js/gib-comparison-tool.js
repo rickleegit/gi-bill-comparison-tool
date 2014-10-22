@@ -1070,7 +1070,7 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
       calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
-    } else if ((calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+    } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_2 =  (6.6/9) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_2 = (6.6/9) * calculated.monthly_rate_final;
@@ -1114,7 +1114,7 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
       calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
-    } else if ((calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+    } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_3 = (7/15) * calculated.monthly_rate_final;
@@ -1150,7 +1150,7 @@ var GIBComparisonTool = (function () {
   var getHousingAllowTotal = function () {
     if (calculated.institution_type == 'ojt') {
       calculated.housing_allow_total = 0.4 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
-    } else if ((calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+    } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_total =  (7/15) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
       calculated.housing_allow_total = (7/15) * calculated.monthly_rate_final;
