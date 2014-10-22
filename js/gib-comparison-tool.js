@@ -2273,7 +2273,7 @@ var GIBComparisonTool = (function () {
     }
 
     if (calculated.number_of_terms == 3 || calculated.institution_type == 'ojt') {
-          $('#total-year-td').prop('colspan', 5);
+          $('#total-year-td').prop('colspan', 4);
     }
     
     // Veteran Indicators  /////////
