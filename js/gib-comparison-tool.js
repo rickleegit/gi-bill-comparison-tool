@@ -1170,7 +1170,7 @@ var GIBComparisonTool = (function () {
     } else if (calculated.institution_type == 'ojt') {
       calculated.housing_allow_total = 0.4 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
     } else if (calculated.only_tuition_fees) {
-      calculated.housing_allow__total = Math.max(0, Math.min(calculated.monthly_rate_final * calculated.acad_year_length, formData.tuition_fees));
+      calculated.housing_allow_total = Math.max(0, Math.min(calculated.monthly_rate_final * calculated.acad_year_length, formData.tuition_fees));
     } else {
       calculated.housing_allow_total = calculated.housing_allow_term_1 * calculated.acad_year_length;
     }
