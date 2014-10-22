@@ -77,6 +77,7 @@ var GIBComparisonTool = (function () {
     rop_ojt:                  0,
     kicker_benefit:           0,
     buy_up_rate:              0, 
+    monthly_rate_final:       0, 
     term1:                    '',
     term2:                    '',
     term3:                    '',
@@ -487,14 +488,24 @@ var GIBComparisonTool = (function () {
    */
 
   var getMonthlyRate = function ( ) {
-    if (formData.gi_bill_chap == 30 && formData.enlistment_service == 3 ) {
+    if (formData.gi_bill_chap == 30 && formData.enlistment_service == 3 && calculated.institution_type == 'ojt' ) {
+        calculated.monthlyrate = MGIB3YRRATE * .75;	
+    } else if (formData.gi_bill_chap == 30 && formData.enlistment_service == 3 ) {
         calculated.monthlyrate = MGIB3YRRATE;
+    } else if (formData.gi_bill_chap == 30 && formData.enlistment_service == 2 && calculated.institution_type == 'ojt') {
+        calculated.monthlyrate = MGIB2YRRATE * .75;
     } else if (formData.gi_bill_chap == 30 && formData.enlistment_service == 2 ) {
         calculated.monthlyrate = MGIB2YRRATE;
+    } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'ojt') {
+        calculated.monthlyrate = MGIB3YRRATE* formData.consecutive_service * .75;
     } else if (formData.gi_bill_chap == 1607 ) {
         calculated.monthlyrate = MGIB3YRRATE* formData.consecutive_service;
+    } else if (formData.gi_bill_chap == 1606 && calculated.institution_type == 'ojt') {
+        calculated.monthlyrate = SRRATE * .75;
     } else if (formData.gi_bill_chap == 1606 ) {
         calculated.monthlyrate = SRRATE;
+    } else if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
+        calculated.monthlyrate = DEARATE * .75;
     } else if (formData.gi_bill_chap == 35) {
         calculated.monthlyrate = DEARATE;
     } else if (formData.gi_bill_chap == 31 && formData.number_of_depend == 0) {
@@ -734,7 +745,7 @@ var GIBComparisonTool = (function () {
   
 
   /*
-   * Determine kicker benefit level
+   * Determine buy up rates
    */
   var getBuyUpRate = function () {
     if (!formData.buy_up_elig) {
@@ -747,6 +758,13 @@ var GIBComparisonTool = (function () {
   };
 
 
+  /*
+   * Calculate Housing Allowance Rate Final
+   */
+
+  var getMonthlyRateFinal = function () {
+    calculated.monthly_rate_final = calculated.rop_old * ((calculated.monthlyrate + calculated.buy_up_rate)  + calculated.kicker_benefit);
+  };
 
   
   /*
@@ -1008,9 +1026,18 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #1
    */
   var getHousingAllowTerm1 = function () {
-    if (calculated.old_gi_bill == true || calculated.vre_only == true) {
-      calculated.housing_allow_term_1 = calculated.rop_old* ((calculated.monthlyrate + calculated.buy_up_rate)  + calculated.kicker_benefit);
-
+   if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
+      calculated.housing_allow_term_1 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .55) ));
+   if (formData.gi_bill_chap == 1606 && calculated.institution_type == 'flight') {
+      calculated.housing_allow_term_1 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * .55 ));
+  } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
+      calculated.housing_allow_term_1 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
+  } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
+      calculated.housing_allow_term_1 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
+  } else if (calculated.only_tuition_fees) {
+      calculated.housing_allow_term_1 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term));
+  } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
+      calculated.housing_allow_term_1 = calculated.monthly_rate_final;
     } else if (formData.military_status == 'active duty') {
       calculated.housing_allow_term_1 = (0 + calculated.kicker_benefit);
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
@@ -1035,8 +1062,22 @@ var GIBComparisonTool = (function () {
   var getHousingAllowTerm2 = function () {
     if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
       calculated.housing_allow_term_2 = 0;
+    } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
+      calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .55) ));
+    } else if (formData.gi_bill_chap == 1606 && calculated.institution_type == 'flight') {
+      calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * .55 ));
+    } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
+      calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
+    } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
+      calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
+    } else if ((calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_2 =  (6.6/9) * calculated.monthly_rate_final;
+    } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_2 = (6.6/9) * calculated.monthly_rate_final;
+    } else if (calculated.only_tuition_fees) {
+      calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term));
     } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
-      calculated.housing_allow_term_2 = calculated.rop_old* ((calculated.monthlyrate + calculated.buy_up_rate)  + calculated.kicker_benefit);
+      calculated.housing_allow_term_2 = calculated.monthly_rate_final;
     } else if (formData.military_status == 'active duty') {
       calculated.housing_allow_term_2 = (0 + calculated.kicker_benefit);
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
@@ -1065,8 +1106,22 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_3 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
       calculated.housing_allow_term_3 = 0;
+    } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
+      calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .55) ));
+    } else if (formData.gi_bill_chap == 1606 && calculated.institution_type == 'flight') {
+      calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * .55 ));
+    } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
+      calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
+    } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
+      calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
+    } else if ((calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final;
+    } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_3 = (7/15) * calculated.monthly_rate_final;
+    } else if (calculated.only_tuition_fees) {
+      calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term));
     } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
-      calculated.housing_allow_term_2 = calculated.rop_old* ((calculated.monthlyrate + calculated.buy_up_rate)  + calculated.kicker_benefit);
+      calculated.housing_allow_term_3 = calculated.monthly_rate_final;
     } else if (formData.military_status == 'active duty') {
       calculated.housing_allow_term_3 = (0 + calculated.kicker_benefit);
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
@@ -1095,6 +1150,12 @@ var GIBComparisonTool = (function () {
   var getHousingAllowTotal = function () {
     if (calculated.institution_type == 'ojt') {
       calculated.housing_allow_total = 0.4 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
+    } else if ((calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_total =  (7/15) * calculated.monthly_rate_final;
+    } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_total = (7/15) * calculated.monthly_rate_final;
+    } else if (calculated.only_tuition_fees) {
+      calculated.housing_allow__total = Math.max(0, Math.min(calculated.monthly_rate_final * calculated.acad_year_length, formData.tuition_fees));
     } else {
       calculated.housing_allow_total = calculated.housing_allow_term_1 * calculated.acad_year_length;
     }
@@ -1813,6 +1874,7 @@ var GIBComparisonTool = (function () {
     getRopOjt();
     getKickerBenefit();
     getBuyUpRate();
+    getMonthlyRateFinal();
     getYellowRibbonEligibility();
     getTerm1();
     getTerm2();
