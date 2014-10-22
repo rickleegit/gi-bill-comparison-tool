@@ -2114,6 +2114,7 @@ var GIBComparisonTool = (function () {
       $('#yellow-ribbon-amount-form').hide();
       $('#yellow-ribbon-rates-link').hide();
       $('#scholar-form').hide();
+      $('#tuition-assist-form').hide();
       $('#calc-yellow-ribbon-row').hide();
     }
     
@@ -2127,6 +2128,7 @@ var GIBComparisonTool = (function () {
       $('#working-form').show();
       $('#calendar-form').hide();
       $('#scholar-form').hide();
+      $('#tuition-assist-form').hide();
       $('#paid-school-calculator').hide();
       $('#calc-tuition-fees-row').hide();
       $('#calc-yellow-ribbon-row').hide();
@@ -2197,8 +2199,9 @@ var GIBComparisonTool = (function () {
       $('#buy-up-rate-form').hide();      
     }
     
-    if (formData.military_status == 'active duty' ||
-        formData.military_status == 'national guard / reserves') {
+    if ((formData.military_status == 'active duty' ||
+        formData.military_status == 'national guard / reserves') &&
+        formData.gi_bill_chap == 33) {
       $('#tuition-assist-form').show();
     }
     
