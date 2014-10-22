@@ -2088,6 +2088,16 @@ var GIBComparisonTool = (function () {
       $('#only-tuition-fees').show();
     }
     
+    if (formData.gi_bill_chap == 31 && calculated.vre_only == false) {
+      $('#enrolled-form').show();
+      $('#enrolled-form-old-gi-bill').hide();
+      $('#yellow-ribbon-recipient-form').hide();
+      $('#yellow-ribbon-amount-form').hide();
+      $('#yellow-ribbon-rates-link').hide();
+      $('#scholar-form').hide();
+      $('#calc-yellow-ribbon-row').hide();
+    }
+    
     if (calculated.institution_type == 'ojt') {
       $('#online-classes').hide();
       $('#veteran-indicators').hide();
@@ -2150,15 +2160,7 @@ var GIBComparisonTool = (function () {
       $('#calc-yellow-ribbon-row').hide();
     }
     
-      if (formData.gi_bill_chap == 31 && calculated.vre_only == false) {
-      $('#enrolled-form').show();
-      $('#enrolled-form-old-gi-bill').hide();
-      $('#yellow-ribbon-recipient-form').hide();
-      $('#yellow-ribbon-amount-form').hide();
-      $('#yellow-ribbon-rates-link').hide();
-      $('#scholar-form').hide();
-      $('#calc-yellow-ribbon-row').hide();
-    }
+
     
     if (formData.kicker_elig) {
       $('#kicker-form').show();
