@@ -1118,7 +1118,7 @@ var GIBComparisonTool = (function () {
    */
   var getHousingAllowTerm3 = function () {
     if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_3 =  0.5 * calculated.monthly_rate_final;
+      calculated.housing_allow_term_3 =  0.494 * calculated.monthly_rate_final;
     } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
