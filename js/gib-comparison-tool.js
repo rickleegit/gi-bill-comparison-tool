@@ -2078,6 +2078,7 @@ var GIBComparisonTool = (function () {
     $('#calc-tuition-fees-charged-row').show();
     $('#calc-out-of-pocket-row').show();
     $('#calc-paid-to-you-total-row').show();
+    $('#calc-tuition-only-row').hide();
     $('#paid-to-you-calculator').show();
     $('#calc-term-total-row').show();
 
@@ -2105,6 +2106,10 @@ var GIBComparisonTool = (function () {
     
     if (calculated.only_tuition_fees == true) {
       $('#only-tuition-fees').show();
+      $('#calc-tuition-only-row').show();
+    } else {
+      $('#only-tuition-fees').hide();
+      $('#calc-tuition-only-row').hide();
     }
     
     if (formData.gi_bill_chap == 31 && calculated.vre_only == false) {
@@ -2140,6 +2145,7 @@ var GIBComparisonTool = (function () {
       $('#calc-paid-to-you-total-row').hide();
       $('#paid-to-you-calculator').hide();
       $('#calc-term-total-row').hide();
+      $('#calc-tuition-only-row').hide();
     }
     
     if (calculated.institution_type == 'flight' ||
