@@ -1060,7 +1060,11 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #2
    */
   var getHousingAllowTerm2 = function () {
-    if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
+    if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_2 =  (6.6/9) * calculated.monthly_rate_final;
+    } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_2 = (6.6/9) * calculated.monthly_rate_final;
+    } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
       calculated.housing_allow_term_2 = 0;
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
       calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .55) ));
@@ -1070,10 +1074,6 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
       calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
-    } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_2 =  (6.6/9) * calculated.monthly_rate_final;
-    } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_2 = (6.6/9) * calculated.monthly_rate_final;
     } else if (calculated.only_tuition_fees) {
       calculated.housing_allow_term_2 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term));
     } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
@@ -1102,7 +1102,11 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #3
    */
   var getHousingAllowTerm3 = function () {
-    if (formData.calendar == 'semesters') {
+    if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final;
+    } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_3 = (7/15) * calculated.monthly_rate_final;
+    } else if (formData.calendar == 'semesters') {
       calculated.housing_allow_term_3 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
       calculated.housing_allow_term_3 = 0;
@@ -1114,10 +1118,6 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'correspond') {
       calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .6)));
-    } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final;
-    } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_3 = (7/15) * calculated.monthly_rate_final;
     } else if (calculated.only_tuition_fees) {
       calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term));
     } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
