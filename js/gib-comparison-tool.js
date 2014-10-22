@@ -1106,10 +1106,6 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_3 = (7/15) * calculated.monthly_rate_final;
-    } else if (formData.calendar == 'semesters') {
-      calculated.housing_allow_term_3 = 0;
-    } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
-      calculated.housing_allow_term_3 = 0;
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
       calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term * (formData.consecutive_service * .55) ));
     } else if (formData.gi_bill_chap == 1606 && calculated.institution_type == 'flight') {
@@ -1122,14 +1118,14 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final, calculated.tuition_fees_per_term));
     } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
       calculated.housing_allow_term_3 = calculated.monthly_rate_final;
-    } else if (formData.military_status == 'active duty') {
-      calculated.housing_allow_term_3 = (0 + calculated.kicker_benefit);
     } else if (formData.military_status == 'spouse' && formData.spouse_active_duty) {
       calculated.housing_allow_term_3 = (0 + calculated.kicker_benefit);
     } else if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
       calculated.housing_allow_term_3 = 0;
     } else if (calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_3 = 0.6 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
+    } else if (formData.military_status == 'active duty') {
+      calculated.housing_allow_term_3 = (0 + calculated.kicker_benefit);
     } else if (formData.calendar == 'semesters') {
       calculated.housing_allow_term_3 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
