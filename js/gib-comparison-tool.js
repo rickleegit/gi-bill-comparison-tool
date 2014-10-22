@@ -480,7 +480,7 @@ var GIBComparisonTool = (function () {
         calculated.only_tuition_fees = true;
     } else if ((calculated.institution_type == 'correspond' || calculated.institution_type == 'flight') && calculated.old_gi_bill == true) {
         calculated.only_tuition_fees = true;    
-    } else if ((formData.rop_old == "less than half", formData.rop_old == "quarter")  && (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607 || formData.gi_bill_chap == 35)) {
+    } else if ((formData.rop_old == "less than half" || formData.rop_old == "quarter")  && (formData.gi_bill_chap == 30 || formData.gi_bill_chap == 1607 || formData.gi_bill_chap == 35)) {
         calculated.only_tuition_fees = true;
     } else {
         calculated.only_tuition_fees = false;
