@@ -2253,6 +2253,7 @@ var GIBComparisonTool = (function () {
       $('#total-left-to-pay-td').prop('colspan', 1);
       $('#total-paid-to-you-td').prop('colspan', 1);
       $('#total-year-td').prop('colspan', 1);
+      $('calc-tuition-only-td').prop('colspan', 3);
     }
     
     if (calculated.number_of_terms < 3 && calculated.institution_type != 'ojt') {
@@ -2269,6 +2270,10 @@ var GIBComparisonTool = (function () {
       $('#total-left-to-pay-td').prop('colspan', 2);
       $('#total-paid-to-you-td').prop('colspan', 2);
       $('#total-year-td').prop('colspan', 2);
+    }
+
+    if (calculated.number_of_terms == 3 || calculated.institution_type == 'ojt') {
+          $('#total-year-td').prop('colspan', 5);
     }
     
     // Veteran Indicators  /////////
