@@ -2203,6 +2203,8 @@ var GIBComparisonTool = (function () {
         formData.military_status == 'national guard / reserves') &&
         formData.gi_bill_chap == 33) {
       $('#tuition-assist-form').show();
+    } else {
+      $('#tuition-assist-form').hide();
     }
     
     if (!calculated.yellow_ribbon_elig) {
