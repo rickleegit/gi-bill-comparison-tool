@@ -855,6 +855,24 @@ layout: va
   top: 10px;
   left: 770px;
 }
+
+.modal .checkbox {
+  padding-top: 5px;
+}
+.checkbox input {
+  margin-right: 10px;
+}
+.checkboxes {
+  margin-top: 10px;
+}
+#adv_results_n h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#adv_results_csv {
+  float:right;
+}
 </style>
 
 <div id="searchmodal">
@@ -1029,16 +1047,21 @@ layout: va
       </select>
 
       called <input id="adv_name" width="100" placeholder="Institution name">
+
+      <a href="#" id="advsearch">Search</a>
     </div>
 
-    <div><label><input type="checkbox" id="adv_student_veteran">Student Veteran Group</input></label></div>
-    <div><label><input type="checkbox" id="adv_yr">Yellow Ribbon</input></label></div>
-    <div><label><input type="checkbox" id="adv_poe">Principles of Excellence</input></label></div>
-    <div><label><input type="checkbox" id="adv_eight_keys">8 Keys</input></label></div>
-
-    <a href="#" id="advsearch">Search</a>
+    <div class="checkboxes">
+      <div class="checkbox"><label><input type="checkbox" id="adv_student_veteran">Student Veteran Group</input></label></div>
+      <div class="checkbox"><label><input type="checkbox" id="adv_yr">Yellow Ribbon</input></label></div>
+      <div class="checkbox"><label><input type="checkbox" id="adv_poe">Principles of Excellence</input></label></div>
+      <div class="checkbox"><label><input type="checkbox" id="adv_eight_keys">8 Keys</input></label></div>
+    </div>
 
     <div id="adv_results">
+      <div id="adv_results_n">
+        <span id="adv_results_csv" style="float:right"></span>
+      </div>
     </div>
 
     <div>

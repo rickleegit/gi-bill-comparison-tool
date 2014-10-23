@@ -76,6 +76,11 @@ function show(institutions, intersection) {
   /* remove previous search results */
   out.html('');
 
+  var resultsn = '<div id="adv_results_n"><h2>'+Object.keys(intersection).length+' Results</h2>' +
+    '  <span id="adv_results_csv">Download as csv</span>' +
+    '</div>';
+  $("#adv_results").append(resultsn);
+
   for (key in intersection) {
     var inst = institutions[key],
         res = '<div class="adv_result">'+inst.name+
