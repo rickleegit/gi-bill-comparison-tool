@@ -836,17 +836,17 @@ layout: va
 
 #searchmodal .modal {
   position:fixed;
-  width:440px;
-  height:200px;
   display:none;
   z-index:9999;
   padding:20px;
+  overflow: scroll;
+  width:775px;
+  height:800px;
+  background-color: white;
 }
 
-#searchmodal #advancedsearch {
-  width:775px;
-  height:203px;
-  background-color: white;
+.adv_res_loc {
+  float: right;
 }
 </style>
 
@@ -1024,9 +1024,14 @@ layout: va
       called <input id="adv_name" width="100" placeholder="Institution name">
     </div>
 
+    <div><input type="checkbox" id="adv_student_veteran">Student Veteran Group</input></div>
+    <div><input type="checkbox" id="adv_yr">Yellow Ribbon</input></div>
+    <div><input type="checkbox" id="adv_poe">Principles of Excellence</input></div>
+    <div><input type="checkbox" id="adv_eight_keys">8 Keys</input></div>
+
     <a href="#" id="advsearch">Search</a>
 
-    <div id="advresults">
+    <div id="adv_results">
     </div>
 
     <div>

@@ -24,6 +24,10 @@ function advanced_search(institutions) {
       state = $("#adv_state").val(),
       country = $("#adv_country").val(),
       name = $("#adv_name").val(),
+      student_veteran = $("#adv_student_veteran").is(":checked"),
+      yr = $("#adv_yr").is(":checked"),
+      poe = $("#adv_poe").is(":checked"),
+      eight_keys = $("#adv_eight_keys").is(":checked"),
       results = [],
       q = queue();
 
@@ -43,8 +47,42 @@ function advanced_search(institutions) {
   if (name != "") {
     q.defer(search_name, name, institutions);
   }
+  if (student_veteran) {
+    var url = 'api/filters/student_veteran/true.json';
+    q.defer(handle_json, url);
+  }
+  if (yr) {
+    var url = 'api/filters/yr/true.json';
+    q.defer(handle_json, url);
+  }
+  if (poe) {
+    var url = 'api/filters/poe/true.json';
+    q.defer(handle_json, url);
+  }
+  if (eight_keys) {
+    var url = 'api/filters/eight_keys/true.json';
+    q.defer(handle_json, url);
+  }
 
-  q.awaitAll(function(err, results) { intersect(institutions, results); })
+  q.awaitAll(function(err, results) {
+    var intersection = intersect(institutions, results);
+    show(institutions, intersection);
+  });
+}
+
+function show(institutions, intersection) {
+  var out = $("#adv_results");
+
+  /* remove previous search results */
+  out.html('');
+
+  for (key in intersection) {
+    var inst = institutions[key],
+        res = '<div class="adv_result">'+inst.name+
+                '<span class="adv_res_loc">'+inst.city+' ,'+inst.state+
+              '</span></div>';
+    out.append(res);
+  }
 }
 
 /* Return the intersection of all its arguments */
@@ -63,12 +101,6 @@ function intersect(institutions, dicts) {
     results = temp_results;
   }
 
-  /* TODO: move this out of the intersection func (?) */
-  /* TODO: where to display these? */
-  for (key in results) {
-    console.log(key, institutions[key].label);
-  }
-
   return results;
 }
 
@@ -84,6 +116,7 @@ $().ready(function () {
 
       institutiondict[data[i][0]] = { value:   data[i][0],
                                       label:   label,
+                                      name:    data[i][1],
                                       city:    data[i][2],
                                       state:   data[i][3],
                                       country: data[i][4] };
