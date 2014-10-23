@@ -848,6 +848,12 @@ layout: va
 .adv_res_loc {
   float: right;
 }
+
+.close {
+  position: absolute;
+  top: 10px;
+  left: 770px;
+}
 </style>
 
 <div id="searchmodal">
@@ -1024,10 +1030,10 @@ layout: va
       called <input id="adv_name" width="100" placeholder="Institution name">
     </div>
 
-    <div><input type="checkbox" id="adv_student_veteran">Student Veteran Group</input></div>
-    <div><input type="checkbox" id="adv_yr">Yellow Ribbon</input></div>
-    <div><input type="checkbox" id="adv_poe">Principles of Excellence</input></div>
-    <div><input type="checkbox" id="adv_eight_keys">8 Keys</input></div>
+    <div><label><input type="checkbox" id="adv_student_veteran">Student Veteran Group</input></label></div>
+    <div><label><input type="checkbox" id="adv_yr">Yellow Ribbon</input></label></div>
+    <div><label><input type="checkbox" id="adv_poe">Principles of Excellence</input></label></div>
+    <div><label><input type="checkbox" id="adv_eight_keys">8 Keys</input></label></div>
 
     <a href="#" id="advsearch">Search</a>
 
@@ -1035,7 +1041,7 @@ layout: va
     </div>
 
     <div>
-      <a href="#" class="close">Close it</a>
+      <a href="#" class="close">X</a>
     </div>
   </div>
 
