@@ -44,7 +44,7 @@ def norm(string):
         raise
 
 attrindexes = {}
-os.path.walk('.', index, (attrindexes, ("type", "state", "country", "poe", "yr", "student_veteran", "eight_keys")))
+os.path.walk('.', index, (attrindexes, ("type", "state", "country")))
 
 for attr in attrindexes:
     dirname = "filters/{}".format(attr)
@@ -52,6 +52,34 @@ for attr in attrindexes:
         os.mkdir(dirname)
     for typ, codes in attrindexes[attr].iteritems():
         fname = "filters/{}/{}.json".format(attr, norm(typ))
-        if typ in ("poe", "yr", "student_veteran", "eight_keys"):
-            codes["__attr__"] = typ
         json.dump(codes, file(fname, 'w'))
+
+def boolindex(args, dirname, fnames):
+    index, attrs = args
+
+    rem(fnames, "filters")
+    rem(fnames, "institutions.json")
+
+    for f in fnames:
+        f = os.path.join(dirname, f)
+        if f.endswith('.json') and os.path.isfile(f):
+            try:
+                j = json.load(file(f))
+                i = int(bool(j["student_veteran"])) << 3 | \
+                    int(bool(j["yr"])) << 2 | \
+                    int(bool(j["poe"])) << 1 | \
+                    int(bool(j["eight_keys"]))
+                index.setdefault(i, {})[j["facility_code"]] = None
+            except:
+                print "Exception reading file {}".format(f)
+
+boolindexes = {}
+os.path.walk('.', boolindex, (boolindexes, ("poe", "yr", "student_veteran", "eight_keys")))
+
+dirname = "filters/bool"
+if not os.path.isdir(dirname):
+    os.mkdir(dirname)
+for i, codes in boolindexes.iteritems():
+    fname = "filters/bool/{}.json".format(i)
+    print fname
+    json.dump(codes, file(fname, 'w'))
