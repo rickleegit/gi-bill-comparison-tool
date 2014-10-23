@@ -139,16 +139,29 @@ $().ready(function () {
     modal.css('top', wh/2-modal.height()/2);
     modal.css('left', ww/2-modal.width()/2);
     modal.show();
+
+    /* Turn on keyboard handler */
+    $(document).keydown(handleEnter);
   });
 
   $(".modal .close").click(function(e) {
     e.preventDefault();
     $('#mask, .modal').hide();
+    $(document).off("keydown", handleEnter);
   });
 
   $('#mask').click(function () {
     $('#mask, .modal').hide();
+    $(document).off("keydown", handleEnter);
   });
 
-  $('#advsearch').click(function() { advanced_search(institutiondict); });
+  $('#advsearch').click(function() {
+    advanced_search(institutiondict);
+  });
+
+  function handleEnter(evt) {
+    if (evt.keyCode == 13) {
+      advanced_search(institutiondict);
+    }
+  }
 });
