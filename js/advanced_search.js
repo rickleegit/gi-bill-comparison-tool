@@ -79,9 +79,29 @@ function show(institutions, intersection) {
 
   for (key in intersection) {
     var inst = institutions[key],
-        res = '<li><a href="#">'+inst.name+'<span>'+inst.city+' ,'+inst.state+'</span></a></li>';
+        res = '<li><a href="#" class="adv_result" data-key="'+key+'">'+inst.name+
+          '<span>'+inst.city+' ,'+inst.state+'</span></a></li>';
     out.append(res);
   }
+
+  $('.adv_result').click(function(evt) {
+    handleSelect(evt, institutions);
+  });
+}
+
+function handleSelect(evt, institutions) {
+  var id = evt.currentTarget.attributes["data-key"].value,
+      inst = institutions[id];
+
+  /* close the modal */
+  $(".modal .close").click();
+
+  /* update the benefits div */
+  $('#institution-search').val(inst.label);
+  GIBComparisonTool.update(id);
+
+  /* scroll to the right place (delay because update eats the URL) */
+  setTimeout('window.location = "#about_your_school"', 10);
 }
 
 /* Return the intersection of all its arguments */

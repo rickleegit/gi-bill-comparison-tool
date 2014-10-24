@@ -1723,7 +1723,11 @@ var GIBComparisonTool = (function () {
   /*
    * Update benefit information
    */
-  var update = function () {
+  var update = function (facility_code) {
+    if (facility_code !== undefined) {
+      formData.facility_code = facility_code;
+    }
+
     // Get user data from the form
     getFormData();
 
