@@ -31,30 +31,44 @@
   font-size: 1.3em;
   border: 1px solid #ccc;
   padding: 1em;
+  line-height: 1.3em;
+  margin: 0;
   font-weight: bold;
 }
 
-#searchmodal input#advname {padding: .25em; font-size: 1.2em;}
+searchmodal fieldset .mad-libs {font-size: 1.3em;}
+
+#searchmodal input#adv_name {font-size: 1.1em;}
+
+#searchmodal .row {
+  padding: .5em 0;
+}
+
+#searchmodal .selections {
+  border-top: 1px solid #ddd;
+  padding: .5em 0;
+  margin: .5em 0
+}
+
+#searchmodal .selections label {font-weight: normal;}
 
 button#advsearch {
   font-size: 1em;
-  font-weight: bold;
+  font-weight: normal;
   background-color: #003E73;
   color: #fff;
   border: none;
   border-radius: none;
   -webkit-appearance: none;
-  padding: .25em .5em;
+  padding: .2em .5em;
 }
 
-.adv_res_loc {
-  float: right;
-}
 
 .close {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 0;
+  right: 0;
+  padding: 1em;
   background: #eee;
   font-weight: bold;
 }
@@ -69,12 +83,61 @@ button#advsearch {
   margin-top: 10px;
 }
 
-#adv_results{
-  padding: 1em;
-  border: 1px solid #ccc;
+.download.button {float: right; display: inline-block; margin: .25em 0 .25em 0;}
+
+#searchmodal h4 {
+  font-size: 1.65em;
+  text-align: left;
+  display: inline-block;
+}
+
+#searchmodal abbr {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#searchmodal ul.results-list {
+  display: block;
+  padding: 0;
+  clear: both;
   background: #eee;
   overflow: scroll;
-  height: 30em;
+  max-height: 30em;
+  margin: 1em 0;
+}
+
+
+.advanced-results {
+  margin: -1px auto 0 auto;
+  width: 96%;
+  padding: 1em;
+  border: 1px solid #ddd;
+
+}
+
+ul.results-list li {
+  border-bottom: 1px solid #ccc;
+  display: block;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+ul.results-list li:last-of-type {border-bottom: none;}
+
+.download.button {float: right; display: inline-block;}
+
+ul.results-list li span {float: right; display: inline-block; color: #444;}
+
+ul.results-list li a {
+  display: block;
+  padding: .5em;
+  margin: 0;
+}
+
+ul.results-list li a:hover {
+  background: #ddd;
+  color: #444;
 }
 
 #adv_result {
