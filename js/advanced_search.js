@@ -71,21 +71,14 @@ function advanced_search(institutions) {
 }
 
 function show(institutions, intersection) {
-  var out = $("#adv_results");
+  var out = $(".results-list");
 
   /* remove previous search results */
   out.html('');
 
-  var resultsn = '<div id="adv_results_n"><h2>'+Object.keys(intersection).length+' Results</h2>' +
-    '  <span id="adv_results_csv">Download as csv</span>' +
-    '</div>';
-  $("#adv_results").append(resultsn);
-
   for (key in intersection) {
     var inst = institutions[key],
-        res = '<div class="adv_result">'+inst.name+
-                '<span class="adv_res_loc">'+inst.city+' ,'+inst.state+
-              '</span></div>';
+        res = '<li><a href="#">'+inst.name+'<span>'+inst.city+' ,'+inst.state+'</span></a></li>';
     out.append(res);
   }
 }
