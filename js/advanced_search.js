@@ -67,6 +67,7 @@ function advanced_search(institutions) {
   q.awaitAll(function(err, results) {
     var intersection = intersect(institutions, results);
     show(institutions, intersection);
+    csv(institutions, intersection)
   });
 }
 
@@ -100,6 +101,18 @@ function intersect(institutions, dicts) {
   }
 
   return results;
+}
+
+function csv(institutions, intersection) {
+  var csvs = "name,city,state\n";
+
+  for (key in intersection) {
+    var res = institutions[key];
+    csvs += res.name+','+res.city+','+res.state+'\n';
+  }
+
+  var encdata = btoa(csvs);
+  $(".download").html('<a href="data:text/csv;base64,'+encdata+'">Download <abbr title="comma seperated value file">CSV</abbr></a>');
 }
 
 $().ready(function () {
