@@ -85,6 +85,8 @@ function show(institutions, intersection) {
     e.preventDefault();
     $(".results-list").html('');
     $("#adv_clear").html('');
+    $("#adv_results_n").html('Search Results');
+    $(".download").html('');
   });
 
   /* add the results to the results box */
@@ -100,6 +102,10 @@ function show(institutions, intersection) {
           '<span>'+place+'</span></a></li>';
     out.append(res);
   }
+
+  var n = Object.keys(intersection).length,
+      sr = n + " Search Result" + (n == 1 ? '' : 's');
+  $("#adv_results_n").html(sr);
 
   /* connect the result links to the handleSelect function */
   $('.adv_result').click(function(evt) {
