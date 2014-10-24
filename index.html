@@ -832,12 +832,13 @@ layout: va
 
 <div id="searchmodal">
   <div id="advancedsearch" class="modal">
-    <div class="questions">
+    <div class="mad-lib">
     <h2>Advanced Search</h2>
     <div class="modal-content">
       <fieldset>
-      I'm looking for a <select id="adv_type">
-        <option value="">Institution Type</option>
+        <div class="question">
+      <label for="adv_type">I'm looking for a</label> <select id="adv_type">
+        <option value="">School Type</option>
         <option value="public">Public</option>
         <option value="private">Private</option>
         <option value="correspondence">Correspondence</option>
@@ -846,7 +847,7 @@ layout: va
         <option value="ojt">On-the job Training<option>
       </select>
 
-    <label>school in</label>
+    <label for="adv_state">school in</label>
 
       <select id="adv_state">
         <option value="">State</option>
@@ -1002,11 +1003,9 @@ layout: va
           <option value="unitedkingdom">United Kingdom</option>
           <option value="uruguay">Uruguay</option>
       </select>
-
-    <div class="row">
-    called <input id="adv_name" width="100" placeholder="Institution name">
-      <button type="submit" id="advsearch">Search</button>
-    </div>
+    <label for="adv_name">called</label> <input id="adv_name" width="70" placeholder="Institution name">
+     <button type="submit" id="advsearch">Go</button>
+  </div>
 
     <div class="selections">
       <div class="checkbox"><label><input type="checkbox" id="adv_student_veteran">Student Veteran Group</input></label></div>

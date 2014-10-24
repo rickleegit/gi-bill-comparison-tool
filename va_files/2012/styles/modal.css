@@ -14,7 +14,7 @@
   left: 10%;
   margin: 1em auto;
   z-index:9999;
-  padding: 3em;
+  padding: 2em;
   height: 80%;
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
   overflow: scroll;
@@ -24,7 +24,7 @@
   font-size: 1em;
 }
 
-#searchmodal .modal h2 {padding: 0; margin: 0;}
+#searchmodal .modal h2 {padding: 0; margin: 0; font-size: 2.2em;}
 
 #searchmodal fieldset {
   background: #efefef;
@@ -36,12 +36,12 @@
   font-weight: bold;
 }
 
-searchmodal fieldset .mad-libs {font-size: 1.3em;}
+#searchmodal fieldset .mad-lib label {font-size: .9em; padding: 0 .25em; font-weight: normal;}
 
-#searchmodal input#adv_name {font-size: 1.1em;}
+#searchmodal input#adv_name {font-size: 1em; width: 120px;}
 
 #searchmodal .row {
-  padding: .5em 0;
+  padding: .75em 0;
 }
 
 #searchmodal .selections {
@@ -52,6 +52,8 @@ searchmodal fieldset .mad-libs {font-size: 1.3em;}
 
 #searchmodal .selections label {font-weight: normal;}
 
+#searchmodal input[type="checkbox"] {border: 1px solid #ccc;}
+
 button#advsearch {
   font-size: 1em;
   font-weight: normal;
@@ -61,6 +63,7 @@ button#advsearch {
   border-radius: none;
   -webkit-appearance: none;
   padding: .2em .5em;
+  margin: 0;
 }
 
 
@@ -100,6 +103,7 @@ button#advsearch {
   display: block;
   padding: 0;
   clear: both;
+  font-size: .9em;
   background: #eee;
   overflow: scroll;
   max-height: 30em;
@@ -109,7 +113,7 @@ button#advsearch {
 
 .advanced-results {
   margin: -1px auto 0 auto;
-  width: 96%;
+  width: 94%;
   padding: 1em;
   border: 1px solid #ddd;
 
@@ -118,6 +122,7 @@ button#advsearch {
 ul.results-list li {
   border-bottom: 1px solid #ccc;
   display: block;
+  font-size: .9em;
   list-style: none;
   margin: 0 !important;
   padding: 0 !important;
@@ -133,6 +138,7 @@ ul.results-list li a {
   display: block;
   padding: .5em;
   margin: 0;
+  font-size: 14px !important;
 }
 
 ul.results-list li a:hover {
