@@ -162,3 +162,7 @@ ul.results-list li a:hover {
   width: 100%;
   display: block;
 }
+
+#adv_clear {
+  text-align: center;
+}

@@ -77,6 +77,17 @@ function show(institutions, intersection) {
   /* remove previous search results */
   out.html('');
 
+  /* Add the clear button */
+  $("#adv_clear").html('<a href="#" id="adv_clear_results">Clear</a>');
+
+  /* add the code to clear the results list */
+  $('#adv_clear_results').click(function(e) {
+    e.preventDefault();
+    $(".results-list").html('');
+    $("#adv_clear").html('');
+  });
+
+  /* add the results to the results box */
   for (key in intersection) {
     var inst = institutions[key],
         place = inst.city;
@@ -90,6 +101,7 @@ function show(institutions, intersection) {
     out.append(res);
   }
 
+  /* connect the result links to the handleSelect function */
   $('.adv_result').click(function(evt) {
     handleSelect(evt, institutions);
   });
