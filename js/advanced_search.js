@@ -79,8 +79,14 @@ function show(institutions, intersection) {
 
   for (key in intersection) {
     var inst = institutions[key],
-        res = '<li><a href="#" class="adv_result" data-key="'+key+'">'+inst.name+
-          '<span>'+inst.city+' ,'+inst.state+'</span></a></li>';
+        place = inst.city;
+
+    if (inst.state) {
+      place += ', '+inst.state;
+    }
+
+    var res = '<li><a href="#" class="adv_result" data-key="'+key+'">'+inst.name+
+          '<span>'+place+'</span></a></li>';
     out.append(res);
   }
 
