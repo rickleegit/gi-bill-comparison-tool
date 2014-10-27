@@ -480,6 +480,8 @@ var GIBComparisonTool = (function () {
         calculated.monthlyrate = SRRATE;
     } else if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
         calculated.monthlyrate = DEARATEOJT;
+    } else if (formData.gi_bill_chap == 35 && calculated.institution_type == 'flight') {
+        calculated.monthlyrate = 0;
     } else if (formData.gi_bill_chap == 35) {
         calculated.monthlyrate = DEARATE;
     } else if (formData.gi_bill_chap == 31 && formData.number_of_depend == 0 && calculated.institution_type == 'ojt') {
