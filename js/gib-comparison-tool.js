@@ -259,9 +259,6 @@ var GIBComparisonTool = (function () {
       $('#cumulative-service-form').hide();
     }
 
-
-
-
     formData.in_state              = $('#in-state-yes').prop('checked');
     formData.tuition_fees          = getCurrency('#tuition-fees-input');
     formData.in_state_tuition_fees = getCurrency('#in-state-tuition-fees');
@@ -458,9 +455,6 @@ var GIBComparisonTool = (function () {
         calculated.only_tuition_fees = false;
     }
   };
-
-
-
 
   /*
    * Calculate the monthly benefit rate for non-chapter 33 benefits
@@ -1866,6 +1860,7 @@ var GIBComparisonTool = (function () {
     $('#tuition-fees').html(calculated.est_tuition_fees);
     $('#housing-allowance').html(calculated.est_housing_allowance);
     $('#book-stipend').html(calculated.est_book_stipend);
+    $('#profile').show();
 
     $('#poe').html(institution.poe ? 'Yes' : 'No');
 
@@ -1895,10 +1890,10 @@ var GIBComparisonTool = (function () {
     $('#acadyearlength').html(calculated.acad_year_length);
     $('#yr_console').html(institution.yr);
 
-    $('#term1').html(calculated.term1);
-    $('#term2').html(calculated.term2);
-    $('#term3').html(calculated.term3);
-    $('#term4').html(calculated.term4);
+    $('.term1').html(calculated.term1);
+    $('.term2').html(calculated.term2);
+    $('.term3').html(calculated.term3);
+    $('.term4').html(calculated.term4);
 
     $('#tuition-fees-term-1').html(formatCurrency(calculated.tuition_fees_term_1));
     $('#tuition-fees-term-2').html(formatCurrency(calculated.tuition_fees_term_2));
@@ -2283,21 +2278,21 @@ var GIBComparisonTool = (function () {
       '#consecutive-service, ' +
       '#online-classes-yes, #online-classes-no, ' +
       '#in-state-yes, #in-state-no, ' +
-      '#tuition-fees-input, ' +
+      // '#tuition-fees-input, ' +
       '#in-state-tuition-fees, ' +
       '#yellow-ribbon-recipient-yes, #yellow-ribbon-recipient-no,  ' +
       '#yellow-ribbon-amount, ' +
-      '#enrolled, ' +
-      '#enrolled-old, ' +
+      // '#enrolled, ' +
+      // '#enrolled-old, ' +
       '#working, ' +
-      '#calendar, ' +
+      // '#calendar, ' +
       '#number-non-traditional-terms, ' +
       '#length-non-traditional-terms, ' +
-      '#kicker-elig-yes, #kicker-elig-no, ' +
+      // '#kicker-elig-yes, #kicker-elig-no, ' +
       '#kicker, ' +
       '#buy-up-yes, #buy-up-no,  ' +
       '#buy-up-rate, ' +
-      '#scholar, ' +
+      // '#scholar, ' +
       '#tuition-assist').on('change', function () {
       GIBComparisonTool.update();
     });
@@ -2307,12 +2302,28 @@ var GIBComparisonTool = (function () {
       GIBComparisonTool.update();
     });
 
+    // Removing this to bind instead to calculate button.
+    /*
     $('#tuition-fees-input, #in-state-tuition-fees,' +
       '#yellow-ribbon-amount, #scholar, #kicker').bindWithDelay('keyup', function(e) {
       $(this).change();
     }, 1000);
+    */
+    
+    $('#calculate-benefits').click(function () {
+      $('#estimated-benefits').hide();
+      GIBComparisonTool.update();
+      $('#calculated-benefits').show();
+    });
+    
+    $('#clear-calculated-benefits').click(function () {
+      $('#calculated-benefits').hide();
+      $('#estimated-benefits').show();
+    });
 
     // Hide elements on load
+    
+    // old elements (may no longer be needed)
     $('#enlistment-service-form').hide();
     $('#consecutive-service-form').hide();
     $('#number-of-dependents-form').hide();
@@ -2325,11 +2336,13 @@ var GIBComparisonTool = (function () {
     $('#only-tuition-fees').hide();
     $('#voc-rehab').hide();
     $('#school-indicators').hide();
-
     $('#tuition-fees-section').hide();
     $('#enrollment-section').hide();
     $('#calculator').hide();
-
+    
+    // new profile elements
+    $('#calculated-benefits').hide();
+    
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
 
