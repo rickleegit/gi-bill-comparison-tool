@@ -239,10 +239,12 @@ var GIBComparisonTool = (function () {
     }
 
 
-    if (formData.gi_bill_chap == 31) {
-      $('#elig-for-post-gi-bill-form').show();
-    } else {
+    if (formData.gi_bill_chap != 31) {
       $('#elig-for-post-gi-bill-form').hide();
+      $('#voc-rehab-warning').hide();
+    } else {
+      $('#elig-for-post-gi-bill-form').show();
+      $('#voc-rehab-warning').show();
     }
 
     if (formData.gi_bill_chap == 31 && formData.post_911_elig == false) {
@@ -251,7 +253,7 @@ var GIBComparisonTool = (function () {
       $('#number-of-dependents-form').hide();
     }
 
-    if (formData.gi_bill_chap == 33 || (formData.gi_bill_chap == 31 && formData.post_911_elig == true)) {
+    if (formData.gi_bill_chap == 33) {
       $('#cumulative-service-form').show();
     } else {
       $('#cumulative-service-form').hide();
@@ -406,7 +408,9 @@ var GIBComparisonTool = (function () {
    * Calculate the tier
    */
   var getTier = function () {
-    if (formData.cumulative_service == 'service discharge') {
+    if (formData.gi_bill_chap == 31 && formData.post_911_elig == true) {
+    calculated.tier = 1;
+    } else if (formData.cumulative_service == 'service discharge') {
       calculated.tier = 1;
       calculated.service_discharge = true;
     } else {
@@ -1963,6 +1967,7 @@ var GIBComparisonTool = (function () {
 
     $('#online-classes').show();
     $('#voc-rehab').hide();
+    $('#voc-rehab-warning').hide();
     $('#only-tuition-fees').hide();
     $('#veteran-indicators').show();
     $('#vet-success-row').hide();
@@ -2314,6 +2319,7 @@ var GIBComparisonTool = (function () {
     $('#elig-for-post-gi-bill-form').hide();
     $('#calculate-benefits-btn').hide();
     $('#spouse-active-duty-form').hide();
+    $('voc-rehab-warning').hide();
     $('#institution-select').hide();
     $('#veteran-indicators').hide();
     $('#only-tuition-fees').hide();
