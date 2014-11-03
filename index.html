@@ -27,7 +27,7 @@ layout: va
 
 .review {
   margin: 0 1em 1em 0;
-  padding: 0 2em 0 0;
+  padding: 0 2em 1em 0;
   border-bottom: 3px solid #ddd;
 }
 
@@ -37,20 +37,83 @@ layout: va
 
 }
 
-#calculated-benefits {
-  padding: 1em 1em .25em 1em;
-  background: #ddd;
+#ratings {
+  float: left;
+  width: 45%;
 }
 
+#gi-summary {
+  float: right;
+  width: 42%;
+}
+
+a.info-link {
+  display: inline-block;
+  padding: .35em .65em;
+  background: #fff;
+  border-radius: 100%;
+  margin: 0 1em 0 0;
+  text-align: center;
+  color: #001A4F;
+  font-weight: bold;
+  font-size: 9px;
+  border: 1px solid #001A4F;
+}
+
+#estimated-benefits {
+  float: left;
+  width: 50%;
+}
+
+#calculated-benefits {
+  padding: 0 1em .25em 1em;
+  background: #ddd;
+  float: left;
+  width: 50%;
+  margin-left: -1em;
+}
+
+#calculated-benefits th, #calculated-benefits td {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#calculated-benefits h4 {
+  text-align: left;
+  color: #003F72;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+#calculated-benefits a {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  text-decoration: underline;
+}
 
 #benefit-calculator {
-  padding: 1em 1em .25em 1em;
-  background: #ddd;
+  float: right;
+  width: 42%;
 }
 
 #benefit-calculator table {
   background: none;
   color: #333;
+}
+
+#benefit-calculator table a {
+  color: #fff;
+}
+
+#benefit-calculator input[type="submit"] {
+  padding: .5em;
+  background: #001A4F;
+  color: #fff;
+  border-radius: none;
+  border: none;
+  font-size: 12px;
 }
 
 #profile table {
@@ -67,6 +130,27 @@ layout: va
   background: none;
   color: #fff;
 }
+
+#benefits {
+  padding: 0 1em 1em 1em;
+  background: #eee;
+}
+
+#compare-favorites a {
+  float: right;
+  display: block;
+  padding: .5em;
+  margin-top: .5em;
+  background: #555;
+  color: #fff;
+}
+
+#compare-favorites {
+  background: #eee;
+  padding: 1em;
+  margin: 0 0 1em 0;
+}
+
 
 #name-summary table h2, #name-summary table h3, #name-summary table h4 {text-align: left; color: #fff;}
 
@@ -336,11 +420,13 @@ ul.plain li {
   <div class="heading solid navy table"><h3>About your favorites:</h3></div>
   <div id="compare-favorites">
     <a href="#dialog" name="modal"> Compare your <span id="number-of-favorites-selected"> </span> favorites </a>
-  </div>
+
   <div id="your-favorites">
     <h3>Your favorites are: </h3>
     <span id="favorites-list"></span>
   </div>
+  <div style="clear: both;">&nbsp;</div>
+</div>
 
   <!-- ================================================== -->
   <!--                  Benefit Estimator                 -->
@@ -396,46 +482,46 @@ ul.plain li {
               <td class="term1">Fall</td>
               <td class="term2">Spring</td>
               <td class="term3"></td>
-              <td class="term4">Total</td>
+              <td class="term4" style="text-align: right;">Total</td>
             </tr>
             <tr id="calc-tuition-fees-row">
               <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuitionfees" onclick="track('Tool Tips', 'Benefit Calculator / Tuition Fees');" target="_blank" alt="Click here for more information about the tuition/fees benefit.">Tuition / Fees:</a></th>
               <td id="tuition-fees-term-1">$0 / term</td>
               <td id="tuition-fees-term-2">$0 / term</td>
               <td id="tuition-fees-term-3"></td>
-              <td id="tuition-fees-total">$0 / yr</td>
+              <td id="tuition-fees-total" style="text-align: right;">$0 / yr</td>
             </tr>
             <tr id="calc-yellow-ribbon-row">
               <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Benefit Calculator / Yellow Ribbon (School)');" target="_blank" alt="Click here for more information.">Yellow Ribbon (School):</a></th>
               <td id="yr-ben-term-1">$0 / term</td>
               <td id="yr-ben-term-2">$0 / term</td>
               <td id="yr-ben-term-3"></td>
-              <td id="yr-ben-total">$0 / yr</td>
+              <td id="yr-ben-total" style="text-align: right;">$0 / yr</td>
             </tr>
             <tr id="calc-yellow-ribbon-va-row">
               <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Benefit Calculator / Yellow Ribbon (VA)');" target="_blank" alt="Click here for more information.">Yellow Ribbon (VA):</a></th>
               <td id="yr-ben-term-va-1">$0 / term</td>
               <td id="yr-ben-term-va-2">$0 / term</td>
               <td id="yr-ben-term-va-3"></td>
-              <td id="yr-ben-va-total">$0 / yr</td>
+              <td id="yr-ben-va-total" style="text-align: right;">$0 / yr</td>
             </tr>
             <tr id="calc-tuition-fees-charged-row">
               <th>Tuition & Fees Owed:</th>
               <td></td>
               <td></td>
-              <td id="total-tuition-fees-charged">$0</td>
+              <td id="total-tuition-fees-charged" style="text-align: right;">$0</td>
             </tr>
             <tr id="calc-term-total-row" style="font-size:25px;font-weight:bold;">
               <th>Total Post-9/11 GI Bill Benefits</th>
               <td></td>
               <td></td>
-              <td id="total-year" class="normal">$0 / yr</td>
+              <td id="total-year" class="normal" style="text-align: right;">$0 / yr</td>
             </tr>
             <tr id="calc-out-of-pocket-row">
               <th>Out of Pocket</th>
               <td></td>
               <td></td>
-              <td><span id="total-left-to-pay">$0</span></td>
+              <td><span id="total-left-to-pay" style="text-align: right;">$0</span></td>
             </tr>
           </tbody>
         </table>
@@ -447,27 +533,27 @@ ul.plain li {
               <td class="term1">Fall</td>
               <td class="term2">Spring</td>
               <td class="term3"></td>
-              <td class="term4">Total</td>
+              <td class="term4" style="text-align: right;">Total</td>
             </tr>
             <tr>
               <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#housingallowance" onclick="track('Tool Tips', 'Benefit Calculator / Housing Allowance');" target="_blank" alt="Click here for more information about the housing allowance.">Housing Allowance:</a></th>
               <td id="housing-allow-term-1">$0 / month</td>
               <td id="housing-allow-term-2">$0 / month</td>
               <td id="housing-allow-term-3"></td>
-              <td id="housing-allow-total">$0 / yr</td>
+              <td id="housing-allow-total" style="text-align: right;">$0 / yr</td>
             </tr>
             <tr>
               <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#bookstipend" onclick="track('Tool Tips', 'Benefit Calculator / Book Stipend');" target="_blank" alt="Click here for more information about the book stipend.">Book Stipend:</a></th>
               <td id="book-stipend-term-1">$0 / term</td>
               <td id="book-stipend-term-2">$0 / term</td>
               <td id="book-stipend-term-3"></td>
-              <td id="book-stipend-total">$0 / yr</td>
+              <td id="book-stipend-total" style="text-align: right;">$0 / yr</td>
             </tr>
             <tr id="calc-paid-to-you-total-row" style="font-size:25px;font-weight:bold;">
               <th>Paid to You</th>
               <td></td>
               <td></td>
-              <td id="total-paid-to-you" style="border-top: 2px solid #fff;">$0</td>
+              <td id="total-paid-to-you" style="border-top: 2px solid #fff;" style="text-align: right;">$0</td>
             </tr>
           </tbody>
         </table>
@@ -533,7 +619,12 @@ ul.plain li {
           </tr>
         </table>
       </div>
+      <div style="clear: both;">&nbsp;</div>
+
     </div>
+
+    <hr />
+
     <div id="profile-more-information">
       <div id="ratings">
         <h2>Ratings<span id="stars"></span></h2>
@@ -555,32 +646,35 @@ ul.plain li {
         <h2>VA Summary</h2>
         <table>
           <tr>
-            <td><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gibillben">i</a>GI Bill Beneficiaries:</td>
+            <td><a class="info-link" href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gibillben">i</a>GI Bill Beneficiaries:</td>
             <td id="gibill"></td>
           </tr>
           <tr>
-            <td><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#student_veterans_group">i</a>Student Veterans Group:</td>
+            <td><a class="info-link" href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#student_veterans_group">i</a>Student Veterans Group:</td>
             <td id="student-veterans"></td>
           </tr>
           <tr>
-            <td><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon">i</a>Yellow Ribbon:</td>
+            <td><a class="info-link" href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon">i</a>Yellow Ribbon:</td>
             <td id="yr"></td>
           </tr>
           <tr>
-            <td><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#principles">i</a>Principles of Excellence:</td>
+            <td><a class="info-link" href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#principles">i</a>Principles of Excellence:</td>
             <td id="poe"></td>
           </tr>
           <tr>
-            <td><a href="https://www.ebenefits.va.gov/ebenefits/vsoc">i</a>Vet Success:</td>
+            <td><a class="info-link" href="https://www.ebenefits.va.gov/ebenefits/vsoc">i</a>Vet Success:</td>
             <td id="vet-success"></td>
           </tr>
           <tr>
-            <td><a href="http://www.ed.gov/veterans-and-military-families/8-keys-success-sites">i</a>8 Keys:</td>
+            <td><a class="info-link" href="http://www.ed.gov/veterans-and-military-families/8-keys-success-sites">i</a>8 Keys:</td>
             <td id="eight-keys"></td>
           </tr>
         </table>
-        <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata">Source for veteran indicators</a>
+        <small><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata">Source for veteran indicators</a></small>
       </div>
+
+      <div style="clear: both;">&nbsp;</div>
+
       <div id="school-indicators">
         <table>
           <tbody>
@@ -1231,7 +1325,7 @@ ul.plain li {
   </div>
 
   <div id="mask"></div>
-  
+
   <div id="comparemodal">
     <div id="dialog" class="window">
       <h2>Your Favorites</h2>
@@ -1241,7 +1335,7 @@ ul.plain li {
     </div>
     <div id="comparemask"></div>
   </div>
-  
+
 </div>
 
 <!-- </div> -->
