@@ -10,6 +10,7 @@ function showSchools () {
     });
     $('#school-list').html(schools);
     $('#school-list #add-to-favorites').hide();
+    $('#school-list #institution').hide();
 }
 
 $(document).ready(function() {

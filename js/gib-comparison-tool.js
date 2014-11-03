@@ -2506,7 +2506,7 @@ function processFavoriteSchool () {
   var f_schools_html = getFavSchoolsHtmlArray();
   var f_schools = getFavoriteSchoolsArray();
   var institution = $('#institution').text();
-  var table_data = $('#benefit-estimator').html() + $('#veteran-indicators').html();
+  var table_data = $('#name-summary').html() + $('#estimated-benefits').html();
 
     if ($('#add-favorite-school-checkbox').is(':checked') && !(institutionFavorited(institution))) {
       /* save institution name */
