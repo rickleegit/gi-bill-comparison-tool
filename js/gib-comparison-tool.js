@@ -1759,6 +1759,7 @@ var GIBComparisonTool = (function () {
         $('#benefit-estimator').show();
         $('#calculator').hide();
         $('#calculate-benefits-btn').show();
+        $('#add-favorite-school-checkbox').prop('checked', institutionFavorited(institution.institution));
         resetCalcBtn();
 
         $('#tuition-fees-input').val(formatCurrency(institution.tuition_in_state));
@@ -2024,6 +2025,12 @@ var GIBComparisonTool = (function () {
 
     // Show/Hide elements (overrides) //////////////////////////////////////////
 
+    if ((getFavoriteSchoolsArray().length < 3) || (institutionFavorited(institution.institution))) {
+      $('#add-to-favorites').show();
+    } else {
+      $('#add-to-favorites').hide();
+    }
+    
     if (formData.cumulative_service == 'service discharge') {
       $('#voc-rehab').show();
     }
@@ -2267,6 +2274,15 @@ var GIBComparisonTool = (function () {
 
   $(document).ready(function () {
 
+    // Initialize favorite schools session data
+    if (sessionStorage.favorite_schools === undefined) {
+      sessionStorage.setItem('favorite_schools', JSON.stringify([]));
+      sessionStorage.setItem('html_fav_schools', JSON.stringify([]));
+    }
+    // Initialize favorite selections display data
+    $('#number-of-favorites-selected').text(getFavoriteSchoolsArray().length);
+    $('#favorites-list').text(getFavoriteSchoolsArray());
+    
     // Bind event handlers to form elements
     $('#military-status, ' +
       '#spouse-active-duty-yes, #spouse-active-duty-no, ' +
@@ -2339,6 +2355,7 @@ var GIBComparisonTool = (function () {
     $('#tuition-fees-section').hide();
     $('#enrollment-section').hide();
     $('#calculator').hide();
+    $('#add-to-favorites').hide();
     
     // new profile elements
     $('#calculated-benefits').hide();
@@ -2459,6 +2476,59 @@ function scrollToAnchor (id) {
   $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 }
 
+/* 
+ * Retrieve array of session's favorite school
+ */
+function getFavSchoolsHtmlArray () {
+  return JSON.parse(sessionStorage.getItem('html_fav_schools'));
+}
+
+/* 
+ * Retrieve array of session's favorite schools 
+ */
+function getFavoriteSchoolsArray () {
+  return JSON.parse(sessionStorage.getItem('favorite_schools'));
+}
+
+
+/*
+ * Has this institution been selected as a favorite? 
+ */
+function institutionFavorited (institution) {
+  return (getFavoriteSchoolsArray().indexOf(institution) >= 0);
+}
+
+
+/*
+ * Add or remove a favorite school 
+ */
+function processFavoriteSchool () {
+  var f_schools_html = getFavSchoolsHtmlArray();
+  var f_schools = getFavoriteSchoolsArray();
+  var institution = $('#institution').text();
+  var table_data = $('#benefit-estimator').html() + $('#veteran-indicators').html();
+
+    if ($('#add-favorite-school-checkbox').is(':checked') && !(institutionFavorited(institution))) {
+      /* save institution name */
+      f_schools.push(institution);
+      /* save institution-related data as html */
+      f_schools_html.push(table_data);
+    } else {
+      /* remove schools data from sessionStorage */
+      if (!$('#add-favorite-school-checkbox').is(':checked') && (institutionFavorited(institution))) {
+        f_schools.splice(f_schools.indexOf(institution), 1);
+        f_schools_html.splice(f_schools.indexOf(institution), 1);
+      }
+    }
+  sessionStorage.setItem('favorite_schools', JSON.stringify(f_schools));
+  sessionStorage.setItem('html_fav_schools', JSON.stringify(f_schools_html));
+  $('#number-of-favorites-selected').text(getFavoriteSchoolsArray().length);
+  $('#favorites-list').text(getFavoriteSchoolsArray());
+  $('#your-favorites').show();
+  $('#compare-favorites').show();
+  console.log("Favorite Schools:");
+  console.log(getFavoriteSchoolsArray() );
+}
 
 /*
  * Tracks a link using Google Analytics

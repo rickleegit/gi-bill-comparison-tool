@@ -331,6 +331,18 @@ ul.plain li {
   <div class="clear"></div>
 
   <!-- ================================================== -->
+  <!--                  Compare Favorites                 -->
+  <!-- ================================================== -->
+  <div class="heading solid navy table"><h3>About your favorites:</h3></div>
+  <div id="compare-favorites">
+    <a href="#dialog" name="modal"> Compare your <span id="number-of-favorites-selected"> </span> favorites </a>
+  </div>
+  <div id="your-favorites">
+    <h3>Your favorites are: </h3>
+    <span id="favorites-list"></span>
+  </div>
+
+  <!-- ================================================== -->
   <!--                  Benefit Estimator                 -->
   <!-- ================================================== -->
 
@@ -345,7 +357,11 @@ ul.plain li {
             <p style="color: #fff;">800-555-1212</p>
           </td>
           <td>
-            <input type="checkbox">&nbsp;Add to favorites</input>
+            <div  id="add-to-favorites" class="checkbox">
+              <label>
+                <input type="checkbox" id="add-favorite-school-checkbox" onclick="processFavoriteSchool();">Add to favorites</input>
+              </label>
+            </div>
           </td>
         </tr>
       </table>
@@ -1214,6 +1230,17 @@ ul.plain li {
   </div>
 
   <div id="mask"></div>
+  
+  <div id="comparemodal">
+    <div id="dialog" class="window">
+      <h2>Your Favorites</h2>
+      <a href="#" class="close">x Close</a>
+      <div id='school-list'>
+      </div>
+    </div>
+    <div id="comparemask"></div>
+  </div>
+  
 </div>
 
 <!-- </div> -->
