@@ -2355,7 +2355,7 @@ var GIBComparisonTool = (function () {
     $('#elig-for-post-gi-bill-form').hide();
     $('#calculate-benefits-btn').hide();
     $('#spouse-active-duty-form').hide();
-    $('voc-rehab-warning').hide();
+    $('#voc-rehab-warning').hide();
     $('#institution-select').hide();
     $('#veteran-indicators').hide();
     $('#only-tuition-fees').hide();
