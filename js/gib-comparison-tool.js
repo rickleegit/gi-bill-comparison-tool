@@ -2032,11 +2032,12 @@ var GIBComparisonTool = (function () {
     } else {
       $('#add-to-favorites').hide();
     }
-    
+
+
     if (formData.cumulative_service == 'service discharge') {
       $('#voc-rehab').show();
     }
-    
+
     if (calculated.only_tuition_fees == true) {
       $('#only-tuition-fees').show();
       $('#calc-tuition-only-row').show();
@@ -2044,7 +2045,7 @@ var GIBComparisonTool = (function () {
       $('#only-tuition-fees').hide();
       $('#calc-tuition-only-row').hide();
     }
-    
+
     if (formData.gi_bill_chap == 31 && calculated.vre_only == false) {
       $('#enrolled-form').show();
       $('#enrolled-form-old-gi-bill').hide();
@@ -2055,7 +2056,7 @@ var GIBComparisonTool = (function () {
       $('#tuition-assist-form').hide();
       $('#calc-yellow-ribbon-row').hide();
     }
-    
+
     if (calculated.institution_type == 'ojt') {
       $('#online-classes').hide();
       $('#veteran-indicators').hide();
@@ -2287,6 +2288,8 @@ var GIBComparisonTool = (function () {
     // Initialize favorite selections display data
     $('#number-of-favorites-selected').text(getFavoriteSchoolsArray().length);
     $('#favorites-list').text(getFavoriteSchoolsArray());
+
+    toggleAboutYourFavorites();
     
     // Bind event handlers to form elements
     $('#military-status, ' +
@@ -2364,9 +2367,9 @@ var GIBComparisonTool = (function () {
     
     // new profile elements
     $('#calculated-benefits').hide();
-    $('#about-your-favorites').hide();
-    $('#compare-favorites').hide();
-    $('#your-favorites').hide();
+    //$('#about-your-favorites').hide();
+    //$('#compare-favorites').hide();
+    //$('#your-favorites').hide();
     
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
@@ -2506,6 +2509,18 @@ function institutionFavorited (institution) {
   return (getFavoriteSchoolsArray().indexOf(institution) >= 0);
 }
 
+function toggleAboutYourFavorites () {
+  if (getFavoriteSchoolsArray().length > 0) {
+    $('#your-favorites').show();
+    $('#compare-favorites').show();
+    $('#about-your-favorites').show();
+    $('#favorites-list').html(getFavoriteSchoolsArray());
+  } else {
+    $('#your-favorites').hide();
+    $('#compare-favorites').hide();
+    $('#about-your-favorites').hide();    
+  }
+}
 
 /*
  * Add or remove a favorite school 
@@ -2531,16 +2546,7 @@ function processFavoriteSchool () {
   sessionStorage.setItem('favorite_schools', JSON.stringify(f_schools));
   sessionStorage.setItem('html_fav_schools', JSON.stringify(f_schools_html));
   $('#number-of-favorites-selected').text(getFavoriteSchoolsArray().length);
-  $('#favorites-list').html(getFavoriteSchoolsArray());
-  if (getFavoriteSchoolsArray().length > 0) {
-    $('#your-favorites').show();
-    $('#compare-favorites').show();
-    $('#about-your-favorites').show();
-  } else {
-    $('#your-favorites').hide();
-    $('#compare-favorites').hide();
-    $('#about-your-favorites').hide();    
-  }
+  toggleAboutYourFavorites();
   console.log("Favorite Schools:");
   console.log(getFavoriteSchoolsArray() );
 }
