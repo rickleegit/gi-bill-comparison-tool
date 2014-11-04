@@ -2301,10 +2301,10 @@ var GIBComparisonTool = (function () {
       // '#enrolled, ' +
       // '#enrolled-old, ' +
       '#working, ' +
-      // '#calendar, ' +
+      '#calendar, ' +
       '#number-non-traditional-terms, ' +
       '#length-non-traditional-terms, ' +
-      // '#kicker-elig-yes, #kicker-elig-no, ' +
+      '#kicker-elig-yes, #kicker-elig-no, ' +
       '#kicker, ' +
       '#buy-up-yes, #buy-up-no,  ' +
       '#buy-up-rate, ' +
