@@ -239,12 +239,12 @@ var GIBComparisonTool = (function () {
     }
 
 
-    if (formData.gi_bill_chap != 31) {
-      $('#elig-for-post-gi-bill-form').hide();
-      $('#voc-rehab-warning').hide();
-    } else {
+    if (formData.gi_bill_chap == 31) {
       $('#elig-for-post-gi-bill-form').show();
       $('#voc-rehab-warning').show();
+    } else {
+      $('#elig-for-post-gi-bill-form').hide();
+      $('#voc-rehab-warning').hide();
     }
 
     if (formData.gi_bill_chap == 31 && formData.post_911_elig == false) {
