@@ -2528,14 +2528,44 @@ function toggleAboutYourFavorites () {
 }
 
 /*
- * Add or remove a favorite school 
+ * Remove a favorite school
+ */
+function removeFavoriteSchool (school_name) {
+  /* TODO: Refactor. See processFavoriteSchool */
+  var f_schools_html = getFavSchoolsHtmlArray();
+  var f_schools = getFavoriteSchoolsArray();
+  var f_school_names = getFavoriteNamesArray();
+  var name_index = f_school_names.indexOf(school_name);
+  f_school_names.splice(name_index , 1);
+  f_schools.splice(name_index , 1);
+  f_schools_html.splice(name_index , 1);
+  sessionStorage.setItem('favorite_names', JSON.stringify(f_school_names));
+  sessionStorage.setItem('favorite_schools', JSON.stringify(f_schools));
+  sessionStorage.setItem('html_fav_schools', JSON.stringify(f_schools_html));
+  $('#number-of-favorites-selected').text(getFavoriteSchoolsArray().length);
+  toggleAboutYourFavorites();
+  if($('#institution').text() === school_name){
+        $('#add-favorite-school-checkbox').prop('checked', false);
+  } else {
+        /* Add to favorite checkbox may not be showing due to limit of 3 favorites. 
+         * After removal of one, it can now be shown.
+         */
+        $('#add-to-favorites').show();
+  }
+  console.log("Favorite Schools:");
+  console.log(getFavoriteSchoolsArray() );
+}
+
+/*
+ * Process (un-)checking of 'Add favorite school' checkbox 
  */
 function processFavoriteSchool () {
   var f_schools_html = getFavSchoolsHtmlArray();
   var f_schools = getFavoriteSchoolsArray();
   var f_school_names = getFavoriteNamesArray();
   var institution_name =  $('#institution').text();
-  var institution = "<li>" + institution_name + "</li>";
+  var institution = "<li>"+institution_name+" <a href='#about-your-favorites'  onclick='removeFavoriteSchool(\"" + institution_name + "\");'>X</a></li>";
+
   var table_data = $('#name-summary').html() + $('#estimated-benefits').html();
 
     if ($('#add-favorite-school-checkbox').is(':checked') && !(institutionFavorited(institution_name))) {
@@ -2547,7 +2577,9 @@ function processFavoriteSchool () {
       f_schools_html.push(table_data);
     } else {
       /* remove schools data from sessionStorage */
+      /* TODO: Refactor. See removeFavoriteSchool */
       if (!$('#add-favorite-school-checkbox').is(':checked') && (institutionFavorited(institution_name))) {
+        removeFavoriteSchool(institution_name);
         var name_index = f_school_names.indexOf(institution_name);
         f_school_names.splice(name_index , 1);
         f_schools.splice(name_index , 1);

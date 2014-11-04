@@ -5,7 +5,7 @@ function showSchools () {
 
   var school_data = getFavSchoolsHtmlArray();
   var schools = [];
-    $.each(getFavoriteSchoolsArray(), function(i, school) {
+    $.each(getFavoriteNamesArray(), function(i, school) {
       schools.push("<div id='school-"+(i+1)+"'> <h2>" + school + "</h2>" + school_data[i] + "</div>");
     });
     $('#school-list').html(schools);
