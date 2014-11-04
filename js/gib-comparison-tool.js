@@ -2359,6 +2359,9 @@ var GIBComparisonTool = (function () {
     
     // new profile elements
     $('#calculated-benefits').hide();
+    $('#about-your-favorites').hide();
+    $('#compare-favorites').hide();
+    $('#your-favorites').hide();
     
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
@@ -2524,8 +2527,15 @@ function processFavoriteSchool () {
   sessionStorage.setItem('html_fav_schools', JSON.stringify(f_schools_html));
   $('#number-of-favorites-selected').text(getFavoriteSchoolsArray().length);
   $('#favorites-list').text(getFavoriteSchoolsArray());
-  $('#your-favorites').show();
-  $('#compare-favorites').show();
+  if (getFavoriteSchoolsArray().length > 0) {
+    $('#your-favorites').show();
+    $('#compare-favorites').show();
+    $('#about-your-favorites').show();
+  } else {
+    $('#your-favorites').hide();
+    $('#compare-favorites').hide();
+    $('#about-your-favorites').hide();    
+  }
   console.log("Favorite Schools:");
   console.log(getFavoriteSchoolsArray() );
 }
