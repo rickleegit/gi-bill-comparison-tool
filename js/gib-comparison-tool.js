@@ -2282,6 +2282,7 @@ var GIBComparisonTool = (function () {
 
     // Initialize favorite schools session data
     if (sessionStorage.favorite_schools === undefined) {
+      sessionStorage.setItem('favorite_names', JSON.stringify([]));
       sessionStorage.setItem('favorite_schools', JSON.stringify([]));
       sessionStorage.setItem('html_fav_schools', JSON.stringify([]));
     }
@@ -2367,9 +2368,6 @@ var GIBComparisonTool = (function () {
     
     // new profile elements
     $('#calculated-benefits').hide();
-    //$('#about-your-favorites').hide();
-    //$('#compare-favorites').hide();
-    //$('#your-favorites').hide();
     
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
@@ -2501,12 +2499,19 @@ function getFavoriteSchoolsArray () {
   return JSON.parse(sessionStorage.getItem('favorite_schools'));
 }
 
+/* 
+ * Retrieve array of session's favorite schools 
+ */
+function getFavoriteNamesArray () {
+  return JSON.parse(sessionStorage.getItem('favorite_names'));
+}
+
 
 /*
  * Has this institution been selected as a favorite? 
  */
-function institutionFavorited (institution) {
-  return (getFavoriteSchoolsArray().indexOf(institution) >= 0);
+function institutionFavorited (name) {
+  return (getFavoriteNamesArray().indexOf(name) >= 0);
 }
 
 function toggleAboutYourFavorites () {
@@ -2528,21 +2533,28 @@ function toggleAboutYourFavorites () {
 function processFavoriteSchool () {
   var f_schools_html = getFavSchoolsHtmlArray();
   var f_schools = getFavoriteSchoolsArray();
-  var institution = "<li>" + $('#institution').text() + "</li>";
+  var f_school_names = getFavoriteNamesArray();
+  var institution_name =  $('#institution').text();
+  var institution = "<li>" + institution_name + "</li>";
   var table_data = $('#name-summary').html() + $('#estimated-benefits').html();
 
-    if ($('#add-favorite-school-checkbox').is(':checked') && !(institutionFavorited(institution))) {
+    if ($('#add-favorite-school-checkbox').is(':checked') && !(institutionFavorited(institution_name))) {
       /* save institution name */
+      f_school_names.push(institution_name);
+      /* save institution as list item */
       f_schools.push(institution);
       /* save institution-related data as html */
       f_schools_html.push(table_data);
     } else {
       /* remove schools data from sessionStorage */
-      if (!$('#add-favorite-school-checkbox').is(':checked') && (institutionFavorited(institution))) {
-        f_schools.splice(f_schools.indexOf(institution), 1);
-        f_schools_html.splice(f_schools.indexOf(institution), 1);
+      if (!$('#add-favorite-school-checkbox').is(':checked') && (institutionFavorited(institution_name))) {
+        var name_index = f_school_names.indexOf(institution_name);
+        f_school_names.splice(name_index , 1);
+        f_schools.splice(name_index , 1);
+        f_schools_html.splice(name_index , 1);
       }
     }
+  sessionStorage.setItem('favorite_names', JSON.stringify(f_school_names));
   sessionStorage.setItem('favorite_schools', JSON.stringify(f_schools));
   sessionStorage.setItem('html_fav_schools', JSON.stringify(f_schools_html));
   $('#number-of-favorites-selected').text(getFavoriteSchoolsArray().length);
