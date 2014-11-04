@@ -90,15 +90,20 @@ function show(institutions, intersection) {
   });
 
   /* add the results to the results box */
+  var institutionResults = {};
   for (key in intersection) {
-    var inst = institutions[key],
-        place = inst.city;
-
-    if (inst.state) {
-      place += ', '+inst.state;
+    var inst = institutions[key];
+    institutionResults[inst.name] = inst;
+  }
+  var sortedInstitutionNames = Object.keys(institutionResults).sort();
+  for (index in sortedInstitutionNames) {
+    var instName = sortedInstitutionNames[index];
+    var inst = institutionResults[instName];
+    var place = inst.city;
+    if (inst.state){
+      place += ", " + inst.state;
     }
-
-    var res = '<li><a href="#" class="adv_result" data-key="'+key+'">'+inst.name+
+    var res = '<li><a href="#" class="adv_result" data-key="'+inst.value+'">'+inst.name+
           '<span>'+place+'</span></a></li>';
     out.append(res);
   }
