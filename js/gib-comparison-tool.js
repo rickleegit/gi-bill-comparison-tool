@@ -2008,8 +2008,10 @@ var GIBComparisonTool = (function () {
     $('#calc-term-total-row').show();
 
     // Calculator Results - Particular Terms
-    $('#term2').show();
-    $('#term3').show();
+    $('.term2').show();
+    $('.term3').show();
+    $('.paid2').show();
+    $('.paid3').show();
     $('#tuition-fees-term-2').show();
     $('#tuition-fees-term-3').show();
     $('#yr-ben-term-2').show();
@@ -2159,8 +2161,10 @@ var GIBComparisonTool = (function () {
     $('#total-year-td').prop('colspan', 3);
 
     if (calculated.number_of_terms == 1) {
-      $('#term2').hide();
-      $('#term3').hide();
+      $('.term2').hide();
+      $('.term3').hide();
+      $('.paid2').hide();
+      $('.paid3').hide();
       $('#tuition-fees-term-2').hide();
       $('#tuition-fees-term-3').hide();
       $('#yr-ben-term-2').hide();
@@ -2183,7 +2187,8 @@ var GIBComparisonTool = (function () {
     }
 
     if (calculated.number_of_terms < 3 && calculated.institution_type != 'ojt') {
-      $('#term3').hide();
+      $('.term3').hide();
+      $('.paid3').hide();
       $('#tuition-fees-term-3').hide();
       $('#yr-ben-term-3').hide();
       $('#yr-ben-term-va-3').hide();
