@@ -19,6 +19,7 @@ layout: va
   width: 30%
 }
 
+
 .summary {background: #efefef;}
 
 .ratings {margin: 2em 0; clear: both; padding: 1em;}
@@ -49,15 +50,15 @@ layout: va
 
 a.info-link {
   display: inline-block;
-  padding: .35em .65em;
+  padding: .35em .85em;
   background: #fff;
   border-radius: 100%;
   margin: 0 1em 0 0;
   text-align: center;
   color: #001A4F;
-  font-weight: bold;
+  font-weight: bold !important;
   font-size: 9px;
-  border: 1px solid #001A4F;
+  border: 2px solid #001A4F;
 }
 
 #estimated-benefits {
@@ -123,13 +124,19 @@ a.info-link {
 
 #name-summary {
   background: #003E73;
-
+  -webkit-border-radius: .45em;
+  -moz-border-radius: .45em;
+  border-radius: .45em;
+  padding: 0 1em;
 }
 
 #name-summary table {
   background: none;
   color: #fff;
 }
+
+
+#name-summary table h2 {padding-top: 0; margin-top: 0;}
 
 #benefits {
   padding: 0 1em 1em 1em;
@@ -184,6 +191,18 @@ ul.plain li {
 
 .logo {float: left; width: 20%;}
 .address {float: left; width: 60%; margin-left: 1em; }
+
+ul#favorites-list {margin: 0; padding: 0;}
+
+ul#favorites-list li {
+  padding: .5em .25em;
+  display: block;
+  margin-bottom: .5em;
+  clear: both;
+  border-radius: .25em;
+  background: #ddd;
+  list-style-type: none;
+}
 
 </style>
 
@@ -607,20 +626,22 @@ ul.plain li {
           <tr id="number-non-traditional-terms-form" class="form-group top-aligned">
             <td>
               <label for="number-non-traditional-terms">How many terms / year? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'How Many Terms');" target="_blank"><img class="info" src="img/info.png" alt="Click here for more information." title="Click here for more information."></a></label>
-            </td>
-            <td>
               <select id="number-non-traditional-terms" name="How many terms / year?" alt="Select how many terms / year?">
                 <option value="3">Three</option>
                 <option value="2" selected>Two</option>
                 <option value="1">One</option>
               </select>
+
             </td>
+
+            <td>
+              &nbsp;
+            </td>
+
           </tr>
           <tr id="length-non-traditional-terms-form" class="form-group top-aligned">
             <td>
               <label for="length-non-traditional-terms">How long is each term? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / Non-Traditional Term Length');" target="_blank"><img class="info" src="img/info.png" alt="Click here for more information." title="Click here for more information."></a></label>
-            </td>
-            <td>
               <select id="length-non-traditional-terms" name="How long is each term?" alt="Select how long is each term?">
                 <option value="1">1 month</option>
                 <option value="2">2 months</option>
@@ -635,6 +656,10 @@ ul.plain li {
                 <option value="11">11 months</option>
                 <option value="12">12 months</option>
               </select>
+
+            </td>
+            <td>
+              &nbsp;
             </td>
           </tr>
           <tr>
@@ -735,7 +760,7 @@ ul.plain li {
             <td id="eight-keys"></td>
           </tr>
         </table>
-        <small><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata">Source for veteran indicators</a></small>
+        <small style="font-size: .9em;"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata">Source for veteran indicators</a></small>
       </div>
 
       <div style="clear: both;">&nbsp;</div>
@@ -1164,7 +1189,7 @@ ul.plain li {
           <tr id="calc-term-total-row" style="font-size:25px;font-weight:bold;">
             <th></th>
             <td id="total-year-td" colspan="2" class="normal" style="text-align:right;"><b>Total Post-9/11 GI Bill Benefits</b></td>
-            <td id="total-year" class="normal">$0 / yr</td>
+            <td id="total-year" class="normal" style="text-align: right;">$0 / yr</td>
           <tr><td colspan="4"></td></tr>
         </tbody>
       </table>
