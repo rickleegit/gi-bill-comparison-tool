@@ -234,7 +234,6 @@ Use with for example: <div class="icon explore"></div>
 /* Forms */
 
 .comparison .form-group {
-  margin-left: 50px;
   margin-bottom: 15px;
 }
 
@@ -261,6 +260,7 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison .form-group input[type="text"] {
   color: #444;
+  padding: .5em;#
 }
 
 .comparison .form-group input[type="radio"] {
@@ -346,7 +346,7 @@ Use with for example: <div class="icon explore"></div>
 
 /* Benefit Estimator */
 
-.comparison #benefit-estimator {}
+.comparison #benefit-estimator h4 {text-align: left; color: #fff; font-size: 14px;}
 
 .comparison #benefit-estimator a:focus {
   outline: 1px dashed #fff;

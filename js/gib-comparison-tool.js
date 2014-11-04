@@ -1865,7 +1865,6 @@ var GIBComparisonTool = (function () {
     $('#tuition-fees').html(calculated.est_tuition_fees);
     $('#housing-allowance').html(calculated.est_housing_allowance);
     $('#book-stipend').html(calculated.est_book_stipend);
-    $('#profile').show();
 
     $('#poe').html(institution.poe ? 'Yes' : 'No');
 
@@ -2307,12 +2306,12 @@ var GIBComparisonTool = (function () {
       '#consecutive-service, ' +
       '#online-classes-yes, #online-classes-no, ' +
       '#in-state-yes, #in-state-no, ' +
-      // '#tuition-fees-input, ' +
+      '#tuition-fees-input, ' +
       '#in-state-tuition-fees, ' +
       '#yellow-ribbon-recipient-yes, #yellow-ribbon-recipient-no,  ' +
       '#yellow-ribbon-amount, ' +
-      // '#enrolled, ' +
-      // '#enrolled-old, ' +
+      '#enrolled, ' +
+      '#enrolled-old, ' +
       '#working, ' +
       '#calendar, ' +
       '#number-non-traditional-terms, ' +
@@ -2321,7 +2320,7 @@ var GIBComparisonTool = (function () {
       '#kicker, ' +
       '#buy-up-yes, #buy-up-no,  ' +
       '#buy-up-rate, ' +
-      // '#scholar, ' +
+      '#scholar, ' +
       '#tuition-assist').on('change', function () {
       GIBComparisonTool.update();
     });
@@ -2331,28 +2330,12 @@ var GIBComparisonTool = (function () {
       GIBComparisonTool.update();
     });
 
-    // Removing this to bind instead to calculate button.
-    /*
     $('#tuition-fees-input, #in-state-tuition-fees,' +
       '#yellow-ribbon-amount, #scholar, #kicker').bindWithDelay('keyup', function(e) {
       $(this).change();
     }, 1000);
-    */
     
-    $('#calculate-benefits').click(function () {
-      $('#estimated-benefits').hide();
-      GIBComparisonTool.update();
-      $('#calculated-benefits').show();
-    });
-    
-    $('#clear-calculated-benefits').click(function () {
-      $('#calculated-benefits').hide();
-      $('#estimated-benefits').show();
-    });
-
-    // Hide elements on load
-    
-    // old elements (may no longer be needed)
+    // Hide elements on load    
     $('#enlistment-service-form').hide();
     $('#consecutive-service-form').hide();
     $('#number-of-dependents-form').hide();
@@ -2369,10 +2352,7 @@ var GIBComparisonTool = (function () {
     $('#enrollment-section').hide();
     $('#calculator').hide();
     $('#add-to-favorites').hide();
-    
-    // new profile elements
-    $('#calculated-benefits').hide();
-    
+        
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
 
@@ -2457,7 +2437,8 @@ function toggleFilterResults () {
  * Toggle between calculator and benefit estimator
  */
 function toggleCalc () {
-  $('#benefit-estimator').toggle();
+  //$('#benefit-estimator').toggle();
+  $('.estimated-row').toggle();
   $('#calculator').toggle();
   $('#calculate-benefits-btn a').html();
 
