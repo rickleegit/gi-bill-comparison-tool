@@ -20,6 +20,8 @@ layout: va
 }
 
 
+.comparison table {margin-left: 0 !important;}
+
 .summary {background: #efefef;}
 .ratings {margin: 2em 0; clear: both; padding: 1em;}
 .ratings a {display: inline-block; margin: 1em 0;}
@@ -275,6 +277,10 @@ background: none;
 text-align: left;
 }
 
+img.rating {
+  max-width: 100%;
+}
+
 .comparison #calculator table td,
 .comparison #calculator table th {
   text-align: left;
@@ -301,6 +307,13 @@ color: #444;
 text-align: center;
 background: none;
 padding: 1em;
+}
+
+#add-to-favorites span {
+  padding: .5em;
+  display: inline-block;
+  background: rgba(0,0,0,.2);
+  border: 1px solid rgba(0,0,0,.1);
 }
 
 </style>
@@ -561,7 +574,7 @@ padding: 1em;
         <tr>
           <td id="institution"></td>
           <td id="rating">
-            <img src="img/rating.png" alt="coming soon: school ratings" style="width: 20%;"/>
+            <img src="img/rating.png" alt="coming soon: school ratings" class="rating" />
           </td>
         </tr>
         <tr>
@@ -573,9 +586,11 @@ padding: 1em;
           <td id="type" class="normal"></td>
           <td>
             <div  id="add-to-favorites" class="checkbox">
+              <span>
               <label>
                 <input type="checkbox" id="add-favorite-school-checkbox" onclick="processFavoriteSchool();">Add to favorites</input>
               </label>
+            </span>
             </div>
           </td>
         </tr>
