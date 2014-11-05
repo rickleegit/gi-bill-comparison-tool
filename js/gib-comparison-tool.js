@@ -1859,6 +1859,7 @@ var GIBComparisonTool = (function () {
 
     // Write results to the page
     $('#benefit-estimator table').removeClass('inactive');
+    $('#rating').show();
     $('#institution').html(institution.institution);
     $('#location').html(calculated.location);
     $('#type').html(calculated.institution_type_display);
@@ -2352,6 +2353,7 @@ var GIBComparisonTool = (function () {
     $('#enrollment-section').hide();
     $('#calculator').hide();
     $('#add-to-favorites').hide();
+    $('#rating').hide();
         
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
