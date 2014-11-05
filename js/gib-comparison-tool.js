@@ -2488,7 +2488,7 @@ function captureComparisonData() {
  * Collect school comparision data from page
  */
 function getSchoolDataFromPage() {
-   return $('#name-summary').html() + $('#estimated-benefits').html() + $('#gi-summary').html();
+   return $('#benefit-estimator').html() + $('#veteran-indicators').html();
 }
 
 /* 
@@ -2572,7 +2572,7 @@ function processFavoriteSchool () {
   var institution_name =  $('#institution').text();
   var institution = "<li>"+institution_name+" <a href='#about-your-favorites'  onclick='removeFavoriteSchool(\"" + institution_name + "\");'>X</a></li>";
 
-  var table_data = getSchoolDataFromPage();; 
+  var table_data = getSchoolDataFromPage(); 
 
     if ($('#add-favorite-school-checkbox').is(':checked') && !(institutionFavorited(institution_name))) {
       /* save institution name */
