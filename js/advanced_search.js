@@ -201,6 +201,8 @@ function intersect(institutions, dicts) {
 
   results = dicts[0];
   for (var i=1; i<dicts.length; i++) {
+    if (typeof dicts[i] != "object") { continue; }
+
     temp_results = {};
     for (key in results) {
       if (dicts[i].hasOwnProperty(key)) {
