@@ -1737,6 +1737,7 @@ var GIBComparisonTool = (function () {
     if (formData.facility_code == institution.facility_code) {
       // Just do an update with existing institution, no $.getJSON call
       updatePage();
+      captureComparisonData();
     } else {
       // Lookup the new institution
       getInstitution(formData.facility_code, function () {
@@ -1779,9 +1780,12 @@ var GIBComparisonTool = (function () {
         didOpenCalculator = false;
 
         updatePage();
+        captureComparisonData();
       });
     }
   };
+
+
 
   /*
    * Update the entire page
@@ -2486,6 +2490,25 @@ function scrollToAnchor (id) {
 }
 
 /* 
+ * Capture (changed) data for comparing favorite schools
+ */
+function captureComparisonData() { 
+    if ($('#add-favorite-school-checkbox').is(':checked') ) {
+      var f_schools_html = getFavSchoolsHtmlArray();
+      var idx = getFavoriteNamesArray().indexOf($('#institution').text())
+      f_schools_html[idx] = getSchoolDataFromPage();
+      sessionStorage.setItem('html_fav_schools', JSON.stringify(f_schools_html));
+    }
+ }
+
+/*
+ * Collect school comparision data from page
+ */
+function getSchoolDataFromPage() {
+   return $('#name-summary').html() + $('#estimated-benefits').html() + $('#gi-summary').html();
+}
+
+/* 
  * Retrieve array of session's favorite school
  */
 function getFavSchoolsHtmlArray () {
@@ -2566,7 +2589,7 @@ function processFavoriteSchool () {
   var institution_name =  $('#institution').text();
   var institution = "<li>"+institution_name+" <a href='#about-your-favorites'  onclick='removeFavoriteSchool(\"" + institution_name + "\");'>X</a></li>";
 
-  var table_data = $('#name-summary').html() + $('#estimated-benefits').html();
+  var table_data = getSchoolDataFromPage();; 
 
     if ($('#add-favorite-school-checkbox').is(':checked') && !(institutionFavorited(institution_name))) {
       /* save institution name */
