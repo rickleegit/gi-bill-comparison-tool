@@ -1885,6 +1885,12 @@ var GIBComparisonTool = (function () {
 
     $('#gibill').html(institution.gibill ? formatNumber(institution.gibill) : 0);
 
+    var complaint_total = institution.complaints_facility_code + institution.complaints_main_campus_roll_up + institution.complaints_financial +
+                          institution.complaints_quality + institution.complaints_refund+ institution.complaints_marketing + institution.complaints_accreditation +
+                          institution.complaints_degree_requirements + institution.complaints_student_loans + institution.complaints_grades +
+                          institution.complaints_credit_transfer + institution.complaints_jobs + institution.complaints_transcript + institution.complaints_other;
+    $("#complaints-total").html(complaint_total == 0 ? 'None' : formatNumber(complaint_total));
+
     $('#institution-calculator').html(institution.institution);
     $('#location-calculator').html(calculated.location);
     $('#type-calculator').html(calculated.institution_type_display);
