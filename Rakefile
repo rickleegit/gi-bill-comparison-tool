@@ -10,6 +10,10 @@ class String
   end
 end
 
+def sanitize_boolean(value)
+
+end
+
 desc "Convert XSLX"
 task :convert, [:path] do |task, args|
   require 'simple_xlsx_reader'
@@ -46,75 +50,84 @@ task :build do
   CSV.foreach("_data/data.csv", :encoding => "iso-8859-1:utf-8", :headers => true, :header_converters => :symbol) do |row|
     f = row.fields
 
+
+
     # Convert data types (booleans)
     f.map! do |f|
       if f == "Yes"
         true
-      elsif f == "No"
+      elsif f == "No" 
         false
       elsif f == "NR"
+        nil
+      elsif f == "NONE"
         nil
       else
         f
       end
     end
 
+    record = Hash[row.headers[0..-1].zip(f[0..-1])]
+
     # Convert data types
-    # f[0] # facility_code
-    f[1].to_s.upcase! # institution
-    f[2].to_s.upcase! # city
-    f[3].to_s.upcase! # state
-    unless f[4] == nil; f[4] = f[4].rjust(5, '0') end # zip
-    f[5].to_s.upcase! # country
-    # f[6] # type
-    unless f[7] == nil; f[7] = f[7].to_i  end # cross
-    unless f[8] == nil; f[8].tr!('"', '') end # ope
-    unless f[9] == nil; f[9] = f[9].to_i  end # bah
-    # f[10] # poe
-    # f[11] # yr
-    unless f[12] == nil; f[12] = f[12].to_i end # gibill
-    # f[13] # student_veteran
-    # f[14] # student_veteran_link
-    # f[15] # vetsuccess_name
-    # f[16] # vetsuccess_email
-    # f[17] # eight_keys
-    # f[18] # correspondence
-    # f[19] # flight
-    unless f[20] == nil; f[20] = f[20].to_f end # grad_rate
-    unless f[21] == nil; f[21] = f[21].to_i end # grad_rate_rank
-    unless f[22] == nil; f[22] = f[22].to_f end # default_rate
-    unless f[23] == nil; f[23] = f[23].to_i end # avg_stu_loan_debt
-    unless f[24] == nil; f[24] = f[24].to_i end # avg_stu_loan_debt_rank
-    unless f[25] == nil; f[25] = f[25].to_i end # indicator_group
-    # f[26] # salary
-    # f[27] # calendar
-    unless f[28] == nil; f[28] = f[28].to_i end # tuition_in_state
-    unless f[29] == nil; f[29] = f[29].to_i end # tuition_out_of_state
-    unless f[30] == nil; f[30] = f[30] == "true" end # online_all
-    unless f[31] == nil; f[31] = f[31].to_f end # p911_tuition_fees
-    unless f[32] == nil; f[32] = f[32].to_i end # p911_recipients
-    unless f[33] == nil; f[33] = f[33].to_f end # p911_yellow_ribbon
-    unless f[34] == nil; f[34] = f[34].to_i end # p911_yr_recipients
-    # f[35] # accredited
-    # f[36] # accreditation_type
-    # f[37] # accreditation_status
-    unless f[38] == nil; f[38] = f[38].to_i end # complaints_facility_code
-    unless f[39] == nil; f[39] = f[39].to_i end # complaints_main_campus_roll_up
-    unless f[40] == nil; f[40] = f[40].to_i end # complaints_financial
-    unless f[41] == nil; f[41] = f[41].to_i end # complaints_quality
-    unless f[42] == nil; f[42] = f[42].to_i end # complaints_refund
-    unless f[43] == nil; f[43] = f[43].to_i end # complaints_marketing
-    unless f[44] == nil; f[44] = f[44].to_i end # complaints_accreditation
-    unless f[45] == nil; f[45] = f[45].to_i end # complaints_degree_requirements
-    unless f[46] == nil; f[46] = f[46].to_i end # complaints_student_loans
-    unless f[47] == nil; f[47] = f[47].to_i end # complaints_grades
-    unless f[48] == nil; f[48] = f[48].to_i end # complaints_credit_transfer
-    unless f[49] == nil; f[49] = f[49].to_i end # complaints_jobs
-    unless f[50] == nil; f[50] = f[50].to_i end # complaints_transcript
-    unless f[51] == nil; f[51] = f[51].to_i end # complaints_other
+    record[:institution].to_s.upcase!
+    record[:city].to_s.upcase!
+    record[:state].to_s.upcase!
+    record[:zip]                      = record[:zip].rjust(5, '0')            if record[:zip]
+    record[:country].to_s.upcase!
+
+    record[:cross]                    = record[:cross].to_i                   if record[:cross]
+    record[:ope]                      = record[:ope].tr('"', '')              if record[:ope]
+    record[:bah]                      = record[:bah].to_i                     if record[:bah]
+
+    record[:gibill]                   = record[:gibill].to_i                  if record[:gibill]
+
+    record[:grad_rate]                = record[:grad_rate].tr(',', '').to_f       if record[:grad_rate]
+    record[:grad_rate_rank]           = record[:grad_rate_rank].to_i              if record[:grad_rate_rank]
+    record[:default_rate]             = record[:default_rate].tr(',', '').to_f    if record[:default_rate]
+    record[:avg_stu_loan_debt]        = record[:avg_stu_loan_debt].to_i           if record[:avg_stu_loan_debt]
+    record[:avg_stu_loan_debt_rank]   = record[:avg_stu_loan_debt_rank].to_i      if record[:avg_stu_loan_debt_rank]
+    record[:indicator_group]          = record[:indicator_group].to_i             if record[:indicator_group]
+
+    record[:tuition_in_state]         = record[:tuition_in_state].to_i        if record[:tuition_in_state]
+    record[:tuition_out_of_state]     = record[:tuition_out_of_state].to_i    if record[:tuition_out_of_state]
+    record[:books]                    = record[:books].to_i                   if record[:books]
+    record[:online_all]               = !!record[:online_all]
+
+    record[:p911_tuition_fees]        = record[:p911_tuition_fees].tr(',', '').to_f       if record[:p911_tuition_fees]
+    record[:p911_recipients]          = record[:p911_recipients].to_i                     if record[:p911_recipients]
+    record[:p911_yellow_ribbon]       = record[:p911_yellow_ribbon].tr(',', '').to_f      if record[:p911_yellow_ribbon]
+    record[:p911_yr_recipients]       = record[:p911_yr_recipients].to_i                  if record[:p911_yr_recipients]
+
+    record[:complaints_facility_code]                     = record[:complaints_facility_code].to_i                      if record[:complaints_facility_code]
+    record[:complaints_financial_by_fac_code]             = record[:complaints_financial_by_fac_code].to_i              if record[:complaints_financial_by_fac_code]
+    record[:complaints_quality_by_fac_code]               = record[:complaints_quality_by_fac_code].to_i                if record[:complaints_quality_by_fac_code]
+    record[:complaints_refund_by_fac_code]                = record[:complaints_refund_by_fac_code].to_i                 if record[:complaints_refund_by_fac_code]
+    record[:complaints_marketing_by_fac_code]             = record[:complaints_marketing_by_fac_code].to_i              if record[:complaints_marketing_by_fac_code]
+    record[:complaints_accreditation_by_fac_code]         = record[:complaints_accreditation_by_fac_code].to_i          if record[:complaints_accreditation_by_fac_code]
+    record[:complaints_degree_requirements_by_fac_code]   = record[:complaints_degree_requirements_by_fac_code].to_i    if record[:complaints_degree_requirements_by_fac_code]
+    record[:complaints_student_loans_by_fac_code]         = record[:complaints_student_loans_by_fac_code].to_i          if record[:complaints_student_loans_by_fac_code]
+    record[:complaints_grades_by_fac_code]                = record[:complaints_grades_by_fac_code].to_i                 if record[:complaints_grades_by_fac_code]
+    record[:complaints_credit_transfer_by_fac_code]       = record[:complaints_credit_transfer_by_fac_code].to_i        if record[:complaints_credit_transfer_by_fac_code]
+    record[:complaints_transcript_by_fac_code]            = record[:complaints_transcript_by_fac_code].to_i             if record[:complaints_transcript_by_fac_code]
+    record[:complaints_other_by_fac_code]                 = record[:complaints_other_by_fac_code].to_i                  if record[:complaints_other_by_fac_code]
+
+    record[:complaints_main_campus_roll_up]               = record[:complaints_main_campus_roll_up].to_i                if record[:complaints_main_campus_roll_up]
+
+    record[:complaints_financial_by_ope_id_do_not_sum]             = record[:complaints_financial_by_ope_id_do_not_sum].to_i              if record[:complaints_financial_by_ope_id_do_not_sum]
+    record[:complaints_quality_by_ope_id_do_not_sum]               = record[:complaints_quality_by_ope_id_do_not_sum].to_i                if record[:complaints_quality_by_ope_id_do_not_sum]
+    record[:complaints_refund_by_ope_id_do_not_sum]                = record[:complaints_refund_by_ope_id_do_not_sum].to_i                 if record[:complaints_refund_by_ope_id_do_not_sum]
+    record[:complaints_marketing_by_ope_id_do_not_sum]             = record[:complaints_marketing_by_ope_id_do_not_sum].to_i              if record[:complaints_marketing_by_ope_id_do_not_sum]
+    record[:complaints_accreditation_by_ope_id_do_not_sum]         = record[:complaints_accreditation_by_ope_id_do_not_sum].to_i          if record[:complaints_accreditation_by_ope_id_do_not_sum]
+    record[:complaints_degree_requirements_by_ope_id_do_not_sum]   = record[:complaints_degree_requirements_by_ope_id_do_not_sum].to_i    if record[:complaints_degree_requirements_by_ope_id_do_not_sum]
+    record[:complaints_student_loans_by_ope_id_do_not_sum]         = record[:complaints_student_loans_by_ope_id_do_not_sum].to_i          if record[:complaints_student_loans_by_ope_id_do_not_sum]
+    record[:complaints_grades_by_ope_id_do_not_sum]                = record[:complaints_grades_by_ope_id_do_not_sum].to_i                 if record[:complaints_grades_by_ope_id_do_not_sum]
+    record[:complaints_credit_transfer_by_ope_id_do_not_sum]       = record[:complaints_credit_transfer_by_ope_id_do_not_sum].to_i        if record[:complaints_credit_transfer_by_ope_id_do_not_sum]
+    record[:complaints_transcript_by_ope_id_do_not_sum]            = record[:complaints_transcript_by_ope_id_do_not_sum].to_i             if record[:complaints_transcript_by_ope_id_do_not_sum]
+    record[:complaints_other_by_ope_id_do_not_sum]                 = record[:complaints_other_by_ope_id_do_not_sum].to_i                  if record[:complaints_other_by_ope_id_do_not_sum]
 
     # Save row to array
-    data.push Hash[row.headers[0..-1].zip(f[0..-1])]
+    data.push record
   end
 
   puts "Writing `api/institutions.json`".bold
