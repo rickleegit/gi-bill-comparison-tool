@@ -317,28 +317,25 @@ layout: va
     <div id="benefit-calculator">
       <h4>Calculate your complete benefit</h4>
       <table>
-
         <tr>
           <td colspan="2">
-            <label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" id="tuition-fees-input" target="_blank" class="info-link">i</a></label>
+            <label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" target="_blank" class="info-link">i</a></label>
             <div>
               <input id="tuition-fees-input" type="text" value="$0" name="Tuition Fees" alt="Tuition Fees"/>
             </div>
           </td>
         </tr>
-
         <tr>
-
           <td colspan="2">
-            <label for="scholar">Scholarships (not Pell): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#scholarships" onclick="track('Tool Tips', 'Calculator / Scholarships');" target="_blank" id="scholar" class="info-link">i</a></label>
+            <label for="scholar">Scholarships (not Pell): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#scholarships" onclick="track('Tool Tips', 'Calculator / Scholarships');" target="_blank" class="info-link">i</a></label>
             <div>
             <input id="scholar" type="text" value="$0" name="Scholarships (not Pell)" alt="How much are you receiving in scholarships and not Pell grants"/>
           </div>
           </td>
-
         </tr>
         <tr>
-          <td><label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
+          <td>
+            <label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
               <div>
               <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
                 <option value="1.0">Full Time</option>
@@ -347,35 +344,27 @@ layout: va
                 <option value="0">½ Time or less</option>
               </select>
             </div>
-
           </td>
-          <td><label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
-
-          <div>
-          <select id="calendar" name="School Calendar" alt="Select type of school calendar">
-            <option value="semesters">Semesters</option>
-            <option value="quarters">Quarters</option>
-            <option value="nontraditional">Non-Traditional</option>
-          </select>
-        </div>
-
+          <td>
+            <label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
+            <div>
+              <select id="calendar" name="School Calendar" alt="Select type of school calendar">
+                <option value="semesters">Semesters</option>
+                <option value="quarters">Quarters</option>
+                <option value="nontraditional">Non-Traditional</option>
+              </select>
+            </div>
           </td>
         </tr>
-
         <tr id="number-non-traditional-terms-form" class="form-group top-aligned">
           <td colspan="2">
             <label for="how-many-non-traditional-terms">How many terms / year? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'How Many Terms');" target="_blank" class="info-link">i</a></label>
-
             <select id="how-many-non-traditional-terms" name="How many terms / year?" alt="Select how many terms / year?">
               <option value="3">Three</option>
               <option value="2" selected>Two</option>
               <option value="1">One</option>
             </select>
-
           </td>
-
-
-
         </tr>
         <tr id="length-non-traditional-terms-form" class="form-group top-aligned">
           <td>
@@ -394,7 +383,6 @@ layout: va
               <option value="11">11 months</option>
               <option value="12">12 months</option>
             </select>
-
           </td>
           <td>
             &nbsp;
@@ -424,7 +412,9 @@ layout: va
           <td id="yellow-ribbon-rates-link" class="form-group"></td>
         </tr>
         <tr>
-          <td><label class="question">Eligible for Kicker: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / Eligible for Kicker');" target="_blank" class="info-link">i</a></label></td>
+          <td>
+            <label class="question">Eligible for Kicker: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / Eligible for Kicker');" target="_blank" class="info-link">i</a></label>
+          </td>
           <td>
             <label class="radio" for="kicker-elig-yes">Yes</label>
             <input id="kicker-elig-yes" name="Kicker Eligible" type="radio" value="yes">
