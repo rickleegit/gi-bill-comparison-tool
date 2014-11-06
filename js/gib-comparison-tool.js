@@ -17,6 +17,21 @@ var GIBComparisonTool = (function () {
   // All institutions (names and facility codes)
   var institutions = [];
 
+  var complaint_types = {
+    "complaints_financial_by_ope_id_do_not_sum":                'Financial',
+    "complaints_quality_by_ope_id_do_not_sum":                  'Quality',
+    "complaints_refund_by_ope_id_do_not_sum":                   'Refund',
+    "complaints_marketing_by_ope_id_do_not_sum":                'Marketing',
+    "complaints_accreditation_by_ope_id_do_not_sum":            'Accreditation',
+    "complaints_degree_requirements_by_ope_id_do_not_sum":      'Degree Requirements',
+    "complaints_student_loans_by_ope_id_do_not_sum":            'Student Loans',
+    "complaints_grades_by_ope_id_do_not_sum":                   'Grades',
+    "complaints_credit_transfer_by_ope_id_do_not_sum":          'Credit Transfer',
+    "complaints_jobs_by_ope_id_do_not_sum":                     'Jobs',
+    "complaints_transcript_by_ope_id_do_not_sum":               'Transcript',
+    "complaints_other_by_ope_id_do_not_sum":                    'Other'
+  };
+
   // User form data
   var formData = {
     military_status:        '',
@@ -1886,8 +1901,13 @@ var GIBComparisonTool = (function () {
     $('#gibill').html(institution.gibill ? formatNumber(institution.gibill) : 0);
 
     var complaints = 0 + institution.complaints_main_campus_roll_up;
+    $("#complaints-total").html(complaints == 0 ? 'None' : formatNumber(complaints) + '&nbsp;<a href="#complaints-total" id="complaints-detail-link" onclick="expandComplaintDetails();">See Details</a>');
 
-    $("#complaints-total").html(complaints == 0 ? 'None' : formatNumber(complaints));
+    var table = $("#complaints-table");
+    table.html('');
+    $.each(complaint_types, function(key, display_name) { 
+      table.append('<tr><td>' +  display_name + '</td><td>' + institution[key] + '</td></tr>');
+    });
 
     $('#institution-calculator').html(institution.institution);
     $('#location-calculator').html(calculated.location);
@@ -2430,6 +2450,14 @@ var GIBComparisonTool = (function () {
     trackOpenCalculator: trackOpenCalculator
   };
 })();
+
+
+function expandComplaintDetails() {
+  $("#complaints-details").toggle();
+  var showhide = $("#complaints-total").html();
+  showhide = showhide.indexOf('See') > 0 ? showhide.replace('See', 'Hide') : showhide.replace('Hide', 'See');
+  $("#complaints-total").html(showhide);
+}
 
 /*
  * Toggle filter results
