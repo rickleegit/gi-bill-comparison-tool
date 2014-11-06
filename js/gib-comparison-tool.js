@@ -338,13 +338,9 @@ var GIBComparisonTool = (function () {
    * Formats currency in USD
    */
   var formatCurrency = function (num) {
-    num = Math.round(num);
-    var str = num.toString();
-    if (str.length > 3) {
-       return '$' + str.slice(0, -3) + ',' + str.slice(-3);
-    } else {
-      return '$' + str;
-    }
+    var str = parseFloat(num).toFixed(2).toString();
+    // match a digit if it's followed by 3 other digits, appending a comma to each match
+    return '$' + str.replace(/\d(?=(\d{3})+\.)/g, '$&,');
   };
 
   /*
