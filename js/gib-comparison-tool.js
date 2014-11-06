@@ -1944,6 +1944,25 @@ var GIBComparisonTool = (function () {
     $('#acadyearlength').html(calculated.acad_year_length);
     $('#yr_console').html(institution.yr);
 
+
+    $('#housing-allow-rate').html(formatCurrency(calculated.housing_allow_term_1));
+    $('#total-left-to-pay').html(formatCurrency(calculated.total_left_to_pay));
+    if (calculated.total_left_to_pay > 0) {
+      $('#total-left-to-pay').addClass('red');
+    } else {
+      $('#total-left-to-pay').removeClass('red');
+    }
+
+
+    $('#total-paid-to-school').html(formatCurrency(calculated.total_to_school));
+    $('#total-paid-to-you').html(formatCurrency(calculated.total_to_you));
+
+    $('#total-year-td').html(calculated.gi_bill_total_text);
+    $('#total-year').html(formatCurrency(calculated.total_year));
+
+    $('#total-tuition-fees-scholarships').html(formatCurrency(calculated.total_scholarship_ta));
+    $('#total-tuition-fees-charged').html(formatCurrency(formData.tuition_fees));
+
     $('.term1').html(calculated.term1);
     $('.term2').html(calculated.term2);
     $('.term3').html(calculated.term3);
@@ -1964,21 +1983,11 @@ var GIBComparisonTool = (function () {
     $('#yr-ben-term-va-3').html(formatCurrency(calculated.yr_ben_va_term_3));
     $('#yr-ben-va-total').html(formatCurrency(calculated.yr_ben_va_total));
 
-    $('#total-paid-to-school').html(formatCurrency(calculated.total_to_school));
-    $('#total-tuition-fees-scholarships').html(formatCurrency(calculated.total_scholarship_ta));
-    $('#total-tuition-fees-charged').html(formatCurrency(formData.tuition_fees));
-
-    $('#total-left-to-pay').html(formatCurrency(calculated.total_left_to_pay));
-    if (calculated.total_left_to_pay > 0) {
-      $('#total-left-to-pay').addClass('red');
-    } else {
-      $('#total-left-to-pay').removeClass('red');
-    }
-
-    $('#housing-allow-term-1').html(formatCurrency(calculated.housing_allow_term_1) + ' /month');
-    $('#housing-allow-term-2').html(formatCurrency(calculated.housing_allow_term_2) + ' /month');
-    $('#housing-allow-term-3').html(formatCurrency(calculated.housing_allow_term_3) + ' /month');
+    $('#housing-allow-term-1').html(formatCurrency(calculated.housing_allow_term_1));
+    $('#housing-allow-term-2').html(formatCurrency(calculated.housing_allow_term_2));
+    $('#housing-allow-term-3').html(formatCurrency(calculated.housing_allow_term_3));
     $('#housing-allow-total').html(formatCurrency(calculated.housing_allow_total));
+
 
     $('#book-stipend-term-1').html(formatCurrency(calculated.book_stipend_term_1));
     $('#book-stipend-term-2').html(formatCurrency(calculated.book_stipend_term_2));
@@ -1986,6 +1995,9 @@ var GIBComparisonTool = (function () {
     $('#book-stipend-total').html(formatCurrency(calculated.book_stipend_total));
 
     if (calculated.institution_type == 'ojt') {
+      $('#housing-allow-term-1').append(' /month');
+      $('#housing-allow-term-2').append(' /month');
+      $('#housing-allow-term-3').append(' /month');
       $('#housing-allow-total').append(' /month');
       $('#book-stipend-term-1').append(' /month');
       $('#book-stipend-term-2').append(' /month');
@@ -1996,10 +2008,6 @@ var GIBComparisonTool = (function () {
     $('#total-term-1').html(formatCurrency(calculated.total_term_1));
     $('#total-term-2').html(formatCurrency(calculated.total_term_2));
     $('#total-term-3').html(formatCurrency(calculated.total_term_3));
-
-    $('#total-paid-to-you').html(formatCurrency(calculated.total_to_you));
-    $('#total-year-td').html(calculated.gi_bill_total_text);
-    $('#total-year').html(formatCurrency(calculated.total_year));
 
     if (institution.student_veteran) {
       $('#student-veterans').html('Yes');
