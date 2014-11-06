@@ -257,27 +257,17 @@ layout: va
       <tbody>
         <tr><td colspan="2"></td></tr>
         <tr>
-          <td id="institution"></td>
-          <td id="rating">
-            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp"><img src="img/rating.png" alt="coming soon: school ratings" class="rating" /></a>
-          </td>
+          <td id="institution" colspan="2"></td>
         </tr>
         <tr>
           <td id="location" class="normal"></td>
-          <td id="" class="normal">
+          <td id="rating">
+            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp"><img src="img/rating.png" alt="coming soon: school ratings" class="rating" /></a>
+          </td>
           </td>
         </tr>
         <tr>
           <td id="type" class="normal"></td>
-          <td>
-            <div  id="add-to-favorites" class="checkbox">
-              <span>
-              <label>
-                <input type="checkbox" id="add-favorite-school-checkbox" onclick="processFavoriteSchool();">Add to favorites</input>
-              </label>
-            </span>
-            </div>
-          </td>
         </tr>
         <tr class="estimated-row">
           <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuitionfees" onclick="track('Tool Tips', 'Benefit Estimator / Tuition Fees');" target="_blank" alt="Click here for more information about the tuition/fees benefit." title="Click here for more information the tuition/fees benefit.">Tuition / Fees:</a></th>
@@ -299,6 +289,17 @@ layout: va
         </tr>
         <tr class="estimated-row">
           <td colspan="2"></td>
+        </tr>
+        <tr class="estimated-row"> 
+          <td>
+            <div  id="add-to-favorites" class="checkbox">
+              <span>
+              <label>
+                <input type="checkbox" id="add-favorite-school-checkbox" onclick="processFavoriteSchool();">Compare this school</input>
+              </label>
+            </span>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
