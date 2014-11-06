@@ -293,6 +293,22 @@ var GIBComparisonTool = (function () {
     formData.tuition_assist        = getCurrency('#tuition-assist');
   };
 
+  var getAccreditation = function() {
+    console.log(institution);
+    if(institution.accredited == null) { 
+      $("#school-summary").hide();
+    }else{
+      $("#school-summary").show();
+      $('#accreditation').text(institution.accredited ? 'Yes' : 'No');
+      if(institution.accreditation_type) {
+        $('#accreditation-type').text(institution.accreditation_type);
+      }else{ $('#accreditation-type-row').hide(); }
+      if(institution.accreditation_status) {
+        $('#accreditation-status').text(institution.accreditation_status);
+      }else{ $('#accreditation-status-row').hide(); }
+    }
+  };
+
   /*
    * Get data for selected institution
    */
@@ -1866,7 +1882,7 @@ var GIBComparisonTool = (function () {
     getTotalPaidToYou();
     getTotalYear();
     getTotalText();
-
+    getAccreditation();
 
     // Log values for testing
     console.log("Form Data:");
@@ -1919,22 +1935,6 @@ var GIBComparisonTool = (function () {
       $('#p_911_yellow_ribbon').show(); 
       $("#p_911_yellow_ribbon_spent").text(formatCurrency(institution.p911_yellow_ribbon) + ' (' + institution.p911_yr_recipients + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's') + ')');
     }else { $('#p_911_yellow_ribbon').hide(); }
-
-    var accreditation_text = '';
-    if(institution.accredited && institution.accreditation_type) { 
-      accreditation_text = 'Accreditation is ' + institution.accreditation_type;
-    }else if(institution.accredited) {
-      accreditation_text = 'Accredited';
-    }
-    if(institution.accreditation_status) { 
-      accreditation_text += ' (' + institution.accreditation_status + ')';
-    }
-    if(accreditation_text == '') { 
-      $("#school-summary").hide();
-    }else{
-      $("#school-summary").show();
-      $("#accreditation").text(accreditation_text);
-    }
 
     $('#institution-calculator').html(institution.institution);
     $('#location-calculator').html(calculated.location);
