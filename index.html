@@ -309,7 +309,7 @@ layout: va
     </div>
     <div id="benefit-calculator">
       <h4>Calculate your complete benefit</h4>
-      <table>
+      <table id="tuition-fees-section">
         <tr id="in-state" class="form-group">
           <td>
             <label class="question">In-state student? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#in_state_residency" onclick="track('Tool Tips', 'Calculator / In-State Student');" target="_blank" class="info-link">i</a></label>
@@ -335,6 +335,29 @@ layout: va
             <input id="in-state-tuition-fees" type="text" value="$0" name="In-state Tuition Fees" alt="In-state Tuition Fees">
           </td>
         </tr>
+        <tr id="yellow-ribbon-recipient-form">
+          <td>
+            <label class="question">Receiving Yellow Ribbon? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Receiving Yellow Ribbon');" target="_blank" class="info-link">i</a></label>
+          </td>
+          <td>
+            <label class="radio" for="yellow-ribbon-recipient-yes">Yes</label>
+            <input id="yellow-ribbon-recipient-yes" name="Receiving Yellow Ribbon" type="radio" value="yes">
+            <label class="radio" for="yellow-ribbon-recipient-no">No</label>
+            <input id="yellow-ribbon-recipient-no" name="Receiving Yellow Ribbon" type="radio" value="no" checked>
+          </td>
+        </tr>
+        <tr id="yellow-ribbon-amount-form" class="form-group top-aligned">
+          <!-- Yellow Ribbon Amount -->
+          <td>
+            <label for="yellow-ribbon-amount">Yellow Ribbon Amount From School (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Yellow Ribbon Amount');" target="_blank" class="info-link">i</a></label>
+          </td>
+          <td>
+            <input id="yellow-ribbon-amount" type="text" value="$0" name="Yellow Ribbon Amount From School" alt="Yellow Ribbon Amount From School">
+          </td>
+        </tr>
+        <tr>
+          <td id="yellow-ribbon-rates-link" class="form-group"></td>
+        </tr>
         <tr>
           <td colspan="2">
             <label for="scholar">Scholarships (not Pell): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#scholarships" onclick="track('Tool Tips', 'Calculator / Scholarships');" target="_blank" class="info-link">i</a></label>
@@ -343,8 +366,16 @@ layout: va
           </div>
           </td>
         </tr>
-        <tr>
+        <tr id="tuition-assist-form" class="form-group top-aligned">
           <td>
+            <label for="tuition-assist">Military Tuition Assistance: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#military_tuition_assist" onclick="track('Tool Tips', 'Calculator / Military Tuition Assistance');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+            <input id="tuition-assist" type="text" value="$0" name="Military Tuition Assistance" alt="How much are you receiving in military tuition assistance">
+          </td>
+        </tr>
+      </table>
+      <table id="enrollment-section">
+        <tr>
+          <td id="enrolled-form">
             <label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
               <div>
               <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
@@ -355,7 +386,7 @@ layout: va
               </select>
             </div>
           </td>
-          <td>
+          <td id="calendar-form">
             <label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
             <div>
               <select id="calendar" name="School Calendar" alt="Select type of school calendar">
@@ -364,6 +395,28 @@ layout: va
                 <option value="nontraditional">Non-Traditional</option>
               </select>
             </div>
+          </td>
+        </tr>
+        <tr id="working-form" class="form-group top-aligned">
+          <td>
+            <label for="working">Will be working: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit_ojt" onclick="track('Tool Tips', 'Calculator / Will Be Working');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+            <select id="working" name="Will be working" alt="Select how much you will be working">
+              <option value="30">30+ hrs / week</option>
+              <option value="28">28 hrs / week</option>
+              <option value="26">26 hrs / week</option>
+              <option value="24">24 hrs / week</option>
+              <option value="22">22 hrs / week</option> 
+              <option value="20">20 hrs / week</option>
+              <option value="18">18 hrs / week</option>
+              <option value="16">16 hrs / week</option>
+              <option value="14">14 hrs / week</option>
+              <option value="12">12 hrs / week</option>
+              <option value="10">10 hrs / week</option>
+              <option value="8">8 hrs / week</option>
+              <option value="6">6 hrs / week</option>
+              <option value="4">4 hrs / week</option> 
+              <option value="2">2 hrs / week</option>
+            </select>
           </td>
         </tr>
         <tr id="number-non-traditional-terms-form" class="form-group top-aligned">
@@ -398,30 +451,7 @@ layout: va
             &nbsp;
           </td>
         </tr>
-        <tr id="yellow-ribbon-recipient-form">
-          <td>
-            <label class="question">Receiving Yellow Ribbon? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Receiving Yellow Ribbon');" target="_blank" class="info-link">i</a></label>
-          </td>
-          <td>
-            <label class="radio" for="yellow-ribbon-recipient-yes">Yes</label>
-            <input id="yellow-ribbon-recipient-yes" name="Receiving Yellow Ribbon" type="radio" value="yes">
-            <label class="radio" for="yellow-ribbon-recipient-no">No</label>
-            <input id="yellow-ribbon-recipient-no" name="Receiving Yellow Ribbon" type="radio" value="no" checked>
-          </td>
-        </tr>
-        <tr id="yellow-ribbon-amount-form" class="form-group top-aligned">
-          <!-- Yellow Ribbon Amount -->
-          <td>
-            <label for="yellow-ribbon-amount">Yellow Ribbon Amount From School (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Yellow Ribbon Amount');" target="_blank" class="info-link">i</a></label>
-          </td>
-          <td>
-            <input id="yellow-ribbon-amount" type="text" value="$0" name="Yellow Ribbon Amount From School" alt="Yellow Ribbon Amount From School">
-          </td>
-        </tr>
-        <tr>
-          <td id="yellow-ribbon-rates-link" class="form-group"></td>
-        </tr>
-        <tr>
+        <tr id="kicker-elig-form">
           <td>
             <label class="question">Eligible for Kicker: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / Eligible for Kicker');" target="_blank" class="info-link">i</a></label>
           </td>
@@ -635,53 +665,6 @@ layout: va
       <div id="enrollment-section">
 
       <div class="heading solid navy"><h3>Enrollment</h3></div>
-
-      <!-- Rate of Pursuit -->
-      <div id="enrolled-form" class="form-group top-aligned">
-        <label for="enrolled-form-two">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
-        <select id="enrolled-form-two" name="Enrolled" alt="Select your enrollment level">
-          <option value="1.0">Full Time</option>
-          <option value="0.8">¾ Time</option>
-          <option value="0.6">More than ½ time</option>
-          <option value="0">½ Time or less</option>
-        </select>
-      </div>
-
-      <div class="clear"></div>
-
-      <!-- Rate of Pursuit for OJT -->
-      <div id="working-form" class="form-group top-aligned">
-        <label for="working">Will be working: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit_ojt" onclick="track('Tool Tips', 'Calculator / Will Be Working');" target="_blank" class="info-link">i</a></label>
-        <select id="working" name="Will be working" alt="Select how much you will be working">
-          <option value="30">30+ hrs / week</option>
-          <option value="28">28 hrs / week</option>
-          <option value="26">26 hrs / week</option>
-          <option value="24">24 hrs / week</option>
-          <option value="22">22 hrs / week</option>
-          <option value="20">20 hrs / week</option>
-          <option value="18">18 hrs / week</option>
-          <option value="16">16 hrs / week</option>
-          <option value="14">14 hrs / week</option>
-          <option value="12">12 hrs / week</option>
-          <option value="10">10 hrs / week</option>
-          <option value="8">8 hrs / week</option>
-          <option value="6">6 hrs / week</option>
-          <option value="4">4 hrs / week</option>
-          <option value="2">2 hrs / week</option>
-        </select>
-      </div>
-
-      <div class="clear"></div>
-
-      <!-- School Calendar -->
-      <div id="calendar-form" class="form-group top-aligned">
-        <label for="school-calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
-        <select id="school-calendar" name="School Calendar" alt="Select type of school calendar">
-          <option value="semesters">Semesters</option>
-          <option value="quarters">Quarters</option>
-          <option value="nontraditional">Non-Traditional</option>
-        </select>
-      </div>
 
       <div class="clear"></div>
 
