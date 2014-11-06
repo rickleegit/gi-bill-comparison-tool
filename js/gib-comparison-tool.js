@@ -17,6 +17,21 @@ var GIBComparisonTool = (function () {
   // All institutions (names and facility codes)
   var institutions = [];
 
+  var complaint_types = {
+    "complaints_financial_by_ope_id_do_not_sum":                'Financial',
+    "complaints_quality_by_ope_id_do_not_sum":                  'Quality',
+    "complaints_refund_by_ope_id_do_not_sum":                   'Refund',
+    "complaints_marketing_by_ope_id_do_not_sum":                'Marketing',
+    "complaints_accreditation_by_ope_id_do_not_sum":            'Accreditation',
+    "complaints_degree_requirements_by_ope_id_do_not_sum":      'Degree Requirements',
+    "complaints_student_loans_by_ope_id_do_not_sum":            'Student Loans',
+    "complaints_grades_by_ope_id_do_not_sum":                   'Grades',
+    "complaints_credit_transfer_by_ope_id_do_not_sum":          'Credit Transfer',
+    "complaints_jobs_by_ope_id_do_not_sum":                     'Jobs',
+    "complaints_transcript_by_ope_id_do_not_sum":               'Transcript',
+    "complaints_other_by_ope_id_do_not_sum":                    'Other'
+  };
+
   // User form data
   var formData = {
     military_status:        '',
@@ -276,6 +291,22 @@ var GIBComparisonTool = (function () {
     formData.buy_up                = $('#buy-up-rate').val();
     formData.scholar               = getCurrency('#scholar');
     formData.tuition_assist        = getCurrency('#tuition-assist');
+  };
+
+  var getAccreditation = function() {
+    console.log(institution);
+    if(institution.accredited == null) { 
+      $("#school-summary").hide();
+    }else{
+      $("#school-summary").show();
+      $('#accreditation').text(institution.accredited ? 'Yes' : 'No');
+      if(institution.accreditation_type) {
+        $('#accreditation-type').text(institution.accreditation_type);
+      }else{ $('#accreditation-type-row').hide(); }
+      if(institution.accreditation_status) {
+        $('#accreditation-status').text(institution.accreditation_status);
+      }else{ $('#accreditation-status-row').hide(); }
+    }
   };
 
   /*
@@ -1737,6 +1768,7 @@ var GIBComparisonTool = (function () {
     if (formData.facility_code == institution.facility_code) {
       // Just do an update with existing institution, no $.getJSON call
       updatePage();
+      captureComparisonData();
     } else {
       // Lookup the new institution
       getInstitution(formData.facility_code, function () {
@@ -1774,14 +1806,19 @@ var GIBComparisonTool = (function () {
           formData.calendar = 'semesters';
           $('#calendar').val('semesters');
         }
-
+        
+        $('.estimated-row').show();
+        
         // Reset opening calculator tracking
         didOpenCalculator = false;
 
         updatePage();
+        captureComparisonData();
       });
     }
   };
+
+
 
   /*
    * Update the entire page
@@ -1845,7 +1882,7 @@ var GIBComparisonTool = (function () {
     getTotalPaidToYou();
     getTotalYear();
     getTotalText();
-
+    getAccreditation();
 
     // Log values for testing
     console.log("Form Data:");
@@ -1855,13 +1892,13 @@ var GIBComparisonTool = (function () {
 
     // Write results to the page
     $('#benefit-estimator table').removeClass('inactive');
+    $('#rating').show();
     $('#institution').html(institution.institution);
     $('#location').html(calculated.location);
     $('#type').html(calculated.institution_type_display);
     $('#tuition-fees').html(calculated.est_tuition_fees);
     $('#housing-allowance').html(calculated.est_housing_allowance);
     $('#book-stipend').html(calculated.est_book_stipend);
-    $('#profile').show();
 
     $('#poe').html(institution.poe ? 'Yes' : 'No');
 
@@ -1880,6 +1917,24 @@ var GIBComparisonTool = (function () {
     }
 
     $('#gibill').html(institution.gibill ? formatNumber(institution.gibill) : 0);
+
+    var complaints = 0 + institution.complaints_main_campus_roll_up;
+    $("#complaints-total").html(complaints == 0 ? 'None' : formatNumber(complaints) + '&nbsp;<a href="#complaints-total" id="complaints-detail-link" onclick="expandComplaintDetails();">See Details</a>');
+
+    var table = $("#complaints-table");
+    table.html('');
+    $.each(complaint_types, function(key, display_name) { 
+      table.append('<tr><td>' +  display_name + '</td><td>' + institution[key] + '</td></tr>');
+    });
+
+    if(institution.p911_yellow_ribbon && institution.p911_recipients) {
+      $('#p_911_recipients').show(); 
+      $("#p_911_spent").text(formatCurrency(institution.p911_tuition_fees) + ' (' + institution.p911_recipients + ' student' + (institution.p911_recipients == 1 ? '' : 's') + ')');
+    }else{ $('#p_911_recipients').hide(); }
+    if(institution.p911_yellow_ribbon && institution.p911_yr_recipients) {
+      $('#p_911_yellow_ribbon').show(); 
+      $("#p_911_yellow_ribbon_spent").text(formatCurrency(institution.p911_yellow_ribbon) + ' (' + institution.p911_yr_recipients + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's') + ')');
+    }else { $('#p_911_yellow_ribbon').hide(); }
 
     $('#institution-calculator').html(institution.institution);
     $('#location-calculator').html(calculated.location);
@@ -2080,6 +2135,8 @@ var GIBComparisonTool = (function () {
       $('#paid-to-you-calculator').hide();
       $('#calc-term-total-row').hide();
       $('#calc-tuition-only-row').hide();
+      $('#payments-to-school-title').hide();
+      $('#payments-to-school-terms').hide();
     }
 
     if (calculated.institution_type == 'flight' ||
@@ -2303,12 +2360,12 @@ var GIBComparisonTool = (function () {
       '#consecutive-service, ' +
       '#online-classes-yes, #online-classes-no, ' +
       '#in-state-yes, #in-state-no, ' +
-      // '#tuition-fees-input, ' +
+      '#tuition-fees-input, ' +
       '#in-state-tuition-fees, ' +
       '#yellow-ribbon-recipient-yes, #yellow-ribbon-recipient-no,  ' +
       '#yellow-ribbon-amount, ' +
-      // '#enrolled, ' +
-      // '#enrolled-old, ' +
+      '#enrolled, ' +
+      '#enrolled-old, ' +
       '#working, ' +
       '#calendar, ' +
       '#number-non-traditional-terms, ' +
@@ -2317,7 +2374,7 @@ var GIBComparisonTool = (function () {
       '#kicker, ' +
       '#buy-up-yes, #buy-up-no,  ' +
       '#buy-up-rate, ' +
-      // '#scholar, ' +
+      '#scholar, ' +
       '#tuition-assist').on('change', function () {
       GIBComparisonTool.update();
     });
@@ -2327,28 +2384,12 @@ var GIBComparisonTool = (function () {
       GIBComparisonTool.update();
     });
 
-    // Removing this to bind instead to calculate button.
-    /*
     $('#tuition-fees-input, #in-state-tuition-fees,' +
       '#yellow-ribbon-amount, #scholar, #kicker').bindWithDelay('keyup', function(e) {
       $(this).change();
     }, 1000);
-    */
     
-    $('#calculate-benefits').click(function () {
-      $('#estimated-benefits').hide();
-      GIBComparisonTool.update();
-      $('#calculated-benefits').show();
-    });
-    
-    $('#clear-calculated-benefits').click(function () {
-      $('#calculated-benefits').hide();
-      $('#estimated-benefits').show();
-    });
-
-    // Hide elements on load
-    
-    // old elements (may no longer be needed)
+    // Hide elements on load    
     $('#enlistment-service-form').hide();
     $('#consecutive-service-form').hide();
     $('#number-of-dependents-form').hide();
@@ -2365,10 +2406,8 @@ var GIBComparisonTool = (function () {
     $('#enrollment-section').hide();
     $('#calculator').hide();
     $('#add-to-favorites').hide();
-    
-    // new profile elements
-    $('#calculated-benefits').hide();
-    
+    $('#rating').hide();
+        
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
 
@@ -2434,12 +2473,19 @@ var GIBComparisonTool = (function () {
     });
   });
 
-
   return {
     update: update,
     trackOpenCalculator: trackOpenCalculator
   };
 })();
+
+
+function expandComplaintDetails() {
+  $("#complaints-details").toggle();
+  var showhide = $("#complaints-total").html();
+  showhide = showhide.indexOf('See') > 0 ? showhide.replace('See', 'Hide') : showhide.replace('Hide', 'See');
+  $("#complaints-total").html(showhide);
+}
 
 /*
  * Toggle filter results
@@ -2453,7 +2499,8 @@ function toggleFilterResults () {
  * Toggle between calculator and benefit estimator
  */
 function toggleCalc () {
-  $('#benefit-estimator').toggle();
+  //$('#benefit-estimator').toggle();
+  $('.estimated-row').toggle();
   $('#calculator').toggle();
   $('#calculate-benefits-btn a').html();
 
@@ -2483,6 +2530,25 @@ function resetCalcBtn () {
 function scrollToAnchor (id) {
   var aTag = $("a[name='"+ id +"']");
   $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+
+/* 
+ * Capture (changed) data for comparing favorite schools
+ */
+function captureComparisonData() { 
+    if ($('#add-favorite-school-checkbox').is(':checked') ) {
+      var f_schools_html = getFavSchoolsHtmlArray();
+      var idx = getFavoriteNamesArray().indexOf($('#institution').text())
+      f_schools_html[idx] = getSchoolDataFromPage();
+      sessionStorage.setItem('html_fav_schools', JSON.stringify(f_schools_html));
+    }
+ }
+
+/*
+ * Collect school comparision data from page
+ */
+function getSchoolDataFromPage() {
+   return $('#benefit-estimator').html() + $('#veteran-indicators').html();
 }
 
 /* 
@@ -2566,7 +2632,7 @@ function processFavoriteSchool () {
   var institution_name =  $('#institution').text();
   var institution = "<li>"+institution_name+" <a href='#about-your-favorites'  onclick='removeFavoriteSchool(\"" + institution_name + "\");'>X</a></li>";
 
-  var table_data = $('#name-summary').html() + $('#estimated-benefits').html();
+  var table_data = getSchoolDataFromPage(); 
 
     if ($('#add-favorite-school-checkbox').is(':checked') && !(institutionFavorited(institution_name))) {
       /* save institution name */

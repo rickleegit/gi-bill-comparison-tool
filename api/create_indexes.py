@@ -28,9 +28,12 @@ def index(args, dirname, fnames):
                 j = json.load(file(f))
                 for attr in attrs:
                     index.setdefault(attr, {}).setdefault(j[attr], {})[j["facility_code"]] = None
-                    #typeindex.setdefault(j[attr], []).append(j["facility_code"])
+                # anything that's not ojt also gets added to "school"
+                if j["type"].lower() != "ojt":
+                    index.setdefault("type", {}).setdefault("school", {})[j["facility_code"]] = None
             except:
                 print "Exception reading file {}".format(f)
+                raise
 
 def norm(string):
     if string is None:  string = "null"
@@ -52,6 +55,4 @@ for attr in attrindexes:
         os.mkdir(dirname)
     for typ, codes in attrindexes[attr].iteritems():
         fname = "filters/{}/{}.json".format(attr, norm(typ))
-        if typ in ("poe", "yr", "student_veteran", "eight_keys"):
-            codes["__attr__"] = typ
         json.dump(codes, file(fname, 'w'))

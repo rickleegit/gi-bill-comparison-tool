@@ -28,43 +28,92 @@ function advanced_search(institutions) {
       yr = $("#adv_yr").is(":checked"),
       poe = $("#adv_poe").is(":checked"),
       eight_keys = $("#adv_eight_keys").is(":checked"),
+      publicsch = $("#adv_public").is(":checked"),
+      privatesch = $("#adv_private").is(":checked"),
+      correspondence = $("#adv_correspondence").is(":checked"),
+      flight = $("#adv_flight").is(":checked"),
+      foreign = $("#adv_foreign").is(":checked"),
+      ojt = $("#adv_ojt").is(":checked"),
       results = [],
-      q = queue();
+      intersectq = queue(),
+      unionq = queue(),
+      displayq = queue();
 
   /* TODO: can these be gzipped? */
   if (type != "") {
     var url = 'api/filters/type/' + normalize(type) + '.json';
-    q.defer(handle_json, url);
+    intersectq.defer(handle_json, url);
   }
   if (state != "") {
     var url = 'api/filters/state/' + normalize(state) + '.json';
-    q.defer(handle_json, url);
+    intersectq.defer(handle_json, url);
   }
   if (country != "") {
     var url = 'api/filters/country/' + normalize(country) + '.json';
-    q.defer(handle_json, url);
+    intersectq.defer(handle_json, url);
   }
   if (name != "") {
-    q.defer(search_name, name, institutions);
+    intersectq.defer(search_name, name, institutions);
   }
   if (student_veteran) {
     var url = 'api/filters/student_veteran/true.json';
-    q.defer(handle_json, url);
+    intersectq.defer(handle_json, url);
   }
   if (yr) {
     var url = 'api/filters/yr/true.json';
-    q.defer(handle_json, url);
+    intersectq.defer(handle_json, url);
   }
   if (poe) {
     var url = 'api/filters/poe/true.json';
-    q.defer(handle_json, url);
+    intersectq.defer(handle_json, url);
   }
   if (eight_keys) {
     var url = 'api/filters/eight_keys/true.json';
-    q.defer(handle_json, url);
+    intersectq.defer(handle_json, url);
+  }
+  if (publicsch) {
+    var url = 'api/filters/type/public.json';
+    unionq.defer(handle_json, url);
+  }
+  if (privatesch) {
+    var url = 'api/filters/type/private.json';
+    unionq.defer(handle_json, url);
+  }
+  if (correspondence) {
+    var url = 'api/filters/type/correspondence.json';
+    unionq.defer(handle_json, url);
+  }
+  if (flight) {
+    var url = 'api/filters/type/flight.json';
+    unionq.defer(handle_json, url);
+  }
+  if (foreign) {
+    var url = 'api/filters/type/foreign.json';
+    unionq.defer(handle_json, url);
+  }
+  if (ojt) {
+    var url = 'api/filters/type/ojt.json';
+    unionq.defer(handle_json, url);
   }
 
-  q.awaitAll(function(err, results) {
+  // The search results are as follows, where & means intersection and | means union:
+  // (type & country & name & student_veterans & yr & poe & eight_keys) &
+  // (public | private | correspondence | flight | foreign | ojt)
+  function getintersect(callback) {
+    intersectq.awaitAll(function(err, results) {
+      callback(null, intersect(institutions, results));
+    });
+  }
+
+  function unionize(callback) {
+    unionq.awaitAll(function(err, results) {
+      callback(null, union(institutions, results));
+    });
+  }
+
+  displayq.defer(getintersect);
+  displayq.defer(unionize);
+  displayq.awaitAll(function(err, results) {
     var intersection = intersect(institutions, results);
     show(institutions, intersection);
     csv(institutions, intersection)
@@ -133,12 +182,27 @@ function handleSelect(evt, institutions) {
   setTimeout('window.location = "#about_your_school"', 10);
 }
 
+function union(institutions, dicts) {
+  if (dicts.length == 0) { return; }
+
+  results = dicts[0];
+  for (var i=1; i<dicts.length; i++) {
+    for (key in dicts[i]) {
+      results[key] = undefined;
+    }
+  }
+
+  return results;
+}
+
 /* Return the intersection of all its arguments */
 function intersect(institutions, dicts) {
   if (dicts.length == 0) { return; }
 
   results = dicts[0];
   for (var i=1; i<dicts.length; i++) {
+    if (typeof dicts[i] != "object") { continue; }
+
     temp_results = {};
     for (key in results) {
       if (dicts[i].hasOwnProperty(key)) {
@@ -153,11 +217,11 @@ function intersect(institutions, dicts) {
 }
 
 function csv(institutions, intersection) {
-  var csvs = "name,city,state\n";
+  var csvs = "facility code,name,city,state\n";
 
   for (key in intersection) {
     var res = institutions[key];
-    csvs += res.name+','+res.city+','+res.state+'\n';
+    csvs += res.value+','+res.name+','+res.city+','+res.state+'\n';
   }
 
   var encdata = btoa(csvs);
@@ -224,4 +288,14 @@ $().ready(function () {
       advanced_search(institutiondict);
     }
   }
+
+  // "an employer" or "a school"
+  $("#employer_n").hide();
+  $("#adv_type").change(function() {
+    if (this.value == "ojt") {
+      $("#employer_n").show()
+    } else {
+      $("#employer_n").hide()
+    }
+  })
 });
