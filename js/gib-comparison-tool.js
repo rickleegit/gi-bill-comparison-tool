@@ -2133,6 +2133,8 @@ var GIBComparisonTool = (function () {
       $('#paid-to-you-calculator').hide();
       $('#calc-term-total-row').hide();
       $('#calc-tuition-only-row').hide();
+      $('#payments-to-school-title').hide();
+      $('#payments-to-school-terms').hide();
     }
 
     if (calculated.institution_type == 'flight' ||
