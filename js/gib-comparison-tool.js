@@ -1790,7 +1790,9 @@ var GIBComparisonTool = (function () {
           formData.calendar = 'semesters';
           $('#calendar').val('semesters');
         }
-
+        
+        $('.estimated-row').show();
+        
         // Reset opening calculator tracking
         didOpenCalculator = false;
 
@@ -2470,7 +2472,6 @@ var GIBComparisonTool = (function () {
 
     });
   });
-
 
   return {
     update: update,
