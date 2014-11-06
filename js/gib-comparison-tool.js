@@ -1909,6 +1909,15 @@ var GIBComparisonTool = (function () {
       table.append('<tr><td>' +  display_name + '</td><td>' + institution[key] + '</td></tr>');
     });
 
+    if(institution.p911_yellow_ribbon && institution.p911_recipients) {
+      $('#p_911_recipients').show(); 
+      $("#p_911_spent").text('$' + institution.p911_tuition_fees + ' with ' + institution.p911_recipients + ' student' + (institution.p911_recipients == 1 ? '' : 's'));
+    }else{ $('#p_911_recipients').hide(); }
+    if(institution.p911_yellow_ribbon && institution.p911_yr_recipients) {
+      $('#p_911_yellow_ribbon').show(); 
+      $("#p_911_yellow_ribbon_spent").text('$' + institution.p911_yellow_ribbon + ' with ' + institution.p911_yr_recipients + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's'));
+    }else { $('#p_911_yellow_ribbon').hide(); }
+
     $('#institution-calculator').html(institution.institution);
     $('#location-calculator').html(calculated.location);
     $('#type-calculator').html(calculated.institution_type_display);
