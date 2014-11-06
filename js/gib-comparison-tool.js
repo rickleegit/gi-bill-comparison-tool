@@ -1925,7 +1925,7 @@ var GIBComparisonTool = (function () {
       table.append('<tr><td>' +  display_name + '</td><td>' + institution[key] + '</td></tr>');
     });
 
-    if(institution.p911_yellow_ribbon && institution.p911_recipients) {
+    if(institution.p911_tuition_fees && institution.p911_recipients) {
       $('#p_911_recipients').show(); 
       $("#p_911_spent").text(formatCurrency(institution.p911_tuition_fees) + ' (' + institution.p911_recipients + ' student' + (institution.p911_recipients == 1 ? '' : 's') + ')');
     }else{ $('#p_911_recipients').hide(); }
