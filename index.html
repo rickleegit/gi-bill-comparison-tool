@@ -317,12 +317,29 @@ layout: va
     <div id="benefit-calculator">
       <h4>Calculate your complete benefit</h4>
       <table>
+        <tr id="in-state" class="form-group">
+          <td>
+            <label class="question">In-state student? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#in_state_residency" onclick="track('Tool Tips', 'Calculator / In-State Student');" target="_blank" class="info-link">i</a></label>
+          </td>
+          <td>
+            <label class="radio" for="in-state-yes">Yes</label>
+            <input id="in-state-yes" name="In-state" type="radio" value="yes" checked=""/>
+            <label class="radio" for="in-state-no">No</label>
+            <input id="in-state-no" name="In-state" type="radio" value="no"/>
+          </td>
+        </tr>
         <tr>
           <td colspan="2">
             <label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" target="_blank" class="info-link">i</a></label>
             <div>
               <input id="tuition-fees-input" type="text" value="$0" name="Tuition Fees" alt="Tuition Fees"/>
             </div>
+          </td>
+        </tr>
+        <tr id="in-state-tuition-fees-form" class="form-group top-aligned">
+          <td colspan="2">
+            <label for="in-state-tuition-fees">In-state Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_receiving" onclick="track('Tool Tips', 'Calculator / In-State Tuition Fees');" target="_blank" class="info-link">i</a></label>
+            <input id="in-state-tuition-fees" type="text" value="$0" name="In-state Tuition Fees" alt="In-state Tuition Fees">
           </td>
         </tr>
         <tr>
@@ -558,15 +575,6 @@ layout: va
         </div>
 
         <!-- In-state Residency -->
-        <div id="in-state" class="form-group">
-          <span class="question">In-state student? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#in_state_residency" onclick="track('Tool Tips', 'Calculator / In-State Student');" target="_blank" class="info-link">i</a></span>
-
-          <label class="radio" for="in-state-yes">Yes</label>
-          <input id="in-state-yes" name="In-state" type="radio" value="yes" checked/>
-
-          <label class="radio" for="in-state-no">No</label>
-          <input id="in-state-no" name="In-state" type="radio" value="no"/>
-        </div>
 
         <div class="clear"></div>
 
