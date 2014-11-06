@@ -476,29 +476,23 @@ layout: va
       </table>
     </div>
     <div id="calculated-benefits">
-      <h4 id="payments-to-you-title">Payments to you</h4>
       <table>
         <tbody>
-          <tr id="payments-to-you-terms" style="font-weight:bold;">
-            <th aria-hidden="true"></th>
-            <td class="term1">Fall</td>
-            <td class="term2">Spring</td>
-            <td class="term3"></td>
-            <td class="term4">Total</td>
+          <tr id="calc-out-of-pocket-row">
+            <th>Monthly Allowance</th>
+            <td class="paid1"></td>
+            <td class="paid2"></td>
+            <td class="paid3"></td>
+            <td id="housing-allow-rate" style="border-top: 2px solid #fff;">$0</td>
+          </tr>
+          <tr id="calc-out-of-pocket-row">
+            <th>Out of Pocket</th>
+            <td class="paid1"></td>
+            <td class="paid2"></td>
+            <td class="paid3"></td>
+            <td id="total-left-to-pay" style="border-top: 2px solid #fff;">$0</td>
           </tr>
           <tr>
-            <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#housingallowance" onclick="track('Tool Tips', 'Benefit Calculator / Housing Allowance');" target="_blank" alt="Click here for more information about the housing allowance.">Housing Allowance:</a></th>
-            <td id="housing-allow-term-1">$0 / month</td>
-            <td id="housing-allow-term-2">$0 / month</td>
-            <td id="housing-allow-term-3"></td>
-            <td id="housing-allow-total">$0 / yr</td>
-          </tr>
-          <tr>
-            <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#bookstipend" onclick="track('Tool Tips', 'Benefit Calculator / Book Stipend');" target="_blank" alt="Click here for more information about the book stipend.">Book Stipend:</a></th>
-            <td id="book-stipend-term-1">$0 / term</td>
-            <td id="book-stipend-term-2">$0 / term</td>
-            <td id="book-stipend-term-3"></td>
-            <td id="book-stipend-total">$0 / yr</td>
           </tr>
           <tr id="calc-paid-to-you-total-row" style="font-size:25px;font-weight:bold;">
             <th>Paid to You</th>
@@ -507,12 +501,23 @@ layout: va
             <td class="paid3"></td>
             <td id="total-paid-to-you" style="border-top: 2px solid #fff;">$0</td>
           </tr>
-        </tbody>
-      </table>
-      <h4 id="payments-to-school-title">Payments to school</h4>
-      <table>
-        <tbody>
-          <tr id="payments-to-school-terms" style="font-weight:bold;">
+          <tr id="calc-paid-to-school-total-row" style="font-size:25px;font-weight:bold;">
+            <th>Paid to school</th>
+            <td class="paid1"></td>
+            <td class="paid2"></td>
+            <td class="paid3"></td>
+            <td id="total-paid-to-school" style="border-top: 2px solid #fff;">$0</td>
+          </tr>
+          <tr id="calc-term-total-row" style="font-size:25px;font-weight:bold;">
+            <th>Total Post-9/11 GI Bill Benefits</th>
+            <td class="paid1"></td>
+            <td class="paid2"></td>
+            <td class="paid3"></td>
+            <td id="total-year" class="normal">$0 / yr</td>
+          </tr>
+          <tr>
+          </tr>
+          <tr id="payments-to-you-terms" style="font-weight:bold;">
             <th aria-hidden="true"></th>
             <td class="term1">Fall</td>
             <td class="term2">Spring</td>
@@ -540,40 +545,19 @@ layout: va
             <td id="yr-ben-term-va-3"></td>
             <td id="yr-ben-va-total">$0 / yr</td>
           </tr>
-          <tr id="calc-paid-to-school-total-row" style="font-size:25px;font-weight:bold;">
-            <th>Paid to school</th>
-            <td class="paid1"></td>
-            <td class="paid2"></td>
-            <td class="paid3"></td>
-            <td id="total-paid-to-school" style="border-top: 2px solid #fff;">$0</td>
+          <tr>
+            <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#housingallowance" onclick="track('Tool Tips', 'Benefit Calculator / Housing Allowance');" target="_blank" alt="Click here for more information about the housing allowance.">Housing Allowance:</a></th>
+            <td id="housing-allow-term-1">$0 / month</td>
+            <td id="housing-allow-term-2">$0 / month</td>
+            <td id="housing-allow-term-3"></td>
+            <td id="housing-allow-total">$0 / yr</td>
           </tr>
-          <tr id="calc-tuition-fees-scholarship-row" style="display: table-row;">
-            <th>Your Scholarships</th>
-            <td class="paid1"></td>
-            <td class="paid2"></td>
-            <td class="paid3"></td>
-            <td id="total-tuition-fees-scholarships">$0</td>
-          </tr>
-          <tr id="calc-tuition-fees-charged-row">
-            <th>Tuition & Fees Owed:</th>
-            <td class="paid1"></td>
-            <td class="paid2"></td>
-            <td class="paid3"></td>
-            <td id="total-tuition-fees-charged">$0</td>
-          </tr>
-          <tr id="calc-out-of-pocket-row">
-            <th>Out of Pocket</th>
-            <td class="paid1"></td>
-            <td class="paid2"></td>
-            <td class="paid3"></td>
-            <td id="total-left-to-pay" style="border-top: 2px solid #fff;">$0</td>
-          </tr>
-          <tr id="calc-term-total-row" style="font-size:25px;font-weight:bold;">
-            <th>Total Post-9/11 GI Bill Benefits</th>
-            <td class="paid1"></td>
-            <td class="paid2"></td>
-            <td class="paid3"></td>
-            <td id="total-year" class="normal">$0 / yr</td>
+          <tr>
+            <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#bookstipend" onclick="track('Tool Tips', 'Benefit Calculator / Book Stipend');" target="_blank" alt="Click here for more information about the book stipend.">Book Stipend:</a></th>
+            <td id="book-stipend-term-1">$0 / term</td>
+            <td id="book-stipend-term-2">$0 / term</td>
+            <td id="book-stipend-term-3"></td>
+            <td id="book-stipend-total">$0 / yr</td>
           </tr>
         </tbody>
       </table>
