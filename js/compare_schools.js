@@ -12,6 +12,9 @@ function showSchools () {
     $('#school-list #add-to-favorites').hide();
     $('#school-list #institution').hide();
     $('#school-list #rating').hide();
+    $('#school-list #yr').html(function(index, oldHtml){
+      return oldHtml.substring(0, 3);
+    });
 }
 
 $(document).ready(function() {
