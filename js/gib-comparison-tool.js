@@ -1918,6 +1918,22 @@ var GIBComparisonTool = (function () {
       $("#p_911_yellow_ribbon_spent").text('$' + institution.p911_yellow_ribbon + ' with ' + institution.p911_yr_recipients + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's'));
     }else { $('#p_911_yellow_ribbon').hide(); }
 
+    var accreditation_text = '';
+    if(institution.accredited && institution.accreditation_type) { 
+      accreditation_text = 'Accreditation is ' + institution.accreditation_type;
+    }else if(institution.accredited) {
+      accreditation_text = 'Accredited';
+    }
+    if(institution.accreditation_status) { 
+      accreditation_text += '(' + institution.accreditation_status + ')';
+    }
+    if(accreditation_text == '') { 
+      $("#school-summary").hide();
+    }else{
+      $("#school-summary").show();
+      $("#accreditation").text(accreditation_text);
+    }
+
     $('#institution-calculator').html(institution.institution);
     $('#location-calculator').html(calculated.location);
     $('#type-calculator').html(calculated.institution_type_display);
