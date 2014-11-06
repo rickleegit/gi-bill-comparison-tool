@@ -11,6 +11,7 @@ function showSchools () {
     $('#school-list').html(schools);
     $('#school-list #add-to-favorites').hide();
     $('#school-list #institution').hide();
+    $('#school-list #rating').hide();
 }
 
 $(document).ready(function() {
