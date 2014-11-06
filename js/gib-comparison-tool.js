@@ -1934,6 +1934,35 @@ var GIBComparisonTool = (function () {
       $("#p_911_yellow_ribbon_spent").text(formatCurrency(institution.p911_yellow_ribbon) + ' (' + institution.p911_yr_recipients + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's') + ')');
     }else { $('#p_911_yellow_ribbon').hide(); }
 
+    $('#complaint-total-all').html(formData.complaints_main_campus_roll_up);
+    $('#complaint-total-fc').html(formData.complaints_facility_code);
+    $('#complaint-accreditation-fc').html(formData.complaints_accreditation_by_fac_code);
+    $('#complaint-accreditation-ope').html(formData.complaints_accreditation_by_ope_id_do_not_sum);
+    $('#complaint-credit-transfer-fc').html(formData.complaints_credit_transfer_by_fac_code);
+    $('#complaint-credit-transfer-ope').html(formData.complaints_credit_transfer_by_ope_id_do_not_sum);
+    $('#complaint-degree-plan-fc').html(formData.complaints_degree_requirements_by_fac_code);
+    $('#complaint-degree-plan-ope').html(formData.complaints_degree_requirements_by_ope_id_do_not_sum);
+    $('#complaint-financial-fc').html(formData.complaints_financial_by_fac_code);
+    $('#complaint-financial-ope').html(formData.complaints_financial_by_ope_id_do_not_sum);
+    $('#complaint-grade-policy-fc').html(formData.complaints_grades_by_fac_code);
+    $('#complaint-grade-policy-ope').html(formData.complaints_grades_by_ope_id_do_not_sum);
+//    $('#complaint-job-prep-fc').html(formData.complaints_jobs_by_fac_code);
+    $('#complaint-job-prep-ope').html(formData.complaints_jobs_by_ope_id_do_not_sum);
+    $('#complaint-loans-fc').html(formData.complaints_student_loans_by_fac_code);
+    $('#complaint-loans-ope').html(formData.complaints_student_loans_by_ope_id_do_not_sum);
+    $('#complaint-other-fc').html(formData.complaints_other_by_fac_code);
+    $('#complaint-other-ope').html(formData.complaints_other_by_ope_id_do_not_sum);
+    $('#complaint-quality-fc').html(formData.complaints_quality_by_fac_code);
+    $('#complaint-quality-ope').html(formData.complaints_quality_by_ope_id_do_not_sum);
+    $('#complaint-recruiting-fc').html(formData.complaints_marketing_by_fac_code);
+    $('#complaint-recruiting-ope').html(formData.complaints_marketing_by_ope_id_do_not_sum);
+    $('#complaint-refund-fc').html(formData.complaints_refund_by_fac_code);
+    $('#complaint-refund-ope').html(formData.complaints_refund_by_ope_id_do_not_sum);
+    $('#complaint-transcripts-fc').html(formData.complaints_transcript_by_fac_code);
+    $('#complaint-transcripts-ope').html(formData.complaints_transcript_by_ope_id_do_not_sum);
+
+
+
     $('#institution-calculator').html(institution.institution);
     $('#location-calculator').html(calculated.location);
     $('#type-calculator').html(calculated.institution_type_display);
