@@ -4,340 +4,7 @@ layout: va
 
 <style>
 
-.feature-box {
-  background: #ccc;
-  padding: 1em;
-}
 
-.main {
-  width: 64%;
-  float: left;
-}
-
-.secondary {
-  float: right;
-  width: 30%
-}
-
-
-.comparison table {margin-left: 0 !important;}
-
-.summary {background: #efefef;}
-.ratings {margin: 2em 0; clear: both; padding: 1em;}
-.ratings a {display: inline-block; margin: 1em 0;}
-
-.review {
-  margin: 0 1em 1em 0;
-  padding: 0 2em 1em 0;
-  border-bottom: 3px solid #ddd;
-}
-
-.review blockquote {
-  padding: 1em 0 1em 0;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-#ratings {
-  float: left;
-  width: 45%;
-}
-
-#gi-summary {
-  float: right;
-  width: 42%;
-}
-
-a.info-link {
-  display: inline-block;
-  padding: 0 .45em;
-  background: #fff;
-  border-radius: 100%;
-  margin: 0 1em 0 .5em;
-  text-align: center;
-  color: #001A4F !important;
-  font-weight: bold !important;
-  font-size: 10px !important;
-  border: 2px solid #001A4F;
-}
-
-#estimated-benefits {
-  float: left;
-  width: 50%;
-  a.info-link {font-size: 9px; color: #001A4F}
-}
-
-#calculated-benefits {
-  background: #006890;
-  float: right;
-  padding-left: 2%;
-  padding-right: 1%;
-  width: 46%;
-}
-
-#calculated-benefits th, #calculated-benefits td {
-  font-size: 12px;
-  text-align: left;
-  font-weight: normal;
-}
-
-#calculated-benefits table {
-  background: rgba(255,255,255,.2);
-  text-align: left;
-}
-
-#calculated-benefits h4 {
-  text-align: left;
-  color: #fff;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-#calculated-benefits a {
-  color: #fff;
-  padding: 0;
-  margin: 0;
-  font-size: 12px;
-  text-decoration: underline;
-}
-
-#benefit-calculator {
-  padding: 0 1em .25em 1em;
-  float: left;
-  margin-left: -1em;
-}
-
-#benefit-calculator h4 {
-  text-align: left;
-  color: #fff;
-  font-size: 14px;
-  padding: .5em;
-  font-family: arial, helvetica, sans-serif;
-}
-
-#benefit-calculator table {
-  background: none;
-  color: #333;
-}
-
-#benefit-calculator table a {
-  color: #fff;
-}
-
-#benefit-calculator label {
-  font-size: 12px;
-  color: #fff;
-}
-
-#benefit-calculator input[type="text"] {
-  padding: 0 !important;
-  max-width: 100%;
-  width: 100px;
-  margin: 0;
-  font-size: 12px !important;
-}
-
-#benefit-calculator input[type="submit"] {
-  background: #001A4F;
-  color: #fff;
-  border-radius: none;
-  border: none;
-  font-size: 12px;
-}
-
-#profile table {
-  background: #888;
-  color: #333;
-}
-
-#name-summary {
-  background: #003E73;
-  -webkit-border-radius: .45em;
-  -moz-border-radius: .45em;
-  border-radius: .45em;
-  padding: 0 1em;
-}
-
-#name-summary table {
-  background: none;
-  color: #fff;
-}
-
-
-#name-summary table h2 {padding-top: 0; margin-top: 0;}
-
-#benefits {
-  padding: 0 1em 1em 1em;
-  background: #eee;
-}
-
-#compare-link {
-  float: right;
-  display: block;
-  padding: .5em;
-  margin-top: .5em;
-  background: #555;
-  color: #fff;
-}
-
-#compare-favorites {
-  background: #eee;
-  padding: 1em;
-  margin: 0 0 1em 0;
-}
-
-
-#name-summary table h2, #name-summary table h3, #name-summary table h4 {text-align: left; color: #fff;}
-
-
-table.summary-info {width: 100%; display: block; background: none; color: #444; font-size: 13px;}
-
-
-table.summary-info tr {
-  border-bottom: 1px solid #ddd;
-  width: 100%;
-}
-
-table.summary-info td {
-  padding: .25em 0;
-  width: 45%;
-}
-
-ul.plain {
-  margin: 0;
-  padding: 0;
-}
-
-ul.plain li {
-  list-style: none;
-  list-style-type: none;
-  list-style-image: none;
-  padding: .25em;
-  margin: 0;
-  display: block;
-}
-
-.logo {float: left; width: 20%;}
-.address {float: left; width: 60%; margin-left: 1em; }
-
-ul#favorites-list {margin: 1em 0; padding: 0; width: 50%;}
-
-ul#favorites-list li {
-  padding: .5em .75em;
-  display: inline-block;
-  margin-bottom: .5em;
-  margin-right: .5em;
-  clear: both;
-  border-radius: .25em;
-  background: #ddd;
-  list-style-type: none;
-}
-
-ul#favorites-list li a {
-  font-weight: bold;
-  font-size: 12px;
-}
-
-#school-list div {
-  float: left;
-  margin-top: 1em;
-  width: 28%;
-  text-align: left;
-  padding: 0 2%;
-  margin-right: 1%;
-  background: #777;
-}
-
-#school-list div.heading {
-  width: 100%;
-  float: none;
-}
-
-#school-list div a {
-  font-weight: normal;
-  font-style: normal;
-  font-size: 12px;
-}
-
-#school-list .source {margin-right: 2%;}
-
-.comparison table th {
-padding: 5px !important;
-
-}
-
-#school-list .comparison table th {padding: .25em;}
-
-#school-list div p {font-size: 12px;}
-
-#school-list div h2 {
-  color: #fff;
-  line-height: 1.2em;
-  font-size: 18px;
-}
-
-#school-list div h3 {font-size: 16px; font-style: normal;}
-
-#school-list div h4 {
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.2em;
-}
-
-#school-list div table {
-  background: #777;
-  padding: 0; margin: 0;
-  border-top: 1px solid #eee;
-  font-size: 12px;
-}
-
-#school-list div table td {
-  font-size: 12px;
-}
-
-
-.comparison #calculator table {
-background: none;
-text-align: left;
-}
-
-img.rating {
-  max-width: 100%;
-}
-
-.comparison #calculator table td,
-.comparison #calculator table th {
-  text-align: left;
-}
-
-
-.comparison #calculator {
-    background: #008CBF;
-    border-radius: .5em;
-    padding-bottom: 0;
-}
-
-.comparison .form-group select {
-width: auto !important;
-font-size: 16px;
-color: #444;
-}
-
-#calculate-benefits-btn {
-  margin: 2em auto;
-}
-
-.comparison .toggle-calc {
-text-align: center;
-background: none;
-padding: 1em;
-}
-
-#add-to-favorites span {
-  padding: .5em;
-  display: inline-block;
-  background: rgba(0,0,0,.2);
-  border: 1px solid rgba(0,0,0,.1);
-}
 
 </style>
 
@@ -650,47 +317,56 @@ padding: 1em;
     <div id="benefit-calculator">
       <h4>Calculate your complete benefit</h4>
       <table>
+
         <tr>
-          <td><label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" target="_blank" class="info-link">i</a></label></td>
-          <td><label for="scholar">Scholarships (not Pell): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#scholarships" onclick="track('Tool Tips', 'Calculator / Scholarships');" target="_blank" class="info-link">i</a></label></td>
-        </tr>
-        <tr>
-          <td>
+          <td colspan="2">
+            <label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" id="tuition-fees-input" target="_blank" class="info-link">i</a></label>
             <div>
               <input id="tuition-fees-input" type="text" value="$0" name="Tuition Fees" alt="Tuition Fees"/>
             </div>
           </td>
-          <td>
+        </tr>
+
+        <tr>
+
+          <td colspan="2">
+            <label for="scholar">Scholarships (not Pell): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#scholarships" onclick="track('Tool Tips', 'Calculator / Scholarships');" target="_blank" id="scholar" class="info-link">i</a></label>
+            <div>
             <input id="scholar" type="text" value="$0" name="Scholarships (not Pell)" alt="How much are you receiving in scholarships and not Pell grants"/>
+          </div>
           </td>
+
         </tr>
         <tr>
-        </tr>
-        <tr>
-          <td><label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label></td>
-          <td><label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label></td>
-        </tr>
-        <tr>
-          <td>
-            <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
-              <option value="1.0">Full Time</option>
-              <option value="0.8">¾ Time</option>
-              <option value="0.6">More than ½ time</option>
-              <option value="0">½ Time or less</option>
-            </select>
+          <td><label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
+              <div>
+              <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
+                <option value="1.0">Full Time</option>
+                <option value="0.8">¾ Time</option>
+                <option value="0.6">More than ½ time</option>
+                <option value="0">½ Time or less</option>
+              </select>
+            </div>
+
           </td>
-          <td>
-            <select id="calendar" name="School Calendar" alt="Select type of school calendar">
-              <option value="semesters">Semesters</option>
-              <option value="quarters">Quarters</option>
-              <option value="nontraditional">Non-Traditional</option>
-            </select>
+          <td><label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
+
+          <div>
+          <select id="calendar" name="School Calendar" alt="Select type of school calendar">
+            <option value="semesters">Semesters</option>
+            <option value="quarters">Quarters</option>
+            <option value="nontraditional">Non-Traditional</option>
+          </select>
+        </div>
+
           </td>
         </tr>
+
         <tr id="number-non-traditional-terms-form" class="form-group top-aligned">
-          <td>
-            <label for="number-non-traditional-terms">How many terms / year? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'How Many Terms');" target="_blank" class="info-link">i</a></label>
-            <select id="number-non-traditional-terms" name="How many terms / year?" alt="Select how many terms / year?">
+          <td colspan="2">
+            <label for="how-many-non-traditional-terms">How many terms / year? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'How Many Terms');" target="_blank" class="info-link">i</a></label>
+
+            <select id="how-many-non-traditional-terms" name="How many terms / year?" alt="Select how many terms / year?">
               <option value="3">Three</option>
               <option value="2" selected>Two</option>
               <option value="1">One</option>
@@ -698,9 +374,7 @@ padding: 1em;
 
           </td>
 
-          <td>
-            &nbsp;
-          </td>
+
 
         </tr>
         <tr id="length-non-traditional-terms-form" class="form-group top-aligned">
@@ -773,32 +447,32 @@ padding: 1em;
       <table>
         <tbody>
           <tr style="font-weight:bold;">
-            <th></th>
+            <th aria-hidden="true"></th>
             <td class="term1">Fall</td>
             <td class="term2">Spring</td>
             <td class="term3"></td>
-            <td class="term4" style="text-align: right;">Total</td>
+            <td class="term4">Total</td>
           </tr>
           <tr>
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#housingallowance" onclick="track('Tool Tips', 'Benefit Calculator / Housing Allowance');" target="_blank" alt="Click here for more information about the housing allowance.">Housing Allowance:</a></th>
             <td id="housing-allow-term-1">$0 / month</td>
             <td id="housing-allow-term-2">$0 / month</td>
             <td id="housing-allow-term-3"></td>
-            <td id="housing-allow-total" style="text-align: right;">$0 / yr</td>
+            <td id="housing-allow-total">$0 / yr</td>
           </tr>
           <tr>
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#bookstipend" onclick="track('Tool Tips', 'Benefit Calculator / Book Stipend');" target="_blank" alt="Click here for more information about the book stipend.">Book Stipend:</a></th>
             <td id="book-stipend-term-1">$0 / term</td>
             <td id="book-stipend-term-2">$0 / term</td>
             <td id="book-stipend-term-3"></td>
-            <td id="book-stipend-total" style="text-align: right;">$0 / yr</td>
+            <td id="book-stipend-total">$0 / yr</td>
           </tr>
           <tr id="calc-paid-to-you-total-row" style="font-size:25px;font-weight:bold;">
             <th>Paid to You</th>
             <td class="paid1"></td>
             <td class="paid2"></td>
             <td class="paid3"></td>
-            <td id="total-paid-to-you" style="border-top: 2px solid #fff;" style="text-align: right;">$0</td>
+            <td id="total-paid-to-you" style="border-top: 2px solid #fff;">$0</td>
           </tr>
         </tbody>
       </table>
@@ -806,67 +480,67 @@ padding: 1em;
       <table>
         <tbody>
           <tr style="font-weight:bold;">
-            <th></th>
+            <th aria-hidden="true"></th>
             <td class="term1">Fall</td>
             <td class="term2">Spring</td>
             <td class="term3"></td>
-            <td class="term4" style="text-align: right;">Total</td>
+            <td class="term4">Total</td>
           </tr>
           <tr id="calc-tuition-fees-row">
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuitionfees" onclick="track('Tool Tips', 'Benefit Calculator / Tuition Fees');" target="_blank" alt="Click here for more information about the tuition/fees benefit.">Tuition / Fees:</a></th>
             <td id="tuition-fees-term-1">$0 / term</td>
             <td id="tuition-fees-term-2">$0 / term</td>
             <td id="tuition-fees-term-3"></td>
-            <td id="tuition-fees-total" style="text-align: right;">$0 / yr</td>
+            <td id="tuition-fees-total">$0 / yr</td>
           </tr>
           <tr id="calc-yellow-ribbon-row">
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Benefit Calculator / Yellow Ribbon (School)');" target="_blank" alt="Click here for more information.">Yellow Ribbon (School):</a></th>
             <td id="yr-ben-term-1">$0 / term</td>
             <td id="yr-ben-term-2">$0 / term</td>
             <td id="yr-ben-term-3"></td>
-            <td id="yr-ben-total" style="text-align: right;">$0 / yr</td>
+            <td id="yr-ben-total">$0 / yr</td>
           </tr>
           <tr id="calc-yellow-ribbon-va-row">
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Benefit Calculator / Yellow Ribbon (VA)');" target="_blank" alt="Click here for more information.">Yellow Ribbon (VA):</a></th>
             <td id="yr-ben-term-va-1">$0 / term</td>
             <td id="yr-ben-term-va-2">$0 / term</td>
             <td id="yr-ben-term-va-3"></td>
-            <td id="yr-ben-va-total" style="text-align: right;">$0 / yr</td>
+            <td id="yr-ben-va-total">$0 / yr</td>
           </tr>
           <tr id="calc-paid-to-school-total-row" style="font-size:25px;font-weight:bold;">
             <th>Paid to school</th>
             <td class="paid1"></td>
             <td class="paid2"></td>
             <td class="paid3"></td>
-            <td id="total-paid-to-school" style="border-top: 2px solid #fff; text-align: right;">$0</td>
+            <td id="total-paid-to-school" style="border-top: 2px solid #fff;">$0</td>
           </tr>
           <tr id="calc-tuition-fees-scholarship-row" style="display: table-row;">
             <th>Your Scholarships</th>
             <td class="paid1"></td>
             <td class="paid2"></td>
             <td class="paid3"></td>
-            <td id="total-tuition-fees-scholarships" style="text-align: right;">$0</td>
+            <td id="total-tuition-fees-scholarships">$0</td>
           </tr>
           <tr id="calc-tuition-fees-charged-row">
             <th>Tuition & Fees Owed:</th>
             <td class="paid1"></td>
             <td class="paid2"></td>
             <td class="paid3"></td>
-            <td id="total-tuition-fees-charged" style="text-align: right;">$0</td>
+            <td id="total-tuition-fees-charged">$0</td>
           </tr>
           <tr id="calc-out-of-pocket-row">
             <th>Out of Pocket</th>
             <td class="paid1"></td>
             <td class="paid2"></td>
             <td class="paid3"></td>
-            <td id="total-left-to-pay" style="border-top: 2px solid #fff;" style="text-align: right;">$0</td>
+            <td id="total-left-to-pay" style="border-top: 2px solid #fff;">$0</td>
           </tr>
           <tr id="calc-term-total-row" style="font-size:25px;font-weight:bold;">
             <th>Total Post-9/11 GI Bill Benefits</th>
             <td class="paid1"></td>
             <td class="paid2"></td>
             <td class="paid3"></td>
-            <td id="total-year" class="normal" style="text-align: right;">$0 / yr</td>
+            <td id="total-year" class="normal">$0 / yr</td>
           </tr>
         </tbody>
       </table>
@@ -973,8 +647,8 @@ padding: 1em;
 
       <!-- Rate of Pursuit -->
       <div id="enrolled-form" class="form-group top-aligned">
-        <label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
-        <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
+        <label for="enrolled-form-two">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
+        <select id="enrolled-form-two" name="Enrolled" alt="Select your enrollment level">
           <option value="1.0">Full Time</option>
           <option value="0.8">¾ Time</option>
           <option value="0.6">More than ½ time</option>
@@ -1010,8 +684,8 @@ padding: 1em;
 
       <!-- School Calendar -->
       <div id="calendar-form" class="form-group top-aligned">
-        <label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
-        <select id="calendar" name="School Calendar" alt="Select type of school calendar">
+        <label for="school-calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
+        <select id="school-calendar" name="School Calendar" alt="Select type of school calendar">
           <option value="semesters">Semesters</option>
           <option value="quarters">Quarters</option>
           <option value="nontraditional">Non-Traditional</option>
@@ -1034,8 +708,8 @@ padding: 1em;
 
       <!-- Length of Non Traditional Terms -->
       <div id="length-non-traditional-terms-form" class="form-group top-aligned">
-        <label for="length-non-traditional-terms">How long is each term? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / Non-Traditional Term Length');" target="_blank" class="info-link">i</a></label>
-        <select id="length-non-traditional-terms" name="How long is each term?" alt="Select how long is each term?">
+        <label for="how-long-non-traditional-terms">How long is each term? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / Non-Traditional Term Length');" target="_blank" class="info-link">i</a></label>
+        <select id="how-long-non-traditional-terms" name="How long is each term?" alt="Select how long is each term?">
           <option value="1">1 month</option>
           <option value="2">2 months</option>
           <option value="3" selected>3 months</option>
@@ -1091,7 +765,7 @@ padding: 1em;
           <td id="type-calculator" colspan="5" class="normal"></td>
         </tr>
         <tr style="font-weight:bold;">
-          <th></th>
+          <th>Semester / Total</th>
           <td id="term1">Fall</td>
           <td id="term2">Spring</td>
           <td id="term3"></td>
@@ -1112,7 +786,7 @@ padding: 1em;
           <td id="book-stipend-total">$0 / yr</td>
         </tr>
         <tr id="calc-paid-to-you-total-row" style="font-size:25px;font-weight:bold;">
-          <th></th>
+          <th aria-hidden="true"></th>
           <td id="total-paid-to-you-td" colspan="2" class="normal" style="border-top: 2px solid #fff;text-align:right;"><b>Paid to You:</b></td>
           <td id="total-paid-to-you" style="border-top: 2px solid #fff;">$0</td>
         </tr>
@@ -1138,23 +812,23 @@ padding: 1em;
           <td id="yr-ben-va-total">$0 / yr</td>
         </tr>
         <tr id="calc-paid-to-school-total-row" style="font-size:25px;font-weight:bold;">
-          <th></th>
+          <th aria-hidden="true"></th>
           <td id="paid-to-school-td" colspan="2" style="border-top: 2px solid #fff;text-align:right;"><b>Paid to School:</b></td>
           <td id="total-paid-to-school" style="border-top: 2px solid #fff;">$0</td>
         <tr id="calc-tuition-fees-scholarship-row">
-          <th></th>
+          <th aria-hidden="true"></th>
           <td id="tuition-fees-scholarship-td" colspan="2" style="text-align:right;"><b>Your Scholarships:</b></td>
           <td id="total-tuition-fees-scholarships">$0</td>
         <tr id="calc-tuition-fees-charged-row">
-          <th></th>
+          <th aria-hidden="true"></th>
           <td id="tuition-fees-charged-td" colspan="2" style="text-align:right;"><b>Tuition & Fees Owed:</b></td>
           <td id="total-tuition-fees-charged">$0</td>
         <tr id="calc-out-of-pocket-row">
-          <th></th>
+          <th aria-hidden="true"></th>
           <td id="total-left-to-pay-td" colspan="2" style="text-align:right;"><b>Out of Pocket:</b></td>
           <td><span id="total-left-to-pay">$0</span></td>
         <tr id="calc-term-total-row" style="font-size:25px;font-weight:bold;">
-          <th></th>
+          <th aria-hidden="true"></th>
           <td id="total-year-td" colspan="2" class="normal" style="text-align:right;"><b>Total Post-9/11 GI Bill Benefits</b></td>
           <td id="total-year" class="normal">$0 / yr</td>
         <tr><td colspan="4"></td></tr>
@@ -1350,7 +1024,7 @@ padding: 1em;
             <option value="WY">WY</option>
           </select>
 
-              , <select id="adv_country">
+              <label for="adv_country" title="country">,</span> <select id="adv_country">
             <option value="">Country</option>
             <option value="usa">USA</option>
             <option value="afghanistan">Afghanistan</option>
