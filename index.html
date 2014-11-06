@@ -814,9 +814,36 @@ layout: va
   </div>
   <!-- end old -->
 
-  <div id="calculate-benefits-btn" class="toggle-calc">
-    <a href="javascript:toggleCalc()" onclick="GIBComparisonTool.trackOpenCalculator();">How much am I going to get?</a>
-  </div>
+  <!-- ================================================== -->
+  <!--                  Buttons                           -->
+  <!-- ================================================== -->
+
+    <table>
+      <tbody>
+        <td>
+          <div id="calculate-benefits-btn" class="toggle-calc">
+            <span>
+            <label>
+                <a href="javascript:toggleCalc()" onclick="GIBComparisonTool.trackOpenCalculator();">How much am I going to get?</a>
+            </label>
+          </span>
+          </div>
+        </td>
+        <td>
+          <div  id="add-to-favorites" class="checkbox">
+            <span>
+            <label>
+              <input type="checkbox" id="add-favorite-school-checkbox" onclick="processFavoriteSchool();">Add to favorites</input>
+            </label>
+          </span>
+          </div>
+        </td>
+      </tbody>
+    </table>
+
+<!--  <div id="calculate-benefits-btn" class="toggle-calc"> -->
+<!--    <a href="javascript:toggleCalc()" onclick="GIBComparisonTool.trackOpenCalculator();">How much am I going to get?</a> -->
+<!--  </div> -->
 
   <!-- ================================================== -->
   <!--                  Veteran Indicators                -->
