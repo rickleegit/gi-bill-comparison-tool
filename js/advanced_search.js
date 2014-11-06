@@ -217,11 +217,11 @@ function intersect(institutions, dicts) {
 }
 
 function csv(institutions, intersection) {
-  var csvs = "name,city,state\n";
+  var csvs = "facility code,name,city,state\n";
 
   for (key in intersection) {
     var res = institutions[key];
-    csvs += res.name+','+res.city+','+res.state+'\n';
+    csvs += res.value+','+res.name+','+res.city+','+res.state+'\n';
   }
 
   var encdata = btoa(csvs);
