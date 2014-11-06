@@ -1768,7 +1768,6 @@ var GIBComparisonTool = (function () {
     if (formData.facility_code == institution.facility_code) {
       // Just do an update with existing institution, no $.getJSON call
       updatePage();
-      captureComparisonData();
     } else {
       // Lookup the new institution
       getInstitution(formData.facility_code, function () {
@@ -1813,7 +1812,6 @@ var GIBComparisonTool = (function () {
         didOpenCalculator = false;
 
         updatePage();
-        captureComparisonData();
       });
     }
   };
@@ -2531,18 +2529,6 @@ function scrollToAnchor (id) {
   var aTag = $("a[name='"+ id +"']");
   $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 }
-
-/* 
- * Capture (changed) data for comparing favorite schools
- */
-function captureComparisonData() { 
-    if ($('#add-favorite-school-checkbox').is(':checked') ) {
-      var f_schools_html = getFavSchoolsHtmlArray();
-      var idx = getFavoriteNamesArray().indexOf($('#institution').text())
-      f_schools_html[idx] = getSchoolDataFromPage();
-      sessionStorage.setItem('html_fav_schools', JSON.stringify(f_schools_html));
-    }
- }
 
 /*
  * Collect school comparision data from page
