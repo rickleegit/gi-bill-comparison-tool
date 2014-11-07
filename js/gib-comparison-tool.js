@@ -2188,6 +2188,7 @@ var GIBComparisonTool = (function () {
     if (calculated.institution_type == 'ojt') {
       $('#online-classes').hide();
       $('#veteran-indicators').hide();
+      $('#school-summary').hide();
       $('#school-indicators').hide();
       $('#tuition-fees-section').hide();
       $('#enrolled-form').hide();
