@@ -260,7 +260,8 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison .form-group input[type="text"] {
   color: #444;
-  padding: .5em;#
+  padding: .5em;
+  font-size: 15px;
 }
 
 .comparison .form-group input[type="radio"] {
@@ -354,6 +355,8 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison #benefit-estimator table {
   background: #249120 url('../img/dollar_sign.png') 90% 50% no-repeat;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
 }
 
 .comparison #benefit-estimator table th {
@@ -363,6 +366,9 @@ Use with for example: <div class="icon explore"></div>
 .comparison #benefit-estimator td#institution {
   padding-left: 5px;
   font-size: 30px;
+  padding-top: 0;
+  line-height: 1em;
+  margin-top: 0;
   font-weight: bold;
 }
 .comparison #benefit-estimator td#location {
@@ -389,7 +395,7 @@ Use with for example: <div class="icon explore"></div>
 
  /* Benefit Calculator */
 
-.comparison #calculator h4 {margin-top: .5em;}
+.comparison #calculator h4 {margin-top: 0; line-height: 1em; padding-top: 0; font-weight: bold; font-size: 1.1em;}
 
 .comparison #calculator a:focus {
   outline: 1px dashed #fff;
@@ -402,6 +408,9 @@ Use with for example: <div class="icon explore"></div>
 .comparison #calculator table th {
   font-weight: bold;
   width: 35%;
+}
+.comparison #calculator td {
+  font-size: 15px;
 }
 
 .comparison #calculator td#institution-calculator {
@@ -419,21 +428,24 @@ Use with for example: <div class="icon explore"></div>
 }
 
 .comparison #calculator #total-left-to-pay.red {
-  background: red;
+  background: #990000;
   font-weight: bold;
   padding: 2px 4px;
 }
 
 .comparison #calculator td#total-year-td {
+  /*
   border-left: 2px dashed #fff;
   border-bottom: 2px dashed #fff;
   border-top: 2px dashed #fff;
+  */
 }
 
 .comparison #calculator td#total-year {
-  border-top: 2px dashed #fff;
+  /* border-top: 2px dashed #fff;
   border-bottom: 2px dashed #fff;
   border-right: 2px dashed #fff;
+  */
 }
 
 .comparison #calculator #calc-paid-to-you-total-row td {
@@ -476,6 +488,8 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison #veteran-indicators table {
   background: #43798D url('../img/medal.jpg') 90% 50% no-repeat;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
 }
 
 .comparison #veteran-indicators table th {
@@ -560,6 +574,17 @@ Use with for example: <div class="icon explore"></div>
   color: #fff;
 }
 
+/* School Summary */
+
+#school-summary a {
+  color: #fff;
+}
+
+#school-summary table {
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+}
+
 /* Revised Styles for new version */
 
 
@@ -630,10 +655,14 @@ a.info-link {
   float: right;
   padding-left: 2%;
   padding-right: 1%;
+  padding-top: 1em;
   margin-bottom: .75em;
   width: 46%;
-  border-bottom-left-radius: .5em;
+  font-size: 1.3em;
+  border-bottom-left-radius: .3em;
 }
+
+#calculated-benefits tr#payments-to-you-terms td {padding-top: 2em;}
 
 #calculated-benefits th, #calculated-benefits td {
   font-size: 12px;
@@ -644,6 +673,14 @@ a.info-link {
 #calculated-benefits table {
   background: rgba(255,255,255,.2);
   text-align: left;
+}
+
+#calculated-benefits table th {
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 1em;
+  text-align: left;
+  font-weight: normal;
 }
 
 #calculated-benefits h4 {
@@ -663,8 +700,9 @@ a.info-link {
 }
 
 #benefit-calculator {
-  padding: 0 1em .25em 1em;
+  padding: 1em 1em .25em 1em;
   float: left;
+  font-size: 1.1em;
   margin-left: -1em;
 }
 
@@ -679,14 +717,19 @@ a.info-link {
 #benefit-calculator table {
   background: none;
   color: #333;
+  font-size: 1.2em;
 }
 
 #benefit-calculator table a {
   color: #fff;
 }
 
+#benefit-calculator table td div {
+  padding: .25em 0;
+}
+
 #benefit-calculator label {
-  font-size: 12px;
+  font-size: 15px;
   color: #fff;
 }
 
@@ -695,7 +738,8 @@ a.info-link {
   max-width: 100%;
   width: 100px;
   margin: 0;
-  font-size: 13px !important;
+  display: block;
+  font-size: 15px !important;
 }
 
 #benefit-calculator input[type="submit"] {
@@ -727,9 +771,11 @@ a.info-link {
 
 #name-summary table h2 {padding-top: 0; margin-top: 0;}
 
-#benefits {
+#benefits, #about-yourself, #your-school {
   padding: 0 1em 1em 1em;
   background: #eee;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
 }
 
 #compare-link {
@@ -745,6 +791,8 @@ a.info-link {
   background: #eee;
   padding: 1em;
   margin: 0 0 1em 0;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
 }
 
 
@@ -875,7 +923,7 @@ img.rating {
 
 .comparison #calculator {
     background: #008CBF;
-    border-radius: .5em;
+    border-radius: .3em;
     padding-bottom: 0;
 }
 

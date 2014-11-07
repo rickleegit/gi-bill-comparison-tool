@@ -92,7 +92,10 @@ layout: va
   <!--                 Eligibility Section                -->
   <!-- ================================================== -->
 
-  <div class="heading solid navy"><h3>Tell us about yourself.</h3></div>
+  <div class="heading solid navy table"><h3>Tell us about yourself.</h3></div>
+
+  <div id="about-yourself" style="padding-top: 1.5em;">
+
 
   <!-- Military Status -->
   <div class="form-group top-aligned">
@@ -195,6 +198,8 @@ layout: va
     </select>
   </div>
 
+</div>
+
   <div class="clear"></div>
 
   <!-- ================================================== -->
@@ -203,8 +208,8 @@ layout: va
 
   <!-- School Name Search -->
   <a name="about_your_school"></a>
-  <div class="heading solid navy"><h3>About your school:</h3></div>
-
+  <div class="heading solid navy table"><h3>About your school:</h3></div>
+  <div id="your-school" style="padding-top: 1.5em;">
   <div class="form-group" style="float:left;">
     <div class="ui-widget">
       <label class="institution-search-label" for="institution-search">Enter a school or employer name to search:</label>
@@ -214,6 +219,7 @@ layout: va
       </div>
     </div>
   </div>
+
 
   <div class="clear"></div>
 
@@ -227,6 +233,8 @@ layout: va
     <label class="radio" for="online-classes-no">No</label>
     <input id="online-classes-no" name="Online Courses" type="radio" value="no" checked>
   </div>
+
+</div>
 
   <div class="clear"></div>
 
@@ -290,7 +298,7 @@ layout: va
         <tr class="estimated-row">
           <td colspan="2"></td>
         </tr>
-        <tr class="estimated-row"> 
+        <tr class="estimated-row">
           <td>
             <div  id="add-to-favorites" class="checkbox">
               <span>
@@ -405,7 +413,7 @@ layout: va
             </div>
           </td>
         </tr>
-        <tr id="calendar-form">        
+        <tr id="calendar-form">
           <td>
             <label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
             <div>
@@ -425,7 +433,7 @@ layout: va
               <option value="28">28 hrs / week</option>
               <option value="26">26 hrs / week</option>
               <option value="24">24 hrs / week</option>
-              <option value="22">22 hrs / week</option> 
+              <option value="22">22 hrs / week</option>
               <option value="20">20 hrs / week</option>
               <option value="18">18 hrs / week</option>
               <option value="16">16 hrs / week</option>
@@ -434,7 +442,7 @@ layout: va
               <option value="10">10 hrs / week</option>
               <option value="8">8 hrs / week</option>
               <option value="6">6 hrs / week</option>
-              <option value="4">4 hrs / week</option> 
+              <option value="4">4 hrs / week</option>
               <option value="2">2 hrs / week</option>
             </select>
           </td>
@@ -548,31 +556,31 @@ layout: va
       <table>
         <tbody>
           <tr>
-            <th colspan="3" style="text-align:center; font-size:150%;font-weight:bold">Calculator Results</th>
+            <th colspan="3" style="font-size: 1.3em;">Calculator Results</th>
           </tr>
           <tr id="calc-housing-allow-rate-row">
-            <th colspan="2" style="font-size:120%;font-weight:bold">Monthly Allowance:</th>
-            <td id="housing-allow-rate" style="font-size:120%;font-weight:bold">$0</td>
+            <th colspan="2" style="">Monthly Allowance:</th>
+            <td id="housing-allow-rate" style="font-weight: bold;">$0</td>
           </tr>
           <tr id="calc-out-of-pocket-row">
-            <th colspan="2" style="font-size:120%;font-weight:bold">Out of Pocket:</th>
-            <td id="total-left-to-pay" style="font-size:120%;font-weight:bold">$0</td>
+            <th colspan="2" style="">Out of Pocket:</th>
+            <td id="total-left-to-pay" style="font-weight: bold;">$0</td>
           </tr><tr>
           </tr>
           <tr id="calc-paid-to-you-total-row">
-            <th colspan="2" style="font-size:120%;font-weight:bold">Paid to You:</th>
-            <td id="total-paid-to-you" style="font-size:120%;font-weight:bold">$0</td>
+            <th colspan="2" style="">Paid to You:</th>
+            <td id="total-paid-to-you" style="font-weight: bold;">$0</td>
           </tr>
           <tr id="calc-paid-to-school-total-row">
-            <th colspan="2" style="border-bottom: 2px solid #fff;font-size:120%;font-weight:bold">Paid to school:</th>
-            <td id="total-paid-to-school" style="border-bottom: 2px solid #fff;font-size:120%;font-weight:bold">$0</td>
+            <th colspan="2" style="border-bottom: 2px solid #fff;">Paid to school:</th>
+            <td id="total-paid-to-school" style="border-bottom: 2px solid #fff; font-weight: bold;">$0</td>
           </tr>
           <tr id="calc-term-total-row">
-            <th colspan="2" style="font-size:120%;font-weight:bold">Total GI Bill Benefits</th>
-            <td id="total-year"style="font-size:120%;font-weight:bold">$0 / yr</td>
+            <th colspan="2" style="">Total GI Bill Benefits</th>
+            <td id="total-year"style="font-weight: bold;">$0 / yr</td>
           </tr><tr>
           </tr>
-          <tr id="payments-to-you-terms" style="font-weight:bold;">
+          <tr id="payments-to-you-terms" style=";">
             <th aria-hidden="true"></th>
             <td class="term1" style="border-bottom: 2px solid #fff;">Fall</td>
             <td class="term2" style="border-bottom: 2px solid #fff;">Spring</td>
@@ -584,35 +592,35 @@ layout: va
             <td id="tuition-fees-term-1">$0 / term</td>
             <td id="tuition-fees-term-2">$0 / term</td>
             <td id="tuition-fees-term-3"></td>
-            <td id="tuition-fees-total">$0 / yr</td>
+            <td id="tuition-fees-total" style="font-weight: bold;">$0 / yr</td>
           </tr>
           <tr id="calc-yellow-ribbon-row">
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Benefit Calculator / Yellow Ribbon (School)');" target="_blank" alt="Click here for more information.">Yellow Ribbon (School):</a></th>
             <td id="yr-ben-term-1">$0 / term</td>
             <td id="yr-ben-term-2">$0 / term</td>
             <td id="yr-ben-term-3"></td>
-            <td id="yr-ben-total">$0 / yr</td>
+            <td id="yr-ben-total" style="font-weight: bold;">$0 / yr</td>
           </tr>
           <tr id="calc-yellow-ribbon-va-row">
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Benefit Calculator / Yellow Ribbon (VA)');" target="_blank" alt="Click here for more information.">Yellow Ribbon (VA):</a></th>
             <td id="yr-ben-term-va-1">$0 / term</td>
             <td id="yr-ben-term-va-2">$0 / term</td>
             <td id="yr-ben-term-va-3"></td>
-            <td id="yr-ben-va-total">$0 / yr</td>
+            <td id="yr-ben-va-total" style="font-weight: bold;">$0 / yr</td>
           </tr>
           <tr>
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#housingallowance" onclick="track('Tool Tips', 'Benefit Calculator / Housing Allowance');" target="_blank" alt="Click here for more information about the housing allowance.">Housing Allowance:</a></th>
             <td id="housing-allow-term-1">$0 / month</td>
             <td id="housing-allow-term-2">$0 / month</td>
             <td id="housing-allow-term-3"></td>
-            <td id="housing-allow-total">$0 / yr</td>
+            <td id="housing-allow-total" style="font-weight: bold;">$0 / yr</td>
           </tr>
           <tr>
             <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#bookstipend" onclick="track('Tool Tips', 'Benefit Calculator / Book Stipend');" target="_blank" alt="Click here for more information about the book stipend.">Book Stipend:</a></th>
             <td id="book-stipend-term-1">$0 / term</td>
             <td id="book-stipend-term-2">$0 / term</td>
             <td id="book-stipend-term-3"></td>
-            <td id="book-stipend-total">$0 / yr</td>
+            <td id="book-stipend-total" style="font-weight: bold;">$0 / yr</td>
           </tr>
         </tbody>
       </table>
@@ -663,11 +671,12 @@ layout: va
         <div class="form-group">
         <span class="question">Receiving Yellow Ribbon? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Receiving Yellow Ribbon');" target="_blank" class="info-link">i</a></span>
 
-        <label class="radio" for="yellow-ribbon-recipient-yes">Yes</label>
         <input id="yellow-ribbon-recipient-yes" name="Receiving Yellow Ribbon" type="radio" value="yes">
+        <label class="radio" for="yellow-ribbon-recipient-yes">Yes</label>
 
-        <label class="radio" for="yellow-ribbon-recipient-no">No</label>
-        <input id="yellow-ribbon-recipient-no" name="Receiving Yellow Ribbon" type="radio" value="no" checked>
+
+          <input id="yellow-ribbon-recipient-no" name="Receiving Yellow Ribbon" type="radio" value="no" checked>
+          <label class="radio" for="yellow-ribbon-recipient-no">No</label>
       </div>
 
         <div class="clear"></div>
@@ -745,13 +754,18 @@ layout: va
 
       <!-- Eligible for Kicker -->
       <div id="kicker-elig-form" class="form-group">
+
+        <div>
         <span class="question">Eligible for Kicker: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / Eligible for Kicker');" target="_blank" class="info-link">i</a></span>
+       </div>
 
-        <label class="radio" for="kicker-elig-yes">Yes</label>
         <input id="kicker-elig-yes" name="Kicker Eligible" type="radio" value="yes">
+        <label class="radio" for="kicker-elig-yes">Yes</label>
 
-        <label class="radio" for="kicker-elig-no">No</label>
+
         <input id="kicker-elig-no" name="Kicker Eligible" type="radio" value="no" checked>
+        <label class="radio" for="kicker-elig-no">No</label>
+
       </div>
 
       <div class="clear"></div>
@@ -780,7 +794,7 @@ layout: va
         <tr>
           <td id="type-calculator" colspan="5" class="normal"></td>
         </tr>
-        <tr style="font-weight:bold;">
+        <tr style=";">
           <th>Semester / Total</th>
           <td id="term1">Fall</td>
           <td id="term2">Spring</td>
@@ -801,7 +815,7 @@ layout: va
           <td id="book-stipend-term-3"></td>
           <td id="book-stipend-total">$0 / yr</td>
         </tr>
-        <tr id="calc-paid-to-you-total-row" style="font-size:25px;font-weight:bold;">
+        <tr id="calc-paid-to-you-total-row" style="font-size:25px;;">
           <th aria-hidden="true"></th>
           <td id="total-paid-to-you-td" colspan="2" class="normal" style="border-top: 2px solid #fff;text-align:right;"><b>Paid to You:</b></td>
           <td id="total-paid-to-you" style="border-top: 2px solid #fff;">$0</td>
@@ -827,7 +841,7 @@ layout: va
           <td id="yr-ben-term-va-3"></td>
           <td id="yr-ben-va-total">$0 / yr</td>
         </tr>
-        <tr id="calc-paid-to-school-total-row" style="font-size:25px;font-weight:bold;">
+        <tr id="calc-paid-to-school-total-row" style="font-size:25px;;">
           <th aria-hidden="true"></th>
           <td id="paid-to-school-td" colspan="2" style="border-top: 2px solid #fff;text-align:right;"><b>Paid to School:</b></td>
           <td id="total-paid-to-school" style="border-top: 2px solid #fff;">$0</td>
@@ -843,7 +857,7 @@ layout: va
           <th aria-hidden="true"></th>
           <td id="total-left-to-pay-td" colspan="2" style="text-align:right;"><b>Out of Pocket:</b></td>
           <td><span id="total-left-to-pay">$0</span></td>
-        <tr id="calc-term-total-row" style="font-size:25px;font-weight:bold;">
+        <tr id="calc-term-total-row" style="font-size:25px;;">
           <th aria-hidden="true"></th>
           <td id="total-year-td" colspan="2" class="normal" style="text-align:right;"><b>Total Post-9/11 GI Bill Benefits</b></td>
           <td id="total-year" class="normal">$0 / yr</td>
@@ -913,8 +927,8 @@ layout: va
         <tr><td colspan="3"></td></tr>
         <tr>
           <td id="institution-name-complaint"></td>
-          <td style="font-weight:bold;">This Campus</td>
-          <td style="font-weight:bold;">All Campuses</td>
+          <td style=";">This Campus</td>
+          <td style=";">All Campuses</td>
         </tr>
         <tr class="big-summary">
           <th>Student Complaints</th>
@@ -1000,7 +1014,7 @@ layout: va
   <!-- ================================================== -->
   <!--          School Summary           -->
   <!-- ================================================== -->
-  
+
   <div id="school-summary" style="display: none;">
     <div class="heading solid navy table"><h3>School Summary<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" onclick="track('Tool Tips', 'School Summary / Source');" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
     <table>
@@ -1266,13 +1280,13 @@ layout: va
             </div>
 
             <div style="margin-top: 10px;">
-              <label for="adv_accreditation">with</label> 
+              <label for="adv_accreditation">with</label>
               <select id="adv_accreditation">
                 <option value="">any</option>
                 <option value="regional">regional</option>
                 <option value="national">national</option>
               </select>
-              accreditation 
+              accreditation
             </div>
             <div style="margin-top: 10px;">
               <label for="adv_name">called</label> <input id="adv_name" width="70" placeholder="Institution name">
