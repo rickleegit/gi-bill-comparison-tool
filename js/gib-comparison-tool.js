@@ -2444,6 +2444,7 @@ var GIBComparisonTool = (function () {
     $('#add-to-favorites').hide();
     $('#rating').hide();
     $('#complaints-details').hide();
+    $('#complaint-box').hide();
         
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
