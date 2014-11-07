@@ -1951,11 +1951,11 @@ var GIBComparisonTool = (function () {
 
     if(institution.p911_tuition_fees && institution.p911_recipients) {
       $('#p_911_recipients').show(); 
-      $("#p_911_spent").text(formatCurrency(institution.p911_tuition_fees) + ' (' + institution.p911_recipients + ' student' + (institution.p911_recipients == 1 ? '' : 's') + ')');
+      $("#p_911_spent").text(formatCurrency(institution.p911_tuition_fees) + ' (' + formatNumber(institution.p911_recipients) + ' student' + (institution.p911_recipients == 1 ? '' : 's') + ')');
     }else{ $('#p_911_recipients').hide(); }
     if(institution.p911_yellow_ribbon && institution.p911_yr_recipients) {
       $('#p_911_yellow_ribbon').show(); 
-      $("#p_911_yellow_ribbon_spent").text(formatCurrency(institution.p911_yellow_ribbon) + ' (' + institution.p911_yr_recipients + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's') + ')');
+      $("#p_911_yellow_ribbon_spent").text(formatCurrency(institution.p911_yellow_ribbon) + ' (' + formatNumber(institution.p911_yr_recipients) + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's') + ')');
     }else { $('#p_911_yellow_ribbon').hide(); }
 
     var complaints = 0 + institution.complaints_main_campus_roll_up;
