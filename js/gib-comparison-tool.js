@@ -1920,6 +1920,8 @@ var GIBComparisonTool = (function () {
     $('#book-stipend').html(calculated.est_book_stipend);
 
     $('#poe').html(institution.poe ? 'Yes' : 'No');
+    $('#eight-keys').html(institution.eight_keys == 'Yes' ? 'Yes' : 'No');
+
 
     if (institution.yr) {
       var location = institution.country == 'USA' ? institution.state : 'overseas';
