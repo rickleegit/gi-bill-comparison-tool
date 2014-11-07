@@ -1170,7 +1170,7 @@ var GIBComparisonTool = (function () {
     } else if (calculated.old_gi_bill == true) {
       calculated.book_stipend_term_1 = 0;
     } else if (formData.gi_bill_chap == 31) {
-      calculated.book_stipend_term_1 = BSCAP;
+      calculated.book_stipend_term_1 = formData.books / calculated.number_of_terms;
     } else if (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
       calculated.book_stipend_term_1 = BSOJTMONTH;
     } else {
@@ -1191,7 +1191,7 @@ var GIBComparisonTool = (function () {
     } else if (calculated.old_gi_bill == true) {
       calculated.book_stipend_term_2 = 0;
     } else if (formData.gi_bill_chap == 31) {
-      calculated.book_stipend_term_2 = BSCAP;
+      calculated.book_stipend_term_2 = formData.books / calculated.number_of_terms;
     } else {
       calculated.book_stipend_term_2 = calculated.rop_book * BSCAP / calculated.number_of_terms * calculated.tier;
     }
@@ -1202,7 +1202,7 @@ var GIBComparisonTool = (function () {
    */
   var getBookStipendTerm3 = function () {
     if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
-      calculated.book_stipend_term_2 = 0;
+      calculated.book_stipend_term_3 = 0;
     } else if  (calculated.institution_type == 'ojt' && formData.gi_bill_chap == 33) {
       calculated.book_stipend_term_3 = BSOJTMONTH;
     } else if (formData.calendar == 'semesters') {
@@ -1210,9 +1210,9 @@ var GIBComparisonTool = (function () {
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
       calculated.book_stipend_term_3 = 0;
     } else if (calculated.old_gi_bill == true) {
-      calculated.book_stipend_term_2 = 0;
+      calculated.book_stipend_term_3 = 0;
     } else if (formData.gi_bill_chap == 31) {
-      calculated.book_stipend_term_2 = BSCAP;
+      calculated.book_stipend_term_3 = formData.books / calculated.number_of_terms;
     } else {
       calculated.book_stipend_term_3 = calculated.rop_book * BSCAP / calculated.number_of_terms * calculated.tier;
     }
@@ -2079,6 +2079,7 @@ var GIBComparisonTool = (function () {
     $('#tuition-fees-section').show();
     $('#in-state').hide();
     $('#in-state-tuition-fees-form').hide();
+    $('#books-input-row').hide();
     $('#yellow-ribbon-recipient-form').hide();
     $('#yellow-ribbon-amount-form').hide();
     $('#yellow-ribbon-rates-link').hide();
@@ -2192,7 +2193,7 @@ var GIBComparisonTool = (function () {
     }
 
   if (formData.gi_bill_chap == 35) {
-    $('#kicker-elig-form').show();
+    $('#kicker-elig-form').hide();
     $('#kicker-form').hide();
     }    
 
@@ -2243,12 +2244,20 @@ var GIBComparisonTool = (function () {
       $('#buy-up-rate-form').show();
     }
 
+    if (formData.gi_bill_chap == 31) {
+      $('#books-input-row').show();
+    } else {
+      $('#books-input-row').hide();
+    }
+
     if (formData.gi_bill_chap == 30) {
       $('#buy-up-form').show();
     } else {
       $('#buy-up-form').hide();
       $('#buy-up-rate-form').hide();      
     }
+
+
 
     if ((formData.military_status == 'active duty' ||
         formData.military_status == 'national guard / reserves') &&
