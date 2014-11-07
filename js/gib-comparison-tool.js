@@ -60,7 +60,32 @@ var GIBComparisonTool = (function () {
     buy_up_elig:            false,
     buy_up:                 0,
     scholar:                '',
-    tuition_assist:         ''
+    tuition_assist:         '',
+    complaints_main_campus_roll_up:                       0,
+    complaints_facility_code:                             0,
+    complaints_accreditation_by_fac_code:                 0,
+    complaints_accreditation_by_ope_id_do_not_sum:        0,
+    complaints_credit_transfer_by_fac_code:               0,
+    complaints_credit_transfer_by_ope_id_do_not_sum:      0,
+    complaints_degree_requirements_by_fac_code:           0,
+    complaints_degree_requirements_by_ope_id_do_not_sum:  0,
+    complaints_financial_by_fac_code:                     0,
+    complaints_financial_by_ope_id_do_not_sum:            0,
+    complaints_grades_by_fac_code:                        0,
+    complaints_grades_by_ope_id_do_not_sum:               0,
+    complaints_jobs_by_ope_id_do_not_sum:                 0,
+    complaints_marketing_by_fac_code:                     0,
+    complaints_marketing_by_ope_id_do_not_sum:            0,
+    complaints_other_by_fac_code:                         0,
+    complaints_other_by_ope_id_do_not_sum:                0,
+    complaints_quality_by_fac_code:                       0,
+    complaints_quality_by_ope_id_do_not_sum:              0,
+    complaints_refund_by_fac_code:                        0,
+    complaints_refund_by_ope_id_do_not_sum:               0,
+    complaints_student_loans_by_fac_code:                 0,
+    complaints_student_loans_by_ope_id_do_not_sum:        0,
+    complaints_transcript_by_fac_code:                    0,
+    complaints_transcript_by_ope_id_do_not_sum:           0
   };
 
   // The current institution
