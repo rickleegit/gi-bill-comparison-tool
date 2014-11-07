@@ -1815,6 +1815,7 @@ var GIBComparisonTool = (function () {
         $('#tuition-fees-input').val(formatCurrency(institution.tuition_in_state));
         $('#in-state-tuition-fees').val(formatCurrency(institution.tuition_in_state));
         formData.tuition_fees = institution.tuition_in_state;
+        $('#books-input').val(formatCurrency(institution.books));
 
         // Set term calendar from the institution data if present
         if (institution.calendar) {
