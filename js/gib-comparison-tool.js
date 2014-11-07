@@ -47,6 +47,7 @@ var GIBComparisonTool = (function () {
     in_state:               true,
     tuition_fees:           '',
     in_state_tuition_fees:  '',
+    books:                  '',
     yellow_ribbon:          false,
     yellow_ben:             '',
     rop:                    '',
@@ -278,6 +279,7 @@ var GIBComparisonTool = (function () {
     formData.in_state              = $('#in-state-yes').prop('checked');
     formData.tuition_fees          = getCurrency('#tuition-fees-input');
     formData.in_state_tuition_fees = getCurrency('#in-state-tuition-fees');
+    formData.tuition_fees          = getCurrency('#books-input');
     formData.yellow_ribbon         = $('#yellow-ribbon-recipient-yes').prop('checked');
     formData.yellow_ben            = getCurrency('#yellow-ribbon-amount');
     formData.rop                   = $('#enrolled').val();
@@ -2416,6 +2418,7 @@ var GIBComparisonTool = (function () {
       '#in-state-yes, #in-state-no, ' +
       '#tuition-fees-input, ' +
       '#in-state-tuition-fees, ' +
+      '#books-input, ' +
       '#yellow-ribbon-recipient-yes, #yellow-ribbon-recipient-no,  ' +
       '#yellow-ribbon-amount, ' +
       '#enrolled, ' +
@@ -2438,7 +2441,7 @@ var GIBComparisonTool = (function () {
       GIBComparisonTool.update();
     });
 
-    $('#tuition-fees-input, #in-state-tuition-fees,' +
+    $('#tuition-fees-input, #in-state-tuition-fees, #books-input' +
       '#yellow-ribbon-amount, #scholar, #kicker').bindWithDelay('keyup', function(e) {
       $(this).change();
     }, 1000);
