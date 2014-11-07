@@ -2443,6 +2443,7 @@ var GIBComparisonTool = (function () {
     $('#calculator').hide();
     $('#add-to-favorites').hide();
     $('#rating').hide();
+    $('#complaints-details').hide();
         
     // Load institution data
     $.getJSON('api/institutions.json', function (data) {
@@ -2517,7 +2518,7 @@ var GIBComparisonTool = (function () {
 
 
 function expandComplaintDetails() {
-  $("#complaints-details").toggle();
+  $("#complaint-box").toggle();
   var showhide = $("#complaints-total").html();
   showhide = showhide.indexOf('See') > 0 ? showhide.replace('See', 'Hide') : showhide.replace('Hide', 'See');
   $("#complaints-total").html(showhide);
