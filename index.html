@@ -230,19 +230,7 @@ layout: va
 
   <div class="clear"></div>
 
-  <!-- ================================================== -->
-  <!--                  Compare Favorites                 -->
-  <!-- ================================================== -->
-  <div id="about-your-favorites" class="heading solid navy table">
-    <h3>Your favorites:</h3>
-  </div>
-  <div id="compare-favorites">
-    <a id="compare-link" href="#dialog" name="modal"> Compare your <span id="number-of-favorites-selected"> </span> favorites </a>
-    <div id="your-favorites">
-      <ul id="favorites-list"></ul>
-    </div>
-    <div style="clear: both;">&nbsp;</div>
-  </div>
+
 
   <!-- ================================================== -->
   <!--                  Benefit Estimator                 -->
@@ -259,7 +247,7 @@ layout: va
         <tr>
           <td id="institution"></td>
           <td id="rating">
-            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp"><img src="img/rating.png" alt="coming soon: school ratings" class="rating" /></a>
+            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" onclick="track('Tool Tips', 'Benefit Estimator / Ratings Coming Soon');" target="_blank" ><img src="img/rating.png" alt="coming soon: school ratings" class="rating" /></a>
           </td>
         </tr>
         <tr>
@@ -336,6 +324,14 @@ layout: va
           <td colspan="2">
             <label for="in-state-tuition-fees">In-state Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_receiving" onclick="track('Tool Tips', 'Calculator / In-State Tuition Fees');" target="_blank" class="info-link">i</a></label>
             <input id="in-state-tuition-fees" type="text" value="$0" name="In-state Tuition Fees" alt="In-state Tuition Fees">
+          </td>
+        </tr>
+        <tr id="books-input-row">
+          <td colspan="2">
+            <label for="books-input">Books / Supplies (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#books_input" onclick="track('Tool Tips', 'Calculator / Books & Supplies');" target="_blank" class="info-link">i</a></label>
+            <div>
+              <input id="books-input" type="text" value="$0" name="Books" alt="Books"/>
+            </div>
           </td>
         </tr>
         <tr id="yellow-ribbon-recipient-form">
@@ -539,11 +535,9 @@ layout: va
             &nbsp;
           </td>
         </tr>
-
-
-
       </table>
     </div>
+
     <div id="calculated-benefits">
       <table>
         <tbody>
@@ -551,26 +545,45 @@ layout: va
             <th colspan="3" style="text-align:center; font-size:150%;font-weight:bold">Calculator Results</th>
           </tr>
           <tr id="calc-housing-allow-rate-row">
-            <th colspan="2" style="font-size:120%;font-weight:bold">Monthly Allowance:</th>
+            <th colspan="2" style="font-size:120%;font-weight:bold">Monthly Benefit:</th>
             <td id="housing-allow-rate" style="font-size:120%;font-weight:bold">$0</td>
           </tr>
-          <tr id="calc-out-of-pocket-row">
-            <th colspan="2" style="font-size:120%;font-weight:bold">Out of Pocket:</th>
-            <td id="total-left-to-pay" style="font-size:120%;font-weight:bold">$0</td>
-          </tr><tr>
+          <tr>
+            <th></th>
+          </tr>
+          <tr id="calc-term-total-row">
+            <th colspan="2" style="font-size:120%;font-weight:bold;border-bottom: 2px solid #fff;">Total GI Bill Benefits</th>
+            <td id="total-year"style="font-size:120%;font-weight:bold;border-bottom: 2px solid #fff;">$0 / yr</td>
           </tr>
           <tr id="calc-paid-to-you-total-row">
             <th colspan="2" style="font-size:120%;font-weight:bold">Paid to You:</th>
             <td id="total-paid-to-you" style="font-size:120%;font-weight:bold">$0</td>
           </tr>
           <tr id="calc-paid-to-school-total-row">
-            <th colspan="2" style="border-bottom: 2px solid #fff;font-size:120%;font-weight:bold">Paid to school:</th>
-            <td id="total-paid-to-school" style="border-bottom: 2px solid #fff;font-size:120%;font-weight:bold">$0</td>
+            <th colspan="2" style="font-size:120%;font-weight:bold">Paid to school:</th>
+            <td id="total-paid-to-school" style="font-size:120%;font-weight:bold">$0</td>
           </tr>
-          <tr id="calc-term-total-row">
-            <th colspan="2" style="font-size:120%;font-weight:bold">Total GI Bill Benefits</th>
-            <td id="total-year"style="font-size:120%;font-weight:bold">$0 / yr</td>
-          </tr><tr>
+          <tr>
+            <th></th>
+          </tr>
+          <tr id="calc-out-of-pocket-row">
+            <th colspan="2" style="font-size:120%;font-weight:bold;border-bottom: 2px solid #fff;">Out of Pocket:</th>
+            <td id="total-left-to-pay" style="font-size:120%;font-weight:bold;border-bottom: 2px solid #fff;">$0</td>
+          </tr>
+          <tr id="calc-tuition-fees-charged-row">
+            <th id="tuition-fees-charged-td" colspan="2" style="font-size:120%;font-weight:bold"><b>Tuition & Fees Owed:</b></th>
+            <td id="total-tuition-fees-charged">$0</td>
+          </tr>
+          <tr id="calc-school-received-row">
+            <th colspan="2" style="font-size:120%;font-weight:bold">Paid to school:</th>
+            <td id="total-school-received" style="font-size:120%;font-weight:bold">$0</td>
+          </tr>
+          <tr id="calc-tuition-fees-scholarship-row">
+            <th id="tuition-fees-scholarship-td" colspan="2" style="font-size:120%;font-weight:bold"><b>Your Scholarships:</b></th>
+            <td id="total-tuition-fees-scholarships">$0</td>
+          </tr>
+          <tr>
+            <th></th>
           </tr>
           <tr id="payments-to-you-terms" style="font-weight:bold;">
             <th aria-hidden="true"></th>
@@ -859,6 +872,21 @@ layout: va
   </div>
 
   <!-- ================================================== -->
+  <!--                  Compare Favorites                 -->
+  <!-- ================================================== -->
+  <div id="about-your-favorites" class="heading solid navy table">
+    <h3>Your favorites:</h3>
+  </div>
+  <div id="compare-favorites">
+    <a id="compare-link" href="#dialog" name="modal"> Compare your <span id="number-of-favorites-selected"> </span> favorites </a>
+    <div id="your-favorites">
+      <ul id="favorites-list"></ul>
+    </div>
+    <div style="clear: both;">&nbsp;</div>
+  </div>
+  
+
+  <!-- ================================================== -->
   <!--                  Veteran Indicators                -->
   <!-- ================================================== -->
 
@@ -1022,11 +1050,11 @@ layout: va
           <td id="accreditation-link"></td>
         </tr>
         <tr id="p_911_recipients">
-          <th>Post-9/11 Tuition/Fees Paid</th>
+          <th>Post-9/11 Tuition/Fees Paid (FY'13)</th>
           <td id="p_911_spent"></td>
         </tr>
         <tr id="p_911_yellow_ribbon">
-          <th>Post-9/11 Yellow Ribbon Paid</th>
+          <th>Post-9/11 Yellow Ribbon Paid (FY'13)</th>
           <td id="p_911_yellow_ribbon_spent"></td>
         </tr>
       </tbody>
