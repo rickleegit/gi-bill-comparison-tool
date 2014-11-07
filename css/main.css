@@ -902,11 +902,15 @@ padding: 1em;
   border: 1px solid rgba(0,0,0,.1);
 }
 
-.big-summary {
+#complaint-box .big-summary {
   font-size: 2em;
   padding-bottom: 0.5em;
 }
 
-.inner-header {
+#complaint-box .inner-highlight {
   background-color: #0165B9;
+}
+
+#complaint-box tbody tr:nth-child(odd) {
+  background-color: #012A4C;
 }
