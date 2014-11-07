@@ -1959,6 +1959,7 @@ var GIBComparisonTool = (function () {
       $("#p_911_yellow_ribbon_spent").text(formatCurrency(institution.p911_yellow_ribbon) + ' (' + institution.p911_yr_recipients + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's') + ')');
     }else { $('#p_911_yellow_ribbon').hide(); }
 
+    $('#institution-name-complaint').html(institution.institution);
     $('#complaint-total-all').html(formData.complaints_main_campus_roll_up);
     $('#complaint-total-fc').html(formData.complaints_facility_code);
     $('#complaint-accreditation-fc').html(formData.complaints_accreditation_by_fac_code);
