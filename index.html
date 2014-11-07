@@ -377,8 +377,8 @@ layout: va
         </tr>
       </table>
       <table id="enrollment-section">
-        <tr>
-          <td id="enrolled-form">
+        <tr id="enrolled-form">
+          <td>
             <label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
               <div>
               <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
@@ -389,7 +389,24 @@ layout: va
               </select>
             </div>
           </td>
-          <td id="calendar-form">
+        </tr>
+        <!-- Rate of Pursuit Old -->
+        <tr id="enrolled-form-old-gi-bill">
+          <td>
+            <label for="enrolled-old">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+              <div>
+              <select id="enrolled-old" name="Enrolled" alt="Select your enrollment level">
+                <option value="full">Full Time</option>
+                <option value="three quarter">¾ Time</option>
+                <option value="half">1/2 Time </option>
+                <option value="less than half">Less than ½ time more than ¼ time</option>
+                <option value="quarter">1/4 time or less</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr id="calendar-form">        
+          <td>
             <label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
             <div>
               <select id="calendar" name="School Calendar" alt="Select type of school calendar">
@@ -473,6 +490,58 @@ layout: va
             <input id="kicker" type ="text" value="$200" name="How much is your kicker?" alt="Tell us how much is your kicker was for?">
           </td>
         </tr>
+      <!-- Eligible for Buy-up -->
+        <tr id="buy-up-form">
+          <td>
+            <label class="question">Did you participate in buy-up program? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#buy_up" onclick="track('Tool Tips', 'Calculator / Buy Up);" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+          </td>
+          <td>
+            <label class="radio" for="buy-up-yes">Yes</label>
+            <input id="buy-up-yes" name="Buy-Up" type="radio" value="yes">
+            <label class="radio" for="buy-up-no">No</label>
+            <input id="buy-up-no" name="Buy-up" type="radio" value="no" checked>
+          </td>
+        </tr>
+        <tr id="buy-up-rate-form" class="form-group top-aligned">
+          <td>
+            <label for="buy-up-rate">How much did you pay toward buy-up? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#buy_up" onclick="track('Tool Tips', 'Calculator / Buy Up');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+            <select id="buy-up-rate" name="How much did you pay?" alt="Select how much you paid">
+              <option value="600">$600</option>
+              <option value="580">$580</option>
+              <option value="540">$540</option>
+              <option value="520">$520</option>
+              <option value="500">$500</option>
+              <option value="480">$480</option>
+              <option value="460">$460</option>
+              <option value="440">$440</option>
+              <option value="420">$420</option>
+              <option value="400">$400</option>
+              <option value="380">$380</option>
+              <option value="340">$340</option>
+              <option value="320">$320</option>
+              <option value="300">$300</option>
+              <option value="280">$280</option>
+              <option value="260">$260</option>
+              <option value="240">$240</option>
+              <option value="220">$220</option>
+              <option value="200">$200</option>
+              <option value="180">$180</option>
+              <option value="140">$140</option>
+              <option value="120">$120</option>
+              <option value="100">$100</option>
+              <option value="80">$80</option>
+              <option value="60">$60</option>
+              <option value="40">$40</option>
+              <option value="20">$20</option>
+            </select>
+          </td>
+          <td>
+            &nbsp;
+          </td>
+        </tr>
+
+
+
       </table>
     </div>
     <div id="calculated-benefits">
@@ -843,7 +912,7 @@ layout: va
       <tbody>
         <tr><td colspan="3"></td></tr>
         <tr>
-          <td id="institution-name-comlaint"></td>
+          <td id="institution-name-complaint"></td>
           <td style="font-weight:bold;">This Campus</td>
           <td style="font-weight:bold;">All Campuses</td>
         </tr>
@@ -924,6 +993,41 @@ layout: va
     </table>
   </div>
 
+  <!-- ================================================== -->
+  <!--          School Summary           -->
+  <!-- ================================================== -->
+  
+  <div id="school-summary" style="display: none;">
+    <div class="heading solid navy table"><h3>School Summary<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" onclick="track('Tool Tips', 'School Summary / Source');" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
+    <table>
+      <tbody>
+        <tr>
+          <th>Accreditated</th>
+          <td id="accreditation"></td>
+        </tr>
+        <tr id="accreditation-type-row">
+          <th>Accreditation Type</th>
+          <td id="accreditation-type"></td>
+        </tr>
+        <tr id="accreditation-status-row">
+          <th>Accreditated Status</th>
+          <td id="accreditation-status"></td>
+        </tr>
+        <tr id="accreditation-status-link">
+          <th>See Accreditors</th>
+          <td id="accreditation-link"></td>
+        </tr>
+        <tr id="p_911_recipients">
+          <th>Post-9/11 Tuition/Fees Paid</th>
+          <td id="p_911_spent"></td>
+        </tr>
+        <tr id="p_911_yellow_ribbon">
+          <th>Post-9/11 Yellow Ribbon Paid</th>
+          <td id="p_911_yellow_ribbon_spent"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
 
@@ -974,37 +1078,6 @@ layout: va
     </table>
   </div>
 
-  <!-- ================================================== -->
-  <!--          School Summary           -->
-  <!-- ================================================== -->
-  
-  <div id="school-summary" style="display: none;">
-    <div class="heading solid navy table"><h3>School Summary<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" onclick="track('Tool Tips', 'School Summary / Source');" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
-    <table>
-      <tbody>
-        <tr>
-          <th>Accreditated</th>
-          <td id="accreditation"></td>
-        </tr>
-        <tr id="accreditation-type-row">
-          <th>Accreditation Type</th>
-          <td id="accreditation-type"></td>
-        </tr>
-        <tr id="accreditation-status-row">
-          <th>Accreditated Status</th>
-          <td id="accreditation-status"></td>
-        </tr>
-        <tr id="p_911_recipients">
-          <th>Post-9/11 Tuition/Fees Paid</th>
-          <td id="p_911_spent"></td>
-        </tr>
-        <tr id="p_911_yellow_ribbon">
-          <th>Post-9/11 Yellow Ribbon Paid</th>
-          <td id="p_911_yellow_ribbon_spent"></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 
   <!-- ================================================== -->
   <!--          More Information About the Tool           -->
