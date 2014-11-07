@@ -2159,6 +2159,8 @@ var GIBComparisonTool = (function () {
       $('#calc-yellow-ribbon-row').hide();
     }
 
+
+    
     if (calculated.institution_type == 'ojt') {
       $('#online-classes').hide();
       $('#veteran-indicators').hide();
@@ -2185,6 +2187,11 @@ var GIBComparisonTool = (function () {
       $('#payments-to-school-title').hide();
       $('#payments-to-school-terms').hide();
     }
+
+  if (formData.gi_bill_chap == 35) {
+    $('#kicker-elig-form').show();
+    $('#kicker-form').hide();
+    }    
 
     if (calculated.institution_type == 'flight' ||
         calculated.institution_type == 'correspond') {
