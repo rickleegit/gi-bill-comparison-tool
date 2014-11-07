@@ -2075,7 +2075,6 @@ var GIBComparisonTool = (function () {
     $('#only-tuition-fees').hide();
     $('#veteran-indicators').show();
     $('#vet-success-row').hide();
-    $('#eight-keys-row').hide();
     $('#school-indicators').show();
 
     // Tuition/Fees Input Results
