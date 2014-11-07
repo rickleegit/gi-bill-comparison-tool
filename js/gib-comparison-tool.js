@@ -338,7 +338,7 @@ var GIBComparisonTool = (function () {
    * Formats currency in USD
    */
   var formatCurrency = function (num) {
-    var str = Math.round(parseFloat(num)).toString();
+    var str = Math.round(Number(num)).toString();
     // match a digit if it's followed by 3 other digits, appending a comma to each match
     return '$' + str.replace(/\d(?=(\d{3})+$)/g, '$&,');
   };
