@@ -1138,7 +1138,7 @@ var GIBComparisonTool = (function () {
     } else if (calculated.only_tuition_fees) {
       calculated.housing_allow_total = Math.max(0, Math.min(calculated.monthly_rate_final * calculated.acad_year_length, formData.tuition_fees));
     } else {
-      calculated.housing_allow_total = calculated.housing_allow_term_1 * calculated.acad_year_length;
+      calculated.housing_allow_total = calculated.housing_allow_term_1 + calculated.housing_allow_term_2 + calculated.housing_allow_term_3;
     }
   };
 
