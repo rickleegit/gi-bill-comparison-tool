@@ -1141,7 +1141,9 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance Total for year
    */
   var getHousingAllowTotal = function () {
-    if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
+    if (formData.military_status == 'active duty' && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_3 = 0;
+    } else if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
       calculated.housing_allow_total =  0.25 * calculated.monthly_rate_final;
     } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_total =  (7/15) * calculated.monthly_rate_final;
