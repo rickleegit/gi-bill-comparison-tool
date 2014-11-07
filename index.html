@@ -230,19 +230,7 @@ layout: va
 
   <div class="clear"></div>
 
-  <!-- ================================================== -->
-  <!--                  Compare Favorites                 -->
-  <!-- ================================================== -->
-  <div id="about-your-favorites" class="heading solid navy table">
-    <h3>Your favorites:</h3>
-  </div>
-  <div id="compare-favorites">
-    <a id="compare-link" href="#dialog" name="modal"> Compare your <span id="number-of-favorites-selected"> </span> favorites </a>
-    <div id="your-favorites">
-      <ul id="favorites-list"></ul>
-    </div>
-    <div style="clear: both;">&nbsp;</div>
-  </div>
+
 
   <!-- ================================================== -->
   <!--                  Benefit Estimator                 -->
@@ -259,7 +247,7 @@ layout: va
         <tr>
           <td id="institution"></td>
           <td id="rating">
-            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp"><img src="img/rating.png" alt="coming soon: school ratings" class="rating" /></a>
+            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" onclick="track('Tool Tips', 'Benefit Estimator / Ratings Coming Soon');" target="_blank" ><img src="img/rating.png" alt="coming soon: school ratings" class="rating" /></a>
           </td>
         </tr>
         <tr>
@@ -870,6 +858,21 @@ layout: va
   <div id="calculate-benefits-btn" class="toggle-calc">
     <a href="javascript:toggleCalc()" onclick="GIBComparisonTool.trackOpenCalculator();">How much am I going to get?</a>
   </div>
+
+  <!-- ================================================== -->
+  <!--                  Compare Favorites                 -->
+  <!-- ================================================== -->
+  <div id="about-your-favorites" class="heading solid navy table">
+    <h3>Your favorites:</h3>
+  </div>
+  <div id="compare-favorites">
+    <a id="compare-link" href="#dialog" name="modal"> Compare your <span id="number-of-favorites-selected"> </span> favorites </a>
+    <div id="your-favorites">
+      <ul id="favorites-list"></ul>
+    </div>
+    <div style="clear: both;">&nbsp;</div>
+  </div>
+  
 
   <!-- ================================================== -->
   <!--                  Veteran Indicators                -->
