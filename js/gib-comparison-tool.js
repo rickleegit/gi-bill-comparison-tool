@@ -2350,9 +2350,9 @@ var GIBComparisonTool = (function () {
     }
 
     // 8 Keys
-    if (institution.eight_keys) {
-     $('#eight-keys-row').show();
-    }
+//    if (institution.eight_keys) {
+//     $('#eight-keys-row').show();
+//    }
 
     // School Indicators
     if (institution.indicator_group === null ||
