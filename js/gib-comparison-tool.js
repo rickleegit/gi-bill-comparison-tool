@@ -93,6 +93,7 @@ var GIBComparisonTool = (function () {
     kicker_benefit:           0,
     buy_up_rate:              0, 
     monthly_rate_final:       0, 
+    monthly_rate_display:     0,
     term1:                    '',
     term2:                    '',
     term3:                    '',
@@ -1142,6 +1143,21 @@ var GIBComparisonTool = (function () {
     }
   };
 
+
+  /*
+   * Calculate Monthly Rate for Display
+   */
+
+  var getMonthlyRateDisplay = function () {
+    if (calculated.institution_type == 'ojt') {
+      calculated.monthly_rate_display = calculated.housing_allow_term_1;
+    } else {
+      calculated.monthly_rate_display = calculated.housing_allow_term_1 / calculated.term_length;
+    }
+  };
+
+
+
   /*
    * Calculate Book Stipend for Term #1
    */
@@ -1880,6 +1896,7 @@ var GIBComparisonTool = (function () {
     getTotalPaidToYou();
     getTotalYear();
     getTotalText();
+    getMonthlyRateDisplay();
     getAccreditation();
 
     // Log values for testing
@@ -1975,7 +1992,7 @@ var GIBComparisonTool = (function () {
     $('#yr_console').html(institution.yr);
 
 
-    $('#housing-allow-rate').html(formatCurrency(calculated.housing_allow_term_1));
+    $('#housing-allow-rate').html(formatCurrency(calculated.monthly_rate_display));
     $('#total-left-to-pay').html(formatCurrency(calculated.total_left_to_pay));
     if (calculated.total_left_to_pay > 0) {
       $('#total-left-to-pay').addClass('red');
