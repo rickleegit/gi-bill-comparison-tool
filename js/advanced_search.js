@@ -23,6 +23,7 @@ function advanced_search(institutions) {
   var type = $("#adv_type").val(),
       state = $("#adv_state").val(),
       country = $("#adv_country").val(),
+      accreditation = $("#adv_accreditation").val(),
       name = $("#adv_name").val(),
       student_veteran = $("#adv_student_veteran").is(":checked"),
       yr = $("#adv_yr").is(":checked"),
@@ -52,6 +53,10 @@ function advanced_search(institutions) {
     var url = 'api/filters/country/' + normalize(country) + '.json';
     intersectq.defer(handle_json, url);
   }
+  if (accreditation != "") {
+    var url = 'api/filters/accreditation_type/' + normalize(accreditation) + '.json';
+    intersectq.defer(handle_json, url);
+  }  
   if (name != "") {
     intersectq.defer(search_name, name, institutions);
   }

@@ -295,7 +295,6 @@ var GIBComparisonTool = (function () {
   };
 
   var getAccreditation = function() {
-    console.log(institution);
     if(institution.accredited == null) { 
       $("#school-summary").hide();
     }else{

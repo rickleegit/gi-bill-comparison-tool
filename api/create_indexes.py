@@ -47,7 +47,7 @@ def norm(string):
         raise
 
 attrindexes = {}
-os.path.walk('.', index, (attrindexes, ("type", "state", "country", "poe", "yr", "student_veteran", "eight_keys")))
+os.path.walk('.', index, (attrindexes, ("type", "state", "country", "poe", "yr", "student_veteran", "eight_keys", "accreditation_type")))
 
 for attr in attrindexes:
     dirname = "filters/{}".format(attr)
