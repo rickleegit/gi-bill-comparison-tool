@@ -610,7 +610,7 @@ var GIBComparisonTool = (function () {
   var getNumberOfTerms = function () {
     if (calculated.institution_type == 'ojt') {
       calculated.number_of_terms = 3;
-    if (formData.calendar == 'semesters') {
+    } else if (formData.calendar == 'semesters') {
       calculated.number_of_terms = 2;
     } else if (formData.calendar == 'quarters')  {
       calculated.number_of_terms = 3;
