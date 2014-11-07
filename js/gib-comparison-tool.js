@@ -2004,8 +2004,9 @@ var GIBComparisonTool = (function () {
     $('#total-year-td').html(calculated.gi_bill_total_text);
     $('#total-year').html(formatCurrency(calculated.total_year));
 
-    $('#total-tuition-fees-scholarships').html(formatCurrency(calculated.total_scholarship_ta));
     $('#total-tuition-fees-charged').html(formatCurrency(formData.tuition_fees));
+    $('#total-school-received').html(formatCurrency(calculated.total_to_school));
+    $('#total-tuition-fees-scholarships').html(formatCurrency(calculated.total_scholarship_ta));
 
     $('.term1').html(calculated.term1);
     $('.term2').html(calculated.term2);
@@ -2100,18 +2101,26 @@ var GIBComparisonTool = (function () {
     $('#buy-up-rate-form').hide();
 
     // Calculator Results
-    $('#paid-school-calculator').show();
+    $('#calc-housing-allow-rate-row').show();
+
+    $('#calc-term-total-row').show();
+    $('#calc-paid-to-you-total-row').show();
+    $('#calc-paid-to-school-total-row').show();
+
+    $('#calc-out-of-pocket-row').show();
+    $('#calc-tuition-fees-charged-row').show();
+    $('#calc-school-received').show();
+    $('#calc-tuition-fees-scholarship-row').show();
+
+
     $('#calc-tuition-fees-row').show();
     $('#calc-yellow-ribbon-row').show();
     $('#calc-yellow-ribbon-va-row').show();
-    $('#calc-paid-to-school-total-row').show();
-    $('#calc-tuition-fees-scholarship-row').show();
-    $('#calc-tuition-fees-charged-row').show();
-    $('#calc-out-of-pocket-row').show();
-    $('#calc-paid-to-you-total-row').show();
+
+    $('#paid-school-calculator').show();
     $('#calc-tuition-only-row').hide();
     $('#paid-to-you-calculator').show();
-    $('#calc-term-total-row').show();
+
 
     // Calculator Results - Particular Terms
     $('.term2').show();
