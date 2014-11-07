@@ -608,14 +608,14 @@ var GIBComparisonTool = (function () {
    * Calculate the total number of academic terms
    */
   var getNumberOfTerms = function () {
+    if (calculated.institution_type == 'ojt') {
+      calculated.number_of_terms = 3;
     if (formData.calendar == 'semesters') {
       calculated.number_of_terms = 2;
     } else if (formData.calendar == 'quarters')  {
       calculated.number_of_terms = 3;
     } else if (formData.calendar == 'nontraditional') {
       calculated.number_of_terms = formData.number_nontrad_terms;
-    } else if (calculated.institution_type == 'ojt') {
-      calculated.number_of_terms = 4;
     }
   };
 
@@ -1006,7 +1006,11 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #1
    */
   var getHousingAllowTerm1 = function () {
-    if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
+    if (formData.military_status == 'active duty' && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_1 = 0;
+    } else if (formData.gi_bill_chap == 33 & formData.military_status == 'spouse' && formData.spouse_active_duty && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_1 = 0;
+    } else if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_1 =  calculated.monthly_rate_final;
     } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_1 =  calculated.monthly_rate_final;
@@ -1045,12 +1049,18 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #2
    */
   var getHousingAllowTerm2 = function () {
-    if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
+    if (formData.military_status == 'active duty' && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_2 = 0;
+    } else if (formData.gi_bill_chap == 33 & formData.military_status == 'spouse' && formData.spouse_active_duty && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_2 = 0;
+    } else if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_2 =  0.75 * calculated.monthly_rate_final;
     } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_2 =  (6.6/9) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_2 = calculated.monthly_rate_final;
+    } else if (calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_2 = 0.8 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
       calculated.housing_allow_term_2 = 0;
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
@@ -1071,10 +1081,6 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_2 = (0 + calculated.kicker_benefit) * calculated.term_length;
     } else if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
       calculated.housing_allow_term_2 = 0;
-    } else if (calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_2 = 0.8 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
-    } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
-      calculated.housing_allow_term_2 = 0;
     } else if (formData.online) {
       calculated.housing_allow_term_2 = calculated.term_length * formData.rop * (calculated.tier * AVGBAH/ 2 + calculated.kicker_benefit);
     } else if (institution.country != 'USA') {
@@ -1088,12 +1094,18 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #3
    */
   var getHousingAllowTerm3 = function () {
-    if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
+    if (formData.military_status == 'active duty' && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_3 = 0;
+    } else if (formData.gi_bill_chap == 33 & formData.military_status == 'spouse' && formData.spouse_active_duty && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_3 = 0;
+    } else if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_3 =  0.494 * calculated.monthly_rate_final;
     } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
       calculated.housing_allow_term_3 = calculated.monthly_rate_final;
+    } else if (calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_3 = 0.6 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
     } else if (formData.calendar == 'semesters') {
       calculated.housing_allow_term_3 = 0;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms < 3) {
@@ -1114,8 +1126,6 @@ var GIBComparisonTool = (function () {
       calculated.housing_allow_term_3 = (0 + calculated.kicker_benefit) * calculated.term_length;
     } else if (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond') {
       calculated.housing_allow_term_3 = 0;
-    } else if (calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_3 = 0.6 * calculated.rop_ojt * (calculated.tier * institution.bah + calculated.kicker_benefit);
     } else if (formData.military_status == 'active duty') {
       calculated.housing_allow_term_3 = (0 + calculated.kicker_benefit) * calculated.term_length;
     } else if (formData.online) {
