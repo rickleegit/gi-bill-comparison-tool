@@ -1004,7 +1004,13 @@ var GIBComparisonTool = (function () {
    * Calculate Housing Allowance for Term #1
    */
   var getHousingAllowTerm1 = function () {
-   if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
+    if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_1 =  calculated.monthly_rate_final;
+    } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_1 =  calculated.monthly_rate_final;
+    } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
+      calculated.housing_allow_term_1 = calculated.monthly_rate_final;
+    } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
       calculated.housing_allow_term_1 = Math.max(0, Math.min(calculated.monthly_rate_final * calculated.term_length, calculated.tuition_fees_per_term * (formData.consecutive_service * .55) ));
     } else if (formData.gi_bill_chap == 1606 && calculated.institution_type == 'flight') {
       calculated.housing_allow_term_1 = Math.max(0, Math.min(calculated.monthly_rate_final * calculated.term_length, calculated.tuition_fees_per_term * .55 ));
@@ -1038,11 +1044,11 @@ var GIBComparisonTool = (function () {
    */
   var getHousingAllowTerm2 = function () {
     if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_2 =  0.75 * calculated.monthly_rate_final * calculated.term_length;
+      calculated.housing_allow_term_2 =  0.75 * calculated.monthly_rate_final;
     } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_2 =  (6.6/9) * calculated.monthly_rate_final * calculated.term_length;
+      calculated.housing_allow_term_2 =  (6.6/9) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_2 = calculated.monthly_rate_final * calculated.term_length;
+      calculated.housing_allow_term_2 = calculated.monthly_rate_final;
     } else if (formData.calendar == 'nontraditional' && calculated.number_of_terms == 1) {
       calculated.housing_allow_term_2 = 0;
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
@@ -1081,11 +1087,11 @@ var GIBComparisonTool = (function () {
    */
   var getHousingAllowTerm3 = function () {
     if (formData.gi_bill_chap == 35 && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_3 =  0.494 * calculated.monthly_rate_final * calculated.term_length;
+      calculated.housing_allow_term_3 =  0.494 * calculated.monthly_rate_final;
     } else if (calculated.old_gi_bill == true && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final * calculated.term_length;
+      calculated.housing_allow_term_3 =  (7/15) * calculated.monthly_rate_final;
     } else if (calculated.vre_only == true  && calculated.institution_type == 'ojt') {
-      calculated.housing_allow_term_3 = calculated.monthly_rate_final * calculated.term_length;
+      calculated.housing_allow_term_3 = calculated.monthly_rate_final;
     } else if (formData.gi_bill_chap == 1607 && calculated.institution_type == 'flight') {
       calculated.housing_allow_term_3 = Math.max(0, Math.min(calculated.monthly_rate_final * calculated.term_length, calculated.tuition_fees_per_term * (formData.consecutive_service * .55) ));
     } else if (formData.gi_bill_chap == 1606 && calculated.institution_type == 'flight') {
