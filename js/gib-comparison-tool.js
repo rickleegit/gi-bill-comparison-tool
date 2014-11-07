@@ -2200,6 +2200,7 @@ var GIBComparisonTool = (function () {
       $('#calc-tuition-fees-row').hide();
       $('#calc-yellow-ribbon-row').hide();
       $('#calc-yellow-ribbon-va-row').hide();
+      $('#calc-school-received-row').hide();
       $('#calc-paid-to-school-total-row').hide();
       $('#calc-tuition-fees-scholarship-row').hide();
       $('#calc-tuition-fees-charged-row').hide();
