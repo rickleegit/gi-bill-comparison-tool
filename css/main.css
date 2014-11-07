@@ -901,3 +901,12 @@ padding: 1em;
   background: rgba(0,0,0,.2);
   border: 1px solid rgba(0,0,0,.1);
 }
+
+.big-summary {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+
+.inner-header {
+  background-color: #0165B9;
+}

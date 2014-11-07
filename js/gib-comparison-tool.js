@@ -1912,15 +1912,6 @@ var GIBComparisonTool = (function () {
 
     $('#gibill').html(institution.gibill ? formatNumber(institution.gibill) : 0);
 
-    var complaints = 0 + institution.complaints_main_campus_roll_up;
-    $("#complaints-total").html(complaints == 0 ? 'None' : formatNumber(complaints) + '&nbsp;<a href="#complaints-total" id="complaints-detail-link" onclick="expandComplaintDetails();">See Details</a>');
-
-    var table = $("#complaints-table");
-    table.html('');
-    $.each(complaint_types, function(key, display_name) { 
-      table.append('<tr><td>' +  display_name + '</td><td>' + institution[key] + '</td></tr>');
-    });
-
     if(institution.p911_tuition_fees && institution.p911_recipients) {
       $('#p_911_recipients').show(); 
       $("#p_911_spent").text(formatCurrency(institution.p911_tuition_fees) + ' (' + institution.p911_recipients + ' student' + (institution.p911_recipients == 1 ? '' : 's') + ')');
@@ -1930,32 +1921,35 @@ var GIBComparisonTool = (function () {
       $("#p_911_yellow_ribbon_spent").text(formatCurrency(institution.p911_yellow_ribbon) + ' (' + institution.p911_yr_recipients + ' student' + (institution.p911_yr_recipients == 1  ?'' : 's') + ')');
     }else { $('#p_911_yellow_ribbon').hide(); }
 
-    $('#complaint-total-all').html(formData.complaints_main_campus_roll_up);
-    $('#complaint-total-fc').html(formData.complaints_facility_code);
-    $('#complaint-accreditation-fc').html(formData.complaints_accreditation_by_fac_code);
-    $('#complaint-accreditation-ope').html(formData.complaints_accreditation_by_ope_id_do_not_sum);
-    $('#complaint-credit-transfer-fc').html(formData.complaints_credit_transfer_by_fac_code);
-    $('#complaint-credit-transfer-ope').html(formData.complaints_credit_transfer_by_ope_id_do_not_sum);
-    $('#complaint-degree-plan-fc').html(formData.complaints_degree_requirements_by_fac_code);
-    $('#complaint-degree-plan-ope').html(formData.complaints_degree_requirements_by_ope_id_do_not_sum);
-    $('#complaint-financial-fc').html(formData.complaints_financial_by_fac_code);
-    $('#complaint-financial-ope').html(formData.complaints_financial_by_ope_id_do_not_sum);
-    $('#complaint-grade-policy-fc').html(formData.complaints_grades_by_fac_code);
-    $('#complaint-grade-policy-ope').html(formData.complaints_grades_by_ope_id_do_not_sum);
-//    $('#complaint-job-prep-fc').html(formData.complaints_jobs_by_fac_code);
-    $('#complaint-job-prep-ope').html(formData.complaints_jobs_by_ope_id_do_not_sum);
-    $('#complaint-loans-fc').html(formData.complaints_student_loans_by_fac_code);
-    $('#complaint-loans-ope').html(formData.complaints_student_loans_by_ope_id_do_not_sum);
-    $('#complaint-other-fc').html(formData.complaints_other_by_fac_code);
-    $('#complaint-other-ope').html(formData.complaints_other_by_ope_id_do_not_sum);
-    $('#complaint-quality-fc').html(formData.complaints_quality_by_fac_code);
-    $('#complaint-quality-ope').html(formData.complaints_quality_by_ope_id_do_not_sum);
-    $('#complaint-recruiting-fc').html(formData.complaints_marketing_by_fac_code);
-    $('#complaint-recruiting-ope').html(formData.complaints_marketing_by_ope_id_do_not_sum);
-    $('#complaint-refund-fc').html(formData.complaints_refund_by_fac_code);
-    $('#complaint-refund-ope').html(formData.complaints_refund_by_ope_id_do_not_sum);
-    $('#complaint-transcripts-fc').html(formData.complaints_transcript_by_fac_code);
-    $('#complaint-transcripts-ope').html(formData.complaints_transcript_by_ope_id_do_not_sum);
+    var complaints = 0 + institution.complaints_main_campus_roll_up;
+    $("#complaints-total").html(complaints == 0 ? 'None' : formatNumber(complaints) + '&nbsp;<a href="#complaints-total" id="complaints-detail-link" onclick="expandComplaintDetails();">See Details</a>');
+
+    $('#complaint-total-all').html(institution.complaints_main_campus_roll_up + 0);
+    $('#complaint-total-fc').html(institution.complaints_facility_code + 0);
+    $('#complaint-accreditation-fc').html(institution.complaints_accreditation_by_fac_code + 0);
+    $('#complaint-accreditation-ope').html(institution.complaints_accreditation_by_ope_id_do_not_sum + 0);
+    $('#complaint-credit-transfer-fc').html(institution.complaints_credit_transfer_by_fac_code + 0);
+    $('#complaint-credit-transfer-ope').html(institution.complaints_credit_transfer_by_ope_id_do_not_sum + 0);
+    $('#complaint-degree-plan-fc').html(institution.complaints_degree_requirements_by_fac_code + 0);
+    $('#complaint-degree-plan-ope').html(institution.complaints_degree_requirements_by_ope_id_do_not_sum + 0);
+    $('#complaint-financial-fc').html(institution.complaints_financial_by_fac_code + 0);
+    $('#complaint-financial-ope').html(institution.complaints_financial_by_ope_id_do_not_sum + 0);
+    $('#complaint-grade-policy-fc').html(institution.complaints_grades_by_fac_code + 0);
+    $('#complaint-grade-policy-ope').html(institution.complaints_grades_by_ope_id_do_not_sum + 0);
+    // $('#complaint-job-prep-fc').html(institution.complaints_jobs_by_fac_code + 0);
+    $('#complaint-job-prep-ope').html(institution.complaints_jobs_by_ope_id_do_not_sum + 0);
+    $('#complaint-loans-fc').html(institution.complaints_student_loans_by_fac_code + 0);
+    $('#complaint-loans-ope').html(institution.complaints_student_loans_by_ope_id_do_not_sum + 0);
+    $('#complaint-other-fc').html(institution.complaints_other_by_fac_code + 0);
+    $('#complaint-other-ope').html(institution.complaints_other_by_ope_id_do_not_sum + 0);
+    $('#complaint-quality-fc').html(institution.complaints_quality_by_fac_code + 0);
+    $('#complaint-quality-ope').html(institution.complaints_quality_by_ope_id_do_not_sum + 0);
+    $('#complaint-recruiting-fc').html(institution.complaints_marketing_by_fac_code + 0);
+    $('#complaint-recruiting-ope').html(institution.complaints_marketing_by_ope_id_do_not_sum + 0);
+    $('#complaint-refund-fc').html(institution.complaints_refund_by_fac_code + 0);
+    $('#complaint-refund-ope').html(institution.complaints_refund_by_ope_id_do_not_sum + 0);
+    $('#complaint-transcripts-fc').html(institution.complaints_transcript_by_fac_code + 0);
+    $('#complaint-transcripts-ope').html(institution.complaints_transcript_by_ope_id_do_not_sum + 0);
 
 
 
@@ -2512,7 +2506,7 @@ var GIBComparisonTool = (function () {
 
 
 function expandComplaintDetails() {
-  $("#complaints-details").toggle();
+  $('#complaint-box').toggle();
   var showhide = $("#complaints-total").html();
   showhide = showhide.indexOf('See') > 0 ? showhide.replace('See', 'Hide') : showhide.replace('Hide', 'See');
   $("#complaints-total").html(showhide);
