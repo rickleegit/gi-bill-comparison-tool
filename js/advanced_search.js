@@ -16,7 +16,11 @@ function search_name(needle, institutions, callback) {
 }
 
 function normalize(str) {
-  return str.replace(/\W/g, "").toLowerCase();
+  try {
+    return str.replace(/\W/g, "").toLowerCase();
+  } catch (e) {
+    return str;
+  }
 }
 
 function advanced_search(institutions) {
@@ -41,23 +45,23 @@ function advanced_search(institutions) {
       displayq = queue();
 
   /* TODO: can these be gzipped? */
-  if (type != "") {
+  if (typeof type == "string" && type != "") {
     var url = 'api/filters/type/' + normalize(type) + '.json';
     intersectq.defer(handle_json, url);
   }
-  if (state != "") {
+  if (typeof state == "string" && state != "") {
     var url = 'api/filters/state/' + normalize(state) + '.json';
     intersectq.defer(handle_json, url);
   }
-  if (country != "") {
+  if (typeof country == "string" && country != "") {
     var url = 'api/filters/country/' + normalize(country) + '.json';
     intersectq.defer(handle_json, url);
   }
-  if (accreditation != "") {
+  if (typeof accreditation == "string" && accreditation != "") {
     var url = 'api/filters/accreditation_type/' + normalize(accreditation) + '.json';
     intersectq.defer(handle_json, url);
-  }  
-  if (name != "") {
+  }
+  if (typeof name == "string" && name != "") {
     intersectq.defer(search_name, name, institutions);
   }
   if (student_veteran) {
