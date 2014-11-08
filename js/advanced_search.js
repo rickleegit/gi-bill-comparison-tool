@@ -234,7 +234,7 @@ function csv(institutions, intersection) {
   }
 
   var encdata = btoa(csvs);
-  $(".download").html('<a href="data:text/csv;base64,'+encdata+'">Download <abbr title="comma seperated value file">CSV</abbr></a>');
+  $(".download").html('<a href="data:text/csv;base64,'+encdata+'" download="gibill_search_results.csv">Download <abbr title="comma seperated value file">CSV</abbr></a>');
 }
 
 $().ready(function () {
