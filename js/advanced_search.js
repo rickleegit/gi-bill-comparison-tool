@@ -35,6 +35,7 @@ function advanced_search(institutions) {
       eight_keys = $("#adv_eight_keys").is(":checked"),
       publicsch = $("#adv_public").is(":checked"),
       privatesch = $("#adv_private").is(":checked"),
+      forprofitsch = $("#adv_forprofit").is(":checked"),
       correspondence = $("#adv_correspondence").is(":checked"),
       flight = $("#adv_flight").is(":checked"),
       foreign = $("#adv_foreign").is(":checked"),
@@ -86,6 +87,10 @@ function advanced_search(institutions) {
   }
   if (privatesch) {
     var url = 'api/filters/type/private.json';
+    unionq.defer(handle_json, url);
+  }
+  if (forprofitsch) {
+    var url = 'api/filters/type/forprofit.json';
     unionq.defer(handle_json, url);
   }
   if (correspondence) {
