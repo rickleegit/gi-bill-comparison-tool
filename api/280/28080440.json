@@ -48,6 +48,7 @@
   "complaints_student_loans_by_fac_code": null,
   "complaints_grades_by_fac_code": null,
   "complaints_credit_transfer_by_fac_code": null,
+  "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
   "complaints_main_campus_roll_up": 1,
@@ -60,7 +61,7 @@
   "complaints_student_loans_by_ope_id_do_not_sum": 0,
   "complaints_grades_by_ope_id_do_not_sum": 0,
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
-  "complaints_jobs_by_ope_id_do_not_sum": "0",
+  "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
   "complaints_other_by_ope_id_do_not_sum": 1
 }

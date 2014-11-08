@@ -1,6 +1,6 @@
 {
   "facility_code": "31912063",
-  "institution": "INTERAMERICAN UNIVERSITY BAYAMON (UNIVERSIDAD INTERAMERICANA-BAYAM¿N)",
+  "institution": "INTERAMERICAN UNIVERSITY BAYAMON (UNIVERSIDAD INTERAMERICANA-BAYAMÂ¿N)",
   "city": "BAYAMON",
   "state": "PR",
   "zip": "00957",
@@ -48,6 +48,7 @@
   "complaints_student_loans_by_fac_code": null,
   "complaints_grades_by_fac_code": null,
   "complaints_credit_transfer_by_fac_code": null,
+  "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
   "complaints_main_campus_roll_up": null,

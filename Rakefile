@@ -125,6 +125,7 @@ task :build do
     record[:complaints_credit_transfer_by_ope_id_do_not_sum]       = record[:complaints_credit_transfer_by_ope_id_do_not_sum].to_i        if record[:complaints_credit_transfer_by_ope_id_do_not_sum]
     record[:complaints_transcript_by_ope_id_do_not_sum]            = record[:complaints_transcript_by_ope_id_do_not_sum].to_i             if record[:complaints_transcript_by_ope_id_do_not_sum]
     record[:complaints_other_by_ope_id_do_not_sum]                 = record[:complaints_other_by_ope_id_do_not_sum].to_i                  if record[:complaints_other_by_ope_id_do_not_sum]
+    record[:complaints_jobs_by_ope_id_do_not_sum]                 = record[:complaints_jobs_by_ope_id_do_not_sum].to_i                  if record[:complaints_jobs_by_ope_id_do_not_sum]
 
     # Save row to array
     data.push record

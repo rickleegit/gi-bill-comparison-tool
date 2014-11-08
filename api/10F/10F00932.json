@@ -1,6 +1,6 @@
 {
   "facility_code": "10F00932",
-  "institution": "DEPT OF HOMELAND SECURITY ¿ US IMMIGRATION & CUSTOMS ENFORCEMENT",
+  "institution": "DEPT OF HOMELAND SECURITY Â¿ US IMMIGRATION & CUSTOMS ENFORCEMENT",
   "city": "BATAVIA",
   "state": "NY",
   "zip": "14020",
@@ -48,6 +48,7 @@
   "complaints_student_loans_by_fac_code": null,
   "complaints_grades_by_fac_code": null,
   "complaints_credit_transfer_by_fac_code": null,
+  "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
   "complaints_main_campus_roll_up": null,

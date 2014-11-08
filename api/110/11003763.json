@@ -1,6 +1,6 @@
 {
   "facility_code": "11003763",
-  "institution": "UNIVERSIDAD DE PUERTO RICO-BAYAMON (UNIVERSITY OF PUERTO RICO-BAYAM¿N)",
+  "institution": "UNIVERSIDAD DE PUERTO RICO-BAYAMON (UNIVERSITY OF PUERTO RICO-BAYAMÂ¿N)",
   "city": "BAYAMON",
   "state": "PR",
   "zip": "00959",
@@ -48,6 +48,7 @@
   "complaints_student_loans_by_fac_code": null,
   "complaints_grades_by_fac_code": null,
   "complaints_credit_transfer_by_fac_code": null,
+  "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
   "complaints_main_campus_roll_up": null,
