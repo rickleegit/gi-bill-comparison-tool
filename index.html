@@ -306,83 +306,64 @@ layout: va
     <div class="heading solid navy table">
       <h3>Your calculated benefits</h3>
     </div>
+    <div class="benefits">
     <div id="benefit-calculator">
       <h4>Calculate your complete benefit</h4>
-      <table id="tuition-fees-section">
-        <tr id="in-state" class="form-group">
-          <td>
-            <label class="question">In-state student? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#in_state_residency" onclick="track('Tool Tips', 'Calculator / In-State Student');" target="_blank" class="info-link">i</a></label>
-          </td>
-          <td>
-            <label class="radio" for="in-state-yes">Yes</label>
-            <input id="in-state-yes" name="In-state" type="radio" value="yes" checked=""/>
-            <label class="radio" for="in-state-no">No</label>
-            <input id="in-state-no" name="In-state" type="radio" value="no"/>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" target="_blank" class="info-link">i</a></label>
-            <div>
-              <input id="tuition-fees-input" type="text" value="$0" name="Tuition Fees" alt="Tuition Fees"/>
-            </div>
-          </td>
-        </tr>
-        <tr id="in-state-tuition-fees-form" class="form-group top-aligned">
-          <td colspan="2">
-            <label for="in-state-tuition-fees">In-state Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_receiving" onclick="track('Tool Tips', 'Calculator / In-State Tuition Fees');" target="_blank" class="info-link">i</a></label>
-            <input id="in-state-tuition-fees" type="text" value="$0" name="In-state Tuition Fees" alt="In-state Tuition Fees">
-          </td>
-        </tr>
-        <tr id="books-input-row">
-          <td colspan="2">
-            <label for="books-input">Books / Supplies (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#books_input" onclick="track('Tool Tips', 'Calculator / Books & Supplies');" target="_blank" class="info-link">i</a></label>
-            <div>
-              <input id="books-input" type="text" value="$0" name="Books" alt="Books"/>
-            </div>
-          </td>
-        </tr>
-        <tr id="yellow-ribbon-recipient-form">
-          <td>
-            <label class="question">Receiving Yellow Ribbon? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Receiving Yellow Ribbon');" target="_blank" class="info-link">i</a></label>
-          </td>
-          <td>
-            <label class="radio" for="yellow-ribbon-recipient-yes">Yes</label>
-            <input id="yellow-ribbon-recipient-yes" name="Receiving Yellow Ribbon" type="radio" value="yes">
-            <label class="radio" for="yellow-ribbon-recipient-no">No</label>
-            <input id="yellow-ribbon-recipient-no" name="Receiving Yellow Ribbon" type="radio" value="no" checked>
-          </td>
-        </tr>
-        <tr id="yellow-ribbon-amount-form" class="form-group top-aligned">
+
+      <div id="tuition-fees-section">
+        <div id="in-state" class="form-group">
+          <label class="question">In-state student? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#in_state_residency" onclick="track('Tool Tips', 'Calculator / In-State Student');" target="_blank" class="info-link">i</a></label>
+
+          <label class="radio" for="in-state-yes">Yes</label>
+          <input id="in-state-yes" name="In-state" type="radio" value="yes" checked=""/>
+          <label class="radio" for="in-state-no">No</label>
+          <input id="in-state-no" name="In-state" type="radio" value="no"/>
+          <label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" target="_blank" class="info-link">i</a></label>
+          <input id="tuition-fees-input" type="text" value="$0" name="Tuition Fees" alt="Tuition Fees"/>
+        </div>
+
+        <div id="in-state-tuition-fees-form" class="form-group top-aligned">
+          <label for="in-state-tuition-fees">In-state Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_receiving" onclick="track('Tool Tips', 'Calculator / In-State Tuition Fees');" target="_blank" class="info-link">i</a></label>
+          <input id="in-state-tuition-fees" type="text" value="$0" name="In-state Tuition Fees" alt="In-state Tuition Fees">
+        </div>
+        <div id="books-input-row">
+          <label for="books-input">Books / Supplies (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#books_input" onclick="track('Tool Tips', 'Calculator / Books & Supplies');" target="_blank" class="info-link">i</a>
+          </label>
+          <div>
+            <input id="books-input" type="text" value="$0" name="Books" alt="Books"/>
+          </div>
+        </div>
+
+        <div id="yellow-ribbon-recipient-form">
+          <label class="question">Receiving Yellow Ribbon?
+            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Receiving Yellow Ribbon');" target="_blank" class="info-link">i</a>
+          </label>
+          <label class="radio" for="yellow-ribbon-recipient-yes">Yes</label>
+          <input id="yellow-ribbon-recipient-yes" name="Receiving Yellow Ribbon" type="radio" value="yes">
+          <label class="radio" for="yellow-ribbon-recipient-no">No</label>
+          <input id="yellow-ribbon-recipient-no" name="Receiving Yellow Ribbon" type="radio" value="no" checked>
+        </div>
+
+        <div id="yellow-ribbon-amount-form" class="form-group top-aligned">
           <!-- Yellow Ribbon Amount -->
-          <td>
-            <label for="yellow-ribbon-amount">Yellow Ribbon Amount From School (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Yellow Ribbon Amount');" target="_blank" class="info-link">i</a></label>
-            <div>
-              <input id="yellow-ribbon-amount" type="text" value="$0" name="Yellow Ribbon Amount From School" alt="Yellow Ribbon Amount From School">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td id="yellow-ribbon-rates-link" class="form-group"></td>
-        </tr>
-        <tr>
-          <td colspan="2">
+          <label for="yellow-ribbon-amount">Yellow Ribbon Amount From School (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Yellow Ribbon Amount');" target="_blank" class="info-link">i</a></label>
+          <input id="yellow-ribbon-amount" type="text" value="$0" name="Yellow Ribbon Amount From School" alt="Yellow Ribbon Amount From School">
+        </div>
+
+          <div id="yellow-ribbon-rates-link" class="form-group"></div>
             <label for="scholar">Scholarships (not Pell): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#scholarships" onclick="track('Tool Tips', 'Calculator / Scholarships');" target="_blank" class="info-link">i</a></label>
-            <div>
             <input id="scholar" type="text" value="$0" name="Scholarships (not Pell)" alt="How much are you receiving in scholarships and not Pell grants"/>
           </div>
-          </td>
-        </tr>
-        <tr id="tuition-assist-form" class="form-group top-aligned">
-          <td>
+
+        <div id="tuition-assist-form" class="form-group top-aligned">
             <label for="tuition-assist">Military Tuition Assistance: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#military_tuition_assist" onclick="track('Tool Tips', 'Calculator / Military Tuition Assistance');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
             <input id="tuition-assist" type="text" value="$0" name="Military Tuition Assistance" alt="How much are you receiving in military tuition assistance">
-          </td>
-        </tr>
-      </table>
-      <table id="enrollment-section">
-        <tr id="enrolled-form">
-          <td>
+        </div>
+
+
+      <div id="enrollment-section">
+        <div id="enrolled-form">
+
             <label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
               <div>
               <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
@@ -392,11 +373,11 @@ layout: va
                 <option value="0">½ Time or less</option>
               </select>
             </div>
-          </td>
-        </tr>
+
+        </div>
         <!-- Rate of Pursuit Old -->
-        <tr id="enrolled-form-old-gi-bill">
-          <td>
+        <div id="enrolled-form-old-gi-bill">
+
             <label for="enrolled-old">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
               <div>
               <select id="enrolled-old" name="Enrolled" alt="Select your enrollment level">
@@ -407,10 +388,9 @@ layout: va
                 <option value="quarter">1/4 time or less</option>
               </select>
             </div>
-          </td>
-        </tr>
-        <tr id="calendar-form">
-          <td>
+
+        </div>
+        <div id="calendar-form">
             <label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank" class="info-link">i</a></label>
             <div>
               <select id="calendar" name="School Calendar" alt="Select type of school calendar">
@@ -419,10 +399,8 @@ layout: va
                 <option value="nontraditional">Non-Traditional</option>
               </select>
             </div>
-          </td>
-        </tr>
-        <tr id="working-form" class="form-group top-aligned">
-          <td>
+        </div>
+        <div id="working-form" class="form-group top-aligned">
             <label for="working">Will be working: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit_ojt" onclick="track('Tool Tips', 'Calculator / Will Be Working');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
             <select id="working" name="Will be working" alt="Select how much you will be working">
               <option value="30">30+ hrs / week</option>
@@ -441,20 +419,16 @@ layout: va
               <option value="4">4 hrs / week</option>
               <option value="2">2 hrs / week</option>
             </select>
-          </td>
-        </tr>
-        <tr id="number-non-traditional-terms-form" class="form-group top-aligned">
-          <td colspan="2">
+        </div>
+        <div id="number-non-traditional-terms-form" class="form-group top-aligned">
             <label for="number-non-traditional-terms">How many terms / year? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'How Many Terms');" target="_blank" class="info-link">i</a></label>
             <select id="number-non-traditional-terms" name="How many terms / year?" alt="Select how many terms / year?">
               <option value="3">Three</option>
               <option value="2" selected>Two</option>
               <option value="1">One</option>
             </select>
-          </td>
-        </tr>
-        <tr id="length-non-traditional-terms-form" class="form-group top-aligned">
-          <td>
+        </div>
+        <div id="length-non-traditional-terms-form" class="form-group top-aligned">
             <label for="length-non-traditional-terms">How long is each term? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / Non-Traditional Term Length');" target="_blank" class="info-link">i</a></label>
             <select id="length-non-traditional-terms" name="How long is each term?" alt="Select how long is each term?">
               <option value="1">1 month</option>
@@ -470,44 +444,32 @@ layout: va
               <option value="11">11 months</option>
               <option value="12">12 months</option>
             </select>
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-        <tr id="kicker-elig-form">
-          <td>
+        </div>
+        <div id="kicker-elig-form">
             <label class="question">Eligible for Kicker: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / Eligible for Kicker');" target="_blank" class="info-link">i</a></label>
-          </td>
-          <td>
+
             <label class="radio" for="kicker-elig-yes">Yes</label>
             <input id="kicker-elig-yes" name="Kicker Eligible" type="radio" value="yes">
             <label class="radio" for="kicker-elig-no">No</label>
             <input id="kicker-elig-no" name="Kicker Eligible" type="radio" value="no" checked="">
-          </td>
-        </tr>
-        <tr id="kicker-form" class="form-group top-aligned">
-          <td>
+
+        </div>
+        <div id="kicker-form" class="form-group top-aligned">
+
             <label for="kicker">How much is your kicker? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / How Much is Kicker');" target="_blank" class="info-link">i</a></label>
-          </td>
-          <td>
+
             <input id="kicker" type ="text" value="$200" name="How much is your kicker?" alt="Tell us how much is your kicker was for?">
-          </td>
-        </tr>
+
+        </div>
       <!-- Eligible for Buy-up -->
-        <tr id="buy-up-form">
-          <td>
+        <div id="buy-up-form">
             <label class="question">Did you participate in buy-up program? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#buy_up" onclick="track('Tool Tips', 'Calculator / Buy Up);" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
-          </td>
-          <td>
             <label class="radio" for="buy-up-yes">Yes</label>
             <input id="buy-up-yes" name="Buy-Up" type="radio" value="yes">
             <label class="radio" for="buy-up-no">No</label>
             <input id="buy-up-no" name="Buy-up" type="radio" value="no" checked>
-          </td>
-        </tr>
-        <tr id="buy-up-rate-form" class="form-group top-aligned">
-          <td>
+        </div>
+        <div id="buy-up-rate-form" class="form-group top-aligned">
             <label for="buy-up-rate">How much did you pay toward buy-up? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#buy_up" onclick="track('Tool Tips', 'Calculator / Buy Up');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
             <select id="buy-up-rate" name="How much did you pay?" alt="Select how much you paid">
               <option value="600">$600</option>
@@ -538,13 +500,10 @@ layout: va
               <option value="40">$40</option>
               <option value="20">$20</option>
             </select>
-          </td>
-          <td>
-            &nbsp;
-          </td>
-        </tr>
-      </table>
-    </div>
+
+        </div>
+      </div>
+</div>
 
     <div id="calculated-benefits">
       <table>
@@ -623,8 +582,12 @@ layout: va
           </tr>
         </tbody>
       </table>
-    </div>
+
     <div style="clear: both;">&nbsp;</div>
+  </div>
+</div>
+
+  <div style="clear: both;">&nbsp;</div>
   </div>
 
 
@@ -884,7 +847,7 @@ layout: va
     </div>
     <div style="clear: both;">&nbsp;</div>
   </div>
-  
+
 
   <!-- ================================================== -->
   <!--                  Veteran Indicators                -->
@@ -929,7 +892,7 @@ layout: va
   <!-- ================================================== -->
   <!--          School Summary           -->
   <!-- ================================================== -->
-  
+
   <div id="school-summary" style="display: none;">
     <div class="heading solid navy table"><h3>School Summary<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" onclick="track('Tool Tips', 'School Summary / Source');" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
     <table>
@@ -1305,7 +1268,7 @@ layout: va
             <div style="margin-top: 10px;">
               <label for="adv_name">called</label> <input id="adv_name" width="100" placeholder="Institution name">
               <button type="submit" id="advsearch">Search</button>
-            </div> 
+            </div>
 
           <div class="selections">
             <div class="push-left" style="float: left;">

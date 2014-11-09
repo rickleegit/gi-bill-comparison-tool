@@ -53,6 +53,11 @@ sup {
   color: #444;
 }
 
+.comparison input[type="text"] {
+  padding: .25em;
+  font-size: 14px;
+}
+
 .comparison img.info {
   margin-left: 10px;
 }
@@ -189,7 +194,7 @@ Use with for example: <div class="icon explore"></div>
 .comparison .heading.solid.navy {
   background: #003F72;
   /*margin-top: 10px;*/
-  font-style: italic;
+  font-style: normal;
 }
 
 .comparison .heading.solid.navy a {
@@ -212,6 +217,15 @@ Use with for example: <div class="icon explore"></div>
 .comparison .heading span.source {
   float: right;
 }
+
+.comparison .source a {
+  color: #fff;
+  color: rgba(255,255,255,.8);
+  font-size: 12px !important;
+  font-style: normal;
+}
+
+
 
 /*
 .comparison .left-sidebar {
@@ -256,6 +270,8 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison .form-group input {
   font-size: 16px;
+  padding: .2em;
+  border: 1px solid #555;
 }
 
 .comparison .form-group input[type="text"] {
@@ -312,9 +328,9 @@ Use with for example: <div class="icon explore"></div>
 /* Tables */
 
 .comparison table {
-  width: 100%;
   font-size: 18px;
   background: #003F72;
+  width: 100%;
 }
 
 .comparison table.dark-background a {
@@ -355,8 +371,9 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison #benefit-estimator table {
   background: #249120 url('../img/dollar_sign.png') 90% 50% no-repeat;
-  border-bottom-left-radius: .3em;
-  border-bottom-right-radius: .3em;
+  margin-bottom: 0;
+  border-bottom-left-radius: .4em;
+  border-bottom-right-radius: .4em;
 }
 
 .comparison #benefit-estimator table th {
@@ -376,7 +393,7 @@ Use with for example: <div class="icon explore"></div>
 }
 .comparison #benefit-estimator td#type {
   padding-left: 5px;
-  font-style: italic;
+  font-style: normal;
 }
 
 .comparison #benefit-estimator table.inactive {
@@ -396,6 +413,10 @@ Use with for example: <div class="icon explore"></div>
  /* Benefit Calculator */
 
 .comparison #calculator h4 {margin-top: 0; line-height: 1em; padding-top: 0; font-weight: bold; font-size: 1.1em;}
+
+.benefits {
+
+}
 
 .comparison #calculator a:focus {
   outline: 1px dashed #fff;
@@ -424,7 +445,7 @@ Use with for example: <div class="icon explore"></div>
 .comparison #calculator td#type-calculator {
   padding-left: 100px;
   padding-bottom: 20px;
-  font-style: italic;
+  font-style: normal;
 }
 
 .comparison #calculator #total-left-to-pay.red {
@@ -462,24 +483,25 @@ Use with for example: <div class="icon explore"></div>
   text-align: center;
   background: #2A9029;
   padding: 15px;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  border-bottom-left-radius: .4em;
+  border-bottom-right-radius: .4em;
 }
 
 .comparison .toggle-calc a {
   background: #404040;
   color: #fff;
-  width: 500px;
-  padding: 10px;
-  border: 2px solid #fff;
+  border-radius: .2em;
+  padding: 1em;
+  margin: 1em auto;
 }
 
 /* Veteran Indicators */
 
-.comparison #veteran-indicators {}
+.comparison #veteran-indicators table {font-size: 16px;}
 
 .comparison #veteran-indicators a {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: normal !important;
 }
 
 .comparison #veteran-indicators a:focus {
@@ -576,13 +598,26 @@ Use with for example: <div class="icon explore"></div>
 
 /* School Summary */
 
+#school-summary {
+  padding: .5em;
+}
+
 #school-summary a {
   color: #fff;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 #school-summary table {
   border-bottom-left-radius: .3em;
   border-bottom-right-radius: .3em;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 1em .75em;
+}
+
+#school-summary table th {
+  font-weight: normal;
 }
 
 /* Revised Styles for new version */
@@ -702,21 +737,27 @@ a.info-link {
 #benefit-calculator {
   padding: 1em 1em .25em 1em;
   float: left;
+  width: 40%;
   font-size: 1.1em;
-  margin-left: -1em;
 }
 
 #benefit-calculator h4 {
   text-align: left;
   color: #fff;
-  font-size: 14px;
-  padding: .5em;
+  font-size: 15px;
+  padding: .5em 0;
   font-family: arial, helvetica, sans-serif;
 }
 
-#benefit-calculator table {
+#benefit-calculator a {
+  font-size: 14px;
+  color: #fff;
+}
+
+#benefit-calculator div {
   background: none;
   color: #333;
+  padding-bottom: .75em;
   font-size: 1.2em;
 }
 
@@ -738,6 +779,7 @@ a.info-link {
   max-width: 100%;
   width: 100px;
   margin: 0;
+  padding: .2em;
   display: block;
   font-size: 15px !important;
 }
@@ -934,13 +976,18 @@ color: #444;
 }
 
 #calculate-benefits-btn {
-  margin: 2em auto;
+  margin: 1em auto 2em auto;
+  border-bottom-left-radius: .4em;
+  border-bottom-right-radius: .4em;
+  background: #eee;
+  clear: both;
+  padding: 3em 0;
 }
 
 .comparison .toggle-calc {
-text-align: center;
-background: none;
-padding: 1em;
+  text-align: center;
+  background: none;
+  padding: 1em;
 }
 
 #add-to-favorites span {
