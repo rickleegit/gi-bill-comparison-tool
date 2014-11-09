@@ -298,9 +298,8 @@ var GIBComparisonTool = (function () {
 
   var getAccreditation = function() {
     if(institution.accredited == null) { 
-      $("#school-summary").hide();
+      $("#accreditation-row").hide();
     }else{
-      $("#school-summary").show();
       $('#accreditation').text(institution.accredited ? 'Yes' : 'No');
       if(institution.accreditation_type) {
         $('#accreditation-type').text(institution.accreditation_type);
@@ -2086,6 +2085,7 @@ var GIBComparisonTool = (function () {
     $('#voc-rehab-warning').hide();
     $('#only-tuition-fees').hide();
     $('#veteran-indicators').show();
+    $('#school-summary').show();
     $('#vet-success-row').hide();
     $('#school-indicators').show();
 
@@ -2490,6 +2490,7 @@ var GIBComparisonTool = (function () {
     $('#voc-rehab-warning').hide();
     $('#institution-select').hide();
     $('#veteran-indicators').hide();
+    $('#school-summary').hide();
     $('#only-tuition-fees').hide();
     $('#voc-rehab').hide();
     $('#school-indicators').hide();
