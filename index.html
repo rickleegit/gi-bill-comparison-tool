@@ -318,9 +318,13 @@ layout: va
           <input id="in-state-yes" name="In-state" type="radio" value="yes" checked=""/>
           <label class="radio" for="in-state-no">No</label>
           <input id="in-state-no" name="In-state" type="radio" value="no"/>
+        </div>
+
+        <div id="tuition-fees-form" class="form-group top-aligned">
           <label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" target="_blank" class="info-link">i</a></label>
           <input id="tuition-fees-input" type="text" value="$0" name="Tuition Fees" alt="Tuition Fees"/>
         </div>
+
 
         <div id="in-state-tuition-fees-form" class="form-group top-aligned">
           <label for="in-state-tuition-fees">In-state Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_receiving" onclick="track('Tool Tips', 'Calculator / In-State Tuition Fees');" target="_blank" class="info-link">i</a></label>
@@ -363,7 +367,6 @@ layout: va
 
       <div id="enrollment-section">
         <div id="enrolled-form">
-
             <label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank" class="info-link">i</a></label>
               <div>
               <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
@@ -373,11 +376,10 @@ layout: va
                 <option value="0">½ Time or less</option>
               </select>
             </div>
-
         </div>
+        
         <!-- Rate of Pursuit Old -->
         <div id="enrolled-form-old-gi-bill">
-
             <label for="enrolled-old">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
               <div>
               <select id="enrolled-old" name="Enrolled" alt="Select your enrollment level">
@@ -400,6 +402,7 @@ layout: va
               </select>
             </div>
         </div>
+        
         <div id="working-form" class="form-group top-aligned">
             <label for="working">Will be working: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit_ojt" onclick="track('Tool Tips', 'Calculator / Will Be Working');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
             <select id="working" name="Will be working" alt="Select how much you will be working">
@@ -445,22 +448,20 @@ layout: va
               <option value="12">12 months</option>
             </select>
         </div>
+
         <div id="kicker-elig-form">
             <label class="question">Eligible for Kicker: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / Eligible for Kicker');" target="_blank" class="info-link">i</a></label>
-
             <label class="radio" for="kicker-elig-yes">Yes</label>
             <input id="kicker-elig-yes" name="Kicker Eligible" type="radio" value="yes">
             <label class="radio" for="kicker-elig-no">No</label>
             <input id="kicker-elig-no" name="Kicker Eligible" type="radio" value="no" checked="">
-
         </div>
+
         <div id="kicker-form" class="form-group top-aligned">
-
             <label for="kicker">How much is your kicker? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / How Much is Kicker');" target="_blank" class="info-link">i</a></label>
-
             <input id="kicker" type ="text" value="$200" name="How much is your kicker?" alt="Tell us how much is your kicker was for?">
-
         </div>
+        
       <!-- Eligible for Buy-up -->
         <div id="buy-up-form">
             <label class="question">Did you participate in buy-up program? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#buy_up" onclick="track('Tool Tips', 'Calculator / Buy Up);" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
@@ -469,6 +470,7 @@ layout: va
             <label class="radio" for="buy-up-no">No</label>
             <input id="buy-up-no" name="Buy-up" type="radio" value="no" checked>
         </div>
+
         <div id="buy-up-rate-form" class="form-group top-aligned">
             <label for="buy-up-rate">How much did you pay toward buy-up? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#buy_up" onclick="track('Tool Tips', 'Calculator / Buy Up');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
             <select id="buy-up-rate" name="How much did you pay?" alt="Select how much you paid">
@@ -500,7 +502,6 @@ layout: va
               <option value="40">$40</option>
               <option value="20">$20</option>
             </select>
-
         </div>
       </div>
 </div>
@@ -514,11 +515,11 @@ layout: va
           <tr id="calc-housing-allow-rate-row">
             <th colspan="2" style="">Monthly Benefit:</th>
             <td id="housing-allow-rate" style="font-weight: bold;">$0</td>
+          </tr><tr>
           </tr>
           <tr id="calc-term-total-row">
-            <th colspan="2" style="">Total GI Bill Benefits:</th>
-            <td id="total-year"style="font-weight: bold;">$0 / yr</td>
-          </tr><tr>
+            <th colspan="2" style="border-bottom: 2px solid #fff;">Total GI Bill Benefits:</th>
+            <td id="total-year"style="font-weight: bold;border-bottom: 2px solid #fff;">$0 / yr</td>
           </tr>
           <tr id="calc-paid-to-you-total-row">
             <th colspan="2" style="">Paid to You:</th>
@@ -527,11 +528,11 @@ layout: va
           <tr id="calc-paid-to-school-total-row">
             <th colspan="2" style="">Paid to school:</th>
             <td id="total-paid-to-school" style="font-weight: bold;">$0</td>
+          </tr><tr>
           </tr>
           <tr id="calc-out-of-pocket-row">
             <th colspan="2" style="border-bottom: 2px solid #fff;">Out of Pocket:</th>
             <td id="total-left-to-pay" style="border-bottom: 2px solid #fff; font-weight: bold;">$0</td>
-          </tr><tr>
           </tr>
           <tr id="calc-tuition-fees-charged-row">
             <th colspan="2" style="">Tuition &amp; Fees Owed:</th>
