@@ -2716,7 +2716,7 @@ function processFavoriteSchool () {
   var f_schools = getFavoriteSchoolsArray();
   var f_school_names = getFavoriteNamesArray();
   var institution_name =  $('#institution').text();
-  var institution = "<li>"+institution_name+" <a href='#about-your-favorites'  onclick='removeFavoriteSchool(\"" + institution_name + "\");'>X</a></li>";
+  var institution = "<li>"+institution_name+" <a href='#about-your-favorites' aria-label='Remove this school' onclick='removeFavoriteSchool(\"" + institution_name + "\");'>X</a></li>";
 
   var table_data = getSchoolDataFromPage(); 
 
