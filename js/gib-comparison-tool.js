@@ -301,9 +301,9 @@ var GIBComparisonTool = (function () {
       $("#accreditation-row").hide();
     }else{
       $('#accreditation').text((institution.accredited ? 'Yes' : 'No') +  
-        "<p><a href='http://nces.ed.gov/collegenavigator/?id=" +
+        "<a href='http://nces.ed.gov/collegenavigator/?id=" +
         institution.cross +
-        "#accred' onclick=\"track('Tool Tips', 'School Summary / Link to Accreditors');\" target='newtab'>  See Accreditors &raquo;</a></p>");
+        "#accred' onclick=\"track('Tool Tips', 'School Summary / Link to Accreditors');\" target='newtab'>  See Accreditors &raquo;</a>");
       if(institution.accreditation_type) {
         $('#accreditation-type').text(institution.accreditation_type);
       }else{ $('#accreditation-type-row').hide(); }
