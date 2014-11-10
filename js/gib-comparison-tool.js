@@ -1951,7 +1951,7 @@ var GIBComparisonTool = (function () {
       $('#yr').html('No');
     }
 
-    $('#gibill').html(institution.gibill ? formatNumber(institution.gibill) : 0);
+    $('#gibill').html((institution.gibill ? formatNumber(institution.gibill) : 0) + ' student' + (institution.gibill <= 1 ? '' : 's');
 
     if(institution.p911_tuition_fees && institution.p911_recipients) {
       $('#p_911_recipients').show(); 
