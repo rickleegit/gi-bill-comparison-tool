@@ -1978,7 +1978,7 @@ var GIBComparisonTool = (function () {
     $('#complaint-financial-ope').html(institution.complaints_financial_by_ope_id_do_not_sum + 0);
     $('#complaint-grade-policy-fc').html(institution.complaints_grades_by_fac_code + 0);
     $('#complaint-grade-policy-ope').html(institution.complaints_grades_by_ope_id_do_not_sum + 0);
-    // $('#complaint-job-prep-fc').html(institution.complaints_jobs_by_fac_code + 0);
+    $('#complaint-job-prep-fc').html(institution.complaints_jobs_by_fac_code + 0);
     $('#complaint-job-prep-ope').html(institution.complaints_jobs_by_ope_id_do_not_sum + 0);
     $('#complaint-loans-fc').html(institution.complaints_student_loans_by_fac_code + 0);
     $('#complaint-loans-ope').html(institution.complaints_student_loans_by_ope_id_do_not_sum + 0);
