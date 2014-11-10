@@ -300,7 +300,7 @@ var GIBComparisonTool = (function () {
     if(institution.accredited == null) { 
       $("#accreditation-row").hide();
     }else{
-      $('#accreditation').text((institution.accredited ? 'Yes' : 'No') +  
+      $('#accreditation').html((institution.accredited ? 'Yes' : 'No') +  
         "<a href='http://nces.ed.gov/collegenavigator/?id=" +
         institution.cross +
         "#accred' onclick=\"track('Tool Tips', 'School Summary / Link to Accreditors');\" target='newtab'>  See Accreditors &raquo;</a>");
