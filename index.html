@@ -122,7 +122,7 @@ layout: va
 
   <!-- GI Bill Chapter Being Used -->
   <div id="gi-bill-chapter-form" class="form-group top-aligned">
-    <label for="gi-bill-chapter">Which GI Bill benefit are you thinking of using? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / GI Bill Chapter');" target="_blank" class="info-link">i</a></label>
+    <label for="gi-bill-chapter">Which GI Bill benefit are you thinking of using? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gi_bill_chap" onclick="track('Tool Tips', 'Eligibility / GI Bill Chapter');" target="_blank" class="info-link">i</a></label>
     <select id="gi-bill-chapter" name="Type of GI Bill Benefits" alt="Select which GI Bill benefit you are thinking of using">
       <option value="33" selected>Post-9/11 GI Bill (Ch 33)</option>
       <option value="30">Montgomery GI Bill (Ch 30)</option>
@@ -137,7 +137,7 @@ layout: va
 
   <!-- Also eligible for Post-9/11 GI Bill -->
   <div id="elig-for-post-gi-bill-form" class="form-group">
-    <span class="question">Are you eligible for the Post-9/11 GI Bill?</span>
+    <span class="question">Are you eligible for the Post-9/11 GI Bill?<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#vre_post911_eligible" onclick="track('Tool Tips', 'Eligibility / VR&E Post 9/11 Eligible');" target="_blank" class="info-link">i</a></span>
 
     <label class="radio" for="elig-for-post-gi-bill-yes">Yes</label>
     <input id="elig-for-post-gi-bill-yes" name="Post 9-11 GI Bill Eligible" type="radio" value="yes">
@@ -167,7 +167,7 @@ layout: va
 
   <!-- Number of Dependents -->
   <div id="number-of-dependents-form" class="form-group top-aligned">
-    <label for="number-of-dependents">Number of Dependents <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / 1607 Consecutive Service');" target="_blank" class="info-link">i</a></label>
+    <label for="number-of-dependents">Number of Dependents <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#number_of_dependentss" onclick="track('Tool Tips', 'Eligibility / VR&E # of Deoendents');" target="_blank" class="info-link">i</a></label>
     <select id="number-of-dependents" name="Number of Dependents" alt="Select the number of dependents you have">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -181,7 +181,7 @@ layout: va
 
   <!-- Enlistment Length -->
   <div id="enlistment-service-form" class="form-group top-aligned">
-    <label for="enlistment-service">Completed an enlistment of: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / 1607 Consecutive Service');" target="_blank" class="info-link">i</a></label>
+    <label for="enlistment-service">Completed an enlistment of: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#mgib_enlistment" onclick="track('Tool Tips', 'Eligibility / MGIB Enlistment Length');" target="_blank" class="info-link">i</a></label>
     <select id="enlistment-service" name="Enlistment" alt="Select length of your enlistment">
       <option value="3">3 or more years</option>
       <option value="2">2 or more years</option>
@@ -190,7 +190,7 @@ layout: va
 
   <!-- Consecutive Active Duty Service -->
   <div id="consecutive-service-form" class="form-group top-aligned">
-    <label for="consecutive-service">Length of Longest Active Duty Tour: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / 1607 Consecutive Service');" target="_blank" class="info-link">i</a></label>
+    <label for="consecutive-service">Length of Longest Active Duty Tour: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp##reap_longest_tour" onclick="track('Tool Tips', 'Eligibility / REAP Consecutive Service');" target="_blank" class="info-link">i</a></label>
     <select id="consecutive-service" name="Longest Consecutive Active Duty Tour" alt="Select the length of your longest actice duty tour">
       <option value="0.8">2+ years of consecutive service: 80%</option>
       <option value="0.6">1+ year of consecutive service: 60%</option>
@@ -255,7 +255,7 @@ layout: va
         <tr>
           <td id="institution"></td>
           <td id="rating">
-            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" onclick="track('Tool Tips', 'Benefit Estimator / Ratings Coming Soon');" target="_blank" ><img src="img/rating.png" alt="coming soon: school ratings" class="rating" /></a>
+            <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#feedback_ratings" onclick="track('Tool Tips', 'Benefit Estimator / Ratings Coming Soon');" target="_blank" ><img src="img/rating.png" alt="coming soon: school ratings" class="rating" /></a>
           </td>
         </tr>
         <tr>
@@ -330,6 +330,7 @@ layout: va
           <label for="in-state-tuition-fees">In-state Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_receiving" onclick="track('Tool Tips', 'Calculator / In-State Tuition Fees');" target="_blank" class="info-link">i</a></label>
           <input id="in-state-tuition-fees" type="text" value="$0" name="In-state Tuition Fees" alt="In-state Tuition Fees">
         </div>
+
         <div id="books-input-row">
           <label for="books-input">Books / Supplies (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#books_input" onclick="track('Tool Tips', 'Calculator / Books & Supplies');" target="_blank" class="info-link">i</a>
           </label>
@@ -380,7 +381,7 @@ layout: va
         
         <!-- Rate of Pursuit Old -->
         <div id="enrolled-form-old-gi-bill">
-            <label for="enrolled-old">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+            <label for="enrolled-old">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit_old" onclick="track('Tool Tips', 'Calculator / Enrolled Old');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
               <div>
               <select id="enrolled-old" name="Enrolled" alt="Select your enrollment level">
                 <option value="full">Full Time</option>
@@ -538,13 +539,13 @@ layout: va
             <td colspan="2" style="">Tuition &amp; Fees Charged:</td>
             <td id="total-tuition-fees-charged" style="font-weight: bold;">$0</td>
           </tr>
-          <tr id="calc-school-received-row">
-            <td colspan="2" style="">GI Bill Pays:</td>
-            <td id="total-school-received" style="font-weight: bold;">$0</td>
-          </tr>
           <tr id="calc-tuition-fees-scholarship-row">
             <td colspan="2" style="">Your Scholarships:</td>
             <td id="total-tuition-fees-scholarships" style="font-weight: bold;">$0</td>
+          </tr>          
+          <tr id="calc-school-received-row">
+            <td colspan="2" style="">GI Bill Pays:</td>
+            <td id="total-school-received" style="font-weight: bold;">$0</td>
           </tr><tr>
           </tr>
           <tr id="payments-to-you-terms" style=";">
@@ -926,7 +927,7 @@ layout: va
           <td id="p_911_spent"></td>
         </tr>
         <tr id="p_911_yellow_ribbon">
-          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#p911_yrpaid" onclick="track('Tool Tips', 'School Summary / Post-9/11 YR Paid');" target="_blank" alt="Click here for more information." title="Click here for more information.">Post-9/11 Yellow Ribbon Paid (FY'13)</a></th>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#p911_tuitionpaid" onclick="track('Tool Tips', 'School Summary / Post-9/11 YR Paid');" target="_blank" alt="Click here for more information." title="Click here for more information.">Post-9/11 Yellow Ribbon Paid (FY'13)</a></th>
           <td id="p_911_yellow_ribbon_spent"></td>
         </tr>
       </tbody>
@@ -940,17 +941,17 @@ layout: va
   <!-- ================================================== -->
 
   <div id="complaint-box" style="display: none;">
-    <div class="heading solid navy table"><h3><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#accreditation" onclick="track('Tool Tips', 'Complaints / Breakdown');" target="_blank" alt="Click here for more information." title="Click here for more information.">Complaint Breakdown</a><span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata" onclick="track('Tool Tips', 'Vet Indicators / Source');" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
+    <div class="heading solid navy table"><h3>Complaint Breakdown<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata" onclick="track('Tool Tips', 'Complaint Box / Source');" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
     <table class="dark-background">
       <thead>
         <tr><td colspan="3"></td></tr>
         <tr>
           <td id="institution-name-complaint"></td>
           <td style=";">This Campus</td>
-          <td style=";">All Campuses</td>
+          <td style=";"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#complaints_all_campuses" onclick="track('Tool Tips', 'Complaints / All Campuses');" target="_blank" alt="Click here for more information." title="Click here for more information.">All Campuses</a></td>
         </tr>
         <tr class="big-summary">
-          <th>Student Complaints</th>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#complaints" onclick="track('Tool Tips', 'Complaints / Breakdown');" target="_blank" alt="Click here for more information." title="Click here for more information.">Student Complaints</a></th>
           <td id="complaint-total-fc">0</td>
           <td id="complaint-total-all">0</td>
         </tr>
