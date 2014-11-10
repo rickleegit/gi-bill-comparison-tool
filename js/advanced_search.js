@@ -230,17 +230,49 @@ function intersect(institutions, dicts) {
   return results;
 }
 
-function csv(institutions, intersection) {
-  var csvs = "facility code,name,city,state\n";
+function supportsDataUri() {
+  var isOldIE = navigator.appName === "Microsoft Internet Explorer";
+  var isIE11 = !!navigator.userAgent.match(/Trident\/7\./);
+  return ! (isOldIE || isIE11);  //Return true if not any IE
+}
+
+function gen_csv(institutions, intersection, seperator) {
+  var csvs = "facility code,name,city,state" + seperator;
 
   for (key in intersection) {
     var res = institutions[key];
-    csvs += res.value+','+res.name+','+res.city+','+res.state+'\n';
+    csvs += res.value+','+res.name+','+res.city+','+res.state+seperator;
   }
 
-  var encdata = btoa(csvs);
-  $(".download").html('<a href="data:text/csv;base64,'+encdata+'" download="gibill_search_results.csv">Download <abbr title="comma seperated value file">CSV</abbr></a>');
+  return csvs;
 }
+
+function csv(institutions, intersection) {
+  if (supportsDataUri()) {
+    csvs = gen_csv(institutions, intersection, "\n");
+    var encdata = btoa(csvs);
+    $(".download").html('<a href="data:text/csv;base64,'+encdata+'" download="gibill_search_results.csv">Download <abbr title="comma seperated value file">CSV</abbr></a>');
+  } else {
+    csvs = gen_csv(institutions, intersection, "\r\n");
+    $(".download").html('<a href="#">Download <abbr title="comma seperated value file">CSV</abbr></a>');
+    $(".download a").click(function() { save_csv_ie(csvs); });
+  }
+}
+
+var save_csv_ie = function(csvData) {
+ if (navigator.msSaveBlob) { // IE10
+      return navigator.msSaveBlob(new Blob([csvData], {type: "application/octet-stream"}), "gibill_search_results.csv");
+  }
+
+  var iframe = document.getElementById('ie_download_frame');
+  iframe = iframe.contentWindow || iframe.contentDocument;
+
+  iframe.document.open("text/html", "replace");
+  iframe.document.write(csvData);
+  iframe.document.close();
+  iframe.focus();
+  iframe.document.execCommand('SaveAs', true, 'gi_bill_search_results.csv');
+};
 
 $().ready(function () {
   var institutiondict = {};
