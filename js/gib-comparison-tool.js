@@ -1935,6 +1935,7 @@ var GIBComparisonTool = (function () {
 
     $('#poe').html(institution.poe ? 'Yes' : 'No');
     $('#eight-keys').html(institution.eight_keys ? 'Yes' : 'No');
+    $('#complaint-box').hide();
 
 
     if (institution.yr) {
