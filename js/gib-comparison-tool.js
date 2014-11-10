@@ -1964,7 +1964,7 @@ var GIBComparisonTool = (function () {
     }else { $('#p_911_yellow_ribbon').hide(); }
 
     var complaints = 0 + institution.complaints_main_campus_roll_up;
-    $("#complaints-total").html(complaints == 0 ? 'None' : formatNumber(complaints) + '&nbsp;<a href="#complaints-total" id="complaints-detail-link" onclick="expandComplaintDetails();">See Details</a>');
+    $("#complaints-total").html(complaints == 0 ? 'None' : formatNumber(complaints) + '&nbsp;<a href="#complaints-total" id="complaints-detail-link" onclick="expandComplaintDetails();" &nbsp; >See Details</a>');
 
     $('#institution-name-complaint').html(institution.institution);
     $('#complaint-total-all').html(institution.complaints_main_campus_roll_up + 0);
