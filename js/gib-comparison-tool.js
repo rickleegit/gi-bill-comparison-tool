@@ -2005,7 +2005,7 @@ var GIBComparisonTool = (function () {
     $('#yr_console').html(institution.yr);
 
 
-    $('#housing-allow-rate').html(formatCurrency(calculated.monthly_rate_display));
+    $('#housing-allow-rate').html(formatCurrency(calculated.monthly_rate_display)+ ' / month');
     $('#total-left-to-pay').html(formatCurrency(calculated.total_left_to_pay));
     if (calculated.total_left_to_pay > 0) {
       $('#total-left-to-pay').addClass('red');
