@@ -301,7 +301,7 @@ var GIBComparisonTool = (function () {
       $("#accreditation-row").hide();
     }else{
       $('#accreditation').html((institution.accredited ? 'Yes' : 'No') +  
-        "<a href='http://nces.ed.gov/collegenavigator/?id=" +
+        " &nbsp; <a href='http://nces.ed.gov/collegenavigator/?id=" +
         institution.cross +
         "#accred' onclick=\"track('Tool Tips', 'School Summary / Link to Accreditors');\" target='newtab'>  See Accreditors &raquo;</a>");
       if(institution.accreditation_type) {
@@ -1952,7 +1952,7 @@ var GIBComparisonTool = (function () {
       $('#yr').html('No');
     }
 
-    $('#gibill').html(institution.gibill ? formatNumber(institution.gibill) : 0);
+    $('#gibill').text((institution.gibill ? formatNumber(institution.gibill) : 0) + ' student' + (institution.gibill <= 1 ? '' : 's'));
 
     if(institution.p911_tuition_fees && institution.p911_recipients) {
       $('#p_911_recipients').show(); 
@@ -1979,7 +1979,7 @@ var GIBComparisonTool = (function () {
     $('#complaint-financial-ope').html(institution.complaints_financial_by_ope_id_do_not_sum + 0);
     $('#complaint-grade-policy-fc').html(institution.complaints_grades_by_fac_code + 0);
     $('#complaint-grade-policy-ope').html(institution.complaints_grades_by_ope_id_do_not_sum + 0);
-    // $('#complaint-job-prep-fc').html(institution.complaints_jobs_by_fac_code + 0);
+    $('#complaint-job-prep-fc').html(institution.complaints_jobs_by_fac_code + 0);
     $('#complaint-job-prep-ope').html(institution.complaints_jobs_by_ope_id_do_not_sum + 0);
     $('#complaint-loans-fc').html(institution.complaints_student_loans_by_fac_code + 0);
     $('#complaint-loans-ope').html(institution.complaints_student_loans_by_ope_id_do_not_sum + 0);
