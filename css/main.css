@@ -610,6 +610,7 @@ Use with for example: <div class="icon explore"></div>
 }
 
 #school-summary table {
+  background-color: #C30;
   border-bottom-left-radius: .3em;
   border-bottom-right-radius: .3em;
   font-size: 14px;
