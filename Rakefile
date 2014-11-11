@@ -30,6 +30,8 @@ task :convert, [:path] do |task, args|
     }
   end
 
+  FileUtils.cp('_data/data.csv', 'api/data.csv')
+
   puts "Finished in #{(Time.now - start).round(2)} seconds".status
 end
 

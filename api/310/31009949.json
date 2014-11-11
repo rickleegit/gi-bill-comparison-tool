@@ -16,7 +16,7 @@
   "student_veteran_link": "https://my.marianuniversity.edu/campuslife/mrp/default.aspx",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": null,
+  "eight_keys": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 50.6,

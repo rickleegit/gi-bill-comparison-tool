@@ -16,7 +16,7 @@
   "student_veteran_link": "https://und.collegiatelink.net/organization/undmacv",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": null,
+  "eight_keys": true,
   "correspondence": null,
   "flight": true,
   "grad_rate": 52.4,

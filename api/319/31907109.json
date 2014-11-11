@@ -16,7 +16,7 @@
   "student_veteran_link": "http://www.gwveterans.com/",
   "vetsuccess_name": "Roger Deason",
   "vetsuccess_email": "Roger.Deason@va.gov",
-  "eight_keys": null,
+  "eight_keys": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.6,

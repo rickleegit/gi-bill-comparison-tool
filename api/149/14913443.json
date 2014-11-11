@@ -16,7 +16,7 @@
   "student_veteran_link": "http://www.lee.edu/counseling/veterans",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": null,
+  "eight_keys": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 21.5,
