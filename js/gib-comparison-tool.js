@@ -2634,7 +2634,8 @@ function scrollToAnchor (id) {
  * Collect school comparision data from page
  */
 function getSchoolDataFromPage() {
-   return $('#benefit-estimator').html() + $('#veteran-indicators').html();
+   return '<div class="benefit-estimator-table">' + $('#benefit-estimator').html() + '</div>' +
+   '<div class="veteran-indicators-table">' + $('#veteran-indicators').html() + '</div>';
 }
 
 /* 

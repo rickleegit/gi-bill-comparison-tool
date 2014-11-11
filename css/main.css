@@ -891,19 +891,44 @@ ul#favorites-list li a {
   font-size: 12px;
 }
 
-#school-list div {
+#school-list div.compared-school {
   float: left;
   margin-top: 1em;
   width: 28%;
   text-align: left;
-  padding: 0 2%;
   margin-right: 1%;
   background: #777;
 }
 
-#school-list div.heading {
+#school-list div.compared-school h2, #school-list div.benefit-estimator-table {
+  background: #249120;
+}
+
+#school-list div.veteran-indicators-table {
+  background: #43798D;
+}
+
+#school-list .heading.solid.navy.table,
+#school-list .heading.solid.navy,
+#school-list div.heading,
+#school-list table {
+  background: transparent;
+  border: 0px;
   width: 100%;
   float: none;
+}
+
+#school-list .heading.solid {
+  margin-top: 0px;
+  padding: 0px;
+}
+
+#school-list .heading.solid h3 {
+  padding: 5px;
+}
+
+#school-list table {
+  padding: 10px;
 }
 
 #school-list div a {
@@ -924,6 +949,7 @@ ul#favorites-list li a {
 #school-list div p {font-size: 12px;}
 
 #school-list div h2 {
+  margin: 0px;
   color: #fff;
   line-height: 1.2em;
   font-size: 18px;
@@ -938,9 +964,7 @@ ul#favorites-list li a {
 }
 
 #school-list div table {
-  background: #777;
   padding: 0; margin: 0;
-  border-top: 1px solid #eee;
   font-size: 12px;
 }
 

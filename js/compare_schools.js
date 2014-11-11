@@ -6,7 +6,7 @@ function showSchools () {
   var school_data = getFavSchoolsHtmlArray();
   var schools = [];
     $.each(getFavoriteNamesArray(), function(i, school) {
-      schools.push("<div id='school-"+(i+1)+"'> <h2>" + school + "</h2>" + school_data[i] + "</div>");
+      schools.push("<div class='compared-school' id='school-"+(i+1)+"'> <h2>" + school + "</h2>" + school_data[i] + "</div>");
     });
     $('#school-list').html(schools);
     $('#school-list #add-to-favorites').hide();
