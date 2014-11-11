@@ -473,8 +473,9 @@ Use with for example: <div class="icon explore"></div>
   padding-bottom: 30px;
 }
 
-.comparison #calculator #calc-housing-allow-rate-row td {
-  padding-bottom: 30px;
+.comparison #calculator #calc-housing-allow-rate-row th {
+  padding-bottom: 15px;
+  padding-top: 10px;
 }
 
 /* Benefit Estimator / Calculator Toggle */
@@ -914,8 +915,8 @@ ul#favorites-list li a {
 #school-list .source {margin-right: 2%;}
 
 .comparison table th {
-padding: 5px !important;
-
+  padding: 5px;
+  padding-left: 5px !important;
 }
 
 #school-list .comparison table th {padding: .25em;}
