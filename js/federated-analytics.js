@@ -1,12 +1,27 @@
 /*
-Brian Katz, Cardinal Path - Google Analytics Government Wide Site Usage Measurement
-* v0.1 121011 : First Test Version
-* v1.0 121012 : Added Cookie Synchronizing and filtered out Outbound tracking of cross- and sub-domain links
-* v1.1 121015 : Changed cross-domain to use setAllowAnchor and fixed problem with some links
-* v1.2 121015-2 : Added incoming cross-domain tracking to default _gaq tracker by adding _setAllowLinker and _setAllowAnchor
-* v1.3 121015-3 : All Cross-domain Tracking removed
-* v1.4 121015-4 : Multiple Search parameters and XDT links tracked as events
-* v1.5 121122 : Change to sub-domain level visits (cookies). _DOMReady delays tracking so goes last. ECereto Review. JSHinted
+ * v0.1 121011 : First Test Version
+ * v1.0 121012 : Added Cookie Synchronizing and filtered out Outbound tracking of cross- and sub-domain links
+ * v1.1 121015 : Changed cross-domain to use setAllowAnchor and fixed problem with some links
+ * v1.2 121015-2 : Added incoming cross-domain tracking to default _gaq tracker by adding _setAllowLinker and _setAllowAnchor
+ * v1.3 121015-3 : All Cross-domain Tracking removed
+ * v1.4 121015-4 : Multiple Search parameters and XDT links tracked as events
+ * v1.5 121122 : Change to sub-domain level visits (cookies). _DOMReady delays tracking so goes last. ECereto Review. JSHinted
+ * v1.6 130107 : Added Agency, sub-agency and Cookie timeout variables and functions
+ * v1.61 130115 : Fix for (elm in ... now for (var elm = 0 Added Agency, sub-agency and Cookie timeout variables and functions
+ * v1.62 130123 : Using Slots 33, 34, 35 for Page Level Custom Vars
+ * v1.7 130503 : Single File Version
+ * v1.71 130708 : Single File s/d Ver and AGENCY/SUB defaulting to hostnames instead of 'unspecified'
+ * v1.72 130719 : SFS PUAs and exts
+*/
+/**
+ * @preserve
+ * Google Analytics Government Wide Site Usage Measurement Reference:Brian Katz, Cardinal Path
+ * v1.73 130827 : Final Katz-CP Version. exts, multiple devuas
+**/
+
+/*
+* Begin E-Nor
+* v1.74 131022 : Fix for multiple PUA loop
 */
 
 var _gaq = _gaq || [];
@@ -14,209 +29,340 @@ var _gas = _gas || [];
 
 var GSA_CPwrapGA = (function () {
 
-  var oCONFIG = {
-    VERSION      : 'v1.5 121122:Change to sub-domain level visits. _DOMReady delays tracking to end',
-    GAS_PATH    : '',
-    SEARCH_PARAMS  : 'querytext|nasaInclude|k|QT', // ver 1.4 Normalize query params
-    HOST_DOMAIN_OR  : document.location.hostname, // only required if tracking at a sub-domain level eg sub.example.gov and not at example.gov
-    LEADING_PERIOD  : '.',
-    GWT_UAID    : 'UA-33523145-1'
-  };
+		var domainHash;
+		var dlh = document.location.hostname;
+		
+        var oCONFIG = {
+				// System parameters - don't change without discussion with CP
+            VERSION : 'v1.74 131022 : Fix for multiple PUA loop',
+            SEARCH_PARAMS : 'querytext|nasaInclude|k|QT', // ver 1.4 Normalize query params
+            HOST_DOMAIN_OR : dlh, // default is to track sub-domains individually - override set in _setParams()
+            LEADING_PERIOD : '.',
+            GWT_UAID 	   : ['UA-33523145-1'],
 
-  var instance = this;
-
-  /**
-   *  Sets up _gas and configures accounts, domains, etc,
-   * In effect, ensures functions are compiled before being called
-   * @private
-   */
-  var _init = function () {
-
-      // Returns domain name, not sub-domains and with no leading period e.g.  returns usa.gov on http://xyz.usa.gov
-    if (!oCONFIG.HOST_DOMAIN_OR) oCONFIG.HOST_DOMAIN_OR  = getDomainNameGovMil();
-    oCONFIG.HOST_DOMAIN_OR = oCONFIG.HOST_DOMAIN_OR.replace(/^www\./i,'');
-    var ary = setHashAndPeriod(oCONFIG.HOST_DOMAIN_OR);
-    oCONFIG.LEADING_PERIOD = ary[1];
-
-    _gas.push(['GSA_CP._setAccount', oCONFIG.GWT_UAID]);
-    _gas.push(['GSA_CP._setDomainName', oCONFIG.LEADING_PERIOD + oCONFIG.HOST_DOMAIN_OR]);
-
-
-      // These 2 config lines will affect existing trackers owned by the Agencies - has been documented
-    // ver1.3 _gas.push(['_setAllowAnchor', true]);
-    // ver1.3 _gaq.push(['_setAllowLinker', true]);
-
-    if(ary[0]) {
-		_gas.push(['GSA_CP._setAllowHash', false]);
-	}
-
-    _gas.push(['GSA_CP._gasTrackOutboundLinks']);
-    _gas.push(['GSA_CP._gasTrackDownloads']);
-    _gas.push(['GSA_CP._gasTrackMailto']);
-
-    // ver1.3 _gas.push(['GSA_CP._addExternalDomainName', "gov"]);
-    // ver1.3 _gas.push(['GSA_CP._addExternalDomainName', "mil"]);
-    // ver1.3 _gas.push(['GSA_CP._gasMultiDomain', 'click']);
-
-/*
-      // In this implementation, we are placing gas,js into this file so no need to include it
-    (function() {
-      var ga = document.createElement('script');
-      ga.type = 'text/javascript';
-      ga.async = true;
-      ga.src = oCONFIG.GAS_PATH + '/misc/gas.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(ga, s);
-    })();
-*/
-
-      // Filter out cross & sub-domain Outbound links
-  /*
-  * Filter commented out in ver 1.4 since better to track XDT links as events if code not configured for XDT
-    _gas.push(['_addHook', '_trackEvent', function(cat, act){
-      if (cat === 'Outbound' && typeof act === "string" && act.match(/\.(gov|mil)$/)){
-      return false;
-      }
-    }]);
-  */
-      // Filter out sub-domain links tracked as Outbound
-    _gas.push(['_addHook', '_trackEvent', function(cat, act){
-      var linkDomain = act.match(/([^.]+\.(gov|mil)$)/);
-      if (cat === 'Outbound' && typeof act === "string" && linkDomain){
-        return (document.location.hostname.indexOf(linkDomain[1]) === -1);
-      }
-    }]);
-    // Add hook to _trackPageview to standardize search parameters
-  _gas.push(['_addHook', '_trackPageview', function(pageName){
-      var re = new RegExp('([?&])(' + oCONFIG.SEARCH_PARAMS + ')(=[^&]*)', 'i');
-      if (re.test(pageName)){
-        pageName = pageName.replace(re, '$1query$3');
-      }
-      return [pageName];
-    }]);
-
-  };
-
-  /**
-   *  Returns the domain and top-level domain  - eg example.com, example.ca example.co.uk, example.com.au or ipaddress
-   *
-   * @private
-   * @param {string} strURL a hostname or full url
-   */
-  var getDomainNameGovMil = function(strURL) {
-    strURL = strURL || document.location.hostname;
-
-      // extract the host name since full url may have been provided
-    strURL = strURL.match(/^(?:https?:\/\/)?([^\/:]+)/)[1];  // this cannot error unless running as file://
-
-    if(strURL.match(/(\d+\.){3}(\d+)/) || strURL.search(/\./) == -1) return strURL;  // ipaddress
-
-
-    try {
-      if (/\.(gov|mil)$/i.test(strURL)) {  // Customized for .gov and .mil
-        strURL = strURL.match(/\.([^.]+\.(gov|mil)$)/i)[1];
-      } else {
-        strURL = strURL.match(/(([^.\/]+\.[^.\/]{2,3}\.[^.\/]{2})|(([^.\/]+\.)[^.\/]{2,4}))(\/.*)?$/)[1];
-      }
-
-    } catch (e) {}
-    return  strURL.toLowerCase() ;
-  };
-
-
-  /**
-   *  Returns the GA hash for the Cookie domain passed
-   *
-   * @private
-   * @param {string} strCookieDomain -  the hostname used for the cookie domain
-   */
-  var getDomainHash = function(strCookieDomain) {
-
-    fromGaJs_h =  function (e) {
-      return undefined == e || "-" == e || "" == e;
-    };
-    fromGaJs_s =
-      function (e) {
-          var k = 1,
-          a = 0,
-          j, i;
-          if (!fromGaJs_h(e)) {
-            k = 0;
-            for (j = e.length - 1; j >= 0; j--) {
-              i = e.charCodeAt(j);
-              k = (k << 6 & 268435455) + i + (i << 14);
-              a = k & 266338304;
-              k = a !== 0 ? k ^ a >> 21 : k;
-            }
+				// GSA Configurable parameters - ver 1.6 - extended in 1.7x with external parameters
+            AGENCY : '',				// Singular, consistent, succinct, user-friendly abbreviation for the agency.  E.g. DOJ, DOI, Commerce
+            VISITOR_TIMEOUT 	: -1,	// Specified in months, 0 = session = when browser closes, -1 = don't change default (24 months)
+            CAMPAIGN_TIMEOUT 	: -1,	// Specified in months, 0 = session = when browser closes, -1 = don't change default (6 months)
+										// CAMPAIGN_TIMEOUT must be <= VISITOR_TIMEOUT
+            VISIT_TIMEOUT		: -1,	// Specified in minutes, 0 = session = when browser closes, -1 = don't change default (30 minutes)
+			ANONYMIZE_IP		: true,	// only change to false in rare circumustances where GeoIP location accuracy is critical
+			YOUTUBE 			: false
+		};
+        
+			// Object for centralized control of all Custom Variables reported in this sript file.
+			// Since GSA code only ever sets page level CVs, scope is always 3
+        var oCVs = {
+            agency		: { key : 'Agency', slot : 33, scope : 3},
+            sub_agency	: { key : 'Sub-Agency',slot : 34, scope : 3},
+            version		: { key : 'Code Ver',slot : 35, scope : 3
           }
-          return k;
+        }
+        
+        /**
+         *  Sets up _gas and configures accounts, domains, etc,
+         * In effect, ensures functions are compiled before being called
+         * @private
+         */
+        var _init = function () {
+            
+			_setParams();
+							
+            oCONFIG.HOST_DOMAIN_OR = oCONFIG.HOST_DOMAIN_OR.replace(/^www\./i, '');
+			
+            var ary = setHashAndPeriod(oCONFIG.HOST_DOMAIN_OR);
+            oCONFIG.LEADING_PERIOD = ary[1];
+            
+
+            // ver 1.73 allows QS UA ids: _gas.push(['GSA_CP1._setAccount', oCONFIG.GWT_UAID]);
+			for (var i=0;i<oCONFIG.GWT_UAID.length;i++) {
+				_gas.push(['GSA_CP' + (i+1) + '._setAccount', oCONFIG.GWT_UAID[i]]);
+			}
+			
+			if (oCONFIG.PARALLEL_UA && !oCONFIG.DEBUG_MODE)
+				for (i=oCONFIG.GWT_UAID.length;i<oCONFIG.PARALLEL_UA.length + oCONFIG.GWT_UAID.length;i++) {
+					_gas.push(['GSA_CP' + (i+1) + '._setAccount', oCONFIG.PARALLEL_UA[i-1]]);
+				}
+			
+            if (oCONFIG.ANONYMIZE_IP) {
+				_gaq.push (['_gat._anonymizeIp']);
+			}
+            _gas.push(['_setDomainName', oCONFIG.LEADING_PERIOD + oCONFIG.HOST_DOMAIN_OR]);
+			
+			setGAcookieTimeouts();
+            
+            if (ary[0]) {
+                _gas.push(['_setAllowHash', false]);
+            }
+            
+            _gas.push(['_gasTrackOutboundLinks']);
+			
+			if (oCONFIG.EXTS) {
+				_gas.push(['_gasTrackDownloads',{'extensions': oCONFIG.EXTS.split(',')}]);
+			} else {
+				_gas.push(['_gasTrackDownloads']);
+			}
+			
+            _gas.push(['_gasTrackMailto']);
+			if (oCONFIG.YOUTUBE) {
+				_gas.push(['_gasTrackYoutube', {percentages: [33, 66, 90], force:true}]); 
+			}
+
+			// Filter out sub-domain links tracked as Outbound
+			_gas.push(['_addHook', '_trackEvent', function (cat, act) {
+					var linkDomain = act.match(/([^.]+\.(gov|mil)$)/);
+					if (cat === 'Outbound' && typeof act === "string" && linkDomain) {
+						return (document.location.hostname.indexOf(linkDomain[1]) === -1);
+					}
+				}
+			]);
+				
+            // Add hook to _trackPageview to standardize search parameters
+            _gas.push(['_addHook', '_trackPageview', function (pageName) {
+                        var re = new RegExp('([?&])(' + oCONFIG.SEARCH_PARAMS + ')(=[^&]*)', 'i');
+                        if (re.test(pageName)) {
+                            pageName = pageName.replace(re, '$1query$3');
+                        }
+                        return [pageName];
+                    }
+                ]);
+            
         };
-    return fromGaJs_s(strCookieDomain) ;
-  };
+        
+		
+        /**
+         *  Sets the cookie timeouts if values have been set in oCONFIG at the top of this file
+         *
+         * @private
+         */
+		var setGAcookieTimeouts = function() {
+            if (oCONFIG.VISIT_TIMEOUT > -1) _gaq.push(['_setSessionCookieTimeout', oCONFIG.VISIT_TIMEOUT*1000*60]);					// Specified in minutes
+            if (oCONFIG.VISITOR_TIMEOUT > -1) _gaq.push(['_setVisitorCookieTimeout', oCONFIG.VISITOR_TIMEOUT*1000*60*60*24*30.416667]);	// Specified in months - GA uses 30.416.. as the number of days/month
+            if (oCONFIG.CAMPAIGN_TIMEOUT > -1) _gaq.push(['_setCampaignCookieTimeout', oCONFIG.CAMPAIGN_TIMEOUT*1000*60*60*24*30.416667]);	// Specified in months
+		}
+		
+		
+        /**
+         *  Returns the domain and top-level domain  - eg example.com, example.ca example.co.uk, example.com.au or ipaddress
+         *
+         * @private
+         * @param {string} strURL a hostname or full url
+         */
+        var getDomainNameGovMil = function (strURL) {
+            strURL = strURL || dlh;
+            
+            // extract the host name since full url may have been provided
+            strURL = strURL.match(/^(?:https?:\/\/)?([^\/:]+)/)[1]; // this cannot error unless running as file://
+            
+            if (strURL.match(/(\d+\.){3}(\d+)/) || strURL.search(/\./) == -1)
+                return strURL; // ipaddress
+            
+            
+            try {
+                if (/\.(gov|mil)$/i.test(strURL)) { // Customized for .gov and .mil
+                    strURL = strURL.match(/\.([^.]+\.(gov|mil)$)/i)[1];
+                } else {
+                    strURL = strURL.match(/(([^.\/]+\.[^.\/]{2,3}\.[^.\/]{2})|(([^.\/]+\.)[^.\/]{2,4}))(\/.*)?$/)[1];
+                }
+                
+            } catch (e) {}
+            return strURL.toLowerCase();
+        };
+        
+        /**
+         *  Returns the GA hash for the Cookie domain passed
+         *
+         * @private
+         * @param {string} strCookieDomain -  the hostname used for the cookie domain
+         */
+        var getDomainHash = function (strCookieDomain) {
+            
+            var fromGaJs_h = function (e) {
+                return undefined == e || "-" == e || "" == e;
+            };
+            var fromGaJs_s =
+            function (e) {
+                var k = 1,
+                a = 0,
+                j,
+                i;
+                if (!fromGaJs_h(e)) {
+                    k = 0;
+                    for (j = e.length - 1; j >= 0; j--) {
+                        i = e.charCodeAt(j);
+                        k = (k << 6 & 268435455) + i + (i << 14);
+                        a = k & 266338304;
+                        k = a !== 0 ? k^a >> 21 : k;
+                    }
+                }
+                return k;
+            };
+            return fromGaJs_s(strCookieDomain);
+        };
+        
+        /**
+         *  Returns an array [bool, str] where bool indicates value for setAllowHash and str is either blank or a leading period
+         *
+         * @private
+         * @param {string} strCookieDomain -  the hostname used for the cookie domain WITHOUT  the leading period
+         */
+        var setHashAndPeriod = function (strCookieDomain) {
+            var utmaCookies = document.cookie.match(/__utma=[^.]+/g);
+            var retVals = [false, '']; // setAllowHash = false and leading period = ''
+            
+				// if no cookies found
+            if (!utmaCookies)
+                return retVals;
+            
+            domainHash = getDomainHash(strCookieDomain);
+			
+            for (var elm = 0; elm < utmaCookies.length ; elm++) {
+                utmaCookies[elm] = utmaCookies[elm].substr(7); // strip __utma= leaving only the hash
+                
+                // look for the cookie with the matching domain hash
+                var hashFound = (domainHash == utmaCookies[elm]);
+                // if found, there's a hash and we're done
+                if (hashFound) {
+                    retVals[0] = false;
+                    return retVals;
+                } else { // check for period
+                    hashFound = (getDomainHash('.' + strCookieDomain) == utmaCookies[elm]);
+                    retVals[1] = hashFound ? '.' : '';
+                }
+                
+                // if not found, check for setAllowHashFalse - aka hash = 1
+                retVals[0] = retVals[0] || ('1' == utmaCookies[elm]); // true if hash == 1
+            }
+            
+            return retVals;
+        };
+		
+        /**
+         *  Sets the Custom Variables for Agency and sub-Agency based on the agency and sub_agency objects in oCVs
+         *
+         * @private
+         */
+        var setAgencyVars = function() {
+            setCustomVar(oCONFIG.AGENCY, oCVs.agency); // Page level variable sent only to GSA account
+            setCustomVar(oCONFIG.SUB_AGENCY, oCVs.sub_agency); // Page level variable sent only to GSA account
+        }
+                  /**           
+         *  Single generic method to set all custom vars based on single control object for all CVs - see oCVs near the top of the file
+         *	To keep the cookies synchronized, first check that agency is not already using the slot for a Vistor Level Varialbe
+		 *  If it is, even a PLCV will remove the value from their cookie.  In that case we don't set the variable.
+		 
+         * @private
+         * @param {string} value -  the only argument set outside of oCVs
+         * @param {object} oCV -  the object in oCVs for a particular variable
+         */
+        var setCustomVar = function (value, oCV) {
+			if (!value) return;
+			
+			var pageTracker = _gat._getTrackerByName(); // Gets the default tracker.
+			var visitorCustomVarValue = pageTracker._getVisitorCustomVar(oCV.slot);
+			
+			if (!visitorCustomVarValue)
+				_gas.push(['_setCustomVar', oCV.slot, oCV.key, value, oCV.scope]); // Record version in Page Level (oCV.scope ) Custom Variable specified in oCV.slot
+        }
+        
+        /**
+         * Reports a page view and detects if page is a 404 Page not found
+         * @public
+         */
+        this.onEveryPage = function () {
+            
+            var pageName = document.location.pathname + document.location.search + document.location.hash;
+            
+            // ... Page Not Found
+            // Track as a pageview because we need to see if it's a landing page.
+            if (document.title.search(/404|not found/i) !== -1) {
+                var vpv404 = '/vpv404/' + pageName;
+                pageName = vpv404.replace(/\/\//g, '/') + '/' + document.referrer;
+            }
+            
+            setCustomVar(oCONFIG.VERSION, oCVs.version)
+			setAgencyVars();
+            _gas.push(['_trackPageview', pageName]);
+        };
+		
+        
+        /**
+         * Retrieves the params from the script block src
+         * @private
+		*/
+        var _setParams = function _setParams () {
+			var src = document.getElementById('_fed_an_js_tag');
+			var tags;
+			if (!src) tags = document.getElementsByTagName('script');
+			for (var i = 0; tags && !src && i < tags.length; i++) {
+				var tag = tags[i];
+				if (/federated-analytics.*\.js/i.test(tag.src)) src = tag;
+			}
+			
+			if (src) {
+				src = src.src.split(/[?&]/);
+				src.shift();
+				for (var i = 0; i < src.length; i++) {
+				
+					var param = src[i].split('=');
+					src[0] = src[0].toLowerCase();
+					
+						// params in the query string
+					if ('agency' == param[0]) {
+						oCONFIG.AGENCY = param[1].toUpperCase();
+					} else if (/sub(-?agency)?/.test(param[0])) {
+						oCONFIG.SUB_AGENCY = param[1].toUpperCase();
+					} else if ('sp' == param[0]) {
+						param[1] = param[1].replace(/[,;\/]/g,'|');
+						oCONFIG.SEARCH_PARAMS = oCONFIG.SEARCH_PARAMS + '|' + param[1];
+						oCONFIG.SEARCH_PARAMS = oCONFIG.SEARCH_PARAMS.replace(/\|\|/g, '|');
+					} else if ('vcto' == param[0]) {
+						oCONFIG.VISITOR_TIMEOUT = parseInt(param[1]);
+					} else if ('camto' == param[0]) {
+						oCONFIG.CAMPAIGN_TIMEOUT = parseInt(param[1]);
+					} else if ('pua' == param[0]) {
+						oCONFIG.PARALLEL_UA = param[1].toUpperCase();
+						oCONFIG.PARALLEL_UA = oCONFIG.PARALLEL_UA.split(',');
+					} else if ('devua' == param[0]) {
+						oCONFIG.GWT_UAID = param[1].toUpperCase();
+						oCONFIG.GWT_UAID = oCONFIG.GWT_UAID.split(',');
+						oCONFIG.DEBUG_MODE = true;
+					} else if ('exts' == param[0]) {
+						oCONFIG.EXTS = param[1].toLowerCase();
+						oCONFIG.EXTS = oCONFIG.EXTS.replace(/ /g,'');
+					} else if ('aip' == param[0]) {
+						oCONFIG.ANONYMIZE_IP = ('true' == param[1]) ? true : !('false' == param[1]);
+					} else if ('yt' == param[0]) {
+						oCONFIG.YOUTUBE = ('true' == param[1]) ? true : !('false' == param[1]);
+					} else if ('sdor' == param[0]) {	// subdomain override 
+							// default is false - tracking will be at the sub-domain level
+						if (('true' == param[1]) ? true : !('false' == param[1])) {
+							// getDomainNameGovMil() returns domain name, not sub-domains and with no leading period e.g.  returns usa.gov on http://xyz.usa.gov
+							oCONFIG.HOST_DOMAIN_OR = getDomainNameGovMil();
+						} else {
+							oCONFIG.HOST_DOMAIN_OR = dlh;
+						}
+					}
+				}
+			}
+			
+				// Defaults for Agency and Sub-Agency.  Others are in the oCONFIG object
+			oCONFIG.AGENCY = oCONFIG.AGENCY || 'unspecified:' + oCONFIG.HOST_DOMAIN_OR;
+			oCONFIG.SUB_AGENCY = oCONFIG.SUB_AGENCY || ('' + dlh);
+			
+			oCONFIG.SUB_AGENCY = oCONFIG.AGENCY + ' - ' + oCONFIG.SUB_AGENCY
 
-  /**
-   *  Returns an array [bool, str] where bool indicates value for setAllowHash and str is either blank or a leading period
-   *
-   * @private
-   * @param {string} strCookieDomain -  the hostname used for the cookie domain WITHOUT  the leading period
-   */
-  var setHashAndPeriod = function(strCookieDomain) {
-    var utmaCookies = document.cookie.match(/__utma=[^.]+/g);
-    var retVals = [false, ''];  // setAllowHash = false and leading period = ''
+			oCONFIG.CAMPAIGN_TIMEOUT = Math.min(oCONFIG.CAMPAIGN_TIMEOUT, oCONFIG.VISITOR_TIMEOUT);
+		}
+        _init();
+        
+    });
 
-      // if no cookies found
-    if (!utmaCookies) return retVals;
-
-    var domainHash = getDomainHash(strCookieDomain);
-
-    for (var elm in utmaCookies) {
-      utmaCookies[elm] = utmaCookies[elm].substr(7);  // strip __utma= leaving only the hash
-
-        // look for the cookie with the matching domain hash
-      var hashFound = (domainHash == utmaCookies[elm]);
-        // if found, there's a hash and we're done
-      if (hashFound) {
-        retVals[0] = false;
-        return retVals;
-      }
-      else {  // check for period
-        hashFound =  (getDomainHash('.' + strCookieDomain) == utmaCookies[elm]);
-        retVals[1] = hashFound ? '.' : '' ;
-      }
-
-        // if not found, check for setAllowHashFalse - aka hash = 1
-      retVals[0] =  retVals[0] || ('1' == utmaCookies[elm]);  // true if hash == 1
-    }
-
-    return retVals;
-  };
+// -- End of federated-analytics.js ----
+// To make the instructions and implementation as easy as possible for all agencies, gas.js has been included below
 
 
-  /**
-   * Reports a page view and detects if page is a 404 Page not found
-   * @public
-   */
-  this.onEveryPage = function () {
-
-    var pageName = document.location.pathname + document.location.search + document.location.hash;
-
-      // ... Page Not Found
-      // Track as a pageview because we need to see if it's a landing page.
-    if (document.title.search(/404|not found/i) !== -1) {
-      var vpv404 = '/vpv404/' + pageName;
-      pageName = vpv404.replace(/\/\//g, '/') + '/' + document.referrer;
-    }
-
-    if (oCONFIG.VERSION) _gas.push(['GSA_CP._setCustomVar', 50, 'Code Ver', oCONFIG.VERSION, 3]);  // Record version in Page Level Custom Variable 50
-    _gas.push(['GSA_CP._trackPageview', pageName]);
-  };
-
-  _init();
-
-});
-
-// --------------------------- End of federated-analytics.js -------------------------------------
-// To make the instructions and implementation as easy as possible for all agencies, gas.js has been appended to federated.js
+// -- gasStart--
 
 /**
  * @preserve Copyright 2011, Cardinal Path and DigitalInc.
@@ -227,7 +373,7 @@ var GSA_CPwrapGA = (function () {
  * @author Eduardo Cereto <eduardocereto@gmail.com>
  * Licensed under the GPLv3 license.
  */
-(function(window, undefined) {
+(function(window, undefined) {  
 /**
  * GAS - Google Analytics on Steroids
  *
@@ -290,14 +436,14 @@ GasHelper.prototype._sanitizeString = function (str, strict_opt) {
         .replace(/\ +$/, '')
         .replace(/\s+/g, '_')
         .replace(/[áàâãåäæª]/g, 'a')
-        .replace(/[éèêë?]/g, 'e')
+        .replace(/[éèêëЄ€]/g, 'e')
         .replace(/[íìîï]/g, 'i')
         .replace(/[óòôõöøº]/g, 'o')
         .replace(/[úùûü]/g, 'u')
         .replace(/[ç¢©]/g, 'c');
 
     if (strict_opt) {
-        str = str.replace(/[^a-z0-9_-]/g, '_');
+        str = str.replace(/[^a-z0-9_\-]/g, '_');
     }
     return str.replace(/_+/g, '_');
 };
@@ -405,6 +551,7 @@ GasHelper.prototype._DOMReady = function (callback) {
  *
  * @author Eduardo Cereto <eduardocereto@gmail.com>
  */
+ /*global document:true*/
 
 /**
  * Google Analytics original _gaq.
@@ -695,18 +842,16 @@ _gas.push(['_addHook', '_gasSetDefaultTracker', function (tname) {
     return false;
 }]);
 /**
- * This is kept just for backward compatibility since it's now supported
- * natively in _gaq.
+ * Hook to sanity check trackEvents
+ *
+ * The value is rounded and parsed to integer.
+ * Negative values are sent as zero.
+ * If val is NaN than it is sent as zero.
  */
-_gas.push(['_addHook', '_trackPageview', function () {
+_gas.push(['_addHook', '_trackEvent', function () {
     var args = slice.call(arguments);
-    if (args.length >= 2 &&
-        typeof args[0] === 'string' && typeof args[1] === 'string')
-    {
-        return [{
-            'page': args[0],
-            'title': args[1]
-        }];
+    if (args[3]) {
+        args[3] = (args[3] < 0 ? 0 : Math.round(args[3])) || 0;
     }
     return args;
 }]);
@@ -775,7 +920,7 @@ var _trackDownloads = function (opts) {
     opts['category'] = opts['category'] || 'Download';
 
     var ext = 'xls,xlsx,doc,docx,ppt,pptx,pdf,txt,zip';
-    ext += ',rar,7z,exe,wma,mov,avi,wmv,mp3,csv,tsv';
+    ext += ',rar,7z,gz,tgz,exe,wma,mov,avi,wmv,mp3,mp4,csv,tsv,mobi,epub,swf';
     ext = ext.split(',');
     opts['extensions'] = opts['extensions'].concat(ext);
 
@@ -806,679 +951,6 @@ _gas.push(['_addHook', '_gasTrackDownloads', _trackDownloads]);
 
 // Old API to be deprecated on v2.0
 _gas.push(['_addHook', '_trackDownloads', _trackDownloads]);
-
-/**
- * GAS - Google Analytics on Steroids
- *
- * Ecommerce Meta
- *
- * Copyright 2012, Cardinal Path and Direct Performance
- * Licensed under the GPLv3 license.
- *
- * @author Eduardo Cereto <eduardocereto@gmail.com>
- */
-
-function _gasMetaEcommerce() {
-    var i, meta,
-        f_trans = 0,
-        f_item = 0,
-        metas = document.getElementsByTagName('meta');
-    for (i = 0; i < metas.length; i++) {
-        if (metas[i].name === 'ga_trans') {
-            // Fire transaction
-            meta = metas[i].content.split('^');
-            if (meta.length < 3) {
-                // 3 is the minimum for transaction
-                break;
-            }
-            // Add default values for remaining params
-            while (meta.length < 8) {
-                meta.push('');
-            }
-            _gas.push(['_addTrans',
-                    meta[0],
-                    meta[1],
-                    meta[2],
-                    meta[3],
-                    meta[4],
-                    meta[5],
-                    meta[6],
-                    meta[7]
-                    ]);
-            f_trans++;
-        }
-        else if (metas[i].name === 'ga_item') {
-            // Fire item
-            meta = metas[i].content.split('^');
-            if (meta.length === 6) {
-                _gas.push(['_addItem',
-                        meta[0],
-                        meta[1],
-                        meta[2],
-                        meta[3],
-                        meta[4],
-                        meta[5]
-                        ]);
-                f_item++;
-            }
-        }
-    }
-    if (f_trans > 0 && f_item > 0) {
-        _gas.push(['_trackTrans']);
-        //_gas.push(['_clearTrans']);
-    }
-}
-
-_gas.push(['_addHook', '_gasMetaEcommerce', _gasMetaEcommerce]);
-
-/**
- * Hook to sanity check trackEvents
- *
- * The value is rounded and parsed to integer.
- * Negative values are sent as zero.
- * If val is NaN than it is sent as zero.
- */
-_gas.push(['_addHook', '_trackEvent', function () {
-    var args = slice.call(arguments);
-    if (args[3]) {
-        args[3] = (args[3] < 0 ? 0 : Math.round(args[3])) || 0;
-    }
-    return args;
-}]);
-
-/**
- * GAS - Google Analytics on Steroids
- *
- * Form Tracking Plugin
- *
- * Copyright 2011, Cardinal Path and Direct Performance
- * Licensed under the GPLv3 license.
- *
- * @author Eduardo Cereto <eduardocereto@gmail.com>
- */
-
-/**
- * get the form name for a specific elemet
- *
- * @param {DOMElemet} el Dom Element.
- * @return {String} Form Name or Id.
- */
-function getFormName(el) {
-    while (el && el.nodeName !== 'HTML') {
-        if (el.nodeName === 'FORM') {break; }
-        el = el.parentNode;
-    }
-    if (el.nodeName === 'FORM') {
-        return el.name || el.id || 'none';
-    }
-    return 'none';
-}
-
-var _gasTrackForms = function (opts) {
-    if (!this._formTracked) {
-        this._formTracked = true;
-    } else {
-        //Oops double tracking detected.
-        return;
-    }
-    var scp = this;
-    if (typeof opts !== 'object') {
-        opts = {};
-    }
-
-    // Make sure required attrs are defined or fallback to default
-    opts['category'] = opts['category'] || 'Form Tracking';
-    //opts['live'] = opts['live'] || true; //Ignored
-
-    var trackField = function (e) {
-        var el = e.target,
-            el_name = el.name || el.id || el.type || el.nodeName,
-            form_name = getFormName(el),
-            action = 'form (' + form_name + ')',
-            label = el_name + ' (' + e.type + ')';
-
-        _gas.push(['_trackEvent', opts['category'], action, label]);
-    };
-
-    scp._DOMReady(function () {
-        var changeTags = ['input', 'select', 'textarea', 'hidden'];
-        var submitTags = ['form'];
-        var elements = [];
-        var i, j;
-        for (i = 0; i < changeTags.length; i++) {
-            elements = document.getElementsByTagName(changeTags[i]);
-            for (j = 0; j < elements.length; j++) {
-                scp._addEventListener(elements[j], 'change', trackField);
-            }
-        }
-        for (i = 0; i < submitTags.length; i++) {
-            elements = document.getElementsByTagName(submitTags[i]);
-            for (j = 0; j < elements.length; j++) {
-                scp._addEventListener(elements[j], 'submit', trackField);
-            }
-        }
-    });
-};
-
-_gas.push(['_addHook', '_gasTrackForms', _gasTrackForms]);
-
-// Old API to be deprecated on v2.0
-_gas.push(['_addHook', '_trackForms', _gasTrackForms]);
-/**
- * GAS - Google Analytics on Steroids
- *
- * HTML5 Video Tracking Plugin
- *
- * Copyright 2011, Cardinal Path
- * Licensed under the GPLv3 license.
- *
- * @author Eduardo Cereto <eduardocereto@gmail.com>
- */
-
-/**
- * Triggers the actual video/audio GA events
- *
- * To be used as a callback for the HTML5 media events
- *
- * @param {Event} e A reference to the HTML event fired.
- * @this {HTMLMediaElement} The HTML element firing the event
- */
-function _trackMediaElement(e) {
-    _gas.push(['_trackEvent', this.tagName, e.type, this.currentSrc]);
-}
-
-/**
- * Triggers the HTML5 Video Tracking on the page
-
- * @param {String} tag Either 'audio' or 'video'.
- * @this {GasHelper} GA Helper object.
- */
-var _trackMedia = function (tag) {
-    var self = this;
-    self._liveEvent(tag, 'play', _trackMediaElement);
-    self._liveEvent(tag, 'pause', _trackMediaElement);
-    self._liveEvent(tag, 'ended', _trackMediaElement);
-};
-
-var _trackVideo = function () {
-    if (!this._videoTracked) {
-        this._videoTracked = true;
-    } else {
-        //Oops double tracking detected.
-        return;
-    }
-    _trackMedia.call(this, 'video');
-};
-
-var _trackAudio = function () {
-    if (!this._audioTracked) {
-        this._audioTracked = true;
-    } else {
-        //Oops double tracking detected.
-        return;
-    }
-    _trackMedia.call(this, 'audio');
-};
-
-_gas.push(['_addHook', '_gasTrackVideo', _trackVideo]);
-_gas.push(['_addHook', '_gasTrackAudio', _trackAudio]);
-
-// Old API to be deprecated on v2.0
-_gas.push(['_addHook', '_trackVideo', _trackVideo]);
-_gas.push(['_addHook', '_trackAudio', _trackAudio]);
-
-/**
- * GAS - Google Analytics on Steroids
- *
- * HTML Markup Plugin
- *
- * Copyright 2012, Cardinal Path and Direct Performance
- * Licensed under the GPLv3 license.
- *
- * @author Eduardo Cereto <eduardocereto@gmail.com>
- */
-
-/**
- * Sets Default pagename and Custom Vars based on Meta
- *
- * If a meta name='ga_vpv' is availalbe on the page use that as a page
- * replacement if the pageview is not passed as parameter.
- *
- * If meta name="ga_custom_var" the 4 values for a custom var must be on
- * content separated by a caret (^).
- */
-function _gasMeta() {
-    var i, meta,
-        metas = document.getElementsByTagName('meta');
-    for (i = 0; i < metas.length; i++) {
-        if (metas[i].name === 'ga_vpv') {
-            meta = metas[i].content;
-            (function (vpv) {
-                window._gas.push(['_addHook', '_trackPageview', function (p) {
-                    if (p === undefined) {
-                        return [vpv];
-                    }
-                }]);
-            }(meta));
-        } else if (metas[i].name === 'ga_custom_var') {
-            meta = metas[i].content.split('^');
-            if (meta.length === 4) {
-                window._gas.push(['_setCustomVar',
-                    parseInt(meta[0], 10),
-                    meta[1],
-                    meta[2],
-                    parseInt(meta[3], 10)
-                ]);
-            }
-        }
-    }
-}
-
-/**
- * Listens to all clicks and looks for a tagged element on it.
- *
- * Events have the following params:
- *   x-ga-event-category (required)  The category of the event specified in
- * the solution design document
- *   x-ga-event-action (required)  The action of the event specified in the
- * solution design document
- *   x-ga-event-label (optional)  The label of the event specified in the
- * solution design document.  If no label is specified in the solution design
- * document, this attribute can be omitted
- *   x-ga-event-value (optional)  The value (integer) of the event specified
- * in the solution design document.  If no value is specified in the solution
- * design document, this attribute can be omitted
- *   x-ga-event-noninteractive (optional)  Boolean (true/false) value
- * specified in the solution design document.  If the non-interactive value is
- * not specified, this attribute can be omitted
- *
- * Social Actions have the following params:
- *   x-ga-social-network (required)  The network of the social interaction
- * specified in the solution design document
- *   x-ga-social-action (required)  The action of the social interaction
- * specified in the solution design document
- *   x-ga-social-target (optional)  The target of the social interaction
- * specified in the solution design document.  If no target is specified, this
- * attribute can be omitted
- *   x-ga-social-pagepath (optional)  The page path of the social interaction
- * specified in the solution design document.  If no page path is specified,
- * this attribute can be omitted
- */
-function _gasHTMLMarkup() {
-    var gh = this;
-
-    gh._addEventListener(document, 'mousedown', function (me) {
-        var el;
-        for (el = me.target; el.nodeName !== 'HTML';
-             el = el.parentNode) {
-            if (el.getAttribute('x-ga-event-category')) {
-                // Event element clicked, fire the _trackEvent
-                window._gas.push(['_trackEvent',
-                  el.getAttribute('x-ga-event-category'),
-                  el.getAttribute('x-ga-event-action'),
-                  el.getAttribute('x-ga-event-label') || undefined,
-                  parseInt(el.getAttribute('x-ga-event-value'), 10) || 0,
-                  el.getAttribute('x-ga-event-noninteractive') === 'true' ? true : false
-                ]);
-            }
-            if (el.getAttribute('x-ga-social-network')) {
-                // Social Action Clicked fire _trackSocial
-                window._gas.push(['_trackSocial',
-                  el.getAttribute('x-ga-social-network'),
-                  el.getAttribute('x-ga-social-action'),
-                  el.getAttribute('x-ga-social-target') || undefined,
-                  el.getAttribute('x-ga-social-pagepath') || undefined
-                ]);
-            }
-
-            if (el.parentNode === null) {
-                break;
-            }
-        }
-    }, true);
-}
-
-_gas.push(['_addHook', '_gasMeta', _gasMeta]);
-_gas.push(['_addHook', '_gasHTMLMarkup', _gasHTMLMarkup]);
-
-/**
- * GAS - Google Analytics on Steroids
- *
- * MailTo tracking plugin
- *
- * Copyright 2011, Cardinal Path and Direct Performance
- * Licensed under the GPLv3 license.
- */
-
-/**
- * GAS plugin to track mailto: links
- *
- * @param {object} opts GAS Options.
- */
-var _gasTrackMailto = function (opts) {
-    if (!this._mailtoTracked) {
-        this._mailtoTracked = true;
-    } else {
-        //Oops double tracking detected.
-        return;
-    }
-
-    if (!opts) {
-        opts = {};
-    }
-    opts['category'] = opts['category'] || 'Mailto';
-
-    this._liveEvent('a', 'mousedown', function (e) {
-        var el = e.target;
-        if (el && el.href && el.href.toLowerCase &&
-          sindexOf.call(el.href.toLowerCase(), 'mailto:') === 0) {
-            _gas.push(['_trackEvent', opts['category'], el.href.substr(7)]);
-        }
-    });
-    return false;
-};
-_gas.push(['_addHook', '_gasTrackMailto', _gasTrackMailto]);
-
-// Old API to be deprecated on v2.0
-_gas.push(['_addHook', '_trackMailto', _gasTrackMailto]);
-
-/**
- * GAS - Google Analytics on Steroids
- *
- * Max-Scroll Tracking Plugin
- *
- * Copyright 2011, Cardinal Path and Direct Performance
- * Licensed under the GPLv3 license.
- *
- * @author Eduardo Cereto <eduardocereto@gmail.com>
- */
-
-var _maxScrollOpts;
-
-/**
- * Get current browser viewpane heigtht
- *
- * @return {number} height.
- */
-function _get_window_height() {
-    return window.innerHeight || documentElement.clientHeight ||
-        document.body.clientHeight || 0;
-}
-
-/**
- * Get current absolute window scroll position
- *
- * @return {number} YScroll.
- */
-function _get_window_Yscroll() {
-    return window.pageYOffset || document.body.scrollTop ||
-        documentElement.scrollTop || 0;
-}
-
-/**
- * Get current absolute document height
- *
- * @return {number} Current document height.
- */
-function _get_doc_height() {
-    return Math.max(
-        document.body.scrollHeight || 0, documentElement.scrollHeight || 0,
-        document.body.offsetHeight || 0, documentElement.offsetHeight || 0,
-        document.body.clientHeight || 0, documentElement.clientHeight || 0
-    );
-}
-
-
-/**
- * Get current vertical scroll percentage
- *
- * @return {number} Current vertical scroll percentage.
- */
-function _get_scroll_percentage() {
-    return (
-        (_get_window_Yscroll() + _get_window_height()) / _get_doc_height()
-    ) * 100;
-}
-
-var _t = null;
-var _max_scroll = 0;
-function _update_scroll_percentage(now) {
-    if (_t) {
-        clearTimeout(_t);
-    }
-    if (now === true) {
-        _max_scroll = Math.max(_get_scroll_percentage(), _max_scroll);
-        return;
-    }
-    _t = setTimeout(function () {
-        _max_scroll = Math.max(_get_scroll_percentage(), _max_scroll);
-    }, 400);
-}
-
-function _sendMaxScroll() {
-    _update_scroll_percentage(true);
-    _max_scroll = Math.floor(_max_scroll);
-    if (_max_scroll <= 0 || _max_scroll > 100) return;
-    var bucket = (_max_scroll > 10 ? 1 : 0) * (
-        Math.floor((_max_scroll - 1) / 10) * 10 + 1
-    );
-    bucket = String(bucket) + '-' +
-        String(Math.ceil(_max_scroll / 10) * 10);
-
-    _gas.push(['_trackEvent',
-        _maxScrollOpts['category'],
-        url,
-        bucket,
-        Math.floor(_max_scroll),
-        true // non-interactive
-    ]);
-}
-
-/**
- * Tracks the max Scroll on the page.
- *
- * @param {object} opts GAS Options to be used.
- * @this {GasHelper} The Ga Helper object
- */
-function _trackMaxScroll(opts) {
-    if (!this._maxScrollTracked) {
-        this._maxScrollTracked = true;
-    } else {
-        //Oops double tracking detected.
-        return;
-    }
-    _maxScrollOpts = opts || {};
-    _maxScrollOpts['category'] = _maxScrollOpts['category'] || 'Max Scroll';
-
-    this._addEventListener(window, 'scroll', _update_scroll_percentage);
-    this._addEventListener(window, 'beforeunload', _sendMaxScroll);
-}
-
-_gas.push(['_addHook', '_gasTrackMaxScroll', _trackMaxScroll]);
-
-// Old API to be deprecated on v2.0
-_gas.push(['_addHook', '_trackMaxScroll', _trackMaxScroll]);
-
-/**
- * GAS - Google Analytics on Steroids
- *
- * Multi-Domain Tracking Plugin
- *
- * Copyright 2011, Cardinal Path and Direct Performance
- * Licensed under the GPLv3 license.
- *
- * @author Eduardo Cereto <eduardocereto@gmail.com>
- */
-
-/**
- * Private variable to store allowAnchor choice
- */
-_gas._allowAnchor = false;
-
-/**
- * _setAllowAnchor Hook to store choice for easier use of Anchor
- *
- * This stored value is used on _getLinkerUrl, _link and _linkByPost so it's
- * used the same by default
- */
-_gas.push(['_addHook', '_setAllowAnchor', function (val) {
-    _gas._allowAnchor = !!val;
-}]);
-
-/**
- * _link Hook to use stored allowAnchor value.
- */
-_gas.push(['_addHook', '_link', function (url, use_anchor) {
-    if (use_anchor === undefined) {
-        use_anchor = _gas._allowAnchor;
-    }
-    return [url, use_anchor];
-}]);
-
-/**
- * _linkByPost Hook to use stored allowAnchor value.
- */
-_gas.push(['_addHook', '_linkByPost', function (url, use_anchor) {
-    if (use_anchor === undefined) {
-        use_anchor = _gas._allowAnchor;
-    }
-    return [url, use_anchor];
-}]);
-
-/**
- * Store all domains pushed by _setDomainName that don't match current domain.
- *
- * @type {Array.<string>}
- */
-var _external_domains = [];
-
-/**
- * Store the internal domain name
- *
- * @type string
- */
-var _internal_domain;
-
-/**
- * _setDomainName Hook to add pushed domains to _external_domains if it doesn't
- * match current domain.
- *
- * This Hook let you call _setDomainName multiple times. So _gas will only
- * apply the one that matches the current domain and the other ones will be
- * used to track external domains with cookie data.
- */
-_gas.push(['_addHook', '_setDomainName', function (domainName) {
-    if (sindexOf.call('.' + document.location.hostname, domainName) < 0) {
-        _external_domains.push(domainName);
-        return false;
-    }
-    _internal_domain = domainName;
-}]);
-
-/**
- * _addExternalDomainName Hook.
- *
- * This hook let you add external domains so that urls on current page to this
- * domain are marked to send cookies.
- * You should use _setDomainName for this in most of the cases.
- */
-_gas.push(['_addHook', '_addExternalDomainName', function (domainName) {
-    _external_domains.push(domainName);
-    return false;
-}]);
-
-/**
- * Function to mark links on the current pages to send links
- *
- * This function is used to make it easy to implement multi-domain-tracking.
- * @param {string} event_used Should be 'now', 'click' or 'mousedown'. Default
- * 'click'.
- * @this {GasHelper} GAS Helper functions
- * @return {boolean} Returns false to avoid this is puhed to _gaq.
- */
-function track_links(event_used) {
-    if (!this._multidomainTracked) {
-        this._multidomainTracked = true;
-    } else {
-        //Oops double tracking detected.
-        return;
-    }
-    var internal = document.location.hostname,
-        gh = this,
-        i, j, el,
-        links = document.getElementsByTagName('a');
-    if (event_used !== 'now' && event_used !== 'mousedown') {
-        event_used = 'click';
-    }
-    for (i = 0; i < links.length; i++) {
-        el = links[i];
-        if (sindexOf.call(el.href, 'http') === 0) {
-            // Check to see if it's a internal link
-            if (el.hostname === internal ||
-              sindexOf.call(el.hostname, _internal_domain) >= 0) {
-                continue;
-            }
-            // Tag external Links either now or on mouse event.
-            for (j = 0; j < _external_domains.length; j++) {
-                if (sindexOf.call(el.hostname, _external_domains[j]) >= 0) {
-                    if (event_used === 'now') {
-                        el.href = gh['tracker']['_getLinkerUrl'](
-                            el.href,
-                            _gas._allowAnchor
-                        );
-                    } else {
-                        if (event_used === 'click') {
-                            this._addEventListener(el, event_used, function (e) {
-                                if (this.target && this.target === '_blank') {
-                                    window.open(
-                                        gh['tracker']['_getLinkerUrl'](
-                                            this.href, _gas._allowAnchor
-                                        )
-                                    );
-                                } else {
-                                    _gas.push(
-                                        ['_link', this.href, _gas._allowAnchor]
-                                    );
-                                }
-                                if (e.preventDefault)
-                                    e.preventDefault();
-                                else
-                                    e.returnValue = false;
-                                return false; //needed for ie7
-                            });
-                        } else {
-                            this._addEventListener(el, event_used, function () {
-                                this.href = gh['tracker']['_getLinkerUrl'](
-                                    this.href,
-                                    _gas._allowAnchor
-                                );
-                            });
-                        }
-                    }
-                }
-            }
-        }
-    }
-    return false;
-}
-
-var _gasMultiDomain = function () {
-    var gh = this;
-    var args = slice.call(arguments);
-    if (gh && gh._DOMReady) {
-        gh._DOMReady(function () {
-            track_links.apply(gh, args);
-        });
-    }
-};
-
-/**
- * Registers Hook to _setMultiDomain
- */
-_gas.push(['_addHook', '_gasMultiDomain', _gasMultiDomain]);
-
-// Old API to be deprecated on v2.0
-_gas.push(['_addHook', '_setMultiDomain', _gasMultiDomain]);
 
 /**
  * GAS - Google Analytics on Steroids
@@ -1540,184 +1012,46 @@ _gas.push(['_addHook', '_trackOutboundLinks', _gasTrackOutboundLinks]);
 /**
  * GAS - Google Analytics on Steroids
  *
- * Vimeo Video Tracking Plugin
+ * MailTo tracking plugin
  *
  * Copyright 2011, Cardinal Path and Direct Performance
  * Licensed under the GPLv3 license.
- *
- * @author Eduardo Cereto <eduardocereto@gmail.com>
  */
-
-var _vimeoTimeTriggers = [];
-var _vimeoPoolMaps = {};
 
 /**
- * Cached urls for vimeo players on the page.
+ * GAS plugin to track mailto: links
  *
- * @type {object}
+ * @param {object} opts GAS Options.
  */
-var _vimeo_urls = {};
-
-function _vimeoPool(data) {
-    if (!_vimeoPoolMaps[data.player_id]) {
-        _vimeoPoolMaps[data.player_id] = {};
-        _vimeoPoolMaps[data.player_id].timeTriggers = slice.call(
-            _vimeoTimeTriggers
-        );
+var _gasTrackMailto = function (opts) {
+    if (!this._mailtoTracked) {
+        this._mailtoTracked = true;
+    } else {
+        //Oops double tracking detected.
+        return;
     }
-    if (_vimeoPoolMaps[data.player_id].timeTriggers.length > 0) {
-        if (data.data.percent * 100 >=
-            _vimeoPoolMaps[data.player_id].timeTriggers[0])
-        {
-            var action = _vimeoPoolMaps[data.player_id].timeTriggers.shift();
-            _gas.push([
-                '_trackEvent',
-                'Vimeo Video',
-                action + '%',
-                _vimeo_urls[data.player_id]
-            ]);
+
+    if (!opts) {
+        opts = {};
+    }
+    opts['category'] = opts['category'] || 'Mailto';
+
+    this._liveEvent('a', 'mousedown', function (e) {
+        var el = e.target;
+        if (el && el.href && el.href.toLowerCase &&
+          sindexOf.call(el.href.toLowerCase(), 'mailto:') === 0) {
+            _gas.push(['_trackEvent', opts['category'], el.href.substr(7)]);
         }
-    }
-}
-
-/**
- * Helper function to post messages to a vimeo player
- *
- * @param {string} method The method from the vimeo API.
- * @param {string} params to be passed as the value of the method.
- * @param {object} target Iframe DOM Element for the Vimeo player.
- * @return {boolean} true if it worked or false otherwise.
- */
-function _vimeoPostMessage(method, params, target) {
-    if (!target.contentWindow || !target.contentWindow.postMessage || !JSON) {
-        return false;
-    }
-    var url = target.getAttribute('src').split('?')[0],
-        data = JSON.stringify({
-            method: method,
-            value: params
-        });
-    target.contentWindow.postMessage(data, url);
-    return true;
-}
-
-
-/**
- * Flag that indicates if the global listener has been bind to the window
- * @type {boolean}
- */
-var _has_vimeo_window_event = false;
-
-var _vimeoOpts;
-
-/**
- * postMessage Listener
- * @param {Object} event The Vimeo API return event.
- */
-function _vimeoPostMessageListener(event) {
-    if (sindexOf.call(event.origin, '//player.vimeo.com') > -1) {
-        var data = JSON.parse(event.data);
-        if (data.event === 'ready') {
-            _trackVimeo.call(_gas.gh); // Force rerun since a player is ready
-        } else if (data.method) {
-            if (data.method === 'getVideoUrl') {
-                _vimeo_urls[data.player_id] = data.value;
-            }
-        } else if (data.event === 'playProgress') {
-            _vimeoPool(data);
-        } else {
-            _gas.push(['_trackEvent', _vimeoOpts['category'],
-                data.event, _vimeo_urls[data.player_id]]);
-        }
-    }
-
-}
-
-/**
- * Triggers the Vimeo Tracking on the page
- *
- * Only works for the Universal Tag from Vimeo (iframe). The video must have
- * the parameter api=1 on the url in order to make the tracking work.
- *
- * @this {GasHelper} GA Helper object.
- */
-function _trackVimeo() {
-    var iframes = document.getElementsByTagName('iframe');
-    var vimeo_videos = 0;
-    var player_id;
-    var player_src;
-    var separator;
-    var force = _vimeoOpts['force'];
-    var partials = _vimeoOpts['percentages'];
-    for (var i = 0; i < iframes.length; i++) {
-        if (sindexOf.call(iframes[i].src, '//player.vimeo.com') > -1) {
-            player_id = 'gas_vimeo_' + i;
-            player_src = iframes[i].src;
-            separator = '?';
-            if (sindexOf.call(player_src, '?') > -1) {
-                separator = '&';
-            }
-            if (sindexOf.call(player_src, 'api=1') < 0) {
-                if (force) {
-                    // Reload the video enabling the api
-                    player_src += separator + 'api=1&player_id=' + player_id;
-                } else {
-                    // We won't track players that don't have api enabled.
-                    continue;
-                }
-            } else {
-                if (sindexOf.call(player_src, 'player_id=') < -1) {
-                    player_src += separator + 'player_id=' + player_id;
-                }
-            }
-            vimeo_videos++;
-            iframes[i].id = player_id;
-            if (iframes[i].src !== player_src) {
-                iframes[i].src = player_src;
-                break; // break to wait until it is ready since we reloaded it.
-            }
-            // We need to cache the video url since vimeo won't provide it
-            // in the event
-            _vimeoPostMessage('getVideoUrl', '', iframes[i]);
-            _vimeoPostMessage('addEventListener', 'play', iframes[i]);
-            _vimeoPostMessage('addEventListener', 'pause', iframes[i]);
-            _vimeoPostMessage('addEventListener', 'finish', iframes[i]);
-            if (partials) {
-                _vimeoTimeTriggers = partials;
-                _vimeoPostMessage('addEventListener', 'playProgress',
-                    iframes[i]);
-            }
-        }
-    }
-    if (vimeo_videos > 0 && _has_vimeo_window_event === false) {
-        this._addEventListener(window, 'message',
-            _vimeoPostMessageListener, false
-        );
-        _has_vimeo_window_event = true;
-    }
-}
-
-var _gasTrackVimeo = function (opts) {
-    var gh = this;
-    // Support
-    if (typeof opts === 'boolean' || opts === 'force') {
-        opts = {'force': !!opts};
-    }
-    opts = opts || {};
-    opts['category'] = opts['category'] || 'Vimeo Video';
-    opts['percentages'] = opts['percentages'] || [];
-    opts['force'] = opts['force'] || false;
-    _vimeoOpts = opts;
-    gh._DOMReady(function () {
-        _trackVimeo.call(gh);
     });
     return false;
 };
-
-_gas.push(['_addHook', '_gasTrackVimeo', _gasTrackVimeo]);
+_gas.push(['_addHook', '_gasTrackMailto', _gasTrackMailto]);
 
 // Old API to be deprecated on v2.0
-_gas.push(['_addHook', '_trackVimeo', _gasTrackVimeo]);
+_gas.push(['_addHook', '_trackMailto', _gasTrackMailto]);
+
+
+// -- gasStartYoutube--
 
 /**
  * GAS - Google Analytics on Steroids
@@ -1773,7 +1107,7 @@ function _ytStartPool(target) {
         var h = target['getVideoUrl']();
         if (_ytPoolMaps[h]) {
             _ytStopPool(target);
-        }else {
+        } else {
             _ytPoolMaps[h] = {};
             _ytPoolMaps[h].timeTriggers = slice.call(_ytTimeTriggers);
         }
@@ -1808,7 +1142,7 @@ function _ytStateChange(event) {
     if (action) {
         _gas.push(['_trackEvent',
             _ytOpts['category'], action, event['target']['getVideoUrl']()
-        ]);
+			]);
     }
 }
 
@@ -1954,6 +1288,8 @@ _gas.push(['_addHook', '_gasTrackYoutube', _gasTrackYoutube]);
 // Old API to be deprecated on v2.0
 _gas.push(['_addHook', '_trackYoutube', _gasTrackYoutube]);
 
+// -- gasEndYoutube--
+
 /**
  * Wrap-up
  */
@@ -1963,7 +1299,7 @@ while (_gas._queue.length > 0) {
 }
 
 // Import ga.js
-if (_gaq && _gaq.length >= 0) {
+if (typeof window._gat === 'undefined') {
     (function () {
         var ga = document.createElement('script');
         ga.type = 'text/javascript';
@@ -1979,22 +1315,28 @@ if (_gaq && _gaq.length >= 0) {
     }());
 }
 
-})(window);
+})(window);   
 
-_gas.push(function(){
-  this._DOMReady(function () {
-    try {
-      var oGSA_CPwrapGA = new GSA_CPwrapGA();
+// -- gasEnd--
 
-      if (!document._gsaDelayGA)
-    oGSA_CPwrapGA.onEveryPage();
-    } catch (e) {
-      try {
-        console.log(e.message);
-      } catch(e) {}
 
-    }
-  });
-});
+// Delayed loading of GSA_CPwrapGA
+_gas.push(function () {
+        this._DOMReady(function () {
+                try {
+                    var oGSA_CPwrapGA = new GSA_CPwrapGA();
+                    
+                    if (!document._gsaDelayGA)
+                        oGSA_CPwrapGA.onEveryPage();
+                } catch (e) {
+                    try {
+                        console.log(e.message);
+						console.log(e.stack.toString());
+                    } catch (e) {}
+                    
+                }
+            });
+    });
+
 
 
