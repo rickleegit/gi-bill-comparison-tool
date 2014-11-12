@@ -684,7 +684,9 @@ var GIBComparisonTool = (function () {
    * Calculate the rate of pursuit for Old GI Bill
    */
   var getRopOld = function () {
-    if (formData.rop_old == "full") {
+    if (calculated.institution_type == 'ojt') {
+      calculated.rop_old = formData.ojt_working / 30;
+    } else if (formData.rop_old == "full") {
       calculated.rop_old = 1;
     } else if (formData.rop_old == "three quarter") {
       calculated.rop_old = 0.75;
