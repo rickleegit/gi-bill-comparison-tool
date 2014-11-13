@@ -741,8 +741,12 @@ var GIBComparisonTool = (function () {
   var getKickerBenefit = function () {
     if (!formData.kicker_elig) {
       calculated.kicker_benefit = 0;
+    } else if (calculated.institution_type == 'ojt') {
+      calculated.kicker_benefit = formData.kicker * calculated.rop_ojt;
+    } else if (calculated.old_gi_bill == true || calculated.vre_only == true) {
+      calculated.kicker_benefit = formData.kicker * calculated.rop_old;
     } else {
-      calculated.kicker_benefit = formData.kicker;
+      calculated.kicker_benefit = formData.kicker * formData.rop;
     }
   };
   
