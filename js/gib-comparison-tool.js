@@ -541,7 +541,7 @@ var GIBComparisonTool = (function () {
     } else if (calculated.institution_type == 'ojt') {
       calculated.est_tuition_fees = '';
     } else if (formData.gi_bill_chap == 31  && (calculated.institution_type == 'flight' || calculated.institution_type == 'correspond')) {
-      calculated.est_tuition_fees = '$0';
+      calculated.est_tuition_fees = '$0 year';
     } else if (formData.gi_bill_chap == 31) {
       calculated.est_tuition_fees = 'Full Cost of Attendance';
     } else if (calculated.institution_type == 'flight') {
