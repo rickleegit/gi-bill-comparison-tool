@@ -13,7 +13,28 @@
 
 <script>
 $(document).ready(function() {
-    $('.info-link').tooltipster();
+    $('.info-link').tooltipster({
+      functionInit: function(item){
+        var tooltip_id = item.attr('aria-describedby');
+        if(tooltip_id) {
+          return $('#' + tooltip_id).html();
+        }
+      },
+      functionReady: function(item){
+        var tooltip_id = item.attr('aria-describedby');
+        $('#' + tooltip_id).attr('aria-hidden', false);
+      },
+      functionAfter: function(item){
+        var tooltip_id = item.attr('aria-describedby');
+        $('#' + tooltip_id).attr('aria-hidden', true);
+      }
+    });
+
+    $('.info-link').focus(function(){
+      $(this).tooltipster('show');
+    }).blur(function(){
+      $(this).tooltipster('hide');
+    });
 });
 </script>
 

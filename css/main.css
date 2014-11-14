@@ -19,6 +19,10 @@ sup {
   padding: 0;
 }
 
+.aria-tooltip {
+  display: none;
+}
+
 /* Comparison Tool base styles */
 
 .comparison a {

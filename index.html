@@ -99,7 +99,8 @@ layout: va
 
   <!-- Military Status -->
   <div class="form-group top-aligned">
-    <label for="military-status">Military Status: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#militarystatus" onclick="track('Tool Tips', 'Eligibility / Military Status');" target="_blank" title="Sample tool tip for Military Status" class="info-link">i</a></label>
+    <label for="military-status">Military Status: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#militarystatus" onclick="track('Tool Tips', 'Eligibility / Military Status');" target="_blank" class="info-link" aria-describedby="military-status-tooltip">i</a></label>
+    <span class="aria-tooltip" id="military-status-tooltip">Sample tool tip for Military Status</span>
     <select id="military-status" name="Military Status" alt="Select military status">
       <option value="veteran">Veteran</option>
       <option value="active duty">Active Duty</option>
