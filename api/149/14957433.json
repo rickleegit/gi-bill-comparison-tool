@@ -30,7 +30,7 @@
   "tuition_in_state": 2412,
   "tuition_out_of_state": 8556,
   "books": 1288,
-  "online_all": true,
+  "online_all": false,
   "p911_tuition_fees": 54700.13,
   "p911_recipients": 46,
   "p911_yellow_ribbon": null,

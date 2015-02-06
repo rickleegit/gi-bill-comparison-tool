@@ -1,6 +1,6 @@
 {
   "facility_code": "24003406",
-  "institution": "PRINCE INSTITUTE - ROCKY MOUNTAINS",
+  "institution": "PRINCE INSTITUTE-ROCKY MOUNTAINS",
   "city": "WESTMINSTER",
   "state": "CO",
   "zip": "80031",
@@ -30,7 +30,7 @@
   "tuition_in_state": 9685,
   "tuition_out_of_state": 9685,
   "books": 1200,
-  "online_all": false,
+  "online_all": true,
   "p911_tuition_fees": 1628.94,
   "p911_recipients": 1,
   "p911_yellow_ribbon": null,

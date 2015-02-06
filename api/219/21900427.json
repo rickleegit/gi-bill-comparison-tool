@@ -1,6 +1,6 @@
 {
   "facility_code": "21900427",
-  "institution": "KAPLAN UNIVERSITY - LINCOLN CAMPUS",
+  "institution": "KAPLAN UNIVERSITY-LINCOLN CAMPUS",
   "city": "LINCOLN",
   "state": "NE",
   "zip": "68508",
@@ -30,7 +30,7 @@
   "tuition_in_state": 15352,
   "tuition_out_of_state": 15352,
   "books": 0,
-  "online_all": true,
+  "online_all": false,
   "p911_tuition_fees": 290484.51,
   "p911_recipients": 33,
   "p911_yellow_ribbon": null,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 1,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

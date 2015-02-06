@@ -1,6 +1,6 @@
 {
   "facility_code": "31910521",
-  "institution": "SCHOOL OF THE MUSEUM OF FINE ARTS",
+  "institution": "SCHOOL OF THE MUSEUM OF FINE ARTS-BOSTON",
   "city": "BOSTON",
   "state": "MA",
   "zip": "02115",
@@ -36,7 +36,7 @@
   "p911_yellow_ribbon": 43687.84,
   "p911_yr_recipients": 7,
   "accredited": false,
-  "accreditation_type": "Hybrid",
+  "accreditation_type": "Regional",
   "accreditation_status": null,
   "complaints_facility_code": null,
   "complaints_financial_by_fac_code": null,

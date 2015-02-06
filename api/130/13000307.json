@@ -1,6 +1,6 @@
 {
   "facility_code": "13000307",
-  "institution": "SOUTHERN CONN STATE UNIVERSITY",
+  "institution": "SOUTHERN CONNECTICUT STATE UNIVERSITY",
   "city": "NEW HAVEN",
   "state": "CT",
   "zip": "06515",
@@ -16,7 +16,7 @@
   "student_veteran_link": "https://www.facebook.com/email/unreachable/#!/SCSUVeterans",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 43.7,

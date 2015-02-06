@@ -1,6 +1,6 @@
 {
   "facility_code": "14821511",
-  "institution": "GEORGIA MILITARY COLLEGE (WARNER ROBINS)",
+  "institution": "GEORGIA MILITARY COLLEGE-WARNER ROBINS",
   "city": "WARNER ROBINS",
   "state": "GA",
   "zip": "31093",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

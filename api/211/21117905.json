@@ -1,6 +1,6 @@
 {
   "facility_code": "21117905",
-  "institution": "ITT TECHNICAL INSTITUTE VISTA",
+  "institution": "ITT TECHNICAL INSTITUTE-VISTA",
   "city": "VISTA",
   "state": "CA",
   "zip": "92081",
@@ -10,7 +10,7 @@
   "ope": null,
   "bah": 1908,
   "poe": null,
-  "yr": null,
+  "yr": true,
   "gibill": null,
   "student_veteran": null,
   "student_veteran_link": null,

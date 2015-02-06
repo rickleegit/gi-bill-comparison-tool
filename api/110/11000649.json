@@ -1,6 +1,6 @@
 {
   "facility_code": "11000649",
-  "institution": "UNIV OF WISC-PLATTEVILLE",
+  "institution": "UNIVERSITY OF WISCONSIN-PLATTEVILLE",
   "city": "PLATTEVILLE",
   "state": "WI",
   "zip": "53818",
@@ -10,7 +10,7 @@
   "ope": "00392100",
   "bah": 1053,
   "poe": true,
-  "yr": null,
+  "yr": true,
   "gibill": 250,
   "student_veteran": null,
   "student_veteran_link": null,

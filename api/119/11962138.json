@@ -1,6 +1,6 @@
 {
   "facility_code": "11962138",
-  "institution": "PENN STATE UNIVERSITY FAYETTE/EBERLY CAMPUS",
+  "institution": "PENNSYLVANIA STATE UNIVERSITY-PENN STATE FAYETTE- EBERLY",
   "city": "LEMONT FURNACE",
   "state": "PA",
   "zip": "15456",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 43.8,

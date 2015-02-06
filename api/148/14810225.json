@@ -1,6 +1,6 @@
 {
   "facility_code": "14810225",
-  "institution": "STATE FAIR COMMUNITY COLLEGE - WHITEMAN AFB",
+  "institution": "STATE FAIR COMMUNITY COLLEGE WHITEMAN AFB",
   "city": "WHITEMAN AFB",
   "state": "MO",
   "zip": "65305",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 21.6,

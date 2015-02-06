@@ -1,6 +1,6 @@
 {
   "facility_code": "24905438",
-  "institution": "ART INSTITUTE OF PITTSBURGH",
+  "institution": "THE ART INSTITUTE OF PITTSBURGH",
   "city": "PITTSBURGH",
   "state": "PA",
   "zip": "15219",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

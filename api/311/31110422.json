@@ -1,6 +1,6 @@
 {
   "facility_code": "31110422",
-  "institution": "CENTRAL BIBLE COLLEGE - DETROIT EXTENSION",
+  "institution": "CENTRAL BIBLE COLLEGE-DETROIT EXTENSION",
   "city": "FARMINGTON HILLS",
   "state": "MI",
   "zip": "48334",
@@ -36,7 +36,7 @@
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,
-  "accreditation_type": "Regional",
+  "accreditation_type": null,
   "accreditation_status": null,
   "complaints_facility_code": null,
   "complaints_financial_by_fac_code": null,

@@ -1,6 +1,6 @@
 {
   "facility_code": "31800915",
-  "institution": "BUENA VISTA UNIVERSITY CRESTON CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-CRESTON",
   "city": "CRESTON",
   "state": "IA",
   "zip": "50801",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1017,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 6,
   "student_veteran": null,

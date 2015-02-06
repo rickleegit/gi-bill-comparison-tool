@@ -1,6 +1,6 @@
 {
   "facility_code": "21913348",
-  "institution": "STRAYER UNIVERSITY (TEAYS VALLEY CAMPUS)",
+  "institution": "STRAYER UNIVERSITY-WEST VIRGINIA",
   "city": "SCOTT DEPOT",
   "state": "WV",
   "zip": "25560",
@@ -51,17 +51,17 @@
   "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
-  "complaints_main_campus_roll_up": 2,
+  "complaints_main_campus_roll_up": 5,
   "complaints_financial_by_ope_id_do_not_sum": 1,
-  "complaints_quality_by_ope_id_do_not_sum": 0,
-  "complaints_refund_by_ope_id_do_not_sum": 0,
-  "complaints_marketing_by_ope_id_do_not_sum": 0,
+  "complaints_quality_by_ope_id_do_not_sum": 1,
+  "complaints_refund_by_ope_id_do_not_sum": 1,
+  "complaints_marketing_by_ope_id_do_not_sum": 1,
   "complaints_accreditation_by_ope_id_do_not_sum": 0,
   "complaints_degree_requirements_by_ope_id_do_not_sum": 0,
-  "complaints_student_loans_by_ope_id_do_not_sum": 0,
-  "complaints_grades_by_ope_id_do_not_sum": 0,
-  "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
+  "complaints_student_loans_by_ope_id_do_not_sum": 1,
+  "complaints_grades_by_ope_id_do_not_sum": 1,
+  "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

@@ -1,6 +1,6 @@
 {
   "facility_code": "14812118",
-  "institution": "NORTHWEST LOUISIANA TECH COLLEGE MINDEN",
+  "institution": "NORTHWEST LOUISIANA TECHNICAL COLLEGE MINDEN",
   "city": "MINDEN",
   "state": "LA",
   "zip": "71055",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 58.8,

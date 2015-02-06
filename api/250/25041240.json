@@ -1,6 +1,6 @@
 {
   "facility_code": "25041240",
-  "institution": "REMINGTON COLLEGE - COLUMBIA",
+  "institution": "REMINGTON COLLEGE-COLUMBIA CAMPUS",
   "city": "COLUMBIA",
   "state": "SC",
   "zip": "29210",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

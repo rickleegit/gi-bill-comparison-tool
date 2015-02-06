@@ -1,6 +1,6 @@
 {
   "facility_code": "25010833",
-  "institution": "PAUL MITCHELL THE SCHOOL FAYETTEVILLE(FORMER MONTGOMERY'S HAIR STYLING)",
+  "institution": "PAUL MITCHELL THE SCHOOL FAYETTEVILLE",
   "city": "FAYETTEVILLE",
   "state": "NC",
   "zip": "28303",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

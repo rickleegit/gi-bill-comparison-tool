@@ -1,6 +1,6 @@
 {
   "facility_code": "31807110",
-  "institution": "SAINT LEO UNIVERSITY - UNIVERSITY CAMPUS (ST LEO)",
+  "institution": "SAINT LEO UNIVERSITY UNIVERSITY CAMPUS",
   "city": "ST LEO",
   "state": "FL",
   "zip": "33574",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

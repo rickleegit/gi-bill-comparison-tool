@@ -1,6 +1,6 @@
 {
   "facility_code": "25054921",
-  "institution": "BRANFORD HALL CAREER INSTITUTE",
+  "institution": "BRANFORD HALL CAREER INSTITUTE-SPRINGFIELD CAMPUS",
   "city": "SPRINGFIELD",
   "state": "MA",
   "zip": "01104",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 1,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

@@ -1,6 +1,6 @@
 {
   "facility_code": "25446010",
-  "institution": "BEAUTY SCHOOLS OF AMERICA",
+  "institution": "BEAUTY SCHOOLS OF AMERICA-MIAMI",
   "city": "MIAMI",
   "state": "FL",
   "zip": "33144",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

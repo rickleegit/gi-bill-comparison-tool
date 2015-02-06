@@ -1,6 +1,6 @@
 {
   "facility_code": "25360932",
-  "institution": "SANFORD BROWN INSTITUTE - NYC",
+  "institution": "SANFORD-BROWN INST-NEW YORK",
   "city": "NEW YORK",
   "state": "NY",
   "zip": "10003",
@@ -36,7 +36,7 @@
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,
-  "accreditation_type": null,
+  "accreditation_type": "National",
   "accreditation_status": null,
   "complaints_facility_code": null,
   "complaints_financial_by_fac_code": null,

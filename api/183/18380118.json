@@ -1,6 +1,6 @@
 {
   "facility_code": "18380118",
-  "institution": "CENTRAL LOUISIANA TECH COLLEGE AVOYELLES",
+  "institution": "CENTRAL LOUISIANA TECHNICAL COLLEGE AVOYELLES",
   "city": "COTTONPORT",
   "state": "LA",
   "zip": "71327",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 78.4,

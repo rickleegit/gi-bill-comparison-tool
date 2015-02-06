@@ -1,6 +1,6 @@
 {
   "facility_code": "31800815",
-  "institution": "BUENA VISTA UNIVERSITY DENISON CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-DENISON",
   "city": "DENISON",
   "state": "IA",
   "zip": "51442",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1017,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 1,
   "student_veteran": null,

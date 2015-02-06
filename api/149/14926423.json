@@ -1,6 +1,6 @@
 {
   "facility_code": "14926423",
-  "institution": "NORTHLAND COMM & TECH COLLEGE",
+  "institution": "NORTHLAND COMMUNITY AND TECHNICAL COLLEGE",
   "city": "THIEF RIVER FALLS",
   "state": "MN",
   "zip": "56701",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 29.0,

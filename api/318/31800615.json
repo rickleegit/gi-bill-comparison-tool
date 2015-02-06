@@ -1,6 +1,6 @@
 {
   "facility_code": "31800615",
-  "institution": "BUENA VISTA UNIVERSITY MASON CITY CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-MASON CITY",
   "city": "MASON CITY",
   "state": "IA",
   "zip": "50401",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1071,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 11,
   "student_veteran": null,

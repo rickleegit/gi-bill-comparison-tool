@@ -1,6 +1,6 @@
 {
   "facility_code": "14913413",
-  "institution": "WILBUR WRIGHT COLLEGE",
+  "institution": "CITY COLLEGES OF CHICAGO-WILBUR WRIGHT COLLEGE",
   "city": "CHICAGO",
   "state": "IL",
   "zip": "60634",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

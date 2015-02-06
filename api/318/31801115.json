@@ -1,6 +1,6 @@
 {
   "facility_code": "31801115",
-  "institution": "BUENA VISTA UNIVERSITY-ESTERVILLE CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-ESTERVILLE",
   "city": "ESTHERVILLE",
   "state": "IA",
   "zip": "51334",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1017,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": null,
   "student_veteran": null,

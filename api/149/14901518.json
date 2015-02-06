@@ -1,6 +1,6 @@
 {
   "facility_code": "14901518",
-  "institution": "SOWELA TECHNICAL COMM COLLEGE LAKE CHARLES",
+  "institution": "SOWELA TECHNICAL COMMUNITY COLLEGE LAKE CHARLES",
   "city": "LAKE CHARLES",
   "state": "LA",
   "zip": "70615",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 40.0,

@@ -1,6 +1,6 @@
 {
   "facility_code": "14935401",
-  "institution": "WALLACE STATE C.C. - HANCEVILLE",
+  "institution": "GEORGE C WALLACE STATE COMMUNITY COLLEGE-HANCEVILLE",
   "city": "HANCEVILLE",
   "state": "AL",
   "zip": "35077",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

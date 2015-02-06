@@ -1,6 +1,6 @@
 {
   "facility_code": "14943433",
-  "institution": "GUILFORD TECH COMMUNITY COLLEGE",
+  "institution": "GUILFORD TECHNICAL COMMUNITY COLLEGE",
   "city": "JAMESTOWN",
   "state": "NC",
   "zip": "27282",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 11.9,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

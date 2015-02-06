@@ -1,6 +1,6 @@
 {
   "facility_code": "31801615",
-  "institution": "BUENA VISTA- NEWTON CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-NEWTON",
   "city": "NEWTON",
   "state": "IA",
   "zip": "50208",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1071,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 1,
   "student_veteran": null,

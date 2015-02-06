@@ -1,6 +1,6 @@
 {
   "facility_code": "11906333",
-  "institution": "UNIVERISTY OF NORTH CAROLINA AT CHAPEL HILL/KENAN FLAGLER BUSINESS SCHOOL",
+  "institution": "UNIVERSITY OF NORTH CAROLINA AT CHAPEL HILL-KENAN FLAGLER BUSINESS SCHOOL",
   "city": "CHAPEL HILL",
   "state": "NC",
   "zip": "27599",
@@ -10,7 +10,7 @@
   "ope": "00297400",
   "bah": 1320,
   "poe": true,
-  "yr": null,
+  "yr": true,
   "gibill": 91,
   "student_veteran": true,
   "student_veteran_link": null,

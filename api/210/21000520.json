@@ -1,9 +1,9 @@
 {
   "facility_code": "21000520",
-  "institution": "KAPLAN UNIVERSITY - HAGERSTOWN",
+  "institution": "KAPLAN UNIVERSITY-HAGERSTOWN",
   "city": "HAGERSTOWN",
   "state": "MD",
-  "zip": "21742",
+  "zip": "21740",
   "country": "USA",
   "type": "For Profit",
   "cross": 162681,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 1,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

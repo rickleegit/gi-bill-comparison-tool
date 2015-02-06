@@ -1,6 +1,6 @@
 {
   "facility_code": "18386818",
-  "institution": "SOUTH LOUISIANA COMM COLLEGE  CHARLES",
+  "institution": "SOUTH LOUISIANA COMMUNITY COLLEGE CHARLES",
   "city": "VILLE PLATTE",
   "state": "LA",
   "zip": "70586",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 9.6,

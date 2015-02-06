@@ -1,6 +1,6 @@
 {
   "facility_code": "31801415",
-  "institution": "BUENA VISTA UNIVERSITY- LE MARS CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-LE MARS",
   "city": "LE MARS",
   "state": "IA",
   "zip": "51031",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1053,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 2,
   "student_veteran": null,

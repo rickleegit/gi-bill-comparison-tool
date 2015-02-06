@@ -1,6 +1,6 @@
 {
   "facility_code": "21817310",
-  "institution": "EVEREST UNIVERSITY - ORANGE PARK",
+  "institution": "EVEREST UNIVERSITY-ORANGE PARK",
   "city": "ORANGE PARK",
   "state": "FL",
   "zip": "32073",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 1,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

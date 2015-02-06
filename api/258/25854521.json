@@ -1,6 +1,6 @@
 {
   "facility_code": "25854521",
-  "institution": "UNIVERSAL TECHNICAL INSTITUTE-NORWOOD, MA",
+  "institution": "UNIVERSAL TECHNICAL INSTITUTE OF MASSACHUSETTS INC",
   "city": "NORWOOD",
   "state": "MA",
   "zip": "02062",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

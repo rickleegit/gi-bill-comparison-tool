@@ -1,6 +1,6 @@
 {
   "facility_code": "11057210",
-  "institution": "UNIVERSITY OF ARKANSAS-GRAD RESIDENT CTR HURLBURT FIELD",
+  "institution": "UNIVERSITY OF ARKANSAS GRADUATE RESIDENT CENTER HURLBURT FIELD",
   "city": "HURLBURT FIELD",
   "state": "FL",
   "zip": "32544",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

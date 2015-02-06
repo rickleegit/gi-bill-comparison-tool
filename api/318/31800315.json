@@ -1,6 +1,6 @@
 {
   "facility_code": "31800315",
-  "institution": "BUENA VISTA UNIVERSITY (SPENCER) LAKES & PRAIRIES CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-SPENCER",
   "city": "SPENCER",
   "state": "IA",
   "zip": "51301",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1017,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 2,
   "student_veteran": null,

@@ -1,6 +1,6 @@
 {
   "facility_code": "31800515",
-  "institution": "BUENA VISTA UNIVERSITY MARSHALLTOWN CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-MARSHALLTOWN",
   "city": "MARSHALLTOWN",
   "state": "IA",
   "zip": "50158",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1035,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 7,
   "student_veteran": null,

@@ -1,6 +1,6 @@
 {
   "facility_code": "21974435",
-  "institution": "CHAMBERLAIN COLLEGE OF NURSING - CLEVELAND",
+  "institution": "CHAMBERLAIN COLLEGE OF NURSING-CLEVELAND",
   "city": "CLEVELAND",
   "state": "OH",
   "zip": "44103",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

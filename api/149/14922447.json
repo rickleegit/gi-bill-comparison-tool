@@ -9,7 +9,7 @@
   "cross": 236753,
   "ope": "00379600",
   "bah": 1473,
-  "poe": null,
+  "poe": true,
   "yr": null,
   "gibill": 960,
   "student_veteran": null,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

@@ -1,6 +1,6 @@
 {
   "facility_code": "25018303",
-  "institution": "ARIZONA SCHOOL OF MASSAGE THERAPY - TEMPE",
+  "institution": "ARIZONA SCHOOL OF MASSAGE THERAPY-TEMPE",
   "city": "TEMPE",
   "state": "AZ",
   "zip": "85282",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

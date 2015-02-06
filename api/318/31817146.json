@@ -1,6 +1,6 @@
 {
   "facility_code": "31817146",
-  "institution": "SAINT LEO UNIVERSITY  - FT LEE  CTR",
+  "institution": "SAINT LEO UNIVERSITY-FT LEE",
   "city": "FT LEE",
   "state": "VA",
   "zip": "23801",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

@@ -1,6 +1,6 @@
 {
   "facility_code": "24978425",
-  "institution": "PINNACLE CAREER INSTITUTE",
+  "institution": "PINNACLE CAREER INSTITUTE-SOUTH KANSAS CITY",
   "city": "KANSAS CITY",
   "state": "MO",
   "zip": "64131",
@@ -30,7 +30,7 @@
   "tuition_in_state": 13848,
   "tuition_out_of_state": 13848,
   "books": 1109,
-  "online_all": true,
+  "online_all": false,
   "p911_tuition_fees": 995372.69,
   "p911_recipients": 100,
   "p911_yellow_ribbon": 2940.0,

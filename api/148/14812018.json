@@ -1,6 +1,6 @@
 {
   "facility_code": "14812018",
-  "institution": "SOUTH LOUISIANA COMM COLLEGE  T H HARRIS",
+  "institution": "SOUTH LOUISIANA COMMUNITY COLLEGE TH HARRIS",
   "city": "OPELOUSAS",
   "state": "LA",
   "zip": "70570",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 9.6,

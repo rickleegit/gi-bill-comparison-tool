@@ -1,6 +1,6 @@
 {
   "facility_code": "11939138",
-  "institution": "PENN STATE UNIVERSITY - UNIVERSITY PARK",
+  "institution": "PENNSYLVANIA STATE UNIVERSITY-MAIN CAMPUS",
   "city": "UNIVERSITY PARK",
   "state": "PA",
   "zip": "16802",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 85.6,

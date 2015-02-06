@@ -1,9 +1,9 @@
 {
   "facility_code": "24992410",
-  "institution": "FORTIS COLLEGE - ORANGE PARK",
+  "institution": "FORTIS COLLEGE-ORANGE PARK",
   "city": "ORANGE PARK",
   "state": "FL",
-  "zip": "32073",
+  "zip": "32065",
   "country": "USA",
   "type": "For Profit",
   "cross": 439792,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

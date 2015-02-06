@@ -1,6 +1,6 @@
 {
   "facility_code": "31818210",
-  "institution": "SAINT LEO UNIVERSITY RESIDENT CTR - NAVAL STA MAYPORT",
+  "institution": "SAINT LEO UNIVERSITY RESIDENT CENTER NAVAL STATION MAYPORT",
   "city": "NAVAL STATION MAYPORT",
   "state": "FL",
   "zip": "32228",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

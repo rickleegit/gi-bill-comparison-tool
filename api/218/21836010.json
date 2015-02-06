@@ -1,6 +1,6 @@
 {
   "facility_code": "21836010",
-  "institution": "SANFORD BROWN COLLEGE - TAMPA",
+  "institution": "SANFORD-BROWN COLLEGE-TAMPA",
   "city": "TAMPA",
   "state": "FL",
   "zip": "33607",
@@ -36,8 +36,8 @@
   "p911_yellow_ribbon": 40112.37,
   "p911_yr_recipients": 41,
   "accredited": true,
-  "accreditation_type": null,
-  "accreditation_status": null,
+  "accreditation_type": "National",
+  "accreditation_status": "Probation",
   "complaints_facility_code": null,
   "complaints_financial_by_fac_code": null,
   "complaints_quality_by_fac_code": null,

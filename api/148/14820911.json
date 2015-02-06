@@ -1,6 +1,6 @@
 {
   "facility_code": "14820911",
-  "institution": "GEORGIA MILITARY COLLEGE (COLUMBUS)",
+  "institution": "GEORGIA MILITARY COLLEGE-COLUMBUS",
   "city": "COLUMBUS",
   "state": "GA",
   "zip": "31909",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

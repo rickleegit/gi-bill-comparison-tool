@@ -1,6 +1,6 @@
 {
   "facility_code": "24979435",
-  "institution": "FORTIS COLLEGE - CENTERVILLE",
+  "institution": "FORTIS COLLEGE-CENTERVILLE",
   "city": "CENTERVILLE",
   "state": "OH",
   "zip": "45459",
@@ -37,7 +37,7 @@
   "p911_yr_recipients": null,
   "accredited": true,
   "accreditation_type": "National",
-  "accreditation_status": "Probation",
+  "accreditation_status": null,
   "complaints_facility_code": null,
   "complaints_financial_by_fac_code": null,
   "complaints_quality_by_fac_code": null,

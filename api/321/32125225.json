@@ -1,6 +1,6 @@
 {
   "facility_code": "32125225",
-  "institution": "UMKC SCHOOL OF MEDICINE",
+  "institution": "UNIVERSITY OF MISSOURI KANSAS CITY SCHOOL OF MEDICINE",
   "city": "KANSAS CITY",
   "state": "MO",
   "zip": "64108",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 43.9,

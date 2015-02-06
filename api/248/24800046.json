@@ -1,6 +1,6 @@
 {
   "facility_code": "24800046",
-  "institution": "CENTURA COLLEGE",
+  "institution": "CENTURA COLLEGE-VIRGINIA BEACH",
   "city": "VIRGINIA BEACH",
   "state": "VA",
   "zip": "23452",
@@ -30,7 +30,7 @@
   "tuition_in_state": 16912,
   "tuition_out_of_state": 16912,
   "books": 2306,
-  "online_all": true,
+  "online_all": false,
   "p911_tuition_fees": 885143.97,
   "p911_recipients": 73,
   "p911_yellow_ribbon": 20258.5,

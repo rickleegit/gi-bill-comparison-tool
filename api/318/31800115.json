@@ -1,6 +1,6 @@
 {
   "facility_code": "31800115",
-  "institution": "BUENA VISTA UNIVERSITY  MAIN CAMPUS (STORM LAKE)",
+  "institution": "BUENA VISTA UNIVERSITY",
   "city": "STORM LAKE",
   "state": "IA",
   "zip": "50588",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 1017,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 41,
   "student_veteran": null,

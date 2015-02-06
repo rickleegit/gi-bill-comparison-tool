@@ -1,6 +1,6 @@
 {
   "facility_code": "11000626",
-  "institution": "UNIVERSITY OF MONTANA - WESTERN",
+  "institution": "UNIVERSITY OF MONTANA-WESTERN",
   "city": "DILLON",
   "state": "MT",
   "zip": "59725",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 41.6,

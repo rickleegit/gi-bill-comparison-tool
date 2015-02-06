@@ -1,6 +1,6 @@
 {
   "facility_code": "11901425",
-  "institution": "LINCOLN UNIVERSITY - FT LEONARD WOOD BRANCH",
+  "institution": "LINCOLN UNIVERSITY FORT LEONARD WOOD BRANCH",
   "city": "JEFFERSON CITY",
   "state": "MO",
   "zip": "65101",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

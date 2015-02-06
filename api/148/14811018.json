@@ -1,6 +1,6 @@
 {
   "facility_code": "14811018",
-  "institution": "SOUTH CENTRAL LOUISIANA TECH COLL RIVER",
+  "institution": "SOUTH CENTRAL LOUISIANA TECHNICAL COLLEGE RIVER",
   "city": "RESERVE",
   "state": "LA",
   "zip": "70084",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 70.7,

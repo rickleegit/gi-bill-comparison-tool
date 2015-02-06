@@ -1,6 +1,6 @@
 {
   "facility_code": "31902815",
-  "institution": "BUENA VISTA UNIVERSITY- CARROLL CENTER",
+  "institution": "BUENA VISTA UNIVERSITY-CARROLL",
   "city": "CARROLL",
   "state": "IA",
   "zip": "51401",
@@ -9,7 +9,7 @@
   "cross": 153001,
   "ope": "00184700",
   "bah": 978,
-  "poe": null,
+  "poe": true,
   "yr": true,
   "gibill": 2,
   "student_veteran": null,

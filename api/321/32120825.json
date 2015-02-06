@@ -1,6 +1,6 @@
 {
   "facility_code": "32120825",
-  "institution": "ST. LUKE'S HOSPITAL/UMKC SCHOOL OF MEDICINE",
+  "institution": "ST LUKE'S HOSPITAL/UMKC SCHOOL OF MEDICINE",
   "city": "KANSAS CITY",
   "state": "MO",
   "zip": "64111",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 43.9,

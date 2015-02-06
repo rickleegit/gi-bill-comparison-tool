@@ -1,6 +1,6 @@
 {
   "facility_code": "18018118",
-  "institution": "NORTHWEST LOUISIANA TECH COLLEGE SABINE",
+  "institution": "NORTHWEST LOUISIANA TECHNICAL COLLEGE SABINE",
   "city": "MANY",
   "state": "LA",
   "zip": "71449",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 58.8,

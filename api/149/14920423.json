@@ -1,6 +1,6 @@
 {
   "facility_code": "14920423",
-  "institution": "MINNEAPOLIS COMM & TECH COLL",
+  "institution": "MINNEAPOLIS COMMUNITY AND TECHNICAL COLLEGE",
   "city": "MINNEAPOLIS",
   "state": "MN",
   "zip": "55403",
@@ -16,7 +16,7 @@
   "student_veteran_link": "http://www.facebook.com/StudentVeteransMCTC",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 12.7,

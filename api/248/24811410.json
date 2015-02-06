@@ -1,6 +1,6 @@
 {
   "facility_code": "24811410",
-  "institution": "FLORIDA TECHNICAL COLLEGE - PEMBROKE PINES",
+  "institution": "FLORIDA TECHNICAL COLLEGE-PEMBROKE PINES",
   "city": "PEMBROKE PINES",
   "state": "FL",
   "zip": "33027",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 1,
   "complaints_transcript_by_ope_id_do_not_sum": 1,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

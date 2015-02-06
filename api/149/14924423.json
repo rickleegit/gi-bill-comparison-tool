@@ -1,6 +1,6 @@
 {
   "facility_code": "14924423",
-  "institution": "NORTHLAND COMM & TECH COLLEGE-EAST GRAND FORKS",
+  "institution": "NORTHLAND COMMUNITY AND TECHNICAL COLLEGE-EAST GRAND FORKS",
   "city": "EAST GRAND FORKS",
   "state": "MN",
   "zip": "56721",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 29.0,

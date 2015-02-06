@@ -1,6 +1,6 @@
 {
   "facility_code": "31936105",
-  "institution": "NORTHWEST UNIVERSITY  SACRAMENTO CAMPUS",
+  "institution": "NORTHWEST UNIVERSITY-SACRAMENTO",
   "city": "SACRAMENTO",
   "state": "CA",
   "zip": "95827",
@@ -36,7 +36,7 @@
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,
-  "accreditation_type": "Regional",
+  "accreditation_type": "Hybrid",
   "accreditation_status": null,
   "complaints_facility_code": null,
   "complaints_financial_by_fac_code": null,

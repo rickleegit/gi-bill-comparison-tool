@@ -10,7 +10,7 @@
   "ope": "01039500",
   "bah": 2052,
   "poe": null,
-  "yr": null,
+  "yr": true,
   "gibill": 23,
   "student_veteran": true,
   "student_veteran_link": "http://www.usdvets.org",

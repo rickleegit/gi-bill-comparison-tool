@@ -1,6 +1,6 @@
 {
   "facility_code": "21002444",
-  "institution": "STRAYER UNIVERSITY - ONLINE",
+  "institution": "STRAYER UNIVERSITY-ONLINE-SALT LAKE CITY",
   "city": "SALT LAKE CITY",
   "state": "UT",
   "zip": "84116",
@@ -10,7 +10,7 @@
   "ope": null,
   "bah": 1413,
   "poe": null,
-  "yr": null,
+  "yr": true,
   "gibill": null,
   "student_veteran": null,
   "student_veteran_link": null,

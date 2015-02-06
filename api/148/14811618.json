@@ -1,6 +1,6 @@
 {
   "facility_code": "14811618",
-  "institution": "NORTHSHORE TECHNICAL COLLEGE FLORIDA",
+  "institution": "NORTHSHORE TECHNICAL COMMUNITY COLLEGE FLORIDA",
   "city": "GREENSBURG",
   "state": "LA",
   "zip": "70441",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 47.3,

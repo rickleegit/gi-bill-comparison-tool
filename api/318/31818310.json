@@ -1,6 +1,6 @@
 {
   "facility_code": "31818310",
-  "institution": "SAINT LEO UNIVERSITY - NE FLORIDA (PALATKA)EGLIN AFB",
+  "institution": "SAINT LEO UNIVERSITY NORTH EAST FLORIDA",
   "city": "PALATKA",
   "state": "FL",
   "zip": "32177",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

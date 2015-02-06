@@ -1,6 +1,6 @@
 {
   "facility_code": "15009814",
-  "institution": "VINCENNES UNIVERSITY JASPER - CONTINUING EDUCATION",
+  "institution": "VINCENNES UNIVERSITY JASPER-CONTINUING EDUCATION",
   "city": "JASPER",
   "state": "IN",
   "zip": "47546",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

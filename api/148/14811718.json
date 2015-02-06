@@ -1,6 +1,6 @@
 {
   "facility_code": "14811718",
-  "institution": "RIVER PARISHES COMMUNITY COLLEGE - SORRENTO",
+  "institution": "RIVER PARISHES COMMUNITY COLLEGE SORRENTO",
   "city": "SORRENTO",
   "state": "LA",
   "zip": "70778",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 47.3,

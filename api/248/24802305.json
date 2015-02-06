@@ -1,6 +1,6 @@
 {
   "facility_code": "24802305",
-  "institution": "SANTA BARBARA BUSINESS COLLEGE (BAKERSFIELD)",
+  "institution": "SANTA BARBARA BUSINESS COLLEGE-BAKERSFIELD",
   "city": "BAKERSFIELD",
   "state": "CA",
   "zip": "93309",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

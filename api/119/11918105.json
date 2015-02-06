@@ -1,6 +1,6 @@
 {
   "facility_code": "11918105",
-  "institution": "CALIFORNIA STATE UNIVERSITY NORTHRIDGE",
+  "institution": "CALIFORNIA STATE UNIV-NORTHRIDGE",
   "city": "NORTHRIDGE",
   "state": "CA",
   "zip": "91330",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 48.0,

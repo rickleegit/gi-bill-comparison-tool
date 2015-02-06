@@ -1,6 +1,6 @@
 {
   "facility_code": "31000238",
-  "institution": "THE AMERICAN COLLEGE",
+  "institution": "AMERICAN COLLEGE OF FINANCIAL SERVICES",
   "city": "BRYN MAWR",
   "state": "PA",
   "zip": "19010",
@@ -30,7 +30,7 @@
   "tuition_in_state": null,
   "tuition_out_of_state": null,
   "books": null,
-  "online_all": false,
+  "online_all": true,
   "p911_tuition_fees": 66201.78,
   "p911_recipients": 35,
   "p911_yellow_ribbon": null,

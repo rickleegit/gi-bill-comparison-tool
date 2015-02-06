@@ -1,6 +1,6 @@
 {
   "facility_code": "32925114",
-  "institution": "ADAMS COUNTY EMS TRAINING ACADEMY, ADAMS COUNTY MEMORIAL HOSPITAL",
+  "institution": "ADAMS COUNTY EMS TRAINING ACADEMY ADAMS COUNTY MEMORIAL HOSPITAL",
   "city": "DECATUR",
   "state": "IN",
   "zip": "46733",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

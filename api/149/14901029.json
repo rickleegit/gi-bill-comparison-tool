@@ -1,6 +1,6 @@
 {
   "facility_code": "14901029",
-  "institution": "NEW HAMPSHIRE TECHNICAL INSTITUTE (NHTI) CONCORD'S COMM COLLEGE",
+  "institution": "NEW HAMPSHIRE TECHNICAL INSTITUTE-CONCORD'S COMMUNITY COLLEGE",
   "city": "CONCORD",
   "state": "NH",
   "zip": "03301",
@@ -16,7 +16,7 @@
   "student_veteran_link": "http://www.NHTI.edu",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 23.3,

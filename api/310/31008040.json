@@ -1,6 +1,6 @@
 {
   "facility_code": "31008040",
-  "institution": "SAINT LEO UNIVERSITY - JOINT BASE SHAW",
+  "institution": "SAINT LEO UNIVERSITY",
   "city": "SHAW AFB",
   "state": "SC",
   "zip": "29152",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": null
 }

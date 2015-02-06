@@ -1,6 +1,6 @@
 {
   "facility_code": "219M4543",
-  "institution": "THE ART INSTITUTE OF DALLAS A CAMPUS OF SOUTH UNIVERSITY",
+  "institution": "ART INSTITUTE OF DALLAS (THE)",
   "city": "DALLAS",
   "state": "TX",
   "zip": "75231",
@@ -36,7 +36,7 @@
   "p911_yellow_ribbon": 431448.63,
   "p911_yr_recipients": 116,
   "accredited": true,
-  "accreditation_type": "Regional",
+  "accreditation_type": null,
   "accreditation_status": null,
   "complaints_facility_code": null,
   "complaints_financial_by_fac_code": null,

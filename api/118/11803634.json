@@ -1,6 +1,6 @@
 {
   "facility_code": "11803634",
-  "institution": "UNIVERSITY OF NORTH DAKOTA  FLIGHT TRAINING (JOHN D ODEGARD SCHL OF AEROSPACE)",
+  "institution": "UNIVERSITY OF NORTH DAKOTA FLIGHT TRAINING",
   "city": "GRAND FORKS",
   "state": "ND",
   "zip": "58203",
@@ -16,7 +16,7 @@
   "student_veteran_link": "https://und.collegiatelink.net/organization/undmacv",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": null,
   "correspondence": null,
   "flight": true,
   "grad_rate": 52.4,

@@ -1,7 +1,7 @@
 {
   "facility_code": "21060410",
-  "institution": "KAPLAN UNIVERSITY - FT LAUDERDALE",
-  "city": "FT. LAUDERDALE",
+  "institution": "KAPLAN UNIVERSITY-FT LAUDERDALE",
+  "city": "FT LAUDERDALE",
   "state": "FL",
   "zip": "33309",
   "country": "USA",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 1,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

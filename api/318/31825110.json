@@ -1,6 +1,6 @@
 {
   "facility_code": "31825110",
-  "institution": "COLUMBIA COLLEGE - PATRICK AFB",
+  "institution": "COLUMBIA COLLEGE-PATRICK AFB",
   "city": "PATRICK AFB",
   "state": "FL",
   "zip": "32925",
@@ -51,8 +51,8 @@
   "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
-  "complaints_main_campus_roll_up": 1,
-  "complaints_financial_by_ope_id_do_not_sum": 1,
+  "complaints_main_campus_roll_up": 2,
+  "complaints_financial_by_ope_id_do_not_sum": 2,
   "complaints_quality_by_ope_id_do_not_sum": 0,
   "complaints_refund_by_ope_id_do_not_sum": 0,
   "complaints_marketing_by_ope_id_do_not_sum": 0,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 1,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": null
 }

@@ -52,8 +52,6 @@ task :build do
   CSV.foreach("_data/data.csv", :encoding => "iso-8859-1:utf-8", :headers => true, :header_converters => :symbol) do |row|
     f = row.fields
 
-
-
     # Convert data types (booleans)
     f.map! do |f|
       if f == "Yes"

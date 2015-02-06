@@ -1,6 +1,6 @@
 {
   "facility_code": "15009442",
-  "institution": "TENNESSEE COLLEGE OF APPLIED TECHNOLOGY - JACKSBORO",
+  "institution": "TENNESSEE COLLEGE OF APPLIED TECHNOLOGY-JACKSBORO",
   "city": "JACKSBORO",
   "state": "TN",
   "zip": "37757",
@@ -30,7 +30,7 @@
   "tuition_in_state": 3477,
   "tuition_out_of_state": 3477,
   "books": 2500,
-  "online_all": false,
+  "online_all": true,
   "p911_tuition_fees": 10951.9,
   "p911_recipients": 8,
   "p911_yellow_ribbon": null,
