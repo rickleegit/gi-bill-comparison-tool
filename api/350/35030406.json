@@ -1,6 +1,6 @@
 {
   "facility_code": "35030406",
-  "institution": "THE ROLF INSTITUTE",
+  "institution": "ROLF INSTITUTE OF STRUCTURAL INTEGRATION",
   "city": "BOULDER",
   "state": "CO",
   "zip": "80301",
@@ -22,8 +22,8 @@
   "grad_rate": null,
   "grad_rate_rank": null,
   "default_rate": 0.0,
-  "avg_stu_loan_debt": 7716,
-  "avg_stu_loan_debt_rank": 765,
+  "avg_stu_loan_debt": 6333,
+  "avg_stu_loan_debt_rank": 367,
   "indicator_group": 5,
   "salary": null,
   "calendar": "nontraditional",

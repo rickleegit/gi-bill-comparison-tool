@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 45.0,
-  "grad_rate_rank": 2032,
-  "default_rate": 0.0,
-  "avg_stu_loan_debt": 24886,
-  "avg_stu_loan_debt_rank": 2016,
+  "grad_rate": 45.5,
+  "grad_rate_rank": 2059,
+  "default_rate": 27.7,
+  "avg_stu_loan_debt": 27910,
+  "avg_stu_loan_debt_rank": 2019,
   "indicator_group": 5,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

@@ -1,6 +1,6 @@
 {
   "facility_code": "21804405",
-  "institution": "ART INSTITUTE OF CALIFORNIA-SILICON VLY",
+  "institution": "THE ART INSTITUTE OF CALIFORNIA-ARGOSY UNIVERSITY-SILICON VALLEY",
   "city": "SUNNYVALE",
   "state": "CA",
   "zip": "94086",
@@ -21,9 +21,9 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 15.8,
-  "avg_stu_loan_debt": 10787,
-  "avg_stu_loan_debt_rank": 773,
+  "default_rate": 19.4,
+  "avg_stu_loan_debt": 12955,
+  "avg_stu_loan_debt_rank": 901,
   "indicator_group": 2,
   "salary": null,
   "calendar": "quarters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 2
 }

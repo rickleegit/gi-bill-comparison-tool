@@ -1,6 +1,6 @@
 {
   "facility_code": "25092743",
-  "institution": "AVEDA INSTITUTE HOUSTON",
+  "institution": "AVEDA INSTITUTE-HOUSTON",
   "city": "SHENANDOAH",
   "state": "TX",
   "zip": "77385",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 73.9,
-  "grad_rate_rank": 983,
-  "default_rate": 16.6,
-  "avg_stu_loan_debt": 8874,
-  "avg_stu_loan_debt_rank": 970,
+  "grad_rate": 70.4,
+  "grad_rate_rank": 1164,
+  "default_rate": 11.4,
+  "avg_stu_loan_debt": 9833,
+  "avg_stu_loan_debt_rank": 1396,
   "indicator_group": 5,
   "salary": null,
   "calendar": "nontraditional",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

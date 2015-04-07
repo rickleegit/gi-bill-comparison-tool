@@ -1,6 +1,6 @@
 {
   "facility_code": "25001307",
-  "institution": "PORTER AND CHESTER INSTITUTE OF WATERTOWN",
+  "institution": "PORTER AND CHESTER INSTITUTE OF STRATFORD",
   "city": "WATERTOWN OAKVILLE",
   "state": "CT",
   "zip": "06779",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 70.0,
-  "grad_rate_rank": 1175,
-  "default_rate": 24.0,
-  "avg_stu_loan_debt": 12422,
-  "avg_stu_loan_debt_rank": 1812,
+  "grad_rate": 72.0,
+  "grad_rate_rank": 1086,
+  "default_rate": 21.7,
+  "avg_stu_loan_debt": 12420,
+  "avg_stu_loan_debt_rank": 1797,
   "indicator_group": 5,
   "salary": null,
   "calendar": "quarters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 2
 }

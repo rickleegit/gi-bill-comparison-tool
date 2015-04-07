@@ -1,6 +1,6 @@
 {
   "facility_code": "21917164",
-  "institution": "INSTITUTE OF CLINICAL ACUPUNCTURE & ORIENTAL MEDICINE",
+  "institution": "INSTITUTE OF CLINICAL ACUPUNCTURE & ORIENTAL MED",
   "city": "HONOLULU",
   "state": "HI",
   "zip": "96813",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 0.0,
+  "default_rate": 5.2,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 4,

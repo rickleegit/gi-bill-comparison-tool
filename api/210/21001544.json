@@ -1,6 +1,6 @@
 {
   "facility_code": "21001544",
-  "institution": "ART INSTITUTE (THE) OF SALT LAKE CITY",
+  "institution": "THE ART INSTITUTE-SALT LAKE CITY",
   "city": "DRAPER",
   "state": "UT",
   "zip": "84020",
@@ -19,12 +19,12 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": null,
-  "grad_rate_rank": null,
-  "default_rate": 26.2,
-  "avg_stu_loan_debt": 15000,
-  "avg_stu_loan_debt_rank": 992,
-  "indicator_group": 2,
+  "grad_rate": 14.3,
+  "grad_rate_rank": 1816,
+  "default_rate": 24.6,
+  "avg_stu_loan_debt": 14324,
+  "avg_stu_loan_debt_rank": 428,
+  "indicator_group": 1,
   "salary": null,
   "calendar": "quarters",
   "tuition_in_state": 14896,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 1,
   "complaints_transcript_by_ope_id_do_not_sum": 1,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 4
 }

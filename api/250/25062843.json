@@ -1,6 +1,6 @@
 {
   "facility_code": "25062843",
-  "institution": "CENTRAL TEXAS BEAUTY COLLEGE ROUND ROCK",
+  "institution": "CENTRAL TEXAS BEAUTY COL-ROUND ROCK",
   "city": "ROUND ROCK",
   "state": "TX",
   "zip": "78664",
@@ -19,8 +19,8 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 69.5,
-  "grad_rate_rank": 1211,
+  "grad_rate": 77.4,
+  "grad_rate_rank": 795,
   "default_rate": 0.0,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

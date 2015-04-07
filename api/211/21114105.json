@@ -1,6 +1,6 @@
 {
   "facility_code": "21114105",
-  "institution": "ART INSTITUTE OF CALIFORNIA-HOLLYWOOD",
+  "institution": "THE ART INSTITUTE OF CALIFORNIA-ARGOSY UNIVERSITY HOLLYWOOD",
   "city": "NORTH HOLLYWOOD",
   "state": "CA",
   "zip": "91601",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 26.6,
-  "grad_rate_rank": 1605,
-  "default_rate": 15.8,
-  "avg_stu_loan_debt": 10787,
-  "avg_stu_loan_debt_rank": 192,
+  "grad_rate": 20.0,
+  "grad_rate_rank": 1726,
+  "default_rate": 19.4,
+  "avg_stu_loan_debt": 12955,
+  "avg_stu_loan_debt_rank": 268,
   "indicator_group": 1,
   "salary": null,
   "calendar": "quarters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 2
 }

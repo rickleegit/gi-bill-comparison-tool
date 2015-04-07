@@ -1,6 +1,6 @@
 {
   "facility_code": "35009705",
-  "institution": "CENTER FOR EMPLOYMENT TRNG-EL CENTRO",
+  "institution": "CET-EL CENTRO",
   "city": "EL CENTRO",
   "state": "CA",
   "zip": "92243",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 89.3,
-  "grad_rate_rank": 296,
-  "default_rate": 22.0,
-  "avg_stu_loan_debt": 5250,
-  "avg_stu_loan_debt_rank": 262,
+  "grad_rate": 92.6,
+  "grad_rate_rank": 197,
+  "default_rate": 22.2,
+  "avg_stu_loan_debt": 5500,
+  "avg_stu_loan_debt_rank": 228,
   "indicator_group": 5,
   "salary": null,
   "calendar": "nontraditional",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 1,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

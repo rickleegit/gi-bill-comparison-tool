@@ -1,6 +1,6 @@
 {
   "facility_code": "15367532",
-  "institution": "SCHOOL OF PROFESS HORTICULTURE",
+  "institution": "SCHOOL OF PROFESSIONAL HORTICULTURE AT THE NEW YORK BOTANICAL GARDEN",
   "city": "BRONX",
   "state": "NY",
   "zip": "10458",
@@ -22,8 +22,8 @@
   "grad_rate": 100.0,
   "grad_rate_rank": 1,
   "default_rate": 0.0,
-  "avg_stu_loan_debt": null,
-  "avg_stu_loan_debt_rank": null,
+  "avg_stu_loan_debt": 15250,
+  "avg_stu_loan_debt_rank": 1912,
   "indicator_group": 5,
   "salary": null,
   "calendar": "nontraditional",

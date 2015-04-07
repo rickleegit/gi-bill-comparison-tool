@@ -16,14 +16,14 @@
   "student_veteran_link": "https://www.facebook.com/#!/SVAKeiserUniversityOrlando",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": null,
+  "eight_keys": true,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 55.3,
-  "grad_rate_rank": 216,
-  "default_rate": 18.6,
-  "avg_stu_loan_debt": 19797,
-  "avg_stu_loan_debt_rank": 1191,
+  "grad_rate": 57.1,
+  "grad_rate_rank": 210,
+  "default_rate": 14.9,
+  "avg_stu_loan_debt": 22253,
+  "avg_stu_loan_debt_rank": 1275,
   "indicator_group": 2,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 2,
   "complaints_transcript_by_ope_id_do_not_sum": 1,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

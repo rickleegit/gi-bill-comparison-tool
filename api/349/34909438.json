@@ -1,6 +1,6 @@
 {
   "facility_code": "34909438",
-  "institution": "PITTSBURGH INST OF AERONAUTICS",
+  "institution": "PITTSBURGH INSTITUTE OF AERONAUTICS",
   "city": "WEST MIFFLIN",
   "state": "PA",
   "zip": "15122",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 78.7,
-  "grad_rate_rank": 77,
-  "default_rate": 14.8,
-  "avg_stu_loan_debt": 14498,
-  "avg_stu_loan_debt_rank": 647,
+  "grad_rate": 70.5,
+  "grad_rate_rank": 145,
+  "default_rate": 17.4,
+  "avg_stu_loan_debt": 15459,
+  "avg_stu_loan_debt_rank": 638,
   "indicator_group": 3,
   "salary": null,
   "calendar": "quarters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

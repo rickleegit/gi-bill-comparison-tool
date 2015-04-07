@@ -1,6 +1,6 @@
 {
   "facility_code": "15015605",
-  "institution": "BALDWIN PARK ADULT & COMM EDU",
+  "institution": "BALDWIN PARK ADULT & COMMUNITY EDUCATION",
   "city": "BALDWIN PARK",
   "state": "CA",
   "zip": "91706",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": null,
+  "default_rate": 0.0,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 5,

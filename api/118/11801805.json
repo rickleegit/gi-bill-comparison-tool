@@ -1,6 +1,6 @@
 {
   "facility_code": "11801805",
-  "institution": "SAN DIEGO STATE UNIVERSITY-IMPERIAL CAMPUS",
+  "institution": "SAN DIEGO STATE UNIVERSITY-IMPERIAL VALLEY CAMPUS",
   "city": "CALEXICO",
   "state": "CA",
   "zip": "92231",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 66.0,
-  "grad_rate_rank": 407,
-  "default_rate": 5.9,
-  "avg_stu_loan_debt": 14998,
-  "avg_stu_loan_debt_rank": 520,
+  "grad_rate": 66.2,
+  "grad_rate_rank": 421,
+  "default_rate": 5.2,
+  "avg_stu_loan_debt": 15998,
+  "avg_stu_loan_debt_rank": 560,
   "indicator_group": 1,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

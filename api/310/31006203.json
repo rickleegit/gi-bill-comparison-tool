@@ -1,6 +1,6 @@
 {
   "facility_code": "31006203",
-  "institution": "A T STILL UNIVERSITY SCHOOL OF OSTEOPATHIC MEDICINE",
+  "institution": "A T STILL UNIVERSITY SCHOOL OF HEALTH SCIENCES",
   "city": "MESA",
   "state": "AZ",
   "zip": "85206",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 2.0,
+  "default_rate": 3.1,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 4,

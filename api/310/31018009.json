@@ -1,6 +1,6 @@
 {
   "facility_code": "31018009",
-  "institution": "THE CLINICAL SOCIAL WORK INSTITUTE",
+  "institution": "INSTITUTE FOR CLINICAL SOCIAL WORK",
   "city": "WASHINGTON",
   "state": "DC",
   "zip": "20016",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 7.6,
+  "default_rate": 5.5,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 4,

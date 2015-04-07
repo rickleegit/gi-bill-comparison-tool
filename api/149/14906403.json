@@ -1,6 +1,6 @@
 {
   "facility_code": "14906403",
-  "institution": "RIO SALADO COMMUNITY COLLEGE",
+  "institution": "RIO SALADO COLLEGE",
   "city": "TEMPE",
   "state": "AZ",
   "zip": "85281",
@@ -19,11 +19,11 @@
   "eight_keys": true,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 15.9,
-  "grad_rate_rank": 675,
-  "default_rate": 22.9,
+  "grad_rate": 17.2,
+  "grad_rate_rank": 670,
+  "default_rate": 24.9,
   "avg_stu_loan_debt": 4750,
-  "avg_stu_loan_debt_rank": 80,
+  "avg_stu_loan_debt_rank": 55,
   "indicator_group": 3,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

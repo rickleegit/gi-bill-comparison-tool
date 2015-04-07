@@ -1,6 +1,6 @@
 {
   "facility_code": "11000285",
-  "institution": "NATIONAL UNIV CORP SHIGA UNIV",
+  "institution": "NATIONAL UNIVERSITY",
   "city": "BANBA 1-1-1 522-8522",
   "state": null,
   "zip": null,
@@ -19,11 +19,11 @@
   "eight_keys": true,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 22.9,
-  "grad_rate_rank": 1671,
-  "default_rate": 7.4,
-  "avg_stu_loan_debt": 18750,
-  "avg_stu_loan_debt_rank": 1007,
+  "grad_rate": 38.5,
+  "grad_rate_rank": 1327,
+  "default_rate": 7.0,
+  "avg_stu_loan_debt": 14750,
+  "avg_stu_loan_debt_rank": 458,
   "indicator_group": 1,
   "salary": null,
   "calendar": "nontraditional",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 2
 }

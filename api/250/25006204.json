@@ -1,6 +1,6 @@
 {
   "facility_code": "25006204",
-  "institution": "ARKANSAS COLLEGE OF BARBERING & HAIR DESIGN INC",
+  "institution": "ARKANSAS COLLEGE OF BARBERING AND HAIR DESIGN",
   "city": "NORTH LITTLE ROCK",
   "state": "AR",
   "zip": "72114",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 52.4,
-  "grad_rate_rank": 1884,
-  "default_rate": 3.8,
+  "grad_rate": 65.9,
+  "grad_rate_rank": 1370,
+  "default_rate": 5.1,
   "avg_stu_loan_debt": 9833,
-  "avg_stu_loan_debt_rank": 1488,
+  "avg_stu_loan_debt_rank": 1396,
   "indicator_group": 5,
   "salary": null,
   "calendar": "nontraditional",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

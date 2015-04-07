@@ -1,6 +1,6 @@
 {
   "facility_code": "14921105",
-  "institution": "MIRA COSTA COLLEGE",
+  "institution": "MIRACOSTA COLLEGE",
   "city": "OCEANSIDE",
   "state": "CA",
   "zip": "92056",
@@ -19,11 +19,11 @@
   "eight_keys": true,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 27.7,
-  "grad_rate_rank": 563,
-  "default_rate": 23.6,
+  "grad_rate": 27.4,
+  "grad_rate_rank": 564,
+  "default_rate": 11.2,
   "avg_stu_loan_debt": 3500,
-  "avg_stu_loan_debt_rank": 24,
+  "avg_stu_loan_debt_rank": 17,
   "indicator_group": 3,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

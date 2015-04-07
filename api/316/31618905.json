@@ -1,6 +1,6 @@
 {
   "facility_code": "31618905",
-  "institution": "ACAD OF CHINESE CULTURE & HLTH SCI",
+  "institution": "ACADEMY OF CHINESE CULTURE & HEALTH SCIENCES",
   "city": "OAKLAND",
   "state": "CA",
   "zip": "94612",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 4.1,
+  "default_rate": 5.3,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 4,

@@ -1,6 +1,6 @@
 {
   "facility_code": "14946417",
-  "institution": "MAYSVILLE COMMUNITY AND TECHNICAL COLLEGE",
+  "institution": "MAYSVILLE COMMUNITY AND TECHNICAL COLLEGE-ROWAN CAMPUS",
   "city": "MOREHEAD",
   "state": "KY",
   "zip": "40351",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 32.2,
-  "grad_rate_rank": 524,
-  "default_rate": 32.4,
-  "avg_stu_loan_debt": 9500,
-  "avg_stu_loan_debt_rank": 361,
+  "grad_rate": 29.7,
+  "grad_rate_rank": 537,
+  "default_rate": 30.9,
+  "avg_stu_loan_debt": 8830,
+  "avg_stu_loan_debt_rank": 256,
   "indicator_group": 3,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 1,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

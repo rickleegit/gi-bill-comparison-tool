@@ -1,6 +1,6 @@
 {
   "facility_code": "31303232",
-  "institution": "ST BERNARD'S SCHOOL THEOLOGY",
+  "institution": "ST BERNARD'S SCHOOL THEOLOGY AND MINISTRY",
   "city": "ROCHESTER",
   "state": "NY",
   "zip": "14618",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 20.0,
+  "default_rate": 0.0,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 4,

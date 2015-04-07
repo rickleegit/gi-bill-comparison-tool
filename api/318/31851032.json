@@ -1,6 +1,6 @@
 {
   "facility_code": "31851032",
-  "institution": "NORTHEASTERN SEMINARY AT ROBERTS WESLEYAN COLLEGE",
+  "institution": "NORTHEASTERN SEMINARY",
   "city": "ROCHESTER",
   "state": "NY",
   "zip": "14624",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 8.3,
+  "default_rate": 0.0,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 4,

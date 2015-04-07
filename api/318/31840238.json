@@ -1,6 +1,6 @@
 {
   "facility_code": "31840238",
-  "institution": "WIDENER UNIVERSITY SCHOOL OF LAW",
+  "institution": "WIDENER UNIVERSITY-HARRISBURG CAMPUS",
   "city": "HARRISBURG",
   "state": "PA",
   "zip": "17106",
@@ -22,8 +22,8 @@
   "grad_rate": null,
   "grad_rate_rank": null,
   "default_rate": 5.8,
-  "avg_stu_loan_debt": 23991,
-  "avg_stu_loan_debt_rank": 100,
+  "avg_stu_loan_debt": 25750,
+  "avg_stu_loan_debt_rank": 65,
   "indicator_group": 4,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

@@ -1,6 +1,6 @@
 {
   "facility_code": "18848310",
-  "institution": "SHERIDAN  TECHNICAL CENTER",
+  "institution": "SHERIDAN  TECHNICAL COLLEGE",
   "city": "HOLLYWOOD",
   "state": "FL",
   "zip": "33021",
@@ -19,8 +19,8 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 44.8,
-  "grad_rate_rank": 2034,
+  "grad_rate": 51.9,
+  "grad_rate_rank": 1920,
   "default_rate": 0.0,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 0
 }

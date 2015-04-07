@@ -1,6 +1,6 @@
 {
   "facility_code": "21013506",
-  "institution": "UNIVERSITY OF THE ROCKIES LLC",
+  "institution": "UNIVERSITY OF THE ROCKIES",
   "city": "COLORADO SPRINGS",
   "state": "CO",
   "zip": "80903",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 8.0,
+  "default_rate": 6.7,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 4,

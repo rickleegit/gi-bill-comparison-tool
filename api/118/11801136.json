@@ -7,7 +7,7 @@
   "country": "USA",
   "type": "Public",
   "cross": 207500,
-  "ope": "00318400",
+  "ope": "00318400'",
   "bah": 1035,
   "poe": true,
   "yr": true,
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 65.7,
-  "grad_rate_rank": 417,
-  "default_rate": 6.9,
-  "avg_stu_loan_debt": 17281,
-  "avg_stu_loan_debt_rank": 830,
+  "grad_rate": 65.6,
+  "grad_rate_rank": 434,
+  "default_rate": 4.9,
+  "avg_stu_loan_debt": 18500,
+  "avg_stu_loan_debt_rank": 864,
   "indicator_group": 1,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

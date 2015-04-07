@@ -1,6 +1,6 @@
 {
   "facility_code": "14939405",
-  "institution": "BARSTOW COLLEGE",
+  "institution": "BARSTOW COMMUNITY COLLEGE",
   "city": "BARSTOW",
   "state": "CA",
   "zip": "92311",
@@ -19,8 +19,8 @@
   "eight_keys": true,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 10.6,
-  "grad_rate_rank": 1270,
+  "grad_rate": 17.2,
+  "grad_rate_rank": 1046,
   "default_rate": 0.0,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,

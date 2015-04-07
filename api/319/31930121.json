@@ -1,6 +1,6 @@
 {
   "facility_code": "31930121",
-  "institution": "BOSTON GRADUATE SCHOOL OF PSYCHOANALYSIS",
+  "institution": "BOSTON GRADUATE SCHOOL OF PSYCHOANALYSIS INC",
   "city": "BROOKLINE",
   "state": "MA",
   "zip": "02446",
@@ -21,7 +21,7 @@
   "flight": null,
   "grad_rate": null,
   "grad_rate_rank": null,
-  "default_rate": 13.3,
+  "default_rate": 7.2,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
   "indicator_group": 4,

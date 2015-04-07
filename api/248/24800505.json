@@ -1,6 +1,6 @@
 {
   "facility_code": "24800505",
-  "institution": "SAN JOAQUIN VALLEY COLLEGE-AVIATION CAMPUS",
+  "institution": "SAN JOAQUIN VALLEY COLLEGE-FRESNO AVIATION",
   "city": "FRESNO",
   "state": "CA",
   "zip": "93727",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 81.1,
-  "grad_rate_rank": 36,
-  "default_rate": 25.6,
-  "avg_stu_loan_debt": 17900,
-  "avg_stu_loan_debt_rank": 1120,
+  "grad_rate": 55.6,
+  "grad_rate_rank": 219,
+  "default_rate": 22.8,
+  "avg_stu_loan_debt": 18846,
+  "avg_stu_loan_debt_rank": 1161,
   "indicator_group": 2,
   "salary": null,
   "calendar": "nontraditional",
@@ -51,7 +51,7 @@
   "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
-  "complaints_main_campus_roll_up": 2,
+  "complaints_main_campus_roll_up": 3,
   "complaints_financial_by_ope_id_do_not_sum": 1,
   "complaints_quality_by_ope_id_do_not_sum": 1,
   "complaints_refund_by_ope_id_do_not_sum": 1,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

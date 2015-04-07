@@ -1,6 +1,6 @@
 {
   "facility_code": "21820106",
-  "institution": "WESTWOOD COLLEGE DENVER NORTH",
+  "institution": "WESTWOOD COLLEGE-DENVER NORTH",
   "city": "DENVER",
   "state": "CO",
   "zip": "80221",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 41.4,
-  "grad_rate_rank": 1197,
-  "default_rate": 20.3,
-  "avg_stu_loan_debt": 26180,
-  "avg_stu_loan_debt_rank": 1837,
+  "grad_rate": 26.4,
+  "grad_rate_rank": 1634,
+  "default_rate": 16.0,
+  "avg_stu_loan_debt": 29532,
+  "avg_stu_loan_debt_rank": 1939,
   "indicator_group": 1,
   "salary": null,
   "calendar": "quarters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 1,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

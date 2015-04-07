@@ -1,6 +1,6 @@
 {
   "facility_code": "11913264",
-  "institution": "UNIVERSITY OF HAWAII MANOA-JOHN A BURNS SCHOOL OF MEDICINE",
+  "institution": "UNIVERSITY OF HAWAII AT MANOA",
   "city": "HONOLULU",
   "state": "HI",
   "zip": "96813",
@@ -19,11 +19,11 @@
   "eight_keys": null,
   "correspondence": null,
   "flight": null,
-  "grad_rate": 55.7,
-  "grad_rate_rank": 711,
-  "default_rate": 4.4,
-  "avg_stu_loan_debt": 16956,
-  "avg_stu_loan_debt_rank": 797,
+  "grad_rate": 56.5,
+  "grad_rate_rank": 696,
+  "default_rate": 5.1,
+  "avg_stu_loan_debt": 17962,
+  "avg_stu_loan_debt_rank": 805,
   "indicator_group": 1,
   "salary": null,
   "calendar": "semesters",
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

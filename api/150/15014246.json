@@ -24,7 +24,7 @@
   "default_rate": null,
   "avg_stu_loan_debt": null,
   "avg_stu_loan_debt_rank": null,
-  "indicator_group": 5,
+  "indicator_group": null,
   "salary": null,
   "calendar": null,
   "tuition_in_state": null,
