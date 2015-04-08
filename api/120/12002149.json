@@ -1,6 +1,6 @@
 {
   "facility_code": "12002149",
-  "institution": "UNIVERSITY OF WISCONSIN-MADISON",
+  "institution": "UW HOSPITAL & CLINICS GRADUATE MEDICAL EDUCATION",
   "city": "MADISON",
   "state": "WI",
   "zip": "53792",
@@ -11,7 +11,7 @@
   "bah": 1587,
   "poe": null,
   "yr": null,
-  "gibill": 1,
+  "gibill": 2,
   "student_veteran": true,
   "student_veteran_link": "https://win.wisc.edu/organization/vets",
   "vetsuccess_name": null,

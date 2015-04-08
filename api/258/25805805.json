@@ -1,6 +1,6 @@
 {
   "facility_code": "25805805",
-  "institution": "MARINELLO SCHOOLS OF BEAUTY-HEMET",
+  "institution": "MARINELLO SCHOOLS OF BEAUTY-CITY OF INDUSTRY",
   "city": "CITY OF INDUSTRY",
   "state": "CA",
   "zip": "91748",
@@ -11,7 +11,7 @@
   "bah": 2184,
   "poe": true,
   "yr": null,
-  "gibill": null,
+  "gibill": 1,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

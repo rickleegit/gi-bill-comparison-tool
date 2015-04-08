@@ -1,6 +1,6 @@
 {
   "facility_code": "14911426",
-  "institution": "MISSOULA COLLEGE-UNIVERSITY OF MONTANA",
+  "institution": "THE UNIVERSITY OF MONTANA",
   "city": "MISSOULA",
   "state": "MT",
   "zip": "59801",
@@ -11,7 +11,7 @@
   "bah": 1404,
   "poe": null,
   "yr": null,
-  "gibill": 23,
+  "gibill": 19,
   "student_veteran": true,
   "student_veteran_link": null,
   "vetsuccess_name": null,

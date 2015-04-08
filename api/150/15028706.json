@@ -1,6 +1,6 @@
 {
   "facility_code": "15028706",
-  "institution": "VETERANS UPWARD BOUND-CSU PUEBLO PIKES PEAK CC",
+  "institution": "VETERANS UPWARD BOUND - COLORADO STATE UNIVERSITY PUEBLO & PIKES PEAK CC",
   "city": "COLORADO SPRINGS",
   "state": "CO",
   "zip": "80906",
@@ -11,7 +11,7 @@
   "bah": 1506,
   "poe": null,
   "yr": null,
-  "gibill": 1,
+  "gibill": null,
   "student_veteran": true,
   "student_veteran_link": null,
   "vetsuccess_name": null,

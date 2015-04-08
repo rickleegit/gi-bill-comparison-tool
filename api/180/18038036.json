@@ -1,6 +1,6 @@
 {
   "facility_code": "18038036",
-  "institution": "NORTHWEST TECHNOLOGY CENTER FAIRVIEW",
+  "institution": "NORTHWEST TECHNOLOGY CENTER-FAIRVIEW",
   "city": "FAIRVIEW",
   "state": "OK",
   "zip": "73737",
@@ -31,7 +31,7 @@
   "tuition_out_of_state": 1260,
   "books": 420,
   "online_all": false,
-  "p911_tuition_fees": 263.0,
+  "p911_tuition_fees": 787.0,
   "p911_recipients": 1,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,

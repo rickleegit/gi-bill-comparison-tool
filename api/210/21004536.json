@@ -1,6 +1,6 @@
 {
   "facility_code": "21004536",
-  "institution": "BROWN MACKIE COLLEGE-OKC",
+  "institution": "BROWN MACKIE COLLEGE-OKLAHOMA CITY",
   "city": "OKLAHOMA CITY",
   "state": "OK",
   "zip": "73132",
@@ -11,7 +11,7 @@
   "bah": 1035,
   "poe": true,
   "yr": true,
-  "gibill": null,
+  "gibill": 37,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

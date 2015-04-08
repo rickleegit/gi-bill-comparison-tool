@@ -1,6 +1,6 @@
 {
   "facility_code": "18035136",
-  "institution": "KIAMICHI TECHNOLOGY CTR-IDABEL",
+  "institution": "KIAMICHI TECHNOLOGY CENTER-IDABEL",
   "city": "IDABEL",
   "state": "OK",
   "zip": "74745",
@@ -11,7 +11,7 @@
   "bah": 1053,
   "poe": true,
   "yr": null,
-  "gibill": 2,
+  "gibill": null,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

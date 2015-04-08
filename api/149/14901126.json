@@ -1,6 +1,6 @@
 {
   "facility_code": "14901126",
-  "institution": "MONTANA STATE UNIVERSITY-GALLATIN COLLEGE",
+  "institution": "MONTANA STATE UNIVERSITY",
   "city": "BOZEMAN",
   "state": "MT",
   "zip": "59717",
@@ -11,7 +11,7 @@
   "bah": 1293,
   "poe": true,
   "yr": null,
-  "gibill": 1,
+  "gibill": null,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

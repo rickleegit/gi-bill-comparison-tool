@@ -1,7 +1,7 @@
 {
   "facility_code": "31200080",
   "institution": "EUROPEAN SCHOOL OF MGMT AND TECH",
-  "city": "BERLIN 10178",
+  "city": "10178 BERLIN",
   "state": null,
   "zip": null,
   "country": "GERMANY",
@@ -11,7 +11,7 @@
   "bah": null,
   "poe": null,
   "yr": null,
-  "gibill": null,
+  "gibill": 1,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

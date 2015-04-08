@@ -1,6 +1,6 @@
 {
   "facility_code": "28041336",
-  "institution": "BROKEN ARROW BEAUTY COLLEGE",
+  "institution": "BROKEN ARROW BEAUTY COLLEGE-BROKEN ARROW",
   "city": "BROKEN ARROW",
   "state": "OK",
   "zip": "74012",
@@ -11,7 +11,7 @@
   "bah": 1038,
   "poe": true,
   "yr": null,
-  "gibill": 3,
+  "gibill": 1,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

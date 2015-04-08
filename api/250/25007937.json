@@ -1,6 +1,6 @@
 {
   "facility_code": "25007937",
-  "institution": "PHAGANS' TIGARD BEAUTY SCHOOL",
+  "institution": "PHAGANS TIGARD BEAUTY SCHOOL",
   "city": "TIGARD",
   "state": "OR",
   "zip": "97223",
@@ -11,7 +11,7 @@
   "bah": 1620,
   "poe": null,
   "yr": null,
-  "gibill": 1,
+  "gibill": null,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

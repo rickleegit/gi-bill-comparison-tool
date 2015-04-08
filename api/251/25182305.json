@@ -1,6 +1,6 @@
 {
   "facility_code": "25182305",
-  "institution": "UNIVERSAL COLLEGE OF BEAUTY INC-VERMONT CAMPUS",
+  "institution": "UNIVERSAL COLLEGE OF BEAUTY INC-LOS ANGELES 1",
   "city": "LOS ANGELES",
   "state": "CA",
   "zip": "90044",
@@ -31,8 +31,8 @@
   "tuition_out_of_state": 16200,
   "books": 870,
   "online_all": false,
-  "p911_tuition_fees": null,
-  "p911_recipients": null,
+  "p911_tuition_fees": 847.17,
+  "p911_recipients": 1,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,

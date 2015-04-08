@@ -1,6 +1,6 @@
 {
   "facility_code": "31013175",
-  "institution": "NEW BRUNSWICK COMMUNITY COLL",
+  "institution": "NEW BRUNSWICK COMMUNITY COLLEGE",
   "city": "MONCTON, NB, E1C-8H9",
   "state": null,
   "zip": null,
@@ -31,7 +31,7 @@
   "tuition_out_of_state": null,
   "books": null,
   "online_all": false,
-  "p911_tuition_fees": 4539.25,
+  "p911_tuition_fees": 3150.0,
   "p911_recipients": 1,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,

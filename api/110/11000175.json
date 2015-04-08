@@ -1,7 +1,7 @@
 {
   "facility_code": "11000175",
   "institution": "LAKEHEAD UNIVERSITY",
-  "city": "THUNDER BAY",
+  "city": "THUNDER BAY, ON, P7B 5E1",
   "state": null,
   "zip": null,
   "country": "CANADA",
@@ -31,7 +31,7 @@
   "tuition_out_of_state": null,
   "books": null,
   "online_all": false,
-  "p911_tuition_fees": 30816.17,
+  "p911_tuition_fees": 6459.64,
   "p911_recipients": 1,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,

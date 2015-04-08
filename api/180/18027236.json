@@ -1,6 +1,6 @@
 {
   "facility_code": "18027236",
-  "institution": "MID DEL TECHNOLOGY CENTER",
+  "institution": "MID-DEL TECHNOLOGY CENTER",
   "city": "MIDWEST CITY",
   "state": "OK",
   "zip": "73110",
@@ -11,7 +11,7 @@
   "bah": 1035,
   "poe": null,
   "yr": null,
-  "gibill": 4,
+  "gibill": 12,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

@@ -1,7 +1,7 @@
 {
   "facility_code": "11200175",
   "institution": "RED DEER COLLEGE",
-  "city": "RED DEER",
+  "city": "RED DEER, AB, T4N 5H5",
   "state": null,
   "zip": null,
   "country": "CANADA",
@@ -11,7 +11,7 @@
   "bah": null,
   "poe": null,
   "yr": null,
-  "gibill": 1,
+  "gibill": null,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

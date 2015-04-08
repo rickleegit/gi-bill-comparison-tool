@@ -1,6 +1,6 @@
 {
   "facility_code": "31126025",
-  "institution": "COLUMBIA COLLEGE",
+  "institution": "COLUMBIA COLLEGE SPFLD",
   "city": "SPRINGFIELD",
   "state": "MO",
   "zip": "65804",
@@ -31,8 +31,8 @@
   "tuition_out_of_state": 7115,
   "books": 1000,
   "online_all": false,
-  "p911_tuition_fees": 49669.31,
-  "p911_recipients": 19,
+  "p911_tuition_fees": 43344.61,
+  "p911_recipients": 17,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,

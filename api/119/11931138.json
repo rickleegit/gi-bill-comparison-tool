@@ -31,10 +31,10 @@
   "tuition_out_of_state": 19960,
   "books": 1696,
   "online_all": false,
-  "p911_tuition_fees": 332651.3,
-  "p911_recipients": 29,
-  "p911_yellow_ribbon": 10522.5,
-  "p911_yr_recipients": 2,
+  "p911_tuition_fees": 203815.04,
+  "p911_recipients": 27,
+  "p911_yellow_ribbon": 13282.97,
+  "p911_yr_recipients": 6,
   "accredited": true,
   "accreditation_type": null,
   "accreditation_status": null,
@@ -51,9 +51,9 @@
   "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
-  "complaints_main_campus_roll_up": 2,
+  "complaints_main_campus_roll_up": 3,
   "complaints_financial_by_ope_id_do_not_sum": 2,
-  "complaints_quality_by_ope_id_do_not_sum": 0,
+  "complaints_quality_by_ope_id_do_not_sum": 1,
   "complaints_refund_by_ope_id_do_not_sum": 0,
   "complaints_marketing_by_ope_id_do_not_sum": 0,
   "complaints_accreditation_by_ope_id_do_not_sum": 0,
@@ -63,5 +63,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

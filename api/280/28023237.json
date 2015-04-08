@@ -1,6 +1,6 @@
 {
   "facility_code": "28023237",
-  "institution": "PHAGANS' BEAUTY COLLEGE",
+  "institution": "PHAGANS BEAUTY COLLEGE",
   "city": "CORVALLIS",
   "state": "OR",
   "zip": "97333",
@@ -31,8 +31,8 @@
   "tuition_out_of_state": 14950,
   "books": 3912,
   "online_all": false,
-  "p911_tuition_fees": null,
-  "p911_recipients": null,
+  "p911_tuition_fees": 2267.0,
+  "p911_recipients": 1,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,

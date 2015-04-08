@@ -1,6 +1,6 @@
 {
   "facility_code": "14005031",
-  "institution": "CENTRAL TEXAS COLLEGE HOLLOMAN AFB",
+  "institution": "CENTRAL TEXAS COLLEGE",
   "city": "HOLLOMAN AFB",
   "state": "NM",
   "zip": "88330",
@@ -31,7 +31,7 @@
   "tuition_out_of_state": 5550,
   "books": 1675,
   "online_all": false,
-  "p911_tuition_fees": 4143.6,
+  "p911_tuition_fees": 2007.6,
   "p911_recipients": 2,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,

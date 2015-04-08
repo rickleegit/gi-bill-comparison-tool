@@ -1,6 +1,6 @@
 {
   "facility_code": "28009436",
-  "institution": "BEAUTY TECHNICAL COLLEGE",
+  "institution": "BEAUTY TECHNICAL COLLEGE INC",
   "city": "TAHLEQUAH",
   "state": "OK",
   "zip": "74465",
@@ -31,8 +31,8 @@
   "tuition_out_of_state": 8600,
   "books": 600,
   "online_all": false,
-  "p911_tuition_fees": 6878.39,
-  "p911_recipients": 1,
+  "p911_tuition_fees": null,
+  "p911_recipients": null,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,

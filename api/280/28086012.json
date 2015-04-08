@@ -1,6 +1,6 @@
 {
   "facility_code": "28086012",
-  "institution": "RAZZLE DAZZLE COLLEGE OF HAIR DESIGN",
+  "institution": "RAZZLE DAZZLE COLLEGE OF HAIR DESIGN INC",
   "city": "NAMPA",
   "state": "ID",
   "zip": "83686",
@@ -31,8 +31,8 @@
   "tuition_out_of_state": 15150,
   "books": 1400,
   "online_all": false,
-  "p911_tuition_fees": 13435.41,
-  "p911_recipients": 2,
+  "p911_tuition_fees": null,
+  "p911_recipients": null,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,

@@ -1,7 +1,7 @@
 {
   "facility_code": "11103075",
   "institution": "RYERSON UNIVERSITY",
-  "city": "TORONTO",
+  "city": "TORONTO, ON   M5B 2K3",
   "state": null,
   "zip": null,
   "country": "CANADA",
@@ -31,7 +31,7 @@
   "tuition_out_of_state": null,
   "books": null,
   "online_all": false,
-  "p911_tuition_fees": 12229.22,
+  "p911_tuition_fees": 24553.47,
   "p911_recipients": 3,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,

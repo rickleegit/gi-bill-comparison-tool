@@ -1,6 +1,6 @@
 {
   "facility_code": "28010037",
-  "institution": "NORTHWEST COLLEGE-HAPPY VALLEY",
+  "institution": "NORTHWEST COLLEGE-CLACKAMAS",
   "city": "HAPPY VALLEY",
   "state": "OR",
   "zip": "97086",
@@ -31,8 +31,8 @@
   "tuition_out_of_state": 16938,
   "books": 2975,
   "online_all": false,
-  "p911_tuition_fees": 49166.5,
-  "p911_recipients": 3,
+  "p911_tuition_fees": 8123.0,
+  "p911_recipients": 2,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,

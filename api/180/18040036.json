@@ -1,6 +1,6 @@
 {
   "facility_code": "18040036",
-  "institution": "KIAMICHI TECHNOLOGY CTR-ATOKA",
+  "institution": "KIAMICHI TECHNOLOGY CENTER-ATOKA",
   "city": "ATOKA",
   "state": "OK",
   "zip": "74525",
@@ -11,7 +11,7 @@
   "bah": 978,
   "poe": true,
   "yr": null,
-  "gibill": 2,
+  "gibill": 1,
   "student_veteran": null,
   "student_veteran_link": null,
   "vetsuccess_name": null,

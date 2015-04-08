@@ -1,6 +1,6 @@
 {
   "facility_code": "31806036",
-  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-VANCE AFB",
+  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-WORLDWIDE",
   "city": "VANCE AFB",
   "state": "OK",
   "zip": "73705",
@@ -31,8 +31,8 @@
   "tuition_out_of_state": 7800,
   "books": 1080,
   "online_all": false,
-  "p911_tuition_fees": 3376.84,
-  "p911_recipients": 3,
+  "p911_tuition_fees": 11706.0,
+  "p911_recipients": 4,
   "p911_yellow_ribbon": null,
   "p911_yr_recipients": null,
   "accredited": true,
