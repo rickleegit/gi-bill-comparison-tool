@@ -139,7 +139,8 @@ layout: va
 
   <!-- Also eligible for Post-9/11 GI Bill -->
   <div id="elig-for-post-gi-bill-form" class="form-group">
-    <span class="question">Are you eligible for the Post-9/11 GI Bill?<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#vre_post911_eligible" onclick="track('Tool Tips', 'Eligibility / VR&E Post 9/11 Eligible');" target="_blank" class="info-link">i</a></span>
+    <span class="question">Are you eligible for the Post-9/11 GI Bill?<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#vre_post911_eligible" onclick="track('Tool Tips', 'Eligibility / VR&E Post 9/11 Eligible');" target="_blank" class="info-link" aria-describedby="post911-eligible-tooltip">i</a></span>
+    <span class="aria-tooltip" id="post911-eligible-tooltip" role="tooltip">Sample tool tip for Post 911 eligible</span>
 
     <label class="radio" for="elig-for-post-gi-bill-yes">Yes</label>
     <input id="elig-for-post-gi-bill-yes" name="Post 9-11 GI Bill Eligible" type="radio" value="yes">
@@ -151,7 +152,8 @@ layout: va
 
   <!-- Cumulative Post 9-11 Active Duty Service -->
   <div id="cumulative-service-form" class="form-group top-aligned">
-    <label for="cumulative-service">Cumulative Post 9-11 Active Duty Service: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / Cumulative Service');" target="_blank" class="info-link">i</a></label>
+    <label for="cumulative-service">Cumulative Post 9-11 Active Duty Service: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / Cumulative Service');" target="_blank" class="info-link" aria-describedby="cumulative-service-tooltip">i</a></label>
+    <span class="aria-tooltip" id="cumulative-service-tooltip" role="tooltip">Sample tool tip for cumulative service</span>
     <select id="cumulative-service" name="Cumulative Post 9-11 Active Duty Service" alt="Select amount of cumulative Post 9-11 Active Duty Service">
       <option value="1.0">36+ months: 100% (includes BASIC)</option>
       <option value="0.9">30 months: 90% (includes BASIC)</option>
@@ -169,7 +171,8 @@ layout: va
 
   <!-- Number of Dependents -->
   <div id="number-of-dependents-form" class="form-group top-aligned">
-    <label for="number-of-dependents">Number of Dependents <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#number_of_dependents" onclick="track('Tool Tips', 'Eligibility / VR&E # of Deoendents');" target="_blank" class="info-link">i</a></label>
+    <label for="number-of-dependents">Number of Dependents <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#number_of_dependents" onclick="track('Tool Tips', 'Eligibility / VR&E # of Deoendents');" target="_blank" class="info-link" aria-describedby="number-of-dependents-tooltip">i</a></label>
+    <span class="aria-tooltip" id="number-of-dependents-tooltip" role="tooltip">Sample tool tip for GI Bill Chapter</span>
     <select id="number-of-dependents" name="Number of Dependents" alt="Select the number of dependents you have">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -183,7 +186,8 @@ layout: va
 
   <!-- Enlistment Length -->
   <div id="enlistment-service-form" class="form-group top-aligned">
-    <label for="enlistment-service">Completed an enlistment of: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#mgib_enlistment" onclick="track('Tool Tips', 'Eligibility / MGIB Enlistment Length');" target="_blank" class="info-link">i</a></label>
+    <label for="enlistment-service">Completed an enlistment of: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#mgib_enlistment" onclick="track('Tool Tips', 'Eligibility / MGIB Enlistment Length');" target="_blank" class="info-link" aria-describedby="enlistment-service-tooltip">i</a></label>
+    <span class="aria-tooltip" id="enlistment-service-tooltip" role="tooltip">Sample tool tip for Enlistment Service</span>
     <select id="enlistment-service" name="Enlistment" alt="Select length of your enlistment">
       <option value="3">3 or more years</option>
       <option value="2">2 or more years</option>
@@ -192,7 +196,8 @@ layout: va
 
   <!-- Consecutive Active Duty Service -->
   <div id="consecutive-service-form" class="form-group top-aligned">
-    <label for="consecutive-service">Length of Longest Active Duty Tour: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp##reap_longest_tour" onclick="track('Tool Tips', 'Eligibility / REAP Consecutive Service');" target="_blank" class="info-link">i</a></label>
+    <label for="consecutive-service">Length of Longest Active Duty Tour: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp##reap_longest_tour" onclick="track('Tool Tips', 'Eligibility / REAP Consecutive Service');" target="_blank" class="info-link" aria-describedby="consecutive-service-tooltip">i</a></label>
+    <span class="aria-tooltip" id="consecutive-service-tooltip" role="tooltip">Sample tool tip for Consecutive Service</span>
     <select id="consecutive-service" name="Longest Consecutive Active Duty Tour" alt="Select the length of your longest actice duty tour">
       <option value="0.8">2+ years of consecutive service: 80%</option>
       <option value="0.6">1+ year of consecutive service: 60%</option>
@@ -215,7 +220,8 @@ layout: va
   <div class="form-group" style="float:left;">
     <div class="ui-widget" aria-controls="benefit-estimator">
       <label class="institution-search-label" for="institution-search">Enter a school or employer name to search:</label>
-      <input id="institution-search" placeholder="Search by School or Employer Name" title="Enter school/employer name"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#schoolname" onclick="track('Tool Tips', 'Institution Search');" target="_blank" class="info-link">i</a>
+      <input id="institution-search" placeholder="Search by School or Employer Name" title="Enter school/employer name"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#schoolname" onclick="track('Tool Tips', 'Institution Search');" target="_blank" class="info-link" aria-describedby="institution-search-tooltip">i</a>
+      <span class="aria-tooltip" id="institution-search-tooltip" role="tooltip">Sample tool tip for Institution Search</span>
       <div>
         <a href="#advancedsearch">Advanced search</a>
       </div>
