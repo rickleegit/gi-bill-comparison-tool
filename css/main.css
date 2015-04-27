@@ -19,6 +19,10 @@ sup {
   padding: 0;
 }
 
+.aria-tooltip {
+  display: none;
+}
+
 /* Comparison Tool base styles */
 
 .comparison a {
@@ -679,6 +683,16 @@ a.info-link {
   font-weight: bold !important;
   font-size: 10px !important;
   border: 2px solid #001A4F;
+}
+
+/*** Screen reader only class ***/
+
+.sr-only {
+  position: absolute;
+  left: -9999em;
+  font-size: 1px;
+  float: left;
+  display: inline-block;
 }
 
 #estimated-benefits {

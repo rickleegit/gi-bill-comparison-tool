@@ -9,6 +9,34 @@
 <script src="js/gib-comparison-tool.js"></script>
 <script src="js/advanced_search.js"></script>
 <script src="js/compare_schools.js"></script>
+<script src="js/jquery.tooltipster.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('.info-link').tooltipster({
+      functionInit: function(item){
+        var tooltip_id = item.attr('aria-describedby');
+        if(tooltip_id) {
+          return $('#' + tooltip_id).html();
+        }
+      },
+      functionReady: function(item){
+        var tooltip_id = item.attr('aria-describedby');
+        $('#' + tooltip_id).attr('aria-hidden', false);
+      },
+      functionAfter: function(item){
+        var tooltip_id = item.attr('aria-describedby');
+        $('#' + tooltip_id).attr('aria-hidden', true);
+      }
+    });
+
+    $('.info-link').focus(function(){
+      $(this).tooltipster('show');
+    }).blur(function(){
+      $(this).tooltipster('hide');
+    });
+});
+</script>
 
 <script>
   var _gaq = _gaq || [];
