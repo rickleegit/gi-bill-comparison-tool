@@ -123,7 +123,8 @@ layout: va
 
   <!-- GI Bill Chapter Being Used -->
   <div id="gi-bill-chapter-form" class="form-group top-aligned">
-    <label for="gi-bill-chapter">Which GI Bill benefit are you thinking of using? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gi_bill_chap" onclick="track('Tool Tips', 'Eligibility / GI Bill Chapter');" target="_blank" class="info-link">i</a></label>
+    <label for="gi-bill-chapter">Which GI Bill benefit are you thinking of using? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gi_bill_chap" onclick="track('Tool Tips', 'Eligibility / GI Bill Chapter');" target="_blank" class="info-link" aria-describedby="gi-bill-chapter-tooltip">i</a></label>
+    <span class="aria-tooltip" id="gi-bill-chapter-tooltip" role="tooltip">Sample tool tip for GI Bill Chapter</span>
     <select id="gi-bill-chapter" name="Type of GI Bill Benefits" alt="Select which GI Bill benefit you are thinking of using">
       <option value="33" selected>Post-9/11 GI Bill (Ch 33)</option>
       <option value="30">Montgomery GI Bill (Ch 30)</option>
