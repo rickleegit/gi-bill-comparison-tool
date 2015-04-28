@@ -132,7 +132,8 @@ var GIBComparisonTool = (function () {
     total_left_to_pay:        0,
     total_year:               0,
     gi_bill_total_text:       '',
-    yellow_ribbon_elig:       false
+    yellow_ribbon_elig:       false,
+    sec_702:                  ''
   };
 
   // Constants
@@ -1972,6 +1973,8 @@ var GIBComparisonTool = (function () {
 
     $('#poe').html(institution.poe ? 'Yes' : 'No');
     $('#eight-keys').html(institution.eight_keys ? 'Yes' : 'No');
+    $('#sec-702').html('No');
+
     $('#complaint-box').hide();
 
 
@@ -2128,6 +2131,7 @@ var GIBComparisonTool = (function () {
     $('#veteran-indicators').show();
     $('#school-summary').show();
     $('#vet-success-row').hide();
+    $('#sec-702-row').hide();
     $('#school-indicators').show();
 
     // Tuition/Fees Input Results
@@ -2273,6 +2277,7 @@ var GIBComparisonTool = (function () {
 
     if (calculated.institution_type == 'public') {
       $('#in-state').show();
+      $('#sec-702-row').show();
       if (!formData.in_state) {
         $('#in-state-tuition-fees-form').show();
       }
