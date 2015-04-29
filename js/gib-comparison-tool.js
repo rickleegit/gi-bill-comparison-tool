@@ -1973,7 +1973,8 @@ var GIBComparisonTool = (function () {
 
     $('#poe').html(institution.poe ? 'Yes' : 'No');
     $('#eight-keys').html(institution.eight_keys ? 'Yes' : 'No');
-    $('#sec-702').html('No');
+    $('#sec-702').html(('No') + 
+      " &nbsp; <a href=' http://benefits.va.gov/gibill/702.asp' onclick=\"track('Tool Tips', 'School Summary / Section 702');\" target='newtab'>  More Information &raquo;</a>");
 
     $('#complaint-box').hide();
 
