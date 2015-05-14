@@ -2268,6 +2268,13 @@ var GIBComparisonTool = (function () {
     $('#kicker-form').hide();
     }    
 
+ if (formData.gi_bill_chap == 31 || 
+      formData.gi_bill_chap == 1607 || 
+      formData.gi_bill_chap == 1606 || 
+      formData.gi_bill_chap == 35) {
+  $('#sec-702-row').hide();
+  }
+
     if (calculated.institution_type == 'flight' ||
         calculated.institution_type == 'correspond') {
       $('#online-classes').hide();
