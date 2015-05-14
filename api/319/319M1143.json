@@ -1,6 +1,6 @@
 {
   "facility_code": "319M1143",
-  "institution": "ST. EDWARD'S UNIVERSITY",
+  "institution": "SAINT EDWARD'S UNIVERSITY",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78704",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 69.5,

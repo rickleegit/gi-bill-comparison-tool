@@ -1,6 +1,6 @@
 {
   "facility_code": "31289847",
-  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-SPOKANE",
+  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-WORLDWIDE",
   "city": "FAIRCHILD AFB",
   "state": "WA",
   "zip": "99011",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 58.3,

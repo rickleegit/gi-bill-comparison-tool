@@ -1,6 +1,6 @@
 {
   "facility_code": "10C49643",
-  "institution": "US IMMIGRATION ADN CUSTOMS ENFORCEMENT HAWKINS BLVD",
+  "institution": "US IMMIGRATION AND CUSTOMS ENFORCEMENT HAWKINS BLVD",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79925",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

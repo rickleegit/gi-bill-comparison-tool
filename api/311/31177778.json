@@ -1,6 +1,6 @@
 {
   "facility_code": "31177778",
-  "institution": "HOGESCH VAN ARNHEM EN NIJMEGEN",
+  "institution": "HAN UNIVERSITY OF APPLIED SCIENCES",
   "city": "6826 CC ARNHEM",
   "state": null,
   "zip": null,
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

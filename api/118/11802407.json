@@ -1,6 +1,6 @@
 {
   "facility_code": "11802407",
-  "institution": "UNIVERSITY OF CONNECTICUT",
+  "institution": "UNIVERSITY OF CONNECTICUT-SCHOOL OF LAW",
   "city": "HARTFORD",
   "state": "CT",
   "zip": "06105",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 83.4,

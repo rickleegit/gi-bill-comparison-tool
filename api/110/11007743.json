@@ -1,6 +1,6 @@
 {
   "facility_code": "11007743",
-  "institution": "MIDWESTERN STATE UNIV",
+  "institution": "MIDWESTERN STATE UNIVERSITY",
   "city": "WICHITA FALLS",
   "state": "TX",
   "zip": "76308",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 44.2,

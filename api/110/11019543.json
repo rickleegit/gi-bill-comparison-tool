@@ -1,6 +1,6 @@
 {
   "facility_code": "11019543",
-  "institution": "UNIVERSITY OF TEXAS AT TYLER",
+  "institution": "THE UNIVERSITY OF TEXAS AT TYLER",
   "city": "TYLER",
   "state": "TX",
   "zip": "75799",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 44.1,

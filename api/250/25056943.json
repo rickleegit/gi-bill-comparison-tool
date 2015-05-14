@@ -1,6 +1,6 @@
 {
   "facility_code": "25056943",
-  "institution": "NORTH TX SCH OF SWEDISH MASSAGE",
+  "institution": "NORTH TX SCHOOL OF SWEDISH MASSAGE",
   "city": "ARLINGTON",
   "state": "TX",
   "zip": "76016",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

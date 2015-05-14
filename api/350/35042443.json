@@ -1,6 +1,6 @@
 {
   "facility_code": "35042443",
-  "institution": "BAPTIST HOSPITALS OF SOUTHEAST TX",
+  "institution": "BAPTIST HOSPITALS OF SOUTHEAST TEXAS",
   "city": "BEAUMONT",
   "state": "TX",
   "zip": "77704",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

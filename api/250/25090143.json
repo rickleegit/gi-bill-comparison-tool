@@ -1,6 +1,6 @@
 {
   "facility_code": "25090143",
-  "institution": "CONTINENTAL TRUCK DRVR TRNG/EDU SCH",
+  "institution": "CONTINENTAL TRUCK DRIVER TRNG AND EDU SCH",
   "city": "DALLAS",
   "state": "TX",
   "zip": "75232",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

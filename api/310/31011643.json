@@ -1,6 +1,6 @@
 {
   "facility_code": "31011643",
-  "institution": "SOUTHWESTERN ASSEMBLIES OF GOD UNIV",
+  "institution": "SOUTHWESTERN ASSEMBLIES OF GOD UNIVERSITY",
   "city": "WAXAHACHIE",
   "state": "TX",
   "zip": "75165",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 33.5,

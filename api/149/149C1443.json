@@ -1,6 +1,6 @@
 {
   "facility_code": "149C1443",
-  "institution": "SAN JACINTO COMMUNITY COLLEGE DISTRICT",
+  "institution": "SAN JACINTO COMMUNITY COLLEGE",
   "city": "PASADENA",
   "state": "TX",
   "zip": "77505",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 14.7,

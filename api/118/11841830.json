@@ -1,6 +1,6 @@
 {
   "facility_code": "11841830",
-  "institution": "UNIVERSITY OF MEDICINE AND DENTISTRY OF NEW JERSEY",
+  "institution": "RUTGERS UNIVERSITY-ROBERT WOOD JOHNSON MEDICAL SCHOOL-PATHOLOGY RESIDENCY",
   "city": "NEW BRUNSWICK",
   "state": "NJ",
   "zip": "08903",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Valerie Williams",
   "vetsuccess_email": "Valerie.Williams1@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.4,

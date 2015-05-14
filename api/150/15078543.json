@@ -1,6 +1,6 @@
 {
   "facility_code": "15078543",
-  "institution": "TX A AND M ENGR EXT SV INTL UNEXPLD ORD PROG",
+  "institution": "TX A AND M ENGINEERING EXTENSION SV INTL UNEXPLD ORD PROG",
   "city": "BRYAN",
   "state": "TX",
   "zip": "77807",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

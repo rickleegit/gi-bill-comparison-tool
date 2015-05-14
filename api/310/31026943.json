@@ -1,6 +1,6 @@
 {
   "facility_code": "31026943",
-  "institution": "NORTHWOOD UNIVERSITY NAS JRB FORT WORTH",
+  "institution": "NORTHWOOD UNIVERSITY-MICHIGAN",
   "city": "FT WORTH",
   "state": "TX",
   "zip": "76127",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 53.5,

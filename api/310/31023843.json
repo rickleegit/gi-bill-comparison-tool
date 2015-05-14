@@ -1,6 +1,6 @@
 {
   "facility_code": "31023843",
-  "institution": "PARK UNIVERSITY-LAUGHLIN AFB",
+  "institution": "PARK UNIVERSITY",
   "city": "LAUGHLIN AFB",
   "state": "TX",
   "zip": "78843",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 43.5,

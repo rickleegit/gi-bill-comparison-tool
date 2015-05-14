@@ -1,6 +1,6 @@
 {
   "facility_code": "25090843",
-  "institution": "TEXAS HEALTH SCHOOL LP",
+  "institution": "TEXAS HEALTH SCHOOL",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77079",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 81.7,

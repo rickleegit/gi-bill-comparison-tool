@@ -1,6 +1,6 @@
 {
   "facility_code": "31000450",
-  "institution": "SHEPHERDS THEOLOGICAL SEMINARY-WY",
+  "institution": "SHEPHERDS THEOLOGICAL SEMINARY",
   "city": "LARAMIE",
   "state": "WY",
   "zip": "82073",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

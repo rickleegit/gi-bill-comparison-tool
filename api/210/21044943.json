@@ -1,6 +1,6 @@
 {
   "facility_code": "21044943",
-  "institution": "UNIVERSITY OF ST AUGUSTINE FOR HEALTH SERVICES",
+  "institution": "UNIVERSITY OF ST AUGUSTINE FOR HEALTH SCIENCES",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78739",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

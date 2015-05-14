@@ -1,6 +1,6 @@
 {
   "facility_code": "25458247",
-  "institution": "CORTIVA INSTITUTE-FEDERAL WAY",
+  "institution": "CORTIVA INSTITUTE-SEATTLE",
   "city": "FEDERAL WAY",
   "state": "WA",
   "zip": "98003",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 0.0,

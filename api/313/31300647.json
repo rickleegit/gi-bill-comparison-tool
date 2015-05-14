@@ -1,6 +1,6 @@
 {
   "facility_code": "31300647",
-  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-TACOMA",
+  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-WORLDWIDE",
   "city": "JOINT BASE LEWIS-MCCHORD",
   "state": "WA",
   "zip": "98438",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 58.3,

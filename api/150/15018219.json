@@ -1,6 +1,6 @@
 {
   "facility_code": "15018219",
-  "institution": "MATTANAWCOOK ACADEMY",
+  "institution": "UNIVERSITY OF MAINE AT AUGUSTA-MATTANAWCOOK ACADEMY",
   "city": "LINCOLN",
   "state": "ME",
   "zip": "04457",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 12.3,

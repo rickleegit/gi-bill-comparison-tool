@@ -1,6 +1,6 @@
 {
   "facility_code": "31156776",
-  "institution": "UNIVERSIDAD TECNO DE SANTIAGO",
+  "institution": "UNIVERSIDAD TECNOLOGICA DE SANTIAGO",
   "city": "SANTIAGO",
   "state": null,
   "zip": null,
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

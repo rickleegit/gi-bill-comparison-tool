@@ -1,6 +1,6 @@
 {
   "facility_code": "12070443",
-  "institution": "UNIVERSITY OF TEXAS HEALTH SCICNTR SAN ANTONIO ORTHOPAEDIC SPORTS MED FELLOWSHIP",
+  "institution": "THE UNIVERSITY OF TEXAS HEALTH SCIENCE CENTER AT SAN ANTONIO",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78229",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

@@ -1,6 +1,6 @@
 {
   "facility_code": "20C21843",
-  "institution": "CCA MINERAL WELLS PRE-PAROLE XFER FAC",
+  "institution": "CORRECTIONS CORP OF AMER-MINERAL WELLS PPTF",
   "city": "MINERAL WELLS",
   "state": "TX",
   "zip": "76067",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

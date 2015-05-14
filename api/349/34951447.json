@@ -1,6 +1,6 @@
 {
   "facility_code": "34951447",
-  "institution": "MOODY BIBLE INSTITUTE-SPOKANE",
+  "institution": "MOODY BIBLE INSTITUTE",
   "city": "SPOKANE",
   "state": "WA",
   "zip": "99207",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 84.3,

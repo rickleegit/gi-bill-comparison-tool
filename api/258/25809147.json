@@ -1,6 +1,6 @@
 {
   "facility_code": "25809147",
-  "institution": "GENE JUAREZ ACADEMY OF BEAUTY-SOUTH",
+  "institution": "GENE JUAREZ ACADEMY OF BEAUTY-FEDERAL WAY",
   "city": "FEDERAL WAY",
   "state": "WA",
   "zip": "98003",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 68.0,

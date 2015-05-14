@@ -1,6 +1,6 @@
 {
   "facility_code": "14909447",
-  "institution": "HIGHLINE COLLEGE",
+  "institution": "HIGHLINE COMMUNITY COLLEGE",
   "city": "DES MOINES",
   "state": "WA",
   "zip": "98198",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": false,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 31.8,

@@ -1,6 +1,6 @@
 {
   "facility_code": "249M2243",
-  "institution": "SANFORD BROWN COL N LP CAMPUS",
+  "institution": "SANFORD-BROWN COLLEGE-HOUSTON NORTH LOOP",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77008",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 53.9,

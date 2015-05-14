@@ -1,6 +1,6 @@
 {
   "facility_code": "11034643",
-  "institution": "TEXAS A M UNIV SYS HEALTH SCI CENTER",
+  "institution": "TEXAS A AND M UNIVERSITY HEALTH SCIENCE CENTER",
   "city": "BRYAN",
   "state": "TX",
   "zip": "77807",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

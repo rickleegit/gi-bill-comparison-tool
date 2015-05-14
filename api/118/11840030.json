@@ -1,6 +1,6 @@
 {
   "facility_code": "11840030",
-  "institution": "UNIVERSITY OF MEDICINE AND DENTISTRY OF NEW JERSEY",
+  "institution": "RUTGERS UNIVERSITY-R W JOHNSON MEDICAL SCHOOL-FAMILY MEDICINE RESIDENCY",
   "city": "FREEHOLD",
   "state": "NJ",
   "zip": "07728",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Valerie Williams",
   "vetsuccess_email": "Valerie.Williams1@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.4,

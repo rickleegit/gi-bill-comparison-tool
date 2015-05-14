@@ -1,6 +1,6 @@
 {
   "facility_code": "31350047",
-  "institution": "BRANDMAN UNIVERSITY-BANGOR",
+  "institution": "BRANDMAN UNIVERSITY",
   "city": "SILVERDALE",
   "state": "WA",
   "zip": "98383",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

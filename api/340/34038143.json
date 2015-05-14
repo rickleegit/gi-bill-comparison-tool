@@ -1,6 +1,6 @@
 {
   "facility_code": "34038143",
-  "institution": "REMINGTON COLLEGE-FT WORTH",
+  "institution": "REMINGTON COLLEGE-FT WORTH CAMPUS",
   "city": "FT WORTH",
   "state": "TX",
   "zip": "76112",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 69.5,

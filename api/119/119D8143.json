@@ -1,6 +1,6 @@
 {
   "facility_code": "119D8143",
-  "institution": "TEXAS A AND M UNIVERSITY COMMERCE",
+  "institution": "TEXAS A & M UNIVERSITY-COMMERCE",
   "city": "COMMERCE",
   "state": "TX",
   "zip": "75428",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 45.2,

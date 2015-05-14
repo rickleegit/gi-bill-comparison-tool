@@ -1,6 +1,6 @@
 {
   "facility_code": "11000643",
-  "institution": "UNIVERSITY OF TEXAS AT ARLINGTON",
+  "institution": "THE UNIVERSITY OF TEXAS AT ARLINGTON",
   "city": "ARLINGTON",
   "state": "TX",
   "zip": "76019",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Shalonda Taylor",
   "vetsuccess_email": "Shalonda.Taylor@va.gov",
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 40.4,

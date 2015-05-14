@@ -1,6 +1,6 @@
 {
   "facility_code": "25116343",
-  "institution": "SOUTH TEXAS TRAINING CENTER LAREDO",
+  "institution": "SOUTH TEXAS TRAINING CENTER",
   "city": "LAREDO",
   "state": "TX",
   "zip": "78041",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 85.2,

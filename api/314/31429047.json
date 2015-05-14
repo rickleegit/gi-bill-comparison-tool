@@ -1,6 +1,6 @@
 {
   "facility_code": "31429047",
-  "institution": "SAINT MARTINS UNIVERSITY",
+  "institution": "SAINT MARTIN'S UNIVERSITY",
   "city": "LACEY",
   "state": "WA",
   "zip": "98503",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 47.7,

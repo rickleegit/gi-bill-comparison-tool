@@ -1,6 +1,6 @@
 {
   "facility_code": "11001743",
-  "institution": "UNIVERSITY OF NORTH TEXAS HEALTH SCIENCE CENTER FORT WORTH",
+  "institution": "UNIVERSITY OF NORTH TEXAS HEALTH SCIENCE CENTER",
   "city": "FT WORTH",
   "state": "TX",
   "zip": "76107",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

@@ -1,6 +1,6 @@
 {
   "facility_code": "11840330",
-  "institution": "UNIVERSITY OF MEDICINE AND DENTISTRY OF NEW JERSEY",
+  "institution": "RUTGERS UNIVERSITY-SCHOOL OF HEATH RELATED PROFESSIONS",
   "city": "NEWARK",
   "state": "NJ",
   "zip": "07101",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Valerie Williams",
   "vetsuccess_email": "Valerie.Williams1@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 67.5,

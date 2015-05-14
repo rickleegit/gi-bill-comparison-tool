@@ -17,6 +17,8 @@
   "vetsuccess_name": "Lois Daz",
   "vetsuccess_email": "Lois.Daz@va.gov",
   "eight_keys": true,
+  "sec_702": false,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 18.0,

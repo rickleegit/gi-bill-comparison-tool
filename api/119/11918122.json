@@ -17,6 +17,8 @@
   "vetsuccess_name": "Brent Haddow",
   "vetsuccess_email": "Brent.Haddow@va.gov",
   "eight_keys": true,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 54.9,

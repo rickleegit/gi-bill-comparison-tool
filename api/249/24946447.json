@@ -1,6 +1,6 @@
 {
   "facility_code": "24946447",
-  "institution": "CARRINGTON COLLEGE-SPOKANE VLY",
+  "institution": "CARRINGTON COLLEGE-SPOKANE",
   "city": "SPOKANE VALLEY",
   "state": "WA",
   "zip": "99206",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 70.5,

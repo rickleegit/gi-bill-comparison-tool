@@ -1,6 +1,6 @@
 {
   "facility_code": "14020609",
-  "institution": "UNIVERSITY OF THE DISTRICT OF COLUMBIA",
+  "institution": "UNIVERSITY OF THE DISTRICT OF COLUMBIA-COMMUNITY COLLEGE",
   "city": "WASHINGTON",
   "state": "DC",
   "zip": "20002",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 16.4,

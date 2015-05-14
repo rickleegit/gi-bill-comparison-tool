@@ -1,6 +1,6 @@
 {
   "facility_code": "11002443",
-  "institution": "UT SW MEDICAL CENTER SCHOOL OF HLTH PROFESSIONS",
+  "institution": "UNIVERSITY OF TEXAS SOUTHWESTERN MEDICAL CENTER",
   "city": "DALLAS",
   "state": "TX",
   "zip": "75390",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

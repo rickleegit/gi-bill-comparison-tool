@@ -1,6 +1,6 @@
 {
   "facility_code": "15102243",
-  "institution": "TYLER CO HOSPITAL SCH OF VOC NURSING",
+  "institution": "TYLER COUNTY HOSPITAL SCHOOL OF VOC NURSING",
   "city": "WOODVILLE",
   "state": "TX",
   "zip": "75979",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

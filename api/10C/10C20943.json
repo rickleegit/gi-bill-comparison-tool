@@ -1,6 +1,6 @@
 {
   "facility_code": "10C20943",
-  "institution": "EL PASO FIRE DEPT TRNG ACAD",
+  "institution": "EL PASO FIRE DEPARTMENT TRNG ACAD",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79905",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

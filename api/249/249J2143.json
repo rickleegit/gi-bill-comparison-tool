@@ -1,6 +1,6 @@
 {
   "facility_code": "249J2143",
-  "institution": "KAPLAN COLLEGE DALLAS",
+  "institution": "KAPLAN COLLEGE-DALLAS",
   "city": "DALLAS",
   "state": "TX",
   "zip": "75234",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 68.2,

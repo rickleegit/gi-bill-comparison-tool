@@ -1,6 +1,6 @@
 {
   "facility_code": "11029043",
-  "institution": "UNIVERSITY OF TEXAS MEDICAL BRANCH AT GALVESTON",
+  "institution": "THE UNIVERSITY OF TEXAS MEDICAL BRANCH",
   "city": "GALVESTON",
   "state": "TX",
   "zip": "77555",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

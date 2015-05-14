@@ -1,6 +1,6 @@
 {
   "facility_code": "15106843",
-  "institution": "UNIVERSITY OF TEXAS AT AUSTIN PROF DEV CTR",
+  "institution": "THE UNIVERSITY OF TEXAS AT AUSTIN",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78712",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.4,

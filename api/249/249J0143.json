@@ -1,6 +1,6 @@
 {
   "facility_code": "249J0143",
-  "institution": "THE COLLEGE OF HEALTHCARE PROFESSIONS NW",
+  "institution": "THE COLLEGE OF HEALTH CARE PROFESSIONS-NORTHWEST",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77092",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 84.9,

@@ -1,6 +1,6 @@
 {
   "facility_code": "10086418",
-  "institution": "DEFENCE CONTRACT MANAGEMENT AGENCY",
+  "institution": "DEFENSE CONTRACT MANAGEMENT AGENCY",
   "city": "LAKE CHARLES",
   "state": "LA",
   "zip": "70615",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

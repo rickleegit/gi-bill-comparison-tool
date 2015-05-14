@@ -1,6 +1,6 @@
 {
   "facility_code": "25084143",
-  "institution": "VOGUE COLLEGE SAN ANTONIO NUMBER 10",
+  "institution": "VOGUE COLLEGE OF COSMOTOLOGY-SAN ANTONIO FREDERICKSBURG",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78201",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

@@ -1,6 +1,6 @@
 {
   "facility_code": "31809621",
-  "institution": "BOSTON UNIVERSITY",
+  "institution": "BOSTON UNIVERSITY-METROPOLITAN COLLEGE BRUSSELS CAMPUS",
   "city": "BOSTON",
   "state": "MA",
   "zip": "02215",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 84.5,

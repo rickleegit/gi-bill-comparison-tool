@@ -1,6 +1,6 @@
 {
   "facility_code": "25000208",
-  "institution": "HORIZON HELICOPTERS, INC.",
+  "institution": "HORIZON HELICOPTERS INC",
   "city": "NEWARK",
   "state": "DE",
   "zip": "19702",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": true,
   "grad_rate": null,

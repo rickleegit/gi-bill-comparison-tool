@@ -1,6 +1,6 @@
 {
   "facility_code": "24905330",
-  "institution": "BERKELEY COLLEGE - CLIFTON CAMPUS",
+  "institution": "BERKELEY COLLEGE-CLIFTON CAMPUS",
   "city": "CLIFTON",
   "state": "NJ",
   "zip": "07011",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 31.5,

@@ -1,6 +1,6 @@
 {
   "facility_code": "25118543",
-  "institution": "SOUTH TEXAS VOC TECH INST-CORPUS",
+  "institution": "SOUTH TEXAS VOCATIONAL TECHNICAL INSTITUTE-CORPUS CHRISTI",
   "city": "CORPUS CHRISTI",
   "state": "TX",
   "zip": "78416",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 48.4,

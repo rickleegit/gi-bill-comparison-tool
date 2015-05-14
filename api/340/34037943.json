@@ -1,6 +1,6 @@
 {
   "facility_code": "34037943",
-  "institution": "REMINGTON COLLEGE-HOUSTON",
+  "institution": "REMINGTON COLLEGE-HOUSTON CAMPUS",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77082",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 76.2,

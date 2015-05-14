@@ -1,6 +1,6 @@
 {
   "facility_code": "11841430",
-  "institution": "RUTGERS UNIVERSITY-NEW BRUNSWICK",
+  "institution": "RUTGERS UNIVERSITY-NEW BRUNSWICK R W JOHNSON MED SCHOOL THE CANCER INST OF NJ",
   "city": "NEW BRUNSWICK",
   "state": "NJ",
   "zip": "08901",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Valerie Williams",
   "vetsuccess_email": "Valerie.Williams1@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.4,

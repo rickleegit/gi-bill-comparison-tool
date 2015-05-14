@@ -1,6 +1,6 @@
 {
   "facility_code": "249M2343",
-  "institution": "THE COLLEGE OF HEALTH CARE PROFESSIONS AUSTIN",
+  "institution": "THE COLLEGE OF HEALTH CARE PROFESSIONS-AUSTIN",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78752",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 66.8,

@@ -1,6 +1,6 @@
 {
   "facility_code": "149H4143",
-  "institution": "CENTRAL TEXAS COLLEGE -PAC FAR EAST",
+  "institution": "CENTRAL TEXAS COLLEGE PACIFIC FAR EAST",
   "city": "KILLEEN",
   "state": "TX",
   "zip": "76540",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 14.5,

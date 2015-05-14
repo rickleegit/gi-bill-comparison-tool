@@ -1,6 +1,6 @@
 {
   "facility_code": "18066721",
-  "institution": "MUNICIPAL POLICE TRAINING COMMITTEE BASIC RECRUIT ACADEMY",
+  "institution": "MUNICIPAL POLICE TRAINING COMMITTEE BASIC RECRUIT ACADEMY-RANDOLPH",
   "city": "RANDOLPH",
   "state": "MA",
   "zip": "02368",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

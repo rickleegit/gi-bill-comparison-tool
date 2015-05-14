@@ -1,6 +1,6 @@
 {
   "facility_code": "25094843",
-  "institution": "SOUTHERN CAREERS INST-AUSTIN",
+  "institution": "SOUTHERN CAREERS INSTITUTE-AUSTIN",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78704",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 30.6,

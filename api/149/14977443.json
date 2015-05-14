@@ -1,6 +1,6 @@
 {
   "facility_code": "14977443",
-  "institution": "AUSTIN COMMUNITY COLLEGE",
+  "institution": "AUSTIN COMMUNITY COLLEGE DISTRICT",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78752",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Brad Robichaux",
   "vetsuccess_email": "Brad.Robichaux@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 5.9,

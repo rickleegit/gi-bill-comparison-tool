@@ -1,6 +1,6 @@
 {
   "facility_code": "10C33243",
-  "institution": "COMBINED SUPPORT MAINT SHOP 2",
+  "institution": "COMBINED SUPPORT MAINTENANCE SHOP 2",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78763",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

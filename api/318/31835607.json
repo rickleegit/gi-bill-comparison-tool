@@ -1,6 +1,6 @@
 {
   "facility_code": "31835607",
-  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-WORLDWIDE",
+  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-EAST HARTFORD",
   "city": "EAST HARTFORD",
   "state": "CT",
   "zip": "06108",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 58.3,

@@ -1,7 +1,7 @@
 {
   "facility_code": "11009175",
   "institution": "MOHAWK COLLEGE",
-  "city": "HAMILTON",
+  "city": "HAMILTON, ON, L8N 3T2",
   "state": null,
   "zip": null,
   "country": "CANADA",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

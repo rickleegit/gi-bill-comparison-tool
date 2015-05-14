@@ -1,6 +1,6 @@
 {
   "facility_code": "25459047",
-  "institution": "EVERGREEN BEAUTY COLLEGE-BELLEVUE",
+  "institution": "EVERGREEN BEAUTY AND BARBER COLLEGE-BELLEVUE",
   "city": "BELLEVUE",
   "state": "WA",
   "zip": "98007",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 73.6,

@@ -1,6 +1,6 @@
 {
   "facility_code": "24035643",
-  "institution": "KAPLAN COLLEGE MCALLEN",
+  "institution": "KAPLAN COLLEGE-MCALLEN",
   "city": "MCALLEN",
   "state": "TX",
   "zip": "78503",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 76.9,

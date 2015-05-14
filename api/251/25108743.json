@@ -1,6 +1,6 @@
 {
   "facility_code": "25108743",
-  "institution": "SEBRING CAREER SCHOOLS",
+  "institution": "SEBRING CAREER SCHOOLS-HUNTSVILLE",
   "city": "HUNTSVILLE",
   "state": "TX",
   "zip": "77340",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 51.0,

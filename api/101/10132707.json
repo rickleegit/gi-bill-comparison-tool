@@ -1,6 +1,6 @@
 {
   "facility_code": "10132707",
-  "institution": "SOCIAL SECURITY ADMINISTRATION NEW BRITAIN CT",
+  "institution": "SSA NEW BRITAIN CT",
   "city": "NEW BRITAIN",
   "state": "CT",
   "zip": "06051",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

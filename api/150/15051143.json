@@ -1,6 +1,6 @@
 {
   "facility_code": "15051143",
-  "institution": "CAPITAL AREA COUN OF GOVTS REG TRNG ACAD",
+  "institution": "CAPITAL AREA COUNCIL OF GOVTS REGIONAL TRAINING ACADEMY",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78744",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

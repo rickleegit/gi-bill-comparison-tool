@@ -1,6 +1,6 @@
 {
   "facility_code": "31042543",
-  "institution": "FULLER THEOLOGICAL SEMINARY TEXAS REG CAMPUS",
+  "institution": "FULLER THEOLOGICAL SEMINARY IN CALIFORNIA",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77042",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

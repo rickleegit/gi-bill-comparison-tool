@@ -1,6 +1,6 @@
 {
   "facility_code": "25116543",
-  "institution": "SOUTH TEXAS TRAINING CENTER SAN BENITO",
+  "institution": "SOUTH TEXAS TRAINING CENTER",
   "city": "SAN BENITO",
   "state": "TX",
   "zip": "78586",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 85.2,

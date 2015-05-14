@@ -1,6 +1,6 @@
 {
   "facility_code": "32070043",
-  "institution": "CLINICAL PASTORAL EDU BAPT HLTH SYS",
+  "institution": "CLINICAL PASTORAL EDUCATION BAPT HLTH SYS",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78205",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

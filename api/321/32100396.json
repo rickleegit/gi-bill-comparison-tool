@@ -1,6 +1,6 @@
 {
   "facility_code": "32100396",
-  "institution": "UNIV OF HEALTH SCIENCE ANTIGUA",
+  "institution": "UNIVERSITY OF HEALTH SCIENCE ANTIGUA",
   "city": "ST JOHN'S",
   "state": null,
   "zip": null,
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

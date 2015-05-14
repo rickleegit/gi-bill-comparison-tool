@@ -1,6 +1,6 @@
 {
   "facility_code": "31009421",
-  "institution": "NEW ENGLAND SCHOOL OF LAW",
+  "institution": "NEW ENGLAND LAW/BOSTON",
   "city": "BOSTON",
   "state": "MA",
   "zip": "02116",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

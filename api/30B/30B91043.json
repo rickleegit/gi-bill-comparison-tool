@@ -1,6 +1,6 @@
 {
   "facility_code": "30B91043",
-  "institution": "ASSOC BLDRS/CONTRS ELECT APPSHP",
+  "institution": "ASSOC BUILDERS AND CONTRACTORS ELECT APPRENTICESHIP",
   "city": "CORPUS CHRISTI",
   "state": "TX",
   "zip": "78409",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

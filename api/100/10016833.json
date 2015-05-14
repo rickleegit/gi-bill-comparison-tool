@@ -1,6 +1,6 @@
 {
   "facility_code": "10016833",
-  "institution": "NCDOC - HARNETT CORRECTIONAL INSTITUTION",
+  "institution": "NCDOC - HARNETT CORRECTIONAL INSTITUTION #3805",
   "city": "LILLINGTON",
   "state": "NC",
   "zip": "27546",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

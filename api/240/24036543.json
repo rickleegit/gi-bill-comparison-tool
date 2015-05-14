@@ -1,6 +1,6 @@
 {
   "facility_code": "24036543",
-  "institution": "LINCOLN COLLEGE OF TECHNOLOGY",
+  "institution": "LINCOLN COLLEGE OF TECHNOLOGY-GRAND PRAIRIE",
   "city": "GRAND PRAIRIE",
   "state": "TX",
   "zip": "75052",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 55.4,

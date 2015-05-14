@@ -1,6 +1,6 @@
 {
   "facility_code": "24035743",
-  "institution": "KAPLAN COLLEGE LUBBOCK",
+  "institution": "KAPLAN COLLEGE-LUBBOCK",
   "city": "LUBBOCK",
   "state": "TX",
   "zip": "79401",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 64.6,

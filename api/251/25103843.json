@@ -1,6 +1,6 @@
 {
   "facility_code": "25103843",
-  "institution": "PAUL MITCHELL THE SCHOOL AUSTIN",
+  "institution": "PAUL MITCHELL THE SCHOOL-AUSTIN",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78759",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 58.9,

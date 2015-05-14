@@ -1,6 +1,6 @@
 {
   "facility_code": "11008643",
-  "institution": "UNIVERSITY OF TEXAS-PAN AMERICAN",
+  "institution": "THE UNIVERSITY OF TEXAS-PAN AMERICAN",
   "city": "EDINBURG",
   "state": "TX",
   "zip": "78539",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 39.3,

@@ -1,6 +1,6 @@
 {
   "facility_code": "11001943",
-  "institution": "TEXAS A&M INTERNATIONAL UNIVERSITY",
+  "institution": "TEXAS A & M INTERNATIONAL UNIVERSITY",
   "city": "LAREDO",
   "state": "TX",
   "zip": "78041",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 43.0,

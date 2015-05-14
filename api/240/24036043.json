@@ -1,6 +1,6 @@
 {
   "facility_code": "24036043",
-  "institution": "KAPLAN COLLEGE BEAUMONT",
+  "institution": "KAPLAN COLLEGE-BEAUMONT",
   "city": "BEAUMONT",
   "state": "TX",
   "zip": "77706",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 70.7,

@@ -1,6 +1,6 @@
 {
   "facility_code": "14905144",
-  "institution": "DODGE CITY COMMUNITY COLLEGE-PROVO",
+  "institution": "DODGE CITY COMMUNITY COLLEGE",
   "city": "PROVO",
   "state": "UT",
   "zip": "84601",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

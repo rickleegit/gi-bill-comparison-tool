@@ -1,6 +1,6 @@
 {
   "facility_code": "31419347",
-  "institution": "THE SEATTLE SCHOOL OF THEOLOGY AND PSYCHOLOGY",
+  "institution": "THE SEATTLE SCHOOL OF THEOLOGY & PSYCHOLOGY",
   "city": "SEATTLE",
   "state": "WA",
   "zip": "98121",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

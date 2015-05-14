@@ -1,6 +1,6 @@
 {
   "facility_code": "24036643",
-  "institution": "KAPLAN COLLEGE EL PASO",
+  "institution": "KAPLAN COLLEGE-EL PASO",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79907",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 76.4,

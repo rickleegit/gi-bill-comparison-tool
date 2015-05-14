@@ -1,6 +1,6 @@
 {
   "facility_code": "21801037",
-  "institution": "PIONEER PACIFIC COLLEGE",
+  "institution": "PIONEER PACIFIC COLLEGE - WILSONVILLE",
   "city": "WILSONVILLE",
   "state": "OR",
   "zip": "97070",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 70.3,

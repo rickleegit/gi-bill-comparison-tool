@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 6.3,
@@ -38,7 +40,7 @@
   "accredited": true,
   "accreditation_type": "Regional",
   "accreditation_status": null,
-  "complaints_facility_code": 1,
+  "complaints_facility_code": 2,
   "complaints_financial_by_fac_code": 0,
   "complaints_quality_by_fac_code": 1,
   "complaints_refund_by_fac_code": 0,
@@ -50,8 +52,8 @@
   "complaints_credit_transfer_by_fac_code": 0,
   "complaints_credit_job_by_fac_code": "0",
   "complaints_transcript_by_fac_code": 0,
-  "complaints_other_by_fac_code": 0,
-  "complaints_main_campus_roll_up": 1,
+  "complaints_other_by_fac_code": 1,
+  "complaints_main_campus_roll_up": 2,
   "complaints_financial_by_ope_id_do_not_sum": 0,
   "complaints_quality_by_ope_id_do_not_sum": 1,
   "complaints_refund_by_ope_id_do_not_sum": 0,
@@ -63,5 +65,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": 1
 }

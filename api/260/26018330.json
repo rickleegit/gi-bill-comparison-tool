@@ -1,6 +1,6 @@
 {
   "facility_code": "26018330",
-  "institution": "BRANFORD HALL CAREER INSTITUTE - JERSEY CITY",
+  "institution": "BRANFORD HALL CAREER INSTITUTE-JERSEY CITY",
   "city": "JERSEY CITY",
   "state": "NJ",
   "zip": "07306",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.1,

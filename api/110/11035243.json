@@ -1,6 +1,6 @@
 {
   "facility_code": "11035243",
-  "institution": "SUL ROSS STATE UNIVERSITY RIO GRANDE COLLEGE",
+  "institution": "SUL ROSS STATE UNIVERSITY",
   "city": "DEL RIO",
   "state": "TX",
   "zip": "78840",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 27.1,

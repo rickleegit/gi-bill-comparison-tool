@@ -1,6 +1,6 @@
 {
   "facility_code": "25114643",
-  "institution": "FORTIS INSTITUTE HOUSTON NORTH",
+  "institution": "FORTIS INSTITUTE-HOUSTON",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77060",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 67.4,

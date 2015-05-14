@@ -1,7 +1,7 @@
 {
   "facility_code": "11002174",
   "institution": "DUBLIN CITY UNIVERSITY",
-  "city": "GLASNEVIN",
+  "city": "GLASNEVIN, DUBLIN 9",
   "state": null,
   "zip": null,
   "country": "IRELAND",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

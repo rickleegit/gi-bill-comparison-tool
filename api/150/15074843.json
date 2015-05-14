@@ -1,6 +1,6 @@
 {
   "facility_code": "15074843",
-  "institution": "TX A AND M ENGR EXT SV PUB SFTY AND SEC TR DIV",
+  "institution": "TEXAS A & M UNIVERSITY-COLLEGE STATION",
   "city": "BRYAN",
   "state": "TX",
   "zip": "77807",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.1,

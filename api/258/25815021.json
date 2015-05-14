@@ -1,6 +1,6 @@
 {
   "facility_code": "25815021",
-  "institution": "NEW ENGLAND TRACTOR TRAILER TRAINING SCHOOL",
+  "institution": "NEW ENGLAND TRACTOR TRAILER TRAINING SCHOOL OF MASSACHUSETTS",
   "city": "NORTH ANDOVER",
   "state": "MA",
   "zip": "01845",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.4,

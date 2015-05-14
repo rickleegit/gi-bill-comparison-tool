@@ -1,7 +1,7 @@
 {
   "facility_code": "12800674",
-  "institution": "ST GEORGE'S HOSPITAL MED SCH",
-  "city": "LONDON",
+  "institution": "ST GEORGE'S HOSPITAL MEDICAL SCHOOL",
+  "city": "LONDON, SW17 0RE",
   "state": null,
   "zip": null,
   "country": "UNITED KINGDOM",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

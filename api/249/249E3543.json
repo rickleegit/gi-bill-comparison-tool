@@ -1,6 +1,6 @@
 {
   "facility_code": "249E3543",
-  "institution": "TEXAS VOCATIONAL SCHOOLS",
+  "institution": "TEXAS VOCATIONAL SCHOOLS INC",
   "city": "VICTORIA",
   "state": "TX",
   "zip": "77901",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 73.6,

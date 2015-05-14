@@ -1,6 +1,6 @@
 {
   "facility_code": "25121743",
-  "institution": "PROFESSIONAL CAREER TRAINING INST HOUSTON",
+  "institution": "PROFESSIONAL CAREER TRAINING INSTITUTE",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77090",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 80.3,

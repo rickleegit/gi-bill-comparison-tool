@@ -1,6 +1,6 @@
 {
   "facility_code": "15082643",
-  "institution": "TEXAS A&M ENGINEERING EXTENSION SERVICE PROF & REG SERV",
+  "institution": "TEXAS A AND M ENGINEERING EXTENSION SERVICE PROF & REG SERV",
   "city": "MESQUITE",
   "state": "TX",
   "zip": "75181",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

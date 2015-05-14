@@ -1,6 +1,6 @@
 {
   "facility_code": "31806907",
-  "institution": "YALE UNIVERSITY",
+  "institution": "YALE UNIVERSITY-SCHOOL OF ARCHITECTURE",
   "city": "NEW HAVEN",
   "state": "CT",
   "zip": "06511",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 97.8,

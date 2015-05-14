@@ -1,6 +1,6 @@
 {
   "facility_code": "14920447",
-  "institution": "PIERCE COLLEGE-FT STEILACOOM",
+  "institution": "PIERCE COLLEGE AT FT STEILACOOM",
   "city": "LAKEWOOD",
   "state": "WA",
   "zip": "98498",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 20.3,

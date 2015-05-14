@@ -1,6 +1,6 @@
 {
   "facility_code": "10F00132",
-  "institution": "DEPT OF HOMELAND SECURITY Â¿ US IMMIGRATION & CUSTOMS ENFORCEMENT",
+  "institution": "DEPT OF HOMELAND SECURITY - US IMMIGRATION & CUSTOMS ENFORCEMENT",
   "city": "ELMHURST",
   "state": "NY",
   "zip": "11370",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

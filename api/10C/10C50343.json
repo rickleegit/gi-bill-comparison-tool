@@ -1,6 +1,6 @@
 {
   "facility_code": "10C50343",
-  "institution": "EL PASO COUNTY SHERIFFS OFF REG VIII",
+  "institution": "EL PASO COUNTY SHERIFF'S OFF REG VIII",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79938",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

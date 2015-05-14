@@ -1,6 +1,6 @@
 {
   "facility_code": "25510714",
-  "institution": "CONIFER CANINE DOG TRAINING COLLEGE",
+  "institution": "CONIFER CANINE DOG TRAINER COLLEGE",
   "city": "PETERSBURG",
   "state": "IN",
   "zip": "47567",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

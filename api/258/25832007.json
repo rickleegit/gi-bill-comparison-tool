@@ -1,6 +1,6 @@
 {
   "facility_code": "25832007",
-  "institution": "INTERNATIONAL INSTITUTE OF COSMETOLOGY",
+  "institution": "INTERNATIONAL INSTITUTE OF COSMETOLOGY-WETHERSFIELD",
   "city": "WETHERSFIELD",
   "state": "CT",
   "zip": "06109",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.3,

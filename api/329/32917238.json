@@ -1,7 +1,7 @@
 {
   "facility_code": "32917238",
-  "institution": "UNIVERSITY OF PENN HEALTH SYS",
-  "city": "PHILA",
+  "institution": "HOSPITAL OF THE UNIVERSITY OF PENNSYLVANIA",
+  "city": "PHILADELPHIA",
   "state": "PA",
   "zip": "19104",
   "country": "USA",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

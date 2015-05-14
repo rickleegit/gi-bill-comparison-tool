@@ -1,6 +1,6 @@
 {
   "facility_code": "24900130",
-  "institution": "BERKELEY COLLEGE - WOODLAND PARK",
+  "institution": "BERKELEY COLLEGE-WOODLAND PARK",
   "city": "WOODLAND PARK",
   "state": "NJ",
   "zip": "07424",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 31.5,

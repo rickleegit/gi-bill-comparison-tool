@@ -1,6 +1,6 @@
 {
   "facility_code": "25103043",
-  "institution": "TONI & GUY HAIRDRESSING ACADEMY TIGI CREATIVE SCHOOL",
+  "institution": "TONI & GUY HAIRDRESSING ACADEMY-CARROLLTON",
   "city": "PLANO",
   "state": "TX",
   "zip": "75093",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 62.2,

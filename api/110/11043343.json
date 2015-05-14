@@ -1,6 +1,6 @@
 {
   "facility_code": "11043343",
-  "institution": "TEXAS AM UNIV HSC SW DEPT OF ANESTHESIOLOGY",
+  "institution": "TEXAS A AND M UNIVERSITY HSC SW DEPT OF ANESTHESIOLOGY",
   "city": "TEMPLE",
   "state": "TX",
   "zip": "76508",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

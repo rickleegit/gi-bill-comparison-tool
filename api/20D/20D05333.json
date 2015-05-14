@@ -1,6 +1,6 @@
 {
   "facility_code": "20D05333",
-  "institution": "SIEMENS MEDICAL SOLUTIONS USA, INC.",
+  "institution": "SIEMENS MEDICAL SOLUTIONS USA INC",
   "city": "CARY",
   "state": "NC",
   "zip": "27511",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

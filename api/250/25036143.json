@@ -1,6 +1,6 @@
 {
   "facility_code": "25036143",
-  "institution": "TRI STATE COSMETOLOGY INST NUMBER 1",
+  "institution": "TRI STATE COSMETOLOGY INSTITUTE",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79935",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 62.3,

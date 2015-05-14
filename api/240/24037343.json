@@ -1,6 +1,6 @@
 {
   "facility_code": "24037343",
-  "institution": "KAPLAN COLLEGE ARLINGTON",
+  "institution": "KAPLAN COLLEGE-ARLINGTON",
   "city": "ARLINGTON",
   "state": "TX",
   "zip": "76010",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 70.9,

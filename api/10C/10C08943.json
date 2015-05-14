@@ -1,6 +1,6 @@
 {
   "facility_code": "10C08943",
-  "institution": "TX HWY PATROL REG 7 TX DEPT OF PUBLIC SAFETY AUSTIN",
+  "institution": "TEXAS HIGHWAY PATROL REG 7 TX DEPT OF PUBLIC SAFETY AUSTIN",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78711",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

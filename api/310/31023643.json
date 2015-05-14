@@ -1,6 +1,6 @@
 {
   "facility_code": "31023643",
-  "institution": "PARK UNIVERSITY-FORT BLISS",
+  "institution": "PARK UNIVERSITY",
   "city": "FT BLISS",
   "state": "TX",
   "zip": "79916",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 43.5,

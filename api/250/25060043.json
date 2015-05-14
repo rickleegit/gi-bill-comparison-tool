@@ -1,6 +1,6 @@
 {
   "facility_code": "25060043",
-  "institution": "SEGUIN BEAUTY SCHOOL",
+  "institution": "SEGUIN BEAUTY SCHOOL-SEGUIN",
   "city": "SEGUIN",
   "state": "TX",
   "zip": "78155",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 56.3,

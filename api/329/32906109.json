@@ -1,6 +1,6 @@
 {
   "facility_code": "32906109",
-  "institution": "GEORGETOWN UNIVERSITY",
+  "institution": "GEORGETOWN UNIVERSITY-SCHOOL OF MEDICINE",
   "city": "WASHINGTON",
   "state": "DC",
   "zip": "20007",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 92.5,

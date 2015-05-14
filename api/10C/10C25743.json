@@ -1,6 +1,6 @@
 {
   "facility_code": "10C25743",
-  "institution": "US DEPT OF JUSTICE US MARSHALS SVC DEL RIO",
+  "institution": "US DEPARTMENT OF JUSTICE US MARSHALS SVC DEL RIO",
   "city": "DEL RIO",
   "state": "TX",
   "zip": "78840",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

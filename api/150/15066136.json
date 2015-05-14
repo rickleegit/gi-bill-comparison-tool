@@ -1,7 +1,7 @@
 {
   "facility_code": "15066136",
   "institution": "PRYOR HIGH SCHOOL",
-  "city": "PRYOR",
+  "city": "PRYOR CREEK",
   "state": "OK",
   "zip": "74361",
   "country": "USA",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": false,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

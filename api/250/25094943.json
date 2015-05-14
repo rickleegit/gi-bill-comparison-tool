@@ -1,6 +1,6 @@
 {
   "facility_code": "25094943",
-  "institution": "SOUTHERN CAREERS INST-SAN ANTONIO",
+  "institution": "SOUTHERN CAREERS INSTITUTE-SAN ANTONIO",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78221",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 28.4,

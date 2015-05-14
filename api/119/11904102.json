@@ -17,6 +17,8 @@
   "vetsuccess_name": "Terry Jackson",
   "vetsuccess_email": "Terry.Jackson@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 27.8,

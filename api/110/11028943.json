@@ -1,6 +1,6 @@
 {
   "facility_code": "11028943",
-  "institution": "TEXAS A AND M UNIVERSITY",
+  "institution": "TEXAS A & M UNIVERSITY-COLLEGE STATION",
   "city": "COLLEGE STATION",
   "state": "TX",
   "zip": "77843",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Lynne Muller-McIntyre",
   "vetsuccess_email": "Lynne.Muller-McIntyre@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 79.1,

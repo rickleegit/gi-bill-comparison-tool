@@ -1,6 +1,6 @@
 {
   "facility_code": "24902130",
-  "institution": "BERKELEY COLLEGE - WOODBRIDGE",
+  "institution": "BERKELEY COLLEGE-WOODBRIDGE",
   "city": "WOODBRIDGE",
   "state": "NJ",
   "zip": "07095",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 31.5,

@@ -1,6 +1,6 @@
 {
   "facility_code": "102B3105",
-  "institution": "FAA BURBANK-GLENDALE-PASADENA AIRPORT",
+  "institution": "FAA BURBANK-GLENDALE-PASADENA TOWER",
   "city": "BURBANK",
   "state": "CA",
   "zip": "91505",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

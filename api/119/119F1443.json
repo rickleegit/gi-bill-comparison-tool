@@ -1,6 +1,6 @@
 {
   "facility_code": "119F1443",
-  "institution": "LAMAR STATE COLLEGE ORANGE",
+  "institution": "LAMAR STATE COLLEGE-ORANGE",
   "city": "ORANGE",
   "state": "TX",
   "zip": "77630",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 17.9,

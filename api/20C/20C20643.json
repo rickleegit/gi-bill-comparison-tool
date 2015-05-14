@@ -1,6 +1,6 @@
 {
   "facility_code": "20C20643",
-  "institution": "CUMMINS SOUTHERN PLAINS-ARLINGTON",
+  "institution": "CUMMINS SOUTHERN PLAINS LLC ARLINGTON",
   "city": "ARLINGTON",
   "state": "TX",
   "zip": "76011",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

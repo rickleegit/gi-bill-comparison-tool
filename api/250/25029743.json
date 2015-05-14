@@ -1,6 +1,6 @@
 {
   "facility_code": "25029743",
-  "institution": "COLLEGE OF COSMETOLOGY INC",
+  "institution": "COLLEGE OF COSMETOLOGY, INC",
   "city": "KILLEEN",
   "state": "TX",
   "zip": "76542",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

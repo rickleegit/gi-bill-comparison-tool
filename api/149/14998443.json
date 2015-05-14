@@ -1,6 +1,6 @@
 {
   "facility_code": "14998443",
-  "institution": "TARRANT COUNTY COLLEGE",
+  "institution": "TARRANT COUNTY COLLEGE DISTRICT",
   "city": "FORT WORTH",
   "state": "TX",
   "zip": "76102",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Douglas Smith",
   "vetsuccess_email": "Douglas.Smith1@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 9.4,

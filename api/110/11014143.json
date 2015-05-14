@@ -1,6 +1,6 @@
 {
   "facility_code": "11014143",
-  "institution": "UNIVERSITY OF TEXAS AT EL PASO",
+  "institution": "THE UNIVERSITY OF TEXAS AT EL PASO",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79968",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 39.5,

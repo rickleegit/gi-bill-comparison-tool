@@ -1,6 +1,6 @@
 {
   "facility_code": "249C0443",
-  "institution": "WESTERN TECHNICAL COLLEGE EL PASO",
+  "institution": "WESTERN TECHNICAL COLLEGE",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79924",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 64.1,

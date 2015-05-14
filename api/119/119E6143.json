@@ -1,6 +1,6 @@
 {
   "facility_code": "119E6143",
-  "institution": "UNIVERSITY OF TEXAS AT BROWNSVILLE TSC",
+  "institution": "THE UNIVERSITY OF TEXAS AT BROWNSVILLE",
   "city": "BROWNSVILLE",
   "state": "TX",
   "zip": "78520",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 26.0,

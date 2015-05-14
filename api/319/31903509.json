@@ -1,6 +1,6 @@
 {
   "facility_code": "31903509",
-  "institution": "GEORGETOWN UNIVERSITY",
+  "institution": "GEORGETOWN UNIVERSITY-SCHOOL FOR SUMMER AND CONTINUING EDUCATION",
   "city": "WASHINGTON",
   "state": "DC",
   "zip": "20057",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 92.5,

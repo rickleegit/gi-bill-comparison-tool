@@ -1,6 +1,6 @@
 {
   "facility_code": "25078243",
-  "institution": "JAYS TECHNICAL INSTITUTE INC",
+  "institution": "JAY'S TECHNICAL INSTITUTE",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77071",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 71.4,

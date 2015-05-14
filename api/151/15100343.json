@@ -1,6 +1,6 @@
 {
   "facility_code": "15100343",
-  "institution": "TX A AND M ENGR EXT SV EMCY MED SRV PROG",
+  "institution": "TEXAS A AND M ENGINEER EXT SV EMCY MED SRV PROG",
   "city": "COLLEGE STATION",
   "state": "TX",
   "zip": "77840",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

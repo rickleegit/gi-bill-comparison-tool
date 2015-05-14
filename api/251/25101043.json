@@ -1,6 +1,6 @@
 {
   "facility_code": "25101043",
-  "institution": "SOUTHERN CAREERS INST-BROWNSVILLE",
+  "institution": "SOUTHERN CAREERS INSTITUTE-BROWNSVILLE",
   "city": "BROWNSVILLE",
   "state": "TX",
   "zip": "78520",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 43.8,

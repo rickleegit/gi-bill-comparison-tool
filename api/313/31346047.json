@@ -1,6 +1,6 @@
 {
   "facility_code": "31346047",
-  "institution": "GOLDEN GATE UNIVERSITY",
+  "institution": "GOLDEN GATE UNIVERSITY-SAN FRANCISCO",
   "city": "SEATTLE",
   "state": "WA",
   "zip": "98101",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

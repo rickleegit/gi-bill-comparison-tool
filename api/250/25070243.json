@@ -1,6 +1,6 @@
 {
   "facility_code": "25070243",
-  "institution": "NEUROMUSCULAR CONCEPTS SCH OF MASSAGE",
+  "institution": "NEUROMUSCULAR CONCEPTS SCHOOL OF MASSAGE",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78240",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

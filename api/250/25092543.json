@@ -1,6 +1,6 @@
 {
   "facility_code": "25092543",
-  "institution": "TX EMERGENCY SVCS EDU GROUP",
+  "institution": "TX EMERGENCY SERVICE EDU GROUP",
   "city": "DALLAS",
   "state": "TX",
   "zip": "75229",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

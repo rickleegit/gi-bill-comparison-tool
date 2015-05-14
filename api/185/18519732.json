@@ -1,6 +1,6 @@
 {
   "facility_code": "18519732",
-  "institution": "ST LAWRENCE LEWIS BOCES",
+  "institution": "SAINT LAWRENCE-LEWIS BOCES",
   "city": "CANTON",
   "state": "NY",
   "zip": "13617",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

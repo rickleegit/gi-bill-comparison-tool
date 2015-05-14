@@ -1,6 +1,6 @@
 {
   "facility_code": "12070543",
-  "institution": "UT HLT SCI CTR SAN ANTONIO ORTHODONTIC RESIDENCY",
+  "institution": "THE UNIVERSITY OF TEXAS HEALTH SCIENCE CENTER AT SAN ANOTNIO",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78229",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

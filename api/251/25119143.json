@@ -1,6 +1,6 @@
 {
   "facility_code": "25119143",
-  "institution": "SKY HELICOPTERS, INC",
+  "institution": "SKY HELICOPTERS INC",
   "city": "GARLAND",
   "state": "TX",
   "zip": "75041",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": true,
   "grad_rate": null,

@@ -1,6 +1,6 @@
 {
   "facility_code": "119E1143",
-  "institution": "TX TECH UNIV HLTH SCI CTR SCH OF ALLIED HLTH",
+  "institution": "TEXAS TECH UNIVERSITY HEALTH SCIENCES CENTER",
   "city": "LUBBOCK",
   "state": "TX",
   "zip": "79430",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

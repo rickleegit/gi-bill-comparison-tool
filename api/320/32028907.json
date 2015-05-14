@@ -1,6 +1,6 @@
 {
   "facility_code": "32028907",
-  "institution": "BRIDGEPORT HOSPITAL SCHOOL OF NURSING",
+  "institution": "BRIDGEPORT HOSPITAL SCHOOL OF NURSING-EMS DEPARTMENT",
   "city": "BRIDGEPORT",
   "state": "CT",
   "zip": "06610",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 90.9,

@@ -1,6 +1,6 @@
 {
   "facility_code": "21043043",
-  "institution": "NATIONAL AMERICAN UNIV MESQUITE",
+  "institution": "NATIONAL AMERICAN UNIVERSITY-MESQUITE",
   "city": "MESQUITE",
   "state": "TX",
   "zip": "75150",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

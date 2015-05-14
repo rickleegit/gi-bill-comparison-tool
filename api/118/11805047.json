@@ -1,6 +1,6 @@
 {
   "facility_code": "11805047",
-  "institution": "UNIVERSITY OF WASHINGTON",
+  "institution": "UNIVERSITY OF WASHINGTON-SEATTLE CAMPUS",
   "city": "SEATTLE",
   "state": "WA",
   "zip": "98195",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 81.8,

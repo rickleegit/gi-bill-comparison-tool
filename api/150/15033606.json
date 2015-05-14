@@ -1,6 +1,6 @@
 {
   "facility_code": "15033606",
-  "institution": "AIMS COMMUNITY COLLEGE",
+  "institution": "AIMS COMMUNITY COLLEGE FLIGHT",
   "city": "GREELEY",
   "state": "CO",
   "zip": "80631",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": true,
   "grad_rate": 28.6,

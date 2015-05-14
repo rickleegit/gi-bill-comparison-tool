@@ -1,6 +1,6 @@
 {
   "facility_code": "31007143",
-  "institution": "UNIVERSITY OF MARY HARDIN BAYLOR",
+  "institution": "UNIVERSITY OF MARY HARDIN-BAYLOR",
   "city": "BELTON",
   "state": "TX",
   "zip": "76513",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 47.2,

@@ -1,6 +1,6 @@
 {
   "facility_code": "24038243",
-  "institution": "THE COLLEGE OF HEALTH CARE PROF-SAN ANT",
+  "institution": "THE COLLEGE OF HEALTH CARE PROFESSIONS-SAN ANTONIO",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78229",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 80.3,

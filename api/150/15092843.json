@@ -1,6 +1,6 @@
 {
   "facility_code": "15092843",
-  "institution": "PASADENA POLICE ACAD",
+  "institution": "PASADENA POLICE ACADEMY",
   "city": "PASADENA",
   "state": "TX",
   "zip": "77505",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

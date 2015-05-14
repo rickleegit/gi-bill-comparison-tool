@@ -1,6 +1,6 @@
 {
   "facility_code": "21038343",
-  "institution": "NATIONAL AMERICAN UNIVERSITY AUSTIN",
+  "institution": "NATIONAL AMERICAN UNIVERSITY-AUSTIN",
   "city": "AUSTIN",
   "state": "TX",
   "zip": "78727",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

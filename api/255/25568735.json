@@ -1,6 +1,6 @@
 {
   "facility_code": "25568735",
-  "institution": "THE OHIO ACADEMY-TWINSBURG",
+  "institution": "PAUL MITCHELL THE SCHOOL-CLEVELAND",
   "city": "TWINSBURG",
   "state": "OH",
   "zip": "44087",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 53.9,

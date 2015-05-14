@@ -1,6 +1,6 @@
 {
   "facility_code": "15127743",
-  "institution": "ARLINGTON FIRE DEPT FIRE ACAD",
+  "institution": "ARLINGTON FIRE DEPT FIRE ACADEMY",
   "city": "ARLINGTON",
   "state": "TX",
   "zip": "76013",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

@@ -1,6 +1,6 @@
 {
   "facility_code": "103D0805",
-  "institution": "FAA OAKLAND ZOA SYSTEM SUPPORT CENTER",
+  "institution": "FAA OAKLAND ZOA TECHNICAL OPERATIONS",
   "city": "FREMONT",
   "state": "CA",
   "zip": "94536",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

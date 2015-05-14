@@ -1,6 +1,6 @@
 {
   "facility_code": "14806143",
-  "institution": "CENTRAL TEXAS COLLEGE-KILLEEN",
+  "institution": "CENTRAL TEXAS COLLEGE MAIN CAMPUS",
   "city": "KILLEEN",
   "state": "TX",
   "zip": "76540",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Gregory Primas",
   "vetsuccess_email": "Gregory.Primas@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 14.5,

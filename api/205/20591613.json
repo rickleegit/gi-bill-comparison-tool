@@ -1,6 +1,6 @@
 {
   "facility_code": "20591613",
-  "institution": "FAA CHICAGO OÂ¿HARE TOWER",
+  "institution": "FAA CHICAGO O'HARE TOWER",
   "city": "CHICAGO",
   "state": "IL",
   "zip": "60666",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

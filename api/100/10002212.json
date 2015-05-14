@@ -1,6 +1,6 @@
 {
   "facility_code": "10002212",
-  "institution": "BLAINE COUNTY SHERIFF'S OFFICE",
+  "institution": "BLAINE COUNTY SHERIFFS OFFICE",
   "city": "HAILEY",
   "state": "ID",
   "zip": "83333",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

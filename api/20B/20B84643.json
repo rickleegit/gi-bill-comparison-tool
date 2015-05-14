@@ -1,6 +1,6 @@
 {
   "facility_code": "20B84643",
-  "institution": "CONSTRUCTION EDUCATION FDN",
+  "institution": "CONSTRUCTION EDUCATION FOUNDATION",
   "city": "IRVING",
   "state": "TX",
   "zip": "75063",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

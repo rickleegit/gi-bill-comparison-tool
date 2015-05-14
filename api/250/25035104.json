@@ -1,6 +1,6 @@
 {
   "facility_code": "25035104",
-  "institution": "ARTHURS BEAUTY COLLEGE-FORT SMITH",
+  "institution": "ARTHURS BEAUTY COLLEGE-JONESBORO",
   "city": "JONESBORO",
   "state": "AR",
   "zip": "72401",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 62.9,

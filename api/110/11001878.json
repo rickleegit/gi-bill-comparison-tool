@@ -1,7 +1,7 @@
 {
   "facility_code": "11001878",
   "institution": "HOGESCHOOL VAN AMSTERDAM",
-  "city": "1102 CV AMSTERDAM ZUID-OOST",
+  "city": "1091 GM AMSTERDAM",
   "state": null,
   "zip": null,
   "country": "NETHERLANDS",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

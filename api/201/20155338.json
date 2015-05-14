@@ -1,6 +1,6 @@
 {
   "facility_code": "20155338",
-  "institution": "ASSO BLDRS CONTRACTOR INC KEYSTONE CHAP",
+  "institution": "ASSO BLDRS CONTRACTOR INC-KEYSTONE CHAPTER ABC",
   "city": "MANHEIM",
   "state": "PA",
   "zip": "17545",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

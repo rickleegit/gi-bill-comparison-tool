@@ -1,6 +1,6 @@
 {
   "facility_code": "31021343",
-  "institution": "TEXAS CHIROPRACTIC COLLEGE",
+  "institution": "TEXAS CHIROPRACTIC COLLEGE FOUNDATION INC",
   "city": "PASADENA",
   "state": "TX",
   "zip": "77505",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

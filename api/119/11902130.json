@@ -1,6 +1,6 @@
 {
   "facility_code": "11902130",
-  "institution": "RICHARD STOCKTON COLLEGE OF NEW JERSEY",
+  "institution": "STOCKTON UNIVERSITY",
   "city": "GALLOWAY",
   "state": "NJ",
   "zip": "08205",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 65.5,

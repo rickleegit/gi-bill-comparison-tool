@@ -1,6 +1,6 @@
 {
   "facility_code": "31900150",
-  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-FE WARREN AFB",
+  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-WORLDWIDE",
   "city": "F E WARREN AFB",
   "state": "WY",
   "zip": "82005",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 58.3,

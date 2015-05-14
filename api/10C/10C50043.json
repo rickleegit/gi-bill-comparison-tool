@@ -1,6 +1,6 @@
 {
   "facility_code": "10C50043",
-  "institution": "US DEPT OF JUSTICE BUREAU OF ALCOHOL TOBACCO FIREARMS AND EXPLOSIVES",
+  "institution": "US DEPARTMENT OF JUSTICE BUREAU OF ALCOHOL TOBACCO FIREARMS AND EXPLOSIVES",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77086",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

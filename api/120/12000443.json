@@ -1,6 +1,6 @@
 {
   "facility_code": "12000443",
-  "institution": "UNITED REGIONAL HEALTH CARE SYS-SCH OF MED TECH",
+  "institution": "UNITED REGIONAL HEALTH CARE SYSTEM SCH OF MED TECH",
   "city": "WICHITA FALLS",
   "state": "TX",
   "zip": "76301",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

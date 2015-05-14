@@ -1,6 +1,6 @@
 {
   "facility_code": "31926121",
-  "institution": "FISHER COLLEGE",
+  "institution": "FISHER COLLEGE-BOSTON",
   "city": "BOSTON",
   "state": "MA",
   "zip": "02116",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 38.9,

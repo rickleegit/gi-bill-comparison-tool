@@ -1,6 +1,6 @@
 {
   "facility_code": "25101843",
-  "institution": "TINT SCHOOL OF MAKEUP AND COSMETOLOGY GRAND PRAIRIE",
+  "institution": "TINT SCHOOL OF MAKEUP AND COSMETOLOGY-GRAND PRAIRIE",
   "city": "GRAND PRAIRIE",
   "state": "TX",
   "zip": "75051",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

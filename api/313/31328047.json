@@ -1,6 +1,6 @@
 {
   "facility_code": "31328047",
-  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-WHIDBEY ISLAND",
+  "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-WORLDWIDE",
   "city": "OAK HARBOR",
   "state": "WA",
   "zip": "98277",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 58.3,

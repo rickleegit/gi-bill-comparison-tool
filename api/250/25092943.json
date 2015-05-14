@@ -1,6 +1,6 @@
 {
   "facility_code": "25092943",
-  "institution": "PAUL MITCHELL THE SCHOOL HOUSTON",
+  "institution": "PAUL MITCHELL THE SCHOOL-HOUSTON",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77043",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 66.9,

@@ -1,6 +1,6 @@
 {
   "facility_code": "119G2143",
-  "institution": "UNIVERSITY OF TEXAS AT SAN ANTONIO",
+  "institution": "THE UNIVERSITY OF TEXAS AT SAN ANTONIO",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78249",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Wendy Foster",
   "vetsuccess_email": "Wendy.Foster@va.gov",
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 30.0,

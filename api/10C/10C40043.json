@@ -1,6 +1,6 @@
 {
   "facility_code": "10C40043",
-  "institution": "ARLINGTON FIRE DEPARTMENT",
+  "institution": "ARLINGTON FIRE DEPARTMENT OJT",
   "city": "ARLINGTON",
   "state": "TX",
   "zip": "76013",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

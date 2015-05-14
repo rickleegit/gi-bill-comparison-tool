@@ -17,6 +17,8 @@
   "vetsuccess_name": "Rick Poe",
   "vetsuccess_email": "James.Poe2@va.gov",
   "eight_keys": true,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 56.3,

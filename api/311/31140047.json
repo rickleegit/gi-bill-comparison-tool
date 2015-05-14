@@ -1,6 +1,6 @@
 {
   "facility_code": "31140047",
-  "institution": "FAITH EVANGELICAL COLLEGE AND SEMINARY",
+  "institution": "FAITH EVANGELICAL COLLEGE & SEMINARY",
   "city": "TACOMA",
   "state": "WA",
   "zip": "98407",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 83.3,

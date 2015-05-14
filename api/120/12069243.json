@@ -1,6 +1,6 @@
 {
   "facility_code": "12069243",
-  "institution": "TEXAS A AND M UNIV HSC GRAD MED EDU SCOTT AND WHITE",
+  "institution": "TEXAS A & M UNIVERSITY-CORPUS CHRISTI",
   "city": "TEMPLE",
   "state": "TX",
   "zip": "76508",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 40.2,
@@ -51,7 +53,7 @@
   "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
-  "complaints_main_campus_roll_up": 2,
+  "complaints_main_campus_roll_up": 3,
   "complaints_financial_by_ope_id_do_not_sum": 0,
   "complaints_quality_by_ope_id_do_not_sum": 1,
   "complaints_refund_by_ope_id_do_not_sum": 0,
@@ -63,5 +65,5 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": 2
 }

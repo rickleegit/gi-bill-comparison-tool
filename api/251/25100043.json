@@ -1,6 +1,6 @@
 {
   "facility_code": "25100043",
-  "institution": "INTERNATIONAL BEAUTY COLLEGE 3",
+  "institution": "INTERNATIONAL BEAUTY COLLEGE",
   "city": "GARLAND",
   "state": "TX",
   "zip": "75040",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 100.0,

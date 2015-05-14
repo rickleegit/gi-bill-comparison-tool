@@ -1,6 +1,6 @@
 {
   "facility_code": "12069943",
-  "institution": "TEXAS A AND M S AND W HOSPITAL GEN SURGERY RES PROG",
+  "institution": "TEXAS A & M S AND W HOSPITAL GEN SURGERY RES PROG",
   "city": "TEMPLE",
   "state": "TX",
   "zip": "76508",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

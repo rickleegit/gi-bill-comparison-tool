@@ -17,6 +17,8 @@
   "vetsuccess_name": "Armando De La Garza",
   "vetsuccess_email": "Armando.DeLaGarza@va.gov",
   "eight_keys": true,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 27.2,

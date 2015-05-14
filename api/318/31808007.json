@@ -1,6 +1,6 @@
 {
   "facility_code": "31808007",
-  "institution": "QUINNIPIAC UNIVERSITY",
+  "institution": "QUINNIPIAC UNIVERSITY-SCHOOL OF LAW",
   "city": "HAMDEN",
   "state": "CT",
   "zip": "06518",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 76.3,

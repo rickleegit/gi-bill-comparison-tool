@@ -1,6 +1,6 @@
 {
   "facility_code": "15032243",
-  "institution": "UNIVERSITY OF HOUSTON-DWNTWN CRIMINAL JUST CTR",
+  "institution": "UNIVERSITY OF HOUSTON-DOWNTOWN",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77002",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Ralph Harrison",
   "vetsuccess_email": "Ralph.Harrison@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 14.1,

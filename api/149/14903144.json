@@ -17,6 +17,8 @@
   "vetsuccess_name": "Mike Foster",
   "vetsuccess_email": "Michael.Foster@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 23.2,

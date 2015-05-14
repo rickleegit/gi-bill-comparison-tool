@@ -1,6 +1,6 @@
 {
   "facility_code": "25041643",
-  "institution": "TX BARBER AND HAIRSTYLING SCH # 1",
+  "institution": "TEXAS BARBER AND HAIRSTYLING SCHOOL #1",
   "city": "DALLAS",
   "state": "TX",
   "zip": "75228",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

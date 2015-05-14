@@ -1,6 +1,6 @@
 {
   "facility_code": "24905230",
-  "institution": "BERKELEY COLLEGE - DOVER CAMPUS",
+  "institution": "BERKELEY COLLEGE-DOVER CAMPUS",
   "city": "DOVER",
   "state": "NJ",
   "zip": "07801",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 31.5,

@@ -1,6 +1,6 @@
 {
   "facility_code": "26527047",
-  "institution": "INTERNATIONAL AIR & HOSPITALITY ACADEMY",
+  "institution": "INTERNATIONAL AIR AND HOSPITALITY ACADEMY",
   "city": "VANCOUVER",
   "state": "WA",
   "zip": "98661",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 87.4,

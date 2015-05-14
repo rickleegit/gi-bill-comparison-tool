@@ -1,6 +1,6 @@
 {
   "facility_code": "11035643",
-  "institution": "UT HLTH SCI CTR AT TYLER GRAD MED EDU",
+  "institution": "THE UNIVERSITY OF TEXAS HEALTH SCIENCE CENTER AT HOUSTON",
   "city": "TYLER",
   "state": "TX",
   "zip": "75708",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

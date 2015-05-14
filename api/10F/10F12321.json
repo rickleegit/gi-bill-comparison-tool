@@ -1,6 +1,6 @@
 {
   "facility_code": "10F12321",
-  "institution": "SOCIAL SECURITY ADMINISTRATION ADMINISTRATION FALL RIVER MA",
+  "institution": "SOCIAL SECURITY ADMINISTRATION, FALL RIVER MA",
   "city": "FALL RIVER",
   "state": "MA",
   "zip": "02720",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

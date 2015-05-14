@@ -1,6 +1,6 @@
 {
   "facility_code": "11800126",
-  "institution": "THE UNIVERSITY OF MONTANA",
+  "institution": "THE UNIVERSITY OF MONTANA - MISSOULA",
   "city": "MISSOULA",
   "state": "MT",
   "zip": "59812",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 47.8,

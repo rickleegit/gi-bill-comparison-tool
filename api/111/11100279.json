@@ -1,7 +1,7 @@
 {
   "facility_code": "11100279",
   "institution": "INSTITUT D'ETUDES POLITIQUES DE PARIS",
-  "city": "75337 PARIS CEDEX 07",
+  "city": "75007 PARIS",
   "state": null,
   "zip": null,
   "country": "FRANCE",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

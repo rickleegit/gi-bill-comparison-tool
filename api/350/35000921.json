@@ -1,6 +1,6 @@
 {
   "facility_code": "35000921",
-  "institution": "SIMMONS COLLEGE",
+  "institution": "SIMMONS COLLEGE-LANDMARK SCHOOL",
   "city": "PRIDES CROSSING",
   "state": "MA",
   "zip": "01965",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 71.2,

@@ -1,6 +1,6 @@
 {
   "facility_code": "14949432",
-  "institution": "MOHAWK VALLEY COMMUNITY COLLEGE",
+  "institution": "MOHAWK VALLEY COMMUNITY COLLEGE-ROME",
   "city": "ROME",
   "state": "NY",
   "zip": "13440",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 21.1,

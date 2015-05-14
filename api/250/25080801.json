@@ -1,6 +1,6 @@
 {
   "facility_code": "25080801",
-  "institution": "ARC PRO, INC-PIPE WELDING SCHOOL",
+  "institution": "ARC PRO,INC-PIPE WELDING SCHOOL",
   "city": "THEODORE",
   "state": "AL",
   "zip": "36590",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

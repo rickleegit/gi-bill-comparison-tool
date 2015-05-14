@@ -1,6 +1,6 @@
 {
   "facility_code": "20D02933",
-  "institution": "SIEMENS ENERGY INC (FORMERLY SIEMENS POWER GENERATION, INC)",
+  "institution": "SIEMENS ENERGY INC",
   "city": "CHARLOTTE",
   "state": "NC",
   "zip": "28241",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

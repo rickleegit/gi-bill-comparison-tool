@@ -1,6 +1,6 @@
 {
   "facility_code": "11850110",
-  "institution": "ST PETERSBURG COLLEGE CLEARWATER",
+  "institution": "ST PETERSBURG COLLEGE - CLEARWATER",
   "city": "SAINT PETERSBURG",
   "state": "FL",
   "zip": "33733",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 29.0,

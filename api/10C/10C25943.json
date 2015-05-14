@@ -1,6 +1,6 @@
 {
   "facility_code": "10C25943",
-  "institution": "DHS CUSTOMS/BORDER PROTECTION-EL PASO AIR",
+  "institution": "DEPT OF HOMELAND SEC CBP EL PASO AIR BRANCH",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79925",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

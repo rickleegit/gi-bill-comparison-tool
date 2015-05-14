@@ -1,6 +1,6 @@
 {
   "facility_code": "31437547",
-  "institution": "BRANDMAN UNIVERSITY-LACEY",
+  "institution": "BRANDMAN UNIVERSITY",
   "city": "LACEY",
   "state": "WA",
   "zip": "98516",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

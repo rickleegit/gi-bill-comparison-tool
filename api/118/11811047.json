@@ -1,6 +1,6 @@
 {
   "facility_code": "11811047",
-  "institution": "OLD DOMINION U-BREMERTON",
+  "institution": "OLD DOMINION UNIVERSITY",
   "city": "BREMERTON",
   "state": "WA",
   "zip": "98337",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 51.2,

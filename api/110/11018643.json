@@ -1,6 +1,6 @@
 {
   "facility_code": "11018643",
-  "institution": "UT HLTH SCI CTR HOUSTON GRAD MED EDU OFF",
+  "institution": "THE UNIVERSITY OF TEXAS HEALTH SCIENCE CENTER AT HOUSTON",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77030",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

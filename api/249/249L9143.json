@@ -1,6 +1,6 @@
 {
   "facility_code": "249L9143",
-  "institution": "PLATT COLLEGE",
+  "institution": "PLATT COLLEGE-DALLAS",
   "city": "DALLAS",
   "state": "TX",
   "zip": "75234",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 53.8,

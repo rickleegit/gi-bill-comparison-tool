@@ -1,6 +1,6 @@
 {
   "facility_code": "25097743",
-  "institution": "COLLEGE OF HEALTH CARE PROF SW",
+  "institution": "THE COLLEGE OF HEALTH CARE PROFESSIONS-SW HOUSTON",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77074",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 69.7,

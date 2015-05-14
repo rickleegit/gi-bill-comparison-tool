@@ -1,6 +1,6 @@
 {
   "facility_code": "30421643",
-  "institution": "ASSOC IND ELECT CONTRS OF AMER INC",
+  "institution": "ASSOC IND ELECT CONTRACTORS OF AMER INC",
   "city": "FT WORTH",
   "state": "TX",
   "zip": "76119",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

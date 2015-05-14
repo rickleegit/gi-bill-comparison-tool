@@ -1,6 +1,6 @@
 {
   "facility_code": "24037543",
-  "institution": "KAPLAN COLLEGE LAREDO",
+  "institution": "KAPLAN COLLEGE-LAREDO",
   "city": "LAREDO",
   "state": "TX",
   "zip": "78041",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 72.5,

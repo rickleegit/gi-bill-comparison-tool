@@ -1,6 +1,6 @@
 {
   "facility_code": "149G8143",
-  "institution": "EL PASO COMMUNITY COLL DIST",
+  "institution": "EL PASO COMMUNITY COLLEGE",
   "city": "EL PASO",
   "state": "TX",
   "zip": "79998",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 10.2,

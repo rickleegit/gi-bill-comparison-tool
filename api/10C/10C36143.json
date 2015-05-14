@@ -1,6 +1,6 @@
 {
   "facility_code": "10C36143",
-  "institution": "US CUSTOMS AND BORDER PROTECTION OFFICE OF AIR & MARINE LAREDO",
+  "institution": "US CUSTOMS AND BORDER PROTECTION OFFICE OF AIR AND MARINE LAREDO",
   "city": "LAREDO",
   "state": "TX",
   "zip": "78041",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

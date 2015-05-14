@@ -1,6 +1,6 @@
 {
   "facility_code": "25053043",
-  "institution": "SOUTHERN CAREERS INST-CORPUS",
+  "institution": "SOUTHERN CAREERS INSTITUTE-CORPUS CHRISTI",
   "city": "CORPUS CHRISTI",
   "state": "TX",
   "zip": "78414",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 40.5,

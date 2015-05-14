@@ -1,6 +1,6 @@
 {
   "facility_code": "11009143",
-  "institution": "PRAIRIE VIEW AM UNIVERSITY",
+  "institution": "PRAIRIE VIEW A & M UNIVERSITY",
   "city": "PRAIRIE VIEW",
   "state": "TX",
   "zip": "77446",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 36.5,

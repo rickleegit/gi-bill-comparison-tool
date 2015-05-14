@@ -1,6 +1,6 @@
 {
   "facility_code": "11043943",
-  "institution": "UNIVERSITY OF MARYLAND UNIVERSITY COLLEGE-FT BLISS",
+  "institution": "UNIVERSITY OF MARYLAND-COLLEGE PARK",
   "city": "FORT BLISS",
   "state": "TX",
   "zip": "79916",
@@ -17,6 +17,8 @@
   "vetsuccess_name": "Diane Wilson",
   "vetsuccess_email": "Diane.Wilson2@va.gov",
   "eight_keys": true,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 84.1,

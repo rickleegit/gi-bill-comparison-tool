@@ -17,6 +17,8 @@
   "vetsuccess_name": "Micaela Black",
   "vetsuccess_email": "Micaela.Black@va.gov",
   "eight_keys": true,
+  "sec_702": false,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 42.9,

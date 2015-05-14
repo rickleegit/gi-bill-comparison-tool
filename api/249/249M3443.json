@@ -1,6 +1,6 @@
 {
   "facility_code": "249M3443",
-  "institution": "CULINARY INST OF AMER SAN ANTONIO",
+  "institution": "CULINARY INSTITUTE OF AMERICA",
   "city": "SAN ANTONIO",
   "state": "TX",
   "zip": "78215",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 78.2,

@@ -1,7 +1,7 @@
 {
   "facility_code": "25029263",
   "institution": "INSTITUTO DE BANCA Y COMERCIO-BAYAMON",
-  "city": "BAYAMÂ¿N",
+  "city": "BAYAMON",
   "state": "PR",
   "zip": "00959",
   "country": "USA",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

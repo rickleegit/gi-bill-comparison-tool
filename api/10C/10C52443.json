@@ -1,6 +1,6 @@
 {
   "facility_code": "10C52443",
-  "institution": "EAST CEDAR CREEK FRESH WATER SPLY DIST",
+  "institution": "EAST CEDAR CREEK FRESH WATER SUPPLY DIST",
   "city": "GUN BARREL CITY",
   "state": "TX",
   "zip": "75156",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

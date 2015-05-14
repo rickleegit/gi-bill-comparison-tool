@@ -1,6 +1,6 @@
 {
   "facility_code": "11038743",
-  "institution": "UNIVERSITY OF TEXAS-MD ANDERSON CANCER CENTER",
+  "institution": "THE UIVERSITY OF TEXAS MD ANDERSON CANCER CENTER",
   "city": "HOUSTON",
   "state": "TX",
   "zip": "77030",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

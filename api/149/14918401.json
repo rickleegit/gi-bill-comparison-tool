@@ -1,6 +1,6 @@
 {
   "facility_code": "14918401",
-  "institution": "JOHN C. CALHOUN STATE CC",
+  "institution": "JOHN C. CALHOUN STATE COMMUNITY COLLEGE",
   "city": "DECATUR",
   "state": "AL",
   "zip": "35609",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 13.3,

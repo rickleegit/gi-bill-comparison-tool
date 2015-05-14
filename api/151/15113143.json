@@ -1,6 +1,6 @@
 {
   "facility_code": "15113143",
-  "institution": "SOUTH PLAINS ASSOC OF GOVERNMENTS LE ACAD",
+  "institution": "SOUTH PLAINS ASSOCOCIATION OF GOVERNMENTS LE ACAD",
   "city": "LUBBOCK",
   "state": "TX",
   "zip": "79412",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

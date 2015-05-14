@@ -1,6 +1,6 @@
 {
   "facility_code": "25058843",
-  "institution": "SOUTHERN CAREERS INST-PHARR",
+  "institution": "SOUTHERN CAREERS INSTITUTE-PHARR",
   "city": "PHARR",
   "state": "TX",
   "zip": "78577",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 41.9,

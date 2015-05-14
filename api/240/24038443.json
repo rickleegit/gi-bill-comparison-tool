@@ -1,6 +1,6 @@
 {
   "facility_code": "24038443",
-  "institution": "CONCORDE CAREER COLLEGE-DALLAS",
+  "institution": "CONCORDE CAREER INSTITUTE-DALLAS",
   "city": "DALLAS",
   "state": "TX",
   "zip": "75243",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": true,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 94.6,

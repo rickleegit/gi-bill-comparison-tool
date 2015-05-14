@@ -1,6 +1,6 @@
 {
   "facility_code": "20C05143",
-  "institution": "COYS DISCOUNT FOODS",
+  "institution": "COY'S DISCOUNT FOODS",
   "city": "VERNON",
   "state": "TX",
   "zip": "76384",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

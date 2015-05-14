@@ -1,6 +1,6 @@
 {
   "facility_code": "21910447",
-  "institution": "ITT TECHNICAL INSTITUTE-SPOKANE",
+  "institution": "ITT TECHNICAL INSTITUTE-SPOKANE VALLEY",
   "city": "SPOKANE VALLEY",
   "state": "WA",
   "zip": "99216",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 29.8,

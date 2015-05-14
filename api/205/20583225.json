@@ -1,6 +1,6 @@
 {
   "facility_code": "20583225",
-  "institution": "IRON WORKERS LOCAL 10 JOINT APPRENTICESHIP COMMITTEE",
+  "institution": "JAC IRONWORKERS LOCAL #10",
   "city": "N KANSAS CITY",
   "state": "MO",
   "zip": "64116",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": null,

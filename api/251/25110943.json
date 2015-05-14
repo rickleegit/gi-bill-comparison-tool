@@ -1,6 +1,6 @@
 {
   "facility_code": "25110943",
-  "institution": "SOUTHWEST SCH OF BUSINESS & TECH CAREERS SOUTH TX",
+  "institution": "SOUTHWEST SCHOOL OF BUSINESS AND TECHNICAL CAREERS-SAN ANTONIO",
   "city": "MCALLEN",
   "state": "TX",
   "zip": "78501",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": null,
+  "dodmou": null,
   "correspondence": null,
   "flight": null,
   "grad_rate": 66.5,

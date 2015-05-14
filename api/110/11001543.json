@@ -1,6 +1,6 @@
 {
   "facility_code": "11001543",
-  "institution": "UNIVERSITY OF TEXAS AT DALLAS",
+  "institution": "THE UNIVERSITY OF TEXAS AT DALLAS",
   "city": "RICHARDSON",
   "state": "TX",
   "zip": "75080",
@@ -17,6 +17,8 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": null,
+  "sec_702": true,
+  "dodmou": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 62.9,
