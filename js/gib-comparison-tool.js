@@ -2232,8 +2232,14 @@ var GIBComparisonTool = (function () {
       $('#calc-yellow-ribbon-row').hide();
     }
 
+    if (formData.gi_bill_chap == 30 || 
+          formData.gi_bill_chap == 1607 || 
+          formData.gi_bill_chap == 1606 || 
+          formData.gi_bill_chap == 35) {
+      $('#sec-702-row').hide();
+    }
 
-    
+
     if (calculated.institution_type == 'ojt') {
       $('#online-classes').hide();
       $('#veteran-indicators').hide();
