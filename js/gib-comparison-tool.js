@@ -2232,14 +2232,6 @@ var GIBComparisonTool = (function () {
       $('#calc-yellow-ribbon-row').hide();
     }
 
-    if (formData.gi_bill_chap == 30 || 
-          formData.gi_bill_chap == 1607 || 
-          formData.gi_bill_chap == 1606 || 
-          formData.gi_bill_chap == 35) {
-      $('#sec-702-row').hide();
-    }
-
-
     if (calculated.institution_type == 'ojt') {
       $('#online-classes').hide();
       $('#veteran-indicators').hide();
@@ -2274,13 +2266,6 @@ var GIBComparisonTool = (function () {
     $('#kicker-form').hide();
     }    
 
- if (formData.gi_bill_chap == 31 || 
-      formData.gi_bill_chap == 1607 || 
-      formData.gi_bill_chap == 1606 || 
-      formData.gi_bill_chap == 35) {
-  $('#sec-702-row').hide();
-  }
-
     if (calculated.institution_type == 'flight' ||
         calculated.institution_type == 'correspond') {
       $('#online-classes').hide();
@@ -2296,6 +2281,13 @@ var GIBComparisonTool = (function () {
       if (!formData.in_state) {
         $('#in-state-tuition-fees-form').show();
       }
+    }
+
+    if (formData.gi_bill_chap == 30 || 
+          formData.gi_bill_chap == 1607 || 
+          formData.gi_bill_chap == 1606 || 
+          formData.gi_bill_chap == 35) {
+      $('#sec-702-row').hide();
     }
 
     if (institution.yr && calculated.tier == 1.0) {
