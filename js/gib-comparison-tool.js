@@ -2283,7 +2283,7 @@ var GIBComparisonTool = (function () {
       }
     }
 
-    if (formData.gi_bill_chap == 30 || 
+    if (formData.gi_bill_chap == 31 || 
           formData.gi_bill_chap == 1607 || 
           formData.gi_bill_chap == 1606 || 
           formData.gi_bill_chap == 35) {
