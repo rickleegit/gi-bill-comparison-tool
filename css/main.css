@@ -276,7 +276,7 @@
   .comparison .form-group input {
     font-size: 16px;
     padding: .2em;
-    border: 1px solid #555;
+    /* border: 1px solid #555; */
   }
 
   .comparison .form-group input[type="text"] {
@@ -288,6 +288,7 @@
   .comparison .form-group input[type="radio"] {
     margin-right: 10px;
     color: #444;
+    border: none !important;
   }
 
   .comparison .form-group select {
@@ -1078,7 +1079,7 @@
   #cumulative-service-tooltip,
   span.aria-tooltip {display:none;}
   div#online-classes {margin-top: 10px;}
-  
+
   body, p, a, h1, h2, h3, h4, h5, h6 {color: black !important;}
   p {
     margin-top: 10px;
@@ -1099,7 +1100,7 @@
     font-size: 12px;
   }
   td.term1 {padding-top: 20px;}
-  table th { 
+  table th {
     text-transform: none;
     background-color: white;
   }
@@ -1117,7 +1118,7 @@
     margin-bottom: 10px;
     border:none;
     display: block;
-  } 
+  }
 
   h2 {
     font-size: 12px !important;
