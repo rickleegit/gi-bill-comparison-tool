@@ -17,7 +17,7 @@
   "vetsuccess_name": "Brian Burgess",
   "vetsuccess_email": "Brian.Burgess@va.gov",
   "eight_keys": null,
-  "sec_702": false,
+  "sec_702": true,
   "dodmou": true,
   "correspondence": null,
   "flight": null,

@@ -16,7 +16,7 @@
   "student_veteran_link": "http://www.csus.edu/vets/SVO%20-%20Student%20Veterans%20Organization/joinus.html",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": "yes",
   "sec_702": false,
   "dodmou": true,
   "correspondence": null,

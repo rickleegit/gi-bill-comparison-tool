@@ -16,7 +16,7 @@
   "student_veteran_link": "http://intraweb.stockton.edu/eyos/page.cfm?siteID=174&pageID=6",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": "yes",
   "sec_702": true,
   "dodmou": true,
   "correspondence": null,

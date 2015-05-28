@@ -16,7 +16,7 @@
   "student_veteran_link": "https://uaa.collegiatelink.net/organization/veterans_of_uaa",
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": true,
+  "eight_keys": "yes",
   "sec_702": true,
   "dodmou": true,
   "correspondence": null,

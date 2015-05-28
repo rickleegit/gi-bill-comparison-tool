@@ -16,7 +16,7 @@
   "student_veteran_link": "http://www.uhd.edu/veterans/",
   "vetsuccess_name": "Ralph Harrison",
   "vetsuccess_email": "Ralph.Harrison@va.gov",
-  "eight_keys": true,
+  "eight_keys": "yes",
   "sec_702": true,
   "dodmou": true,
   "correspondence": null,

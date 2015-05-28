@@ -16,7 +16,7 @@
   "student_veteran_link": "https://ufl.collegiatelink.net/organization/cvs",
   "vetsuccess_name": "Charlotte Kemper",
   "vetsuccess_email": "Charlotte.Kemper@va.gov",
-  "eight_keys": true,
+  "eight_keys": "yes",
   "sec_702": null,
   "dodmou": true,
   "correspondence": true,
