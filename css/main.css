@@ -550,14 +550,32 @@
 
   .comparison #school-indicators .box {
     margin-bottom: 25px;
+    width: 100%;
+    padding: 0;
+    clear: both;
+    margin: 0 0 1em 0;
     text-align: center;
   }
 
   .comparison #school-indicators .box > div {
-    display: inline-block;
+    display: block;
     vertical-align: middle;
-    width: 325px;
+    /* width: 325px; */
+    width: 40%;
+    margin: 0;
+    float: left;
+
   }
+
+  .comparison #school-indicators .box > div:after {
+    visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+  }
+
 
   .comparison #school-indicators .box .description {
     text-align: left;
