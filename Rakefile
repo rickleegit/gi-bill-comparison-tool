@@ -155,9 +155,7 @@ task :build do
 
   puts "Generating Indexes".bold
 
-  Dir.chdir("api") do
-    system("python create_indexes.py")
-  end
+  system("python create_indexes.py")
 
   puts "Finished in #{(Time.now - start).round(2)} seconds".status
 end
