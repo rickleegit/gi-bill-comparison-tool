@@ -10,6 +10,8 @@ import re
 #        for f in (f for f in os.listdir("./{}".format(dir)) if f.endswith("json")):
 #            fn(json.load(file("./{}/{}".format(dir, f))))
 
+os.chdir("api")
+
 def rem(lst, name):
     try:
         lst.remove(name)
@@ -52,7 +54,7 @@ os.path.walk('.', index, (attrindexes, ("type", "state", "country", "poe", "yr",
 for attr in attrindexes:
     dirname = "filters/{}".format(attr)
     if not os.path.isdir(dirname):
-        os.mkdir(dirname)
+        os.makedirs(dirname)
     for typ, codes in attrindexes[attr].iteritems():
         fname = "filters/{}/{}.json".format(attr, norm(typ))
         json.dump(codes, file(fname, 'w'))
