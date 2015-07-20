@@ -332,8 +332,8 @@ var GIBComparisonTool = (function () {
   var getCautionIndicator = function() {
     if(institution.accredited == null) { 
       $('#caution-indicator').html("None");
-    } else if (institution.accredited == “Yes”) {
-      $('#caution-indicator').html("<a href='https://studentaid.ed.gov/sa/about/data-center/school/hcm' onclick="track('Tool Tips', 'School Summary / Caution Flag');" target="_blank" alt="Click here for more information." title="To see more information about caution flags, please visit ED’s heightened cash monitoring resource page.">Heightened Cash Monitoring List</a> &nbsp; ("+
+    } else if(institution.accredited == 'Yes') {
+    	$('#caution-indicator').html("<a href='https://studentaid.ed.gov/sa/about/data-center/school/hcm' onclick="track('Tool Tips', 'School Summary / Caution Flag');" target="_blank" alt="Click here for more information." title="To see more information about caution flags, please visit ED’s heightened cash monitoring resource page.">Heightened Cash Monitoring List</a> &nbsp; ("+
 	    institution.accreditation_type +
 	    ")";}
     }
