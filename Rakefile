@@ -44,6 +44,11 @@ task :build do
   # Start the timer
   start = Time.now
 
+  puts "Scrubbing invalid utf-8".bold
+
+  f = "_data/data.csv"
+  File.write(f, File.open(f).read.scrub(""))
+
   puts "Parsing `_data/data.csv`".bold
 
   # Array containing all data
