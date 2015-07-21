@@ -34,7 +34,7 @@ def index(args, dirname, fnames):
                 if j["type"].lower() != "ojt":
                     index.setdefault("type", {}).setdefault("school", {})[j["facility_code"]] = None
             except:
-                print "Exception reading file {}".format(f)
+                print("Exception reading file {}".format(f))
                 raise
 
 def norm(string):
@@ -45,7 +45,7 @@ def norm(string):
     try:
         return re.sub("\W", "", string).lower()
     except TypeError:
-        print string
+        print(string)
         raise
 
 attrindexes = {}
