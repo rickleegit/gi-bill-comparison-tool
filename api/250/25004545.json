@@ -1,7 +1,7 @@
 {
   "facility_code": "25004545",
   "institution": "ADVANCED WELDING INSTITUTE",
-  "city": "S. BURLINGTON",
+  "city": "SOUTH BURLINGTON",
   "state": "VT",
   "zip": "05403",
   "country": "USA",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

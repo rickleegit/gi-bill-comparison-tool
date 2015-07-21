@@ -1,6 +1,6 @@
 {
   "facility_code": "31033143",
-  "institution": "SAINT LEO UNNIVERSITY",
+  "institution": "SAINT LEO UNIVERSITY",
   "city": "CORPUS CHRISTI",
   "state": "TX",
   "zip": "78419",
@@ -53,8 +53,8 @@
   "complaints_credit_job_by_fac_code": null,
   "complaints_transcript_by_fac_code": null,
   "complaints_other_by_fac_code": null,
-  "complaints_main_campus_roll_up": 2,
-  "complaints_financial_by_ope_id_do_not_sum": 1,
+  "complaints_main_campus_roll_up": 3,
+  "complaints_financial_by_ope_id_do_not_sum": 2,
   "complaints_quality_by_ope_id_do_not_sum": 1,
   "complaints_refund_by_ope_id_do_not_sum": 0,
   "complaints_marketing_by_ope_id_do_not_sum": 0,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": 2,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

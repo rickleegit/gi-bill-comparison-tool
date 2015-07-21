@@ -1,6 +1,6 @@
 {
   "facility_code": "31800632",
-  "institution": "NEW YORK UNIVERSITY",
+  "institution": "NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
   "city": "NEW YORK",
   "state": "NY",
   "zip": "10016",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 2
+  "complaints_other_by_ope_id_do_not_sum": 2,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

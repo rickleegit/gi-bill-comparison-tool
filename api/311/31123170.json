@@ -1,6 +1,6 @@
 {
   "facility_code": "31123170",
-  "institution": "CHALLENGER INSTITUTE OF TECH",
+  "institution": "CHALLENGER INSTITUTE OF TECHNOLOGY",
   "city": "FREMANTLE, WA 6160",
   "state": null,
   "zip": null,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

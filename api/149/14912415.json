@@ -3,7 +3,7 @@
   "institution": "IOWA WESTERN COMMUNITY COLLEGE",
   "city": "COUNCIL BLUFFS",
   "state": "IA",
-  "zip": "51502",
+  "zip": "51503",
   "country": "USA",
   "type": "Public",
   "cross": 153630,
@@ -17,7 +17,7 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": "yes",
-  "sec_702": false,
+  "sec_702": true,
   "dodmou": true,
   "correspondence": null,
   "flight": null,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

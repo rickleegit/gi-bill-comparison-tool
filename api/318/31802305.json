@@ -1,7 +1,7 @@
 {
   "facility_code": "31802305",
   "institution": "EMBRY-RIDDLE AERONAUTICAL UNIVERSITY-WORLDWIDE",
-  "city": "VANDENBERTG AFB",
+  "city": "VANDENBERG AFB",
   "state": "CA",
   "zip": "93437",
   "country": "USA",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": 0,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

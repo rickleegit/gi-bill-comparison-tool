@@ -1,9 +1,9 @@
 {
   "facility_code": "21114905",
   "institution": "CALIFORNIA INTERCONTINENTAL UNIVERSITY",
-  "city": "DIAMOND BAR",
+  "city": "IRVINE",
   "state": "CA",
-  "zip": "91765",
+  "zip": "92614",
   "country": "USA",
   "type": "For Profit",
   "cross": 455451,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": 1,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

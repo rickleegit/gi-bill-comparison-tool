@@ -3,12 +3,12 @@
   "institution": "ECLIPS BARBER SCHOOL",
   "city": "OVERLAND",
   "state": "MO",
-  "zip": "63401",
+  "zip": "63114",
   "country": "USA",
   "type": "For Profit",
   "cross": null,
   "ope": null,
-  "bah": 1035,
+  "bah": 1284,
   "poe": null,
   "yr": null,
   "gibill": 2,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

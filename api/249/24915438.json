@@ -1,6 +1,6 @@
 {
   "facility_code": "24915438",
-  "institution": "MCCANN SCHOOL OF BUSINESS & TECHNOLOGY--HAZLE TWP",
+  "institution": "MCCANN SCHOOL OF BUSINESS & TECHNOLOGY-HAZLE TWP",
   "city": "HAZLE TOWNSHIP",
   "state": "PA",
   "zip": "18202",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": true,
+  "hcm_type": "HCM - Cash Monitoring 1",
+  "hcm_reason": "Financial Responsibility"
 }

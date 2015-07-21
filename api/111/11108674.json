@@ -1,6 +1,6 @@
 {
   "facility_code": "11108674",
-  "institution": "QUEEN MARY-UNIV OF LONDON",
+  "institution": "QUEEN MARY UNIVERSITY OF LONDON",
   "city": "LONDON, E1 4NS",
   "state": null,
   "zip": null,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

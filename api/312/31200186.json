@@ -1,7 +1,7 @@
 {
   "facility_code": "31200186",
   "institution": "CETYS UNIVERSIDAD BAJA CALIF",
-  "city": "MEXICALI, B.C. CP 21259",
+  "city": "MEXICALI BC CP 21259",
   "state": null,
   "zip": null,
   "country": "MEXICO",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": 0,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

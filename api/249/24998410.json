@@ -1,7 +1,7 @@
 {
   "facility_code": "24998410",
   "institution": "FORTIS INSTITUTE-PORT ST LUCIE",
-  "city": "PORT ST. LUCIE",
+  "city": "PORT ST LUCIE",
   "state": "FL",
   "zip": "34952",
   "country": "USA",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": true,
+  "hcm_type": "HCM - Cash Monitoring 1",
+  "hcm_reason": "Financial Responsibility"
 }

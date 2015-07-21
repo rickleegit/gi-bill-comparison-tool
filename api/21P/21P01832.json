@@ -1,6 +1,6 @@
 {
   "facility_code": "21P01832",
-  "institution": "FORDHAM UNIVERSITY",
+  "institution": "FORDHAM UNIVERSITY COLLEGE OF LIBERAL STUDIES WESTCHESTER",
   "city": "WEST HARRISON",
   "state": "NY",
   "zip": "10604",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

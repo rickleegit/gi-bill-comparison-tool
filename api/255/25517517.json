@@ -1,6 +1,6 @@
 {
   "facility_code": "25517517",
-  "institution": "AIR CENTER 1, LLC.",
+  "institution": "AIR CENTER 1 LLC",
   "city": "LOUISVILLE",
   "state": "KY",
   "zip": "40205",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

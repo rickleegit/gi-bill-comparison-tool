@@ -10,7 +10,7 @@
   "ope": "03010633",
   "bah": 1053,
   "poe": true,
-  "yr": null,
+  "yr": true,
   "gibill": 38,
   "student_veteran": null,
   "student_veteran_link": null,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 2,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 2,
-  "complaints_other_by_ope_id_do_not_sum": 1
+  "complaints_other_by_ope_id_do_not_sum": 1,
+  "hcm_status": true,
+  "hcm_type": "HCM - Cash Monitoring 1",
+  "hcm_reason": "Financial Responsibility"
 }

@@ -17,7 +17,7 @@
   "vetsuccess_name": "Brent Haddow",
   "vetsuccess_email": "Brent.Haddow@va.gov",
   "eight_keys": null,
-  "sec_702": false,
+  "sec_702": true,
   "dodmou": true,
   "correspondence": null,
   "flight": null,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

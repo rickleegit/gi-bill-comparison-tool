@@ -1,6 +1,6 @@
 {
   "facility_code": "11970132",
-  "institution": "SUNY COLLEGE TECHNOLOGY AT DELHI",
+  "institution": "SUNY COLLEGE OF TECHNOLOGY AT DELHI",
   "city": "DELHI",
   "state": "NY",
   "zip": "13753",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

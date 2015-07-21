@@ -1,14 +1,14 @@
 {
   "facility_code": "15016805",
-  "institution": "MIRACOSTA COLLEGE CS & BD",
-  "city": "OCEANSIDE",
+  "institution": "MIRACOSTA COLLEGE CE & WD",
+  "city": "CARLSBAD",
   "state": "CA",
-  "zip": "92056",
+  "zip": "92011",
   "country": "USA",
   "type": "Public",
   "cross": 118912,
   "ope": "00123900",
-  "bah": 1908,
+  "bah": 2052,
   "poe": true,
   "yr": null,
   "gibill": 120,
@@ -17,7 +17,7 @@
   "vetsuccess_name": null,
   "vetsuccess_email": null,
   "eight_keys": "yes",
-  "sec_702": false,
+  "sec_702": true,
   "dodmou": true,
   "correspondence": null,
   "flight": null,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": 0,
   "complaints_jobs_by_ope_id_do_not_sum": 0,
   "complaints_transcript_by_ope_id_do_not_sum": 0,
-  "complaints_other_by_ope_id_do_not_sum": 0
+  "complaints_other_by_ope_id_do_not_sum": 0,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

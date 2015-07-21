@@ -1,9 +1,9 @@
 {
   "facility_code": "46000507",
   "institution": "HF LEARNSAFETY FIREARMS TRAINING CENTER-HF LEARNSAFETY LLC",
-  "city": "GAYLORDSVILLE",
+  "city": "NEW MILFORD",
   "state": "CT",
-  "zip": "06755",
+  "zip": "06776",
   "country": "USA",
   "type": "Private",
   "cross": null,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

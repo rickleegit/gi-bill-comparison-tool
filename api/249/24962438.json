@@ -1,6 +1,6 @@
 {
   "facility_code": "24962438",
-  "institution": "LAUREL TECHNICAL INSTITUTE--SHARON",
+  "institution": "LAUREL TECHNICAL INSTITUTE-SHARON",
   "city": "SHARON",
   "state": "PA",
   "zip": "16146",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

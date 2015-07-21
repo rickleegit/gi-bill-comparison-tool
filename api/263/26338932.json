@@ -3,7 +3,7 @@
   "institution": "GEMOLOGICAL INSTITUTE OF AMERICA NEW YORK",
   "city": "NEW YORK",
   "state": "NY",
-  "zip": "10016",
+  "zip": "10036",
   "country": "USA",
   "type": "For Profit",
   "cross": 191311,
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

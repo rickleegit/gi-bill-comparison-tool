@@ -1,7 +1,7 @@
 {
   "facility_code": "11000374",
   "institution": "THE COURTAULD INSTITUTE OF ART",
-  "city": "LONDON WC2R ORN",
+  "city": "LONDON, WC2R 0RN",
   "state": null,
   "zip": null,
   "country": "ENGLAND",
@@ -65,5 +65,8 @@
   "complaints_credit_transfer_by_ope_id_do_not_sum": null,
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
-  "complaints_other_by_ope_id_do_not_sum": null
+  "complaints_other_by_ope_id_do_not_sum": null,
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }
