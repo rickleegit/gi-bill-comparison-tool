@@ -160,7 +160,7 @@ task :build do
 
   puts "Generating Indexes".bold
 
-  system("python create_indexes.py")
+  system("./create_indexes.py")
 
   puts "Finished in #{(Time.now - start).round(2)} seconds".status
 end
