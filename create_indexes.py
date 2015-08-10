@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 import json
 import os
 import os.path
@@ -9,8 +10,6 @@ import re
 #    for dir in (d for d in os.listdir('.') if len(d) == 3):
 #        for f in (f for f in os.listdir("./{}".format(dir)) if f.endswith("json")):
 #            fn(json.load(file("./{}/{}".format(dir, f))))
-
-os.chdir("api")
 
 def rem(lst, name):
     try:
@@ -50,6 +49,10 @@ def norm(string):
 
 attrindexes = {}
 os.path.walk('.', index, (attrindexes, ("type", "state", "country", "poe", "yr", "student_veteran", "eight_keys", "accreditation_type")))
+
+os.chdir("api")
+if not os.path.isdir("filters"):
+    os.makedirs("filters")
 
 for attr in attrindexes:
     dirname = "filters/{}".format(attr)
