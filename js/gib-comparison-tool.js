@@ -1994,7 +1994,7 @@ var GIBComparisonTool = (function () {
 
     if (institution.yr) {
       var location = institution.country == 'USA' ? institution.state : 'overseas';
-      var linkFirstHalf = '<a href="http://www.benefits.va.gov/gibill/yellow_ribbon/2014/states/' + location + '.asp" onclick="track(\'Yellow Ribbon Rates\', \'';
+      var linkFirstHalf = '<a href="http://www.benefits.va.gov/gibill/yellow_ribbon/2015/states/' + location + '.asp" onclick="track(\'Yellow Ribbon Rates\', \'';
       var linkSecondHalf = '\');" target="_blank">See YR rates &raquo;</a>';
 
       var linkVetIndicators = linkFirstHalf + 'Vet Indicators' + linkSecondHalf;
