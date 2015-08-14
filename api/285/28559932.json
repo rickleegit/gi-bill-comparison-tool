@@ -66,7 +66,7 @@
   "complaints_jobs_by_ope_id_do_not_sum": null,
   "complaints_transcript_by_ope_id_do_not_sum": null,
   "complaints_other_by_ope_id_do_not_sum": null,
-  "hcm_status": true,
-  "hcm_type": "HCM - Cash Monitoring 1",
-  "hcm_reason": "Administrative Capability"
+  "hcm_status": null,
+  "hcm_type": null,
+  "hcm_reason": null
 }

@@ -67,6 +67,6 @@
   "complaints_transcript_by_ope_id_do_not_sum": null,
   "complaints_other_by_ope_id_do_not_sum": null,
   "hcm_status": true,
-  "hcm_type": "HCM - Cash Monitoring 1",
-  "hcm_reason": "Financial Responsibility"
+  "hcm_type": "HCM - Cash Monitoring 2",
+  "hcm_reason": "Audit Late/Missing"
 }
