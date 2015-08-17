@@ -137,12 +137,12 @@ var GIBComparisonTool = (function () {
   };
 
   // Constants
-  var TFCAP  = 20235.02,
-      AVGBAH = 1509,
+  var TFCAP  = 21084.89,
+      AVGBAH = 1566,
       BSCAP  = 1000,
       BSOJTMONTH = 83,
-      FLTTFCAP   = 11562.86,
-      CORRESPONDTFCAP  = 9828.43,
+      FLTTFCAP   = 12048.50,
+      CORRESPONDTFCAP  = 10241.22,
 // Military Tuition Assistance Cap
       TUITIONASSISTCAP = 4500,
 // MGIB & 1606 Benefit Rates
