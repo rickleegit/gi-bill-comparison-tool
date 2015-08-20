@@ -333,7 +333,7 @@ var GIBComparisonTool = (function () {
     if(institution.hcm_status == null) { 
       $('#caution-indicator').html("None");
     } else if(institution.hcm_status) {
-    	$('#caution-indicator').html("<a href='https://studentaid.ed.gov/sa/about/data-center/school/hcm' onclick='track('Tool Tips', 'School Summary / Caution Flag');' target='_blank' alt='Click here for more information.' title='To see more information about caution flags, please visit ED’s heightened cash monitoring resource page.'>Heightened Cash Monitoring</a>" +
+    	$('#caution-indicator').html("<a href='http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#HCM' onclick='track('Tool Tips', 'School Summary / Caution Flag');' target='_blank' alt='Click here for more information.' title='To see more information about caution flags, please read about ED’s heightened cash monitoring.'>Heightened Cash Monitoring</a>" +
 		"&nbsp; ("+
 	    	institution.hcm_reason +
 	    	")");
