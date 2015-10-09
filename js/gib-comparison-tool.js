@@ -329,8 +329,12 @@ var GIBComparisonTool = (function () {
     }
   };
 
-  var getCautionIndicator = function() {
-    if(institution.hcm_status == null) { 
+var getCautionIndicator = function() {
+    if (institution.caution_flag !== null) {
+      $('#caution-indicator').html("<a href='http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#HCM' onclick='track('Tool Tips', 'School Summary / Caution Flag');' target='_blank' alt='Click here for more information.' title='To see more information about caution flags'>”+
+		institution.caution_flag +
+		“</a>”);
+    } else if(institution.hcm_status == null) { 
       $('#caution-indicator').html("None");
     } else if(institution.hcm_status) {
     	$('#caution-indicator').html("<a href='http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#HCM' onclick='track('Tool Tips', 'School Summary / Caution Flag');' target='_blank' alt='Click here for more information.' title='To see more information about caution flags, please read about ED’s heightened cash monitoring.'>Heightened Cash Monitoring</a>" +
@@ -339,6 +343,10 @@ var GIBComparisonTool = (function () {
 	    	")");
     }
   };
+
+
+
+
 
   /*
    * Get data for selected institution
